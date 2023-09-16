@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="project_budget_operation_view_form" model="ir.ui.view">
+            <field name="name">project.budget.operation.form</field>
+            <field name="model">project.budget.operation</field>
+            <field name="arch" type="xml">
+                <form string="Budget Modifications">
+                    <header>
+						<button string="Confirm" name="action_confirm" states="draft" type="object"
+								class="oe_highlight"/>
+						<button string="Approve" name="action_validate" states="confirm" type="object"
+								class="oe_highlight"/>
+						<button string="Done" name="action_done" states="validate" type="object"
+								class="oe_highlight"/>
+						<button string="Reset to Draft" name="action_draft" states="cancel" type="object"/>
+						<button string="Cancel Budget" name="action_cancel" states="confirm,validate" type="object"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate,done"/>
+					</header>
+					<sheet>
+						<label for="name"/>
+							<h1>
+								<field name="name" readonly="1" force_save="1"/>
+							</h1>
+                        <group>
+							<group>
+								<field name="project_id" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+								<field name="project_cost_id" domain="[('project_id','=',project_id),('state','=','validate')]" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+							</group>
+                            <group>
+                                <field name="analytic_account_id" readonly="1" force_save="1"/>
+								<field name="currency_id" readonly="1" force_save="1" />
+								<field name="company_id" required="1" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Modification Items">
+                                <field name="operation_line_ids" colspan="1"
+									nolabel="1" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree string="Operation Items" editable="bottom">
+										<field name="action" required="1"/>
+										<field name="item_type" required="1" force_save="1" attrs="{'readonly':[('action','!=','to')]}"/>
+										<field name="project_budget_line" force_save="1" domain="[('project_cost_id','=',parent.project_cost_id)]"
+										attrs="{'readonly':[('item_type','!=','exist')], 'required':[('item_type','=','exist')]}"/>
+										<field name="product_id" force_save="1" attrs="{'readonly':[('item_type','=','exist')], 'required':[('item_type','=','new')]}"/>
+										<field name="name" force_save="1" attrs="{'readonly':[('item_type','=','exist')], 'required':[('item_type','=','new')]}"/>
+										<field name="calc_actual" force_save="1" attrs="{'readonly':[('item_type','=','exist')], 'required':[('item_type','=','new')]}"/>
+										<field name="account_id" force_save="1" attrs="{'readonly':[('item_type','=','exist')], 'required':[('item_type','=','new')]}"/>
+										<field name="amount_from" attrs="{'readonly':[('action','!=','from')], 'required':[('action','=','from')]}" sum="Amount Transffered"/>
+										<field name="amount_to" attrs="{'readonly':[('action','!=','to')], 'required':[('action','=','to')]}" sum="Amount Received"/>
+										<field name="remaining_amount" required="1" attrs="{'readonly':[('action','!=','from')], 'required':[('action','=','from')]}"/>
+										<field name="currency_id" invisible="1"/>
+										<field name="company_id" invisible="1"/>
+									</tree>
+								</field>
+                            </page>
+                            <page string="Notes">
+								<field name="note"/>
+							</page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="project_budget_operation_view_tree">
+			<field name="name">project.budget.operation.view.tree</field>
+			<field name="model">project.budget.operation</field>
+			<field name="arch" type="xml">
+				<tree decoration-info="state == 'draft'" decoration-muted="state in ('cancel')" string="Budget">
+					<field name="name" colspan="1"/>
+					<field name="project_id"/>
+                    <field name="project_cost_id" />
+					<field name="analytic_account_id"/>
+					<field name="date"/>
+					<field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_project_budget_operation_search" model="ir.ui.view">
+			<field name="name">project.budget.operation.search</field>
+			<field name="model">project.budget.operation</field>
+			<field name="arch" type="xml">
+				<search string="Budget Modification">
+					<field name="name" filter_domain="[('name', 'ilike', self)]" string="Operation"/>
+					<field name="project_cost_id" filter_domain="[('name', 'ilike', self)]" string="Budget"/>
+					<field name="project_id"/>
+					<field name="analytic_account_id"/>
+					<field name="date"/>
+					<filter string="Draft" name="draft" domain="[('state', '=', 'draft')]" help="Draft Budgets"/>
+					<filter string="To Approve" name="toapprove" domain="[('state', '=', 'confirm')]"
+							help="To Approve Budgets"/>
+					<separator/>
+					<group expand="0" string="Group By">
+                        <filter string="Project" name="project" domain="[]" context="{'group_by': 'project_id'}"/>
+                        <filter string="Analytic Account" name="analytic" domain="[]" context="{'group_by': 'analytic_account_id'}"/>
+                        <filter string="Status" name="status" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Company" name="by_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+
+        <record model="ir.actions.act_window" id="act_project_budget_operation_view">
+			<field name="name">Budget Modification</field>
+			<field name="res_model">project.budget.operation</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="project_budget_operation_view_tree"/>
+			<field name="search_view_id" ref="view_project_budget_operation_search"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Click to create a new operation.
+				</p>
+			</field>
+		</record>
+
+        <menuitem id="menu_project_budget_operation" name="Budget Modifications" parent="menu_budget"
+            action="act_project_budget_operation_view"/>
+
+    </data>
+</odoo>

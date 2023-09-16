@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="project_budget_view_form" model="ir.ui.view">
+            <field name="name">project.budget.form</field>
+            <field name="model">project.budget</field>
+            <field name="arch" type="xml">
+				<form string="Project Budget">
+					<header>
+						<button string="Confirm" name="action_budget_confirm" states="draft" type="object"
+								class="oe_highlight"/>
+						<button string="Approve" name="action_budget_validate" states="confirm" type="object"
+								class="oe_highlight"/>
+						<button string="Done" name="action_budget_done" states="validate" type="object"
+								class="oe_highlight"/>
+						<button string="Reset to Draft" name="action_budget_draft" states="cancel" type="object"/>
+						<button string="Cancel Budget" name="action_budget_cancel" states="confirm,validate" type="object"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate,done"/>
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button type="object" name="action_view_delivery"
+							class="oe_stat_button" icon="fa-truck" string="Delivery"
+							 ><!-- attrs="{'invisible': [('state', '=', 'draft')]}" -->
+							</button>
+							<button type="object" name="action_view_purchase" 
+							class="oe_stat_button" icon="fa-list" string="Purchases">
+							</button>
+							<button type="object" name="action_view_subcontractor" 
+							class="oe_stat_button" icon="fa-list" string="Sub-contractors">
+							</button>
+							<button type="object" name="action_view_operation" 
+							class="oe_stat_button" icon="fa-list" string="Budget Modifications">
+							</button>
+						</div>
+						<div class="oe_title">
+							<label for="name"/>
+							<h1>
+								<field name="name" required="1" attrs="{'readonly':[('state','!=','draft')]}" placeholder="e.g. Budget "/>
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="project_id" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+								<field name="analytic_account_id" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+								<field name="currency_id" readonly="1" force_save="1" />
+								<field name="allow_over_flow" attrs="{'readonly':[('state','!=','draft')]}" />
+							</group>
+							<group>
+								<field name="project_budget_template_id" />
+								<label for="date_from" string="Period"/>
+								<div>
+									<div name="date_edit_only" class="o_row oe_edit_only">
+										<span>From <field name="date_from" class='oe_inline' attrs="{'readonly':[('state','!=','draft')]}" required="1"/></span>
+										<span>To <field name="date_to" class='oe_inline' attrs="{'readonly':[('state','!=','draft')]}" required="1"/></span>
+									</div>
+									<div name="date_read_only" class="o_row oe_read_only">
+										<span attrs="{'invisible': [('date_from', '=', False)]}">From <field name="date_from" class='oe_inline' required="1"/></span>
+										<span attrs="{'invisible': [('date_to', '=', False)]}">To <field name="date_to" class='oe_inline' required="1"/></span>
+									</div>
+								</div>
+								<field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Budget Items" name="budget_lines">
+								<field name="line_ids" colspan="1"
+									nolabel="1" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree string="Budget Lines"  decoration-danger="remaining_amount &lt; 0" editable="bottom">
+										<field name="product_id" required="1"/>
+										<field name="name" required="1"/>
+										<field name="calc_actual" required="1"/>
+										<field name="account_id" required="1" optional="show"/>
+										<field name="currency_id" invisible="1"/>
+										<field name="product_qty" required="1"/>
+										<field name="price_unit" required="1"/>
+										<field name="planned_amount" sum="Planned Amount" force_save="1" readonly="1" required="1"/>
+										<field name="operation_amount" sum="Operation Amount"/>
+										<field name="practical_amount" sum="Practical Amount"/>
+										<field name="remaining_amount" sum="Remaining Amount"/>
+										<!-- <button type="object" name="action_open_budget_entries" string="Entries..."
+												icon="fa-arrow-circle-o-right"/> -->
+										<field name="is_above_budget" invisible="1"/>
+										<field name="company_id" invisible="1"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Other Information">
+								<group>
+									<group>
+										<field name="project_warehouse_id" />
+										<field name="location_id" />
+									</group>
+								</group>
+							</page>
+							<page string="Moves" invisible="1">
+								<field name="stock_move_ids" />
+							</page>
+							<page string="Description">
+								<field name="description"/>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user"/>
+						<field name="activity_ids"/>
+						<field name="message_ids"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="project_budget_view_tree">
+			<field name="name">project.budget.view.tree</field>
+			<field name="model">project.budget</field>
+			<field name="arch" type="xml">
+				<tree decoration-info="state == 'draft'" decoration-muted="state in ('done','cancel')" string="Budget">
+					<field name="name" colspan="1"/>
+					<field name="project_id"/>
+					<field name="analytic_account_id"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_project_budget_search" model="ir.ui.view">
+			<field name="name">project.budget.search</field>
+			<field name="model">project.budget</field>
+			<field name="arch" type="xml">
+				<search string="Budget">
+					<field name="name" filter_domain="[('name', 'ilike', self)]" string="Budget"/>
+					<field name="project_id"/>
+					<field name="analytic_account_id"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<filter string="Draft" name="draft" domain="[('state', '=', 'draft')]" help="Draft Budgets"/>
+					<filter string="To Approve" name="toapprove" domain="[('state', '=', 'confirm')]"
+							help="To Approve Budgets"/>
+					<separator/>
+					<group expand="0" string="Group By">
+                        <filter string="Project" name="project" domain="[]" context="{'group_by': 'project_id'}"/>
+                        <filter string="Analytic Account" name="analytic" domain="[]" context="{'group_by': 'analytic_account_id'}"/>
+                        <filter string="Status" name="status" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Company" name="by_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="act_project_budget_view">
+			<field name="name">Projects Budget</field>
+			<field name="res_model">project.budget</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="project_budget_view_tree"/>
+			<field name="search_view_id" ref="view_project_budget_search"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Click to create a new budget.
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="menu_budget" name="Budgets" parent="project.menu_main_pm"
+             groups="project.group_project_manager"/>
+
+		<menuitem id="menu_project_budget" name="Projects Budget" parent="menu_budget"
+            action="act_project_budget_view"/>
+
+
+		
+	</data>
+</odoo>

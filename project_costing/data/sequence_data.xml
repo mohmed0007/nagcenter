@@ -1,0 +1,13 @@
+<odoo>
+	<data>
+            <record id="sequence_budget_op" model="ir.sequence">
+                <field name="name">Budget Operation</field>
+                <field name="code">budget.operation</field>
+                <field name="prefix">B-OP/</field>
+                <field name="padding">5</field>
+                <!-- <field name="number_next">1</field> -->
+                <field name="number_increment">1</field>
+                <field name="company_id"></field>
+            </record>
+    </data>
+</odoo>

@@ -1,0 +1,1924 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* business_city
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-31 18:27+0000\n"
+"PO-Revision-Date: 2020-05-31 21:29+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: business_city
+#: model:mail.template,report_name:business_city.mail_template_data_delivery_confirmation_bc
+msgid "${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "&amp;nbsp;<span>on</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr ""
+
+#. module: business_city
+#: model:ir.actions.report,print_report_name:business_city.action_report_pro_forma_invoice_1
+msgid "'PRO-FORMA - %s' % (object.name)"
+msgstr ""
+
+#. module: business_city
+#: model:ir.actions.report,print_report_name:business_city.account_invoices_1
+#: model:ir.actions.report,print_report_name:business_city.account_invoices_without_payment_1
+msgid "(object._get_report_base_filename())"
+msgstr ""
+
+#. module: business_city
+#: model:ir.actions.report,print_report_name:business_city.action_report_saleorder_1
+msgid "(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)"
+msgstr ""
+
+#. module: business_city
+#: model:mail.template,body_html:business_city.mail_template_data_delivery_confirmation_bc
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Sale Invoice\n"
+"    </p>\n"
+"</div>\n"
+"        "
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "<span class=\"o_form_label\">Commissions Defaults</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "<span class=\"o_form_label\">Insurance Defaults</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "<span class=\"o_form_label\">Letter Of Quarantee Defaults</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "<span class=\"o_form_label\">Other Defaults</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "<span class=\"o_form_label\">Rental Defaults</span>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh_1
+msgid "<span class=\"oe_inline\">Hijri</span>"
+msgstr "<span class=\"oe_inline\">هجري</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "<span class=\"oe_inline\">Tax Date</span>"
+msgstr "<span class=\"oe_inline\">تاريخ قيد الضريبة</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "<span class=\"oe_inline\">Tax</span>"
+msgstr "<span class=\"oe_inline\">الضريبة</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+msgstr ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">المبلغ</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">اجمالي السعر</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<span>Description</span>"
+msgstr "<span>الوصف</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<span>Disc.%</span>"
+msgstr "<span>خصم.%</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>فاتورة مبدئية # </span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<span>Quantity</span>"
+msgstr "<span>الكمية</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<span>Source Document</span>"
+msgstr "<span>المستند المصدر</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<span>Unit Price</span>"
+msgstr "<span>سعر الوحدة</span>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong class=\"text-center\">Scan me with your banking app.</strong><br/><br/>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong class=\"text-center\">The SEPA QR Code informations are not set correctly.</strong><br/>"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_with_payments_1
+msgid "<strong>Amount Due</strong>"
+msgstr "<strong>المبلغ المستحق</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>كود العميل:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>تاريخ الاستحقاق:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Expiration:</strong>"
+msgstr "<strong>الصلاحية:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>ملاحظة الموقف المالي:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>تاريخ الفاتورة:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>تاريخ الطلب:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Quotation Date:</strong>"
+msgstr "<strong>تاريخ عرض السعر:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>المرجع:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>مسؤول المبيعات:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Shipping Address:</strong>"
+msgstr "<strong>عنوان الشحن:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Signature</strong>"
+msgstr "<strong>التوقيع</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "<strong>Source:</strong>"
+msgstr "<strong>المصدر:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>اجمالي فرعي</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Total</strong>"
+msgstr "<strong>الاجمالي</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>مرجعك:</strong>"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__date
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Accounting Date"
+msgstr "تاريخ المحاسبة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__com_account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__ins_account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__rent_account_accr_exp_id
+msgid "Accrued Expense Account"
+msgstr "حساب المصروف المستحق"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_needaction
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_needaction
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_needaction
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_needaction
+msgid "Action Needed"
+msgstr "يلزم الاجراء"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__active
+#: model:ir.model.fields,field_description:business_city.field_business_ins__active
+#: model:ir.model.fields,field_description:business_city.field_business_quar__active
+#: model:ir.model.fields,field_description:business_city.field_business_rent__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_exception_decoration
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_exception_decoration
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_exception_decoration
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_state
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_state
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_state
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__amount
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__amount
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__com_account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__ins_account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__lq_account_analytic_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__rent_account_analytic_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_attachment_count
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_attachment_count
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_attachment_count
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: business_city
+#: model:ir.actions.server,name:business_city.ir_cron_scheduler_reminder_business_city_action_ir_actions_server
+#: model:ir.cron,cron_name:business_city.ir_cron_scheduler_reminder_business_city_action
+#: model:ir.cron,name:business_city.ir_cron_scheduler_reminder_business_city_action
+msgid "Automate Scheduler"
+msgstr "مجدول تلقائي"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Cancelled Invoice"
+msgstr "فاتورة ملغية"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"Cannot find a stock input account for the product %s. You must define one on the product category, or on the location, "
+"before processing this operation."
+msgstr "لم نستطع إيجاد حساب مخزون وارد للمنتج %s. يجب تعريف حساب في فئة المنتج، أو في الموقع، قبل القيام بهذه العملية."
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"Cannot find a stock output account for the product %s. You must define one on the product category, or on the "
+"location, before processing this operation."
+msgstr "لم نستطع إيجاد حساب مخزون منصرف للمنتج %s. يجب تعريف حساب في فئة المنتج، أو في الموقع، قبل القيام بهذه العملية."
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Choose a Partner"
+msgstr "اختر شريك"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Choose a roperty owner"
+msgstr "اختر مالك العقار"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Choose an Insurance Provider"
+msgstr "اختر الجهة المزودة التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Choose an Project"
+msgstr "اختر مشروع"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Close Insurance"
+msgstr "انهاء التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Close Rent"
+msgstr "انهاء الايجار"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_ins__state__close
+#: model:ir.model.fields.selection,name:business_city.selection__business_rent__state__close
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+msgid "Closed"
+msgstr "منتهي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__commi_id
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__commi_id
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+msgid "Commission"
+msgstr "العمولة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__commi_amount
+#: model:ir.model.fields,field_description:business_city.field_business_quar__quar_commi_amount
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Commission Amount"
+msgstr "مبلغ العمولة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__depreciation_move_ids
+msgid "Commission Entries"
+msgstr "قيود العمولة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__lq_account_exp_id
+msgid "Commission Expence Account"
+msgstr "حساب مصروف العمولات"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Commission Info"
+msgstr "معلومات العمولة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__business_lines
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Commission Lines"
+msgstr "بنود العمولة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line__commi_id
+msgid "Commission Linked"
+msgstr "العمولة المرتبطة"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_business_commi
+msgid "Commission Management"
+msgstr "ادارة العمولات"
+
+#. module: business_city
+#: code:addons/business_city/models/commi.py:0
+#, python-format
+msgid "Commission of "
+msgstr "عمولة "
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_business_commi_form
+#: model:ir.ui.menu,name:business_city.menu_action_account_asset_form_commi
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_tree
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_tree
+msgid "Commissions"
+msgstr "العمولات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__company_id
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__company_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__company_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__company_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__company_id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__company_id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__company_currency_id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__company_currency_id
+msgid "Company Currency"
+msgstr "عملة الشركة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Compute Insurance"
+msgstr "احتساب التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Compute Rent"
+msgstr "احتساب الايجار"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__ct_approval_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_approval_date
+msgid "Contract Approval Date"
+msgstr "تاريخ اعتماد العقد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__ct_approval_date_h
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_approval_date_h
+msgid "Contract Approval Date(Hijri)"
+msgstr "تاريخ اعتماد العقد(هجري)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_approval_no
+msgid "Contract Approval No."
+msgstr "رقم اعتماد العقد."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_duration
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_duration
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_duration
+msgid "Contract Duration(Months)"
+msgstr "مدة العقد(بالاسهر)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_end_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_end_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_end_date
+msgid "Contract End Date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_end_date_h
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_end_date_h
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_end_date_h
+msgid "Contract End Date(Hijri)"
+msgstr "تاريخ نهاية العقد(هجري)"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh_1
+msgid "Contract Info"
+msgstr "بيانات العقد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_no
+msgid "Contract No."
+msgstr "رقم العقد."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_st_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_st_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_st_date
+msgid "Contract Start Date"
+msgstr "تاريخ بدء العقد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_st_date_h
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_st_date_h
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_st_date_h
+msgid "Contract Start Date(Hijri)"
+msgstr "تاريخ بدء العقد(هجري)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__ct_untaxed_amount
+msgid "Contract Untaxed Amount"
+msgstr "قيمة العقد غير شاملة الضريبة"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_move_out_refund_type_bc
+msgid "Create a credit note"
+msgstr "إنشاء اشعار دائن"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_move_out_invoice_type_bc
+msgid "Create a customer invoice"
+msgstr "انشاء فاتورة عميل"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_move_out_invoice_type_bc
+msgid "Create invoices, register payments and keep track of the discussions with your customers."
+msgstr "إنشاء الفواتير وتسجيل المدفوعات وتتبع المناقشات مع عملائك."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__create_uid
+#: model:ir.model.fields,field_description:business_city.field_business_commi__create_uid
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__create_uid
+#: model:ir.model.fields,field_description:business_city.field_business_ins__create_uid
+#: model:ir.model.fields,field_description:business_city.field_business_quar__create_uid
+#: model:ir.model.fields,field_description:business_city.field_business_rent__create_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__create_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__create_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__create_date
+#: model:ir.model.fields,field_description:business_city.field_business_commi__create_date
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__create_date
+#: model:ir.model.fields,field_description:business_city.field_business_ins__create_date
+#: model:ir.model.fields,field_description:business_city.field_business_quar__create_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__create_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__create_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__create_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__create_date
+msgid "Created on"
+msgstr "انشئ في"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Credit Note"
+msgstr "اشعار دائن"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__currency_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__currency_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__currency_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+msgid "Current"
+msgstr "الحالي"
+
+#. module: business_city
+#: model:ir.actions.report,name:business_city.account_invoices_1
+msgid "Custom Invoices"
+msgstr "فواتير مخصصة"
+
+#. module: business_city
+#: model:ir.actions.report,name:business_city.account_invoices_without_payment_1
+msgid "Custom Invoices without Payment"
+msgstr "فواتير مخصصة بدون السداد"
+
+#. module: business_city
+#: model:ir.actions.report,name:business_city.action_report_pro_forma_invoice_1
+msgid "Custom PRO-FORMA Invoice"
+msgstr "فاتورة مبدئية مخصصة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_move_form_inh
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh_1
+msgid "Custom Print"
+msgstr "طباعة مخصصة"
+
+#. module: business_city
+#: model:ir.actions.report,name:business_city.action_report_saleorder_1
+msgid "Custom Quotation / Order"
+msgstr "عرص سعر / امر مخصص"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__invoice_line2_ids
+#: model:ir.model.fields,field_description:business_city.field_sale_order__invoice_line2_ids
+msgid "Customer Invoice lines"
+msgstr "بنود فاتورة العميل"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh_1
+msgid "DD-MM-YYYY"
+msgstr "يوم-شهر-سنة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__date
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__date_h
+#: model:ir.model.fields,field_description:business_city.field_business_quar__date_h
+msgid "Date(Hijri)"
+msgstr "التاريخ(هجري)"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Days"
+msgstr "أيام"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__desc
+#: model:ir.model.fields,field_description:business_city.field_business_quar__quar_desc
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__desc
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__desc
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__desc
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__dest_location_id
+msgid "Destination Location"
+msgstr "موقع الهدف"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__discount
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__discount
+msgid "Discount (%)"
+msgstr "الخصم (%)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__display_name
+#: model:ir.model.fields,field_description:business_city.field_business_commi__display_name
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__display_name
+#: model:ir.model.fields,field_description:business_city.field_business_ins__display_name
+#: model:ir.model.fields,field_description:business_city.field_business_quar__display_name
+#: model:ir.model.fields,field_description:business_city.field_business_rent__display_name
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__display_name
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__display_name
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_commi__state__draft
+#: model:ir.model.fields.selection,name:business_city.selection__business_ins__state__draft
+#: model:ir.model.fields.selection,name:business_city.selection__business_quar__state__draft
+#: model:ir.model.fields.selection,name:business_city.selection__business_rent__state__draft
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Draft Invoice"
+msgstr "فاتورة مسودة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_due
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_due
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_due
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Due Amount"
+msgstr "المبلغ المستحق"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__dued
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__dued
+msgid "Dued"
+msgstr "تم الاستحقاق"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_paid
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_paid
+msgid "Dued Amount"
+msgstr "مبالغ تم استحقاقها"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Entries"
+msgstr "المدخلات"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Entry Date"
+msgstr "تاريخ المدخل"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__pue_entry_id
+#: model:ir.model.fields,field_description:business_city.field_account_move__pue_entry_ids
+msgid "Equevilant PUE Entry"
+msgstr "قيد المشاريع تحت التنفيذ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__com_account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__ins_account_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__rent_account_exp_id
+msgid "Expence Account"
+msgstr "حساب المصروف"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__expiry_date
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Expiry Date"
+msgstr "تاريخ الصلاحية"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_quar__quar_type__final
+msgid "Final"
+msgstr "نهائي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__flag
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__flag
+msgid "Flag"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_follower_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_follower_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_follower_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_follower_ids
+msgid "Followers"
+msgstr "متابعين"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_channel_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_channel_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_channel_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "متابعين (قنوات)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_partner_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_partner_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_partner_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "متابعين (شركاء)"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+msgid "Group By..."
+msgstr "تجميع حسب ..."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__id
+#: model:ir.model.fields,field_description:business_city.field_business_commi__id
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__id
+msgid "ID"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_exception_icon
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_exception_icon
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_exception_icon
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__activity_exception_icon
+#: model:ir.model.fields,help:business_city.field_business_ins__activity_exception_icon
+#: model:ir.model.fields,help:business_city.field_business_quar__activity_exception_icon
+#: model:ir.model.fields,help:business_city.field_business_rent__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__message_needaction
+#: model:ir.model.fields,help:business_city.field_business_commi__message_unread
+#: model:ir.model.fields,help:business_city.field_business_ins__message_needaction
+#: model:ir.model.fields,help:business_city.field_business_ins__message_unread
+#: model:ir.model.fields,help:business_city.field_business_quar__message_needaction
+#: model:ir.model.fields,help:business_city.field_business_quar__message_unread
+#: model:ir.model.fields,help:business_city.field_business_rent__message_needaction
+#: model:ir.model.fields,help:business_city.field_business_rent__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__message_has_error
+#: model:ir.model.fields,help:business_city.field_business_commi__message_has_sms_error
+#: model:ir.model.fields,help:business_city.field_business_ins__message_has_error
+#: model:ir.model.fields,help:business_city.field_business_ins__message_has_sms_error
+#: model:ir.model.fields,help:business_city.field_business_quar__message_has_error
+#: model:ir.model.fields,help:business_city.field_business_quar__message_has_sms_error
+#: model:ir.model.fields,help:business_city.field_business_rent__message_has_error
+#: model:ir.model.fields,help:business_city.field_business_rent__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_quar__quar_type__initial
+msgid "Initial"
+msgstr "مبدئي"
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_business_ins_form
+#: model:ir.model.fields,field_description:business_city.field_account_move__ins_id
+#: model:ir.ui.menu,name:business_city.menu_action_account_asset_form_ins
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_tree
+msgid "Insurance"
+msgstr "التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Insurance Contract Info"
+msgstr "معلومات عقد التأمين"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__depreciation_move_ids
+msgid "Insurance Lines"
+msgstr "بنود التأمين"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line__ins_id
+msgid "Insurance Linked"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_business_ins
+msgid "Insurance Management"
+msgstr "ادارة التأمين"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ins_contract_no
+msgid "Insurance Policy No."
+msgstr "رقم بوليصة التأمين."
+
+#. module: business_city
+#: code:addons/business_city/models/ins.py:0
+#, python-format
+msgid "Insurance Tax of "
+msgstr "ضريبة التأمين لــ "
+
+#. module: business_city
+#: code:addons/business_city/models/ins.py:0
+#, python-format
+msgid "Insurance of "
+msgstr "قيد التأمين لــ "
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_sale_order_bc_invoice
+msgid "Invoice Policy"
+msgstr "سياسة الفوترة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__bc_invoice_ids
+msgid "Invoice Policy Lines"
+msgstr "بنود سياسة الفوترة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_invoiced
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__invoiced_amount
+msgid "Invoiced Amount"
+msgstr "مبلغ مفوتر"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_account_invoice_filter_bc_1
+#: model_terms:ir.ui.view,arch_db:business_city.view_invoice_graph_bc
+#: model_terms:ir.ui.view,arch_db:business_city.view_invoice_line_calendar_bc
+#: model_terms:ir.ui.view,arch_db:business_city.view_invoice_pivot_bc
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "Invoicing 2"
+msgstr "الفواتير"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Invoicing Address:"
+msgstr "عنوان الفوترة:"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Invoicing Policy"
+msgstr "سياسة الفوترة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Invoicing and Payment Policy"
+msgstr "سياسة الفوترة والسداد"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Invoicing and Shipping Address:"
+msgstr "الفوترة وعنوان الشحن:"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_is_follower
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_is_follower
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_is_follower
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__item_ids
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__item_ids
+msgid "Item"
+msgstr "بند"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__journal_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__journal_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__journal_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__journal_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__com_journal_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__ins_journal_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__lq_journal_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__rent_journal_id
+msgid "Journal"
+msgstr "اليومية"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_account_move
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__move2_id
+msgid "Journal Entry2"
+msgstr "قيد اليومية"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2____last_update
+#: model:ir.model.fields,field_description:business_city.field_business_commi____last_update
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line____last_update
+#: model:ir.model.fields,field_description:business_city.field_business_ins____last_update
+#: model:ir.model.fields,field_description:business_city.field_business_quar____last_update
+#: model:ir.model.fields,field_description:business_city.field_business_rent____last_update
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice____last_update
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment____last_update
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2____last_update
+msgid "Last Modified on"
+msgstr "اخر تحديث في"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__write_uid
+#: model:ir.model.fields,field_description:business_city.field_business_commi__write_uid
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__write_uid
+#: model:ir.model.fields,field_description:business_city.field_business_ins__write_uid
+#: model:ir.model.fields,field_description:business_city.field_business_quar__write_uid
+#: model:ir.model.fields,field_description:business_city.field_business_rent__write_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__write_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__write_uid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__write_date
+#: model:ir.model.fields,field_description:business_city.field_business_commi__write_date
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__write_date
+#: model:ir.model.fields,field_description:business_city.field_business_ins__write_date
+#: model:ir.model.fields,field_description:business_city.field_business_quar__write_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__write_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__write_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__write_date
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث في"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_business_quar
+msgid "Letter of Quarantee"
+msgstr "خطابات الضمان"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_location_receive_date
+msgid "Location Receive Date"
+msgstr "تاريخ استلام الموقع"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_location_receive_date_h
+msgid "Location Receive Date(Hijri)"
+msgstr "تاريخ استلام الموقع(هجري)"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_main_attachment_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_main_attachment_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_main_attachment_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_business_ins_form
+msgid "Manage Insurance"
+msgstr "ادارة التأمين"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_business_quar_form
+msgid "Manage Letters of Quarantee"
+msgstr "ادارة خطابات الضمان"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_business_commi_form
+#: model_terms:ir.actions.act_window,help:business_city.action_business_rent_form
+msgid "Manage Rents"
+msgstr "ادارة الايجارات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_purchase_order__merge_id
+msgid "Merge Group"
+msgstr "مستند الدمج"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_purchase_order__merge_rfqs
+msgid "Merge RFQs ?"
+msgstr "دمج طلبات الشراء ؟"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_has_error
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_has_error
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_has_error
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ توصيل الرسالة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_stock_picking__is_pue
+msgid "Move to Project Under Execution ?"
+msgstr "الانتقال إلى المشروع قيد التنفيذ؟"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_date_deadline
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_date_deadline
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_date_deadline
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_summary
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_summary
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_summary
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_type_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_type_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_type_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_due_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_due_date
+msgid "Next Due Date"
+msgstr "تاريخ الاستحقاق القادم"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_due_date_h
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_due_date_h
+msgid "Next Due Date(Hijri)"
+msgstr "تاريخ الاستحقاق التالي(هجري)"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Next Invoice"
+msgstr "الفاتورة القادمة"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Next Payment"
+msgstr "الدفعات القادمة"
+
+#. module: business_city
+#: model_terms:ir.actions.act_window,help:business_city.action_move_out_refund_type_bc
+msgid ""
+"Note that the easiest way to create a credit note is to do it directly\n"
+"                from the customer invoice."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_needaction_counter
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_needaction_counter
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_needaction_counter
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_has_error_counter
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_has_error_counter
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_has_error_counter
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__message_needaction_counter
+#: model:ir.model.fields,help:business_city.field_business_ins__message_needaction_counter
+#: model:ir.model.fields,help:business_city.field_business_quar__message_needaction_counter
+#: model:ir.model.fields,help:business_city.field_business_rent__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__message_has_error_counter
+#: model:ir.model.fields,help:business_city.field_business_ins__message_has_error_counter
+#: model:ir.model.fields,help:business_city.field_business_quar__message_has_error_counter
+#: model:ir.model.fields,help:business_city.field_business_rent__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__message_unread_counter
+#: model:ir.model.fields,help:business_city.field_business_ins__message_unread_counter
+#: model:ir.model.fields,help:business_city.field_business_quar__message_unread_counter
+#: model:ir.model.fields,help:business_city.field_business_rent__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الغير مقروءة"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_ins__state__paused
+#: model:ir.model.fields.selection,name:business_city.selection__business_rent__state__paused
+msgid "On Hold"
+msgstr "في الانتظار"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Order #"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "Other Configurations"
+msgstr "اعدادات اخرى"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_rent__owner_id
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+msgid "Owner"
+msgstr "المالك"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_stock_picking__pue_account_id
+msgid "PUE Account"
+msgstr "حساب المشاريع تحت التنفيذ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_paid
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__paid_amount
+msgid "Paid Amount"
+msgstr "المبلغ المسدد"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_with_payments_1
+msgid "Paid on"
+msgstr "تم السداد في"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__partner_id
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Pause Insurance"
+msgstr "ايقاف التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Pause Rent"
+msgstr "ايقاف الايجار"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_sale_order_bc_payment
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Payment Policy"
+msgstr "تنبؤات السداد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__bc_payment_ids
+msgid "Payment Policy Lines"
+msgstr "بنود تنبؤات السداد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi_line__commi_per
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+msgid "Percentage(%)"
+msgstr "النسبة(%)"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_move_form_inh
+msgid "Picking Details"
+msgstr "تفاصيل الالتقاط"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__custom_picking_type_id
+msgid "Picking Type"
+msgstr "نوع الالتقاط"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__custom_picking_type_id_refund
+msgid "Picking Type(Refunds)"
+msgstr "نوع الالتقاط(للاسترجاع)"
+
+#. module: business_city
+#: code:addons/business_city/models/quar.py:0
+#, python-format
+msgid "Please Enter Return Date!"
+msgstr "من فضلك ادخل تاريخ الارجاع!"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Please define an accounting miscellaneous journal in your company"
+msgstr ""
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Please define an accounting purchase journal in your company"
+msgstr "الرجاء القيام بتعريف دفتر حساب مشتريات في شركتك"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Please define an accounting sale journal in your company"
+msgstr "الرجاء القيام بتعريف دفتر حساب مبيعات في شركتك"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Please use the following communication for your payment :"
+msgstr "يرجى استخدام الاتصال التالي لدفعتك:"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__project_id
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+msgid "Project"
+msgstr "المشروع"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__pue_account_id
+msgid "Project Under Execution Account"
+msgstr "حساب المشاريع تحت التنفيذ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__owner_id
+msgid "Provider"
+msgstr "المزود"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__quantity
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__quantity
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__quar_id
+msgid "Quarantee"
+msgstr "الضمان"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__depreciation_move_ids
+msgid "Quarantee Letter Entries"
+msgstr "قيود خطاب الضمان"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Quarantee Letter Info"
+msgstr "معلومات خطاب الضمان"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line__quar_id
+msgid "Quarantee Letter Linked"
+msgstr "خطابات الضمان المرتبطة"
+
+#. module: business_city
+#: code:addons/business_city/models/quar.py:0
+#, python-format
+msgid "Quarantee Letter of "
+msgstr "خطاب الضمان لـ "
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_business_quar_form
+#: model:ir.ui.menu,name:business_city.menu_action_account_asset_form_quar
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Quarantee Letters"
+msgstr "خطابات الضمان"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__quar_no
+msgid "Quarantee No."
+msgstr "رقم الضمان."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__account_accr_exp_id
+#: model:ir.model.fields,field_description:business_city.field_res_config_settings__lq_account_accr_exp_id
+msgid "Quarantee Receivable Account"
+msgstr "حساب الضمان - المدين"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__quar_type
+msgid "Quarantee Type"
+msgstr "نوع الضمان"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__quar_amount
+msgid "Quatantee Amount"
+msgstr "قيمة الضمان"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Quotation #"
+msgstr "عرض سعر #"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_purchase_order__merge_ids
+msgid "RFQs to Merge"
+msgstr "اختر الطلبات المراد دمجها"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_account_invoice_filter_bc_1
+msgid "Refunds"
+msgstr "الإستردادات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order__bc_invoice_ids_reminder
+#: model:ir.model.fields,field_description:business_city.field_sale_order__bc_payment_ids_reminder
+msgid "Reminder Before(Days)"
+msgstr "التنبيه قبل(بالايام)"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Reminder Before:"
+msgstr "التنبيه قبل:"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__rental_id
+msgid "Rent"
+msgstr "الايجار"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line__rental_id
+msgid "Rent Linked"
+msgstr "الايجارات المرتبطة"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_business_rent
+msgid "Rent Management"
+msgstr "ادارة الايجارات"
+
+#. module: business_city
+#: code:addons/business_city/models/rent.py:0
+#, python-format
+msgid "Rent Tax of "
+msgstr "ضريبة الايجار لــ "
+
+#. module: business_city
+#: code:addons/business_city/models/rent.py:0
+#, python-format
+msgid "Rent of "
+msgstr "الايجار لــ "
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Rental"
+msgstr "الايجار"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Rental Contract Info"
+msgstr "معلومات عقد الايجار"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_rent__rental_contract_no
+msgid "Rental Contract No."
+msgstr "رقم عقد الايجار."
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_rent__depreciation_move_ids
+msgid "Rental Lines"
+msgstr "بنود الايجار"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rent_tree
+msgid "Rentals"
+msgstr "الايجارات"
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_business_rent_form
+#: model:ir.ui.menu,name:business_city.menu_action_account_asset_form_rent
+msgid "Rents"
+msgstr "الايجارات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__activity_user_id
+#: model:ir.model.fields,field_description:business_city.field_business_ins__activity_user_id
+#: model:ir.model.fields,field_description:business_city.field_business_quar__activity_user_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+msgid "Resume Insurance"
+msgstr "استئناف التأمين"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Resume Rent"
+msgstr "استئناف الايجار"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__reversed_entry_date
+msgid "Return Date"
+msgstr "تاريخ الارجاع"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Return Money"
+msgstr "ارجاع المال"
+
+#. module: business_city
+#: code:addons/business_city/models/quar.py:0
+#, python-format
+msgid "Return Quarantee Letter of "
+msgstr "ارجاع خطاب ضمان لــ "
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_quar__state__returned
+msgid "Returned"
+msgstr "مرتجع"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_quar__reversed_entry_id
+msgid "Reversed Entry"
+msgstr "القيد العكسي"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_ins__state__open
+#: model:ir.model.fields.selection,name:business_city.selection__business_rent__state__open
+msgid "Running"
+msgstr "جاري"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_has_sms_error
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_has_sms_error
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_has_sms_error
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ توصيل الرسالة النصية"
+
+#. module: business_city
+#: model:mail.template,subject:business_city.mail_template_data_delivery_confirmation_bc
+msgid "Sale Invoice"
+msgstr "فاتورة مبيعات"
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid "Sale Invoice Picking"
+msgstr "الالتقاط لفاتورة المبيعات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_invoice__order_id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_bc_payment__order_id
+msgid "Sale Order"
+msgstr "امر البيع"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__move2_id
+msgid "Sale Order2"
+msgstr "أمر بيع"
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_move_out_invoice_type_bc
+#: model:ir.ui.menu,name:business_city.report_sales_team_bc
+msgid "Sales Invoices"
+msgstr "فواتير المبيعات"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: business_city
+#: model:ir.actions.act_window,name:business_city.action_move_out_refund_type_bc
+msgid "Sales Refunds"
+msgstr "مرتجعات المبيعات"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__bc_sales_man
+msgid "Salesman"
+msgstr "مندوب المبيعات"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Set to Running"
+msgstr "ضبط كـ جاري"
+
+#. module: business_city
+#: model:res.groups,name:business_city.module_category_bc_sale_person
+msgid "Solar Sales Person"
+msgstr "مسؤول مبيعات قسم الطاقة الشمسية"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__location_id
+msgid "Source Location"
+msgstr "موقع المصدر"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__state
+#: model:ir.model.fields,field_description:business_city.field_business_ins__state
+#: model:ir.model.fields,field_description:business_city.field_business_quar__state
+#: model:ir.model.fields,field_description:business_city.field_business_rent__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__activity_state
+#: model:ir.model.fields,help:business_city.field_business_ins__activity_state
+#: model:ir.model.fields,help:business_city.field_business_quar__activity_state
+#: model:ir.model.fields,help:business_city.field_business_rent__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move__delivery_picking_id
+msgid "Stock Picking"
+msgstr "التقاط المخزون"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__price_subtotal
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__price_subtotal
+#: model_terms:ir.ui.view,arch_db:business_city.view_move_form_inh
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh_1
+msgid "Subtotal"
+msgstr "الاجمالي الفرعي"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__tax_base_amount
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_tax_id
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_tax_id
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__tax_base_amount
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__ct_tax_amount
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Tax Amount"
+msgstr "قيمة الضريبة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_tax_date
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_tax_date
+msgid "Tax Date"
+msgstr "تاريخ الضريبة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Tax ID"
+msgstr "معرف الضريبة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__tender_desc
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_desc
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_desc
+#: model:ir.model.fields,field_description:business_city.field_sale_order__tender_desc
+msgid "Tender Description"
+msgstr "وصف العطاء"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_account_move_line2__move2_id
+msgid "The move of this entry line."
+msgstr "حركة بند هذا المدخل."
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.res_config_settings_view_form_inh
+msgid "These taxes are set in any new product created."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__price_total
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__price_total
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_order_form_inh
+msgid "Total Amount"
+msgstr "اجمالي المبلغ"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__ct_taxed_amount
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_tax
+#: model:ir.model.fields,field_description:business_city.field_business_ins__ct_total
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_tax
+#: model:ir.model.fields,field_description:business_city.field_business_rent__ct_total
+#: model:ir.model.fields,field_description:business_city.field_sale_order__ct_total
+msgid "Total Contract Amount"
+msgstr "اجمالي قيمة العقد"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_ins_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_rental_form
+msgid "Total Due"
+msgstr "اجمالي المبلغ المستحق"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Total Price"
+msgstr "اجمالي السعر"
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__activity_exception_decoration
+#: model:ir.model.fields,help:business_city.field_business_ins__activity_exception_decoration
+#: model:ir.model.fields,help:business_city.field_business_quar__activity_exception_decoration
+#: model:ir.model.fields,help:business_city.field_business_rent__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__price_unit
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__price_unit
+#: model_terms:ir.ui.view,arch_db:business_city.report_saleorder_document_1
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_account_move_line2__product_uom
+#: model:ir.model.fields,field_description:business_city.field_sale_order_line2__product_uom
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_unread
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_unread
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_unread
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__message_unread_counter
+#: model:ir.model.fields,field_description:business_city.field_business_ins__message_unread_counter
+#: model:ir.model.fields,field_description:business_city.field_business_quar__message_unread_counter
+#: model:ir.model.fields,field_description:business_city.field_business_rent__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_sale_order_bc_invoice__company_currency_id
+#: model:ir.model.fields,help:business_city.field_sale_order_bc_payment__company_currency_id
+msgid "Utility field to express amount currency"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_form
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_form
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: business_city
+#: model:ir.model.fields.selection,name:business_city.selection__business_commi__state__done
+#: model:ir.model.fields.selection,name:business_city.selection__business_quar__state__done
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_quar_search
+msgid "Validated"
+msgstr "تم الاعتماد"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Vendor Bill"
+msgstr "فاتورة المورد"
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.report_invoice_document_1
+msgid "Vendor Credit Note"
+msgstr "اشعار الدائن للمورد"
+
+#. module: business_city
+#: model:ir.model.fields,field_description:business_city.field_business_commi__website_message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_ins__website_message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_quar__website_message_ids
+#: model:ir.model.fields,field_description:business_city.field_business_rent__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الالكتروني"
+
+#. module: business_city
+#: model:ir.model.fields,help:business_city.field_business_commi__website_message_ids
+#: model:ir.model.fields,help:business_city.field_business_ins__website_message_ids
+#: model:ir.model.fields,help:business_city.field_business_quar__website_message_ids
+#: model:ir.model.fields,help:business_city.field_business_rent__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"You don't have any stock journal defined on your product category, check if you have installed a chart of accounts."
+msgstr "لا توجد أية قيود مخزون يومية معرفة لفئة منتجك، تأكد من تثبيتك للدليل المحاسبي."
+
+#. module: business_city
+#: code:addons/business_city/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"You don't have any stock valuation account defined on your product category. You must define one before processing "
+"this operation."
+msgstr "لا يوجد حساب لتقييم المخزون معرف لفئة منتجك. يجب تعريف حساب قبل القيام بهذه العملية."
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_account_move_line2
+msgid "account.move.line2"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_business_commi_line
+msgid "business.commi.line"
+msgstr ""
+
+#. module: business_city
+#: model:ir.model,name:business_city.model_sale_order_line2
+msgid "sale.order.line2"
+msgstr ""
+
+#. module: business_city
+#: model_terms:ir.ui.view,arch_db:business_city.view_business_commi_search
+msgid "state"
+msgstr "الحالة"

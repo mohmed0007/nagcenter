@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_account_guarantee_form">
+        <field name="name">account.guarantee.form</field>
+        <field name="model">account.guarantee</field>
+        <field name="inherit_id" ref="account_letter_of_guarantee.view_account_guarantee_form"/>
+        <field name="arch" type="xml">
+            <field name="quar_commi_amount" position="after">
+                <field name="project_id" invisible="0" readonly="1" force_save="1"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

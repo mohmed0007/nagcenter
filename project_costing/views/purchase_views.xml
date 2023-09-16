@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record id="purchase_order_view_form" model="ir.ui.view">
+            <field name="name">purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="arch" type="xml">
+                <field name="currency_id" position="after">
+                    <field name="from_project" readonly="1" force_save="1"/>
+                    <field name="subcontractor" readonly="1" force_save="1"/>
+                    <field name="project_cost_id" readonly="1" force_save="1" attrs="{'invisible': [('from_project','=',False)]}"/>
+                    <field name="project_id" attrs="{'invisible': [('from_project','=',False)], 
+                    'required': [('from_project','=',True),('state','=','draft')], 'readonly': [('state','!=','draft')]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_account_guarantee_form">
+        <field name="name">account.guarantee.form</field>
+        <field name="model">account.guarantee</field>
+        <field name="arch" type="xml">
+            <form string="Letter Of Gurantee">
+                <header>
+                    <button type="object" name="action_confirm" string="Confirm" states="draft" class="oe_highlight"/>
+                    <button type="object" name="compute_rent_board" string="Validate" states="confirm" class="oe_highlight"/>
+                    <button type="object" name="compute_rent_reverse" string="Return Money" states="done" class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,returned"/>
+                </header>
+                <sheet>
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+   
+                    <div class="oe_title">
+                        <label for="name" name="name_label" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" readony="1" force_save="1" required="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        
+                        <group string="Quarantee Letter Info">
+                            <field name="partner_id" placeholder="Choose a Partner" required="1"/>
+                            <field name="quar_no"/>
+                            <field name="quar_type"/>
+                            <field name="quar_amount"/>
+                            <field name="quar_commi_amount"/> 
+                            <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>  
+                        </group>
+                       
+                        <group string="Accounting">
+                            <label for="date"/>
+                            <div class="o_row o_row_readonly o_hr_holidays_dates">
+                            <field name="date" string="Accounting Date" class="oe_inline"/>
+                            <span class="oe_inline">Hijri</span>
+		            <field name="date_h" placeholder="DD-MM-YYYY" class="oe_inline"/>
+                            </div>
+                            <field name="expiry_date" string="Expiry Date"/>
+                            <field name="account_exp_id" required="1"/>
+                            <field name="account_accr_exp_id" required="1"/>
+                            <field name="journal_id" required="1"/>
+                            <field name="account_analytic_id" groups="analytic.group_analytic_accounting" />
+                            <field name="reversed_entry_id" attrs="{'invisible': [('reversed_entry_id', '=', False)]}"/>
+                            <field name="reversed_entry_date"/>
+                        </group>
+                        <group colspan="4">
+                            <field name="quar_desc"/>
+                        </group>
+                       
+                    </group>
+                    <notebook colspan="4">
+                        <page string="Journal Entries" name="depreciation_board_entries">
+                            <field name="depreciation_move_ids" mode="tree" options="{'reload_whole_on_button': true}">
+                                <tree string="Entries" decoration-info="state == 'draft'" create="0"  default_order="date asc, id asc" editable="top">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="ref"/>
+                                    <field name="date" string="Entry Date"/>
+                                    <field name="amount_total" widget="monetary" sum="Total Due" string="Due Amount" options="{'currency_field': 'currency_id'}" attrs="{'readonly': [('state', '=', 'posted')]}"/>
+                                    <!-- <field name="asset_remaining_value" readonly="1" widget="monetary" force_save="1" options="{'currency_field': 'currency_id'}"/ --> 
+                                    <field name="name" readonly="1" string="Journal Entry"/>
+                                    <field name="state" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+   
+
+    <record model="ir.ui.view" id="view_account_guarantee_tree">
+        <field name="name">Quarantee Letters</field>
+        <field name="model">account.guarantee</field>
+        <field name="arch" type="xml">
+            <tree string="Letter Of Gurantee" decoration-info="(state == 'draft')" decoration-muted="(state == 'done')">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="partner_id"/>
+                <field name="quar_no"/>
+                <field name="quar_type"/>
+                <field name="quar_amount"/>
+                <field name="currency_id" groups="base.group_multi_currency"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+   
+
+    <record id="view_account_guarantee_search" model="ir.ui.view">
+        <field name="name">account.guarantee.search</field>
+        <field name="model">account.guarantee</field>
+        <field name="arch" type="xml">
+            <search string="Letter Of Gurantee">
+                <field name="name" string="Gurantee"/>
+                <field name="partner_id" string="Partner"/>
+                <filter string="Draft" name="draft" domain="[('state','=', 'draft')]"/>
+                <filter string="Validated" name="validated" domain="[('state','=', 'done')]"/>
+                <separator/>
+                <group expand="0" string="Group By...">
+                        <filter string="Partner" name="month" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Date" name="month" domain="[]" context="{'group_by':'date'}"/>
+                        <filter string="State" name="month" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Type" name="type" domain="[]" context="{'group_by':'quar_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    
+
+    <record id="action_account_guarantee" model="ir.actions.act_window">
+            <field name="name">Letter Of Gurantee</field>
+            <field name="res_model">account.guarantee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_account_guarantee_tree"/>
+            <field name="search_view_id" ref="view_account_guarantee_search"/>
+            
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Manage Letters of Quarantee
+              </p><p>
+                
+              </p>
+            </field>
+        </record>
+
+    <menuitem parent="account.menu_finance_entries_management" id="menu_action_account_asset_form_quar" action="action_account_guarantee" sequence="506" groups="account.group_account_manager"/>
+
+
+    <record id="view_move_form_asset_inherit_1" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <field name="quar_id" invisible="1"/>
+                
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_move_line_form_asset_inherit_1" model="ir.ui.view">
+        <field name="name">account.move.line.form</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_form"/>
+        <field name="arch" type="xml">
+            <field name="move_id" position="after">
+                <field name="quar_id" attrs="{'invisible': [('quar_id','=',False)]}"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

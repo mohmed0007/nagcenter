@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_guarantee_user,access.account.guarantee,account_letter_of_guarantee.model_account_guarantee,base.group_user,1,1,1,1

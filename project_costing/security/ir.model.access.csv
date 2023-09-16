@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_budget,project_costing.project_budget,model_project_budget,base.group_user,1,1,1,1
+access_project_budget_lines,project_costing.project_budget_lines,model_project_budget_lines,base.group_user,1,1,1,1
+access_project_budget_template,project_costing.project_budget_template,model_project_budget_template,base.group_user,1,1,1,1
+access_project_budget_template_line,project_costing.project_budget_template_line,model_project_budget_template_line,base.group_user,1,1,1,1
+access_project_budget_operation,project_costing.project_budget_operation,model_project_budget_operation,base.group_user,1,1,1,1
+access_project_budget_operation_lines,project_costing.project_budget_operation_lines,model_project_budget_operation_line,base.group_user,1,1,1,1

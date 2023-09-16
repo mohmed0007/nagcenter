@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="project_budget_template_view_form" model="ir.ui.view">
+            <field name="name">project.budget.template.form</field>
+            <field name="model">project.budget.template</field>
+            <field name="arch" type="xml">
+				<form string="Budget Template">
+					<sheet>
+						<div name="button_box" class="oe_button_box"/>
+						<widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+						<div class="oe_title" name="sale_order_template_title">
+							<label for="name" id="sale_order_template_title"/>
+							<h1>
+								<field name="name" placeholder="e.g. Standard Consultancy Package" class="d-block"/>
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="active" invisible="1"/>
+								<field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="Items" name="budget_lines">
+								<field name="budget_template_line_ids" colspan="1"
+									nolabel="1">
+									<tree string="Budget Lines"  editable="bottom">
+										<field name="sequence" widget="handle"/>
+										<field name="product_id" />
+										<field name="product_uom_qty" />
+										<field name="price_unit" required="1"/>
+										<field name="planned_amount" readonly="1" force_save="1"/>
+										<field name="account_id" optional="hide"/>
+										<field name="company_id" invisible="1"/>
+										
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="project_budget_template_view_tree">
+			<field name="name">project.budget.template.view.tree</field>
+			<field name="model">project.budget.template</field>
+			<field name="arch" type="xml">
+				<tree string="Templates">
+					<field name="name" colspan="1"/>
+					<field name="company_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- <record id="view_project_budget_search" model="ir.ui.view">
+			<field name="name">crossovered.budget.search</field>
+			<field name="model">crossovered.budget</field>
+			<field name="arch" type="xml">
+				<search string="Budget">
+					<field name="name" filter_domain="[('name', 'ilike', self)]" string="Budget"/>
+					<field name="project_id"/>
+					<field name="analytic_account_id"/>
+					<field name="date_from"/>
+					<field name="date_to"/>
+					<filter string="Draft" name="draft" domain="[('state', '=', 'draft')]" help="Draft Budgets"/>
+					<filter string="To Approve" name="toapprove" domain="[('state', '=', 'confirm')]"
+							help="To Approve Budgets"/>
+					<separator/>
+					<group expand="0" string="Group By">
+                        <filter string="Project" name="project" domain="[]" context="{'group_by': 'project_id'}"/>
+                        <filter string="Analytic Account" name="journal" domain="[]" context="{'group_by': 'project_id'}"/>
+                        <filter string="Status" name="status" domain="[]" context="{'group_by': 'state'}"/>
+                        <filter string="Company" name="by_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                    </group>
+				</search>
+			</field>
+		</record> -->
+
+		<record model="ir.actions.act_window" id="act_project_budget_template_view">
+			<field name="name">Projects Budget Templates</field>
+			<field name="res_model">project.budget.template</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="project_budget_template_view_tree"/>
+			<!-- <field name="search_view_id" ref="view_project_budget_search"/> -->
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">
+					Click to create a new Template.
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="menu_project_budget_template" name="Projects Budget Templates" parent="project.menu_project_config"
+            action="act_project_budget_template_view"/>
+
+
+		<!-- actions opening views on models -->
+		<!--
+    <record model="ir.actions.act_window" id="project_costing.action_window">
+      <field name="name">project_costing window</field>
+      <field name="res_model">project_costing.project_costing</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+		<!-- server action to the one above -->
+		<!--
+    <record model="ir.actions.server" id="project_costing.action_server">
+      <field name="name">project_costing server</field>
+      <field name="model_id" ref="model_project_costing_project_costing"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+		<!-- Top menu item -->
+		<!--
+    <menuitem name="project_costing" id="project_costing.menu_root"/>
+-->
+		<!-- menu categories -->
+		<!--
+    <menuitem name="Menu 1" id="project_costing.menu_1" parent="project_costing.menu_root"/>
+    <menuitem name="Menu 2" id="project_costing.menu_2" parent="project_costing.menu_root"/>
+-->
+		<!-- actions -->
+		<!--
+    <menuitem name="List" id="project_costing.menu_1_list" parent="project_costing.menu_1" action="project_costing.action_window"/>
+    <menuitem name="Server to list" id="project_costing" parent="project_costing.menu_2" action="project_costing.action_server"/>
+-->
+	</data>
+</odoo>
