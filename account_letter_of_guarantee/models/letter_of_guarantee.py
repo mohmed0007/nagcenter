@@ -63,7 +63,7 @@ class AccountLetterOfGurantee(models.Model):
 
 
     account_exp_id = fields.Many2one('account.account', string='Commission Expence Account',default=_get_default_lq_account_exp_id, readonly=True, states={'draft': [('readonly', False)], 'model': [('readonly', False)]}, domain="[('deprecated', '=', False), ('company_id', '=', company_id),('internal_group', 'in', ('expense','income'))]")
-    account_accr_exp_id = fields.Many2one('account.account', string='Quarantee Receivable Account',default=_get_default_lq_account_accr_exp_id, readonly=True, states={'draft': [('readonly', False)]}, domain="[('deprecated', '=', False), ('company_id', '=', company_id),('internal_type', 'in', ('receivable'))]")
+    account_accr_exp_id = fields.Many2one('account.account', string='Quarantee Receivable Account',default=_get_default_lq_account_accr_exp_id, readonly=True, states={'draft': [('readonly', False)]}, domain="[('deprecated', '=', False), ('company_id', '=', company_id),('internal_type', '=', 'receivable')]")
 
     journal_id = fields.Many2one('account.journal', string='Journal',default=_get_default_lq_journal_id,  readonly=True, states={'draft': [('readonly', False)], 'model': [('readonly', False)]}, domain="[('type', '=', 'bank'), ('company_id', '=', company_id)]")
 
