@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_business_trip_payment_form" model="ir.ui.view">
+        <field name="name">business.trip.payment.form</field>
+        <field name="model">business.trip.payment</field>
+        <field name="arch" type="xml">
+            <form string="Business Trip Payment">
+                <sheet>
+                    <group>
+                        <group>
+                            <label for="amount"/>
+                            <div name="amount_div" class="o_row">
+                                <field name="amount"/>
+                                <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" invisible="1"/>
+                            </div>
+                            <field name="payment_type"/>
+                            <field name="journal_id" widget="selection" domain="[('type', '=', payment_type)]"/>
+                        </group>
+                        <group>
+                            <field name="business_trip_id" readonly="1"/>
+                            <field name="payment_date"/>
+                            <field name="debit_account_id" required="True" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string='Validate' name="action_validate_payment" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_business_trip_payment" model="ir.actions.act_window">
+        <field name="name">Business Trip Payment</field>
+        <field name="res_model">business.trip.payment</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_business_trip_payment_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,919 @@
+<odoo>
+
+
+    <!--  recruit and resignation report-->
+
+
+    <report id="recap_recruit_resignation_report"
+            model="employee.recruit.report.wizard"
+            string="Recruit Resignation Report"
+            report_type="qweb-html"
+            name="hr_report_ksa.employee_recruit_resignation_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <template id="employee_recruit_resignation_report_view">
+        <t t-call="web.html_container">
+
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <br/>
+                    <div class="text-center report_table " style="margin-top: -5px">
+                        <h4 style="! important;font-weight: bold ! important;">
+                            <strong>Recruit Report</strong>
+                        </h4>
+                    </div>
+                    <br/>
+                    <t t-if="department_name">
+                        <div class="text-left">
+                            <h5>
+                                <strong>Department/</strong>
+                                <span t-esc=" department_name"/>
+                            </h5>
+                        </div>
+                    </t>
+
+                    <div class="text-center report_table">
+
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                            <strong class="p-4">From :
+                                <span t-esc="date_start"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                            <strong class="p-4">To :
+                                <span t-esc="date_end"/>
+                            </strong>
+                        </span>
+                        <div class="p-1"/>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="from_no">
+                            <strong class="p-5">From No :
+                                <span t-esc="from_no"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="to_no">
+                            <strong class="p-5">To No :
+                                <span t-esc="to_no"/>
+                            </strong>
+                        </span>
+                        <div class="p-2"/>
+
+
+                    </div>
+
+                    <table class="table table-condensed table-bordered report_table"
+                           style="width: 100% ! important;font-size:12px ! important;">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%">No</th>
+                                <th class="text-center" style="width: 5%">Registration No</th>
+                                <th class="text-center" style="width: 15%">Name</th>
+                                <th class="text-center" style="width: 10%">Department</th>
+                                <th class="text-center" style="width: 10%">Education</th>
+                                <th class="text-center" style="width: 10%">Joining date</th>
+                                <th class="text-center" style="width: 10%">Resignation date</th>
+                                <th class="text-center" style="width: 15%">Reason</th>
+                                <th class="text-center" style="width: 5%">Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="No" t-value="1"/>
+
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="No"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['register']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['emp_name']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['department']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['education']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['first_contract_date']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['resignation_date']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['reason']"/>
+                                    </td>
+                                    <td class="text-center">
+
+                                    </td>
+
+
+                                </tr>
+
+                                <t t-set="No" t-value="No + 1 "/>
+                            </t>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+
+                    <table class="table table-sm" style="width: 25% ! important;font-size:14px ! important;">
+                        <tr style="text-align:center;">
+                            <td style="text-align:left;color:#875A7B">
+                                <strong>Total recruited</strong>
+                            </td>
+                            <td style="text-align:left;border:none;color:#875A7B">
+                                <!--                                <span t-esc="arabian"/>-->
+                            </td>
+                            <!--                                <td style="text-align:left;color:#875A7B"><strong>Total recruited </strong></td>-->
+                            <!--                                <td style="text-align:left;color:#875A7B" >-->
+                            <!--&lt;!&ndash;                                <span t-esc="non_arabian"/>&ndash;&gt;-->
+                            <!--                                </td>-->
+                        </tr>
+
+                        <tr>
+                            <!--                             <tr style="text-align:center;">-->
+                            <!--                                <td style="text-align:left;color:#875A7B"><strong>Total recruited</strong></td>-->
+                            <!--                                <td style="text-align:left;border:none;color:#875A7B" >-->
+                            <!--                                <span t-esc="arabian + non_arabian"/>-->
+                            <!--                                </td>-->
+
+                            <!--                             </tr>-->
+                            <td style="text-align:left;color:#875A7B">
+                                <strong>Total recruited</strong>
+                            </td>
+                            <td style="text-align:left;color:#875A7B">
+                                <!--                                <span t-esc="non_arabian"/>-->
+                            </td>
+                        </tr>
+                        <br/>
+                        <br/>
+                    </table>
+                    <br/>
+                    <br/>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <!--    employee recruit report-->
+    <report id="recap_recruit_report"
+            model="employee.recruit.report.wizard"
+            string="Recruit Report"
+            report_type="qweb-pdf"
+            name="hr_report_ksa.employee_recruit_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <template id="employee_recruit_report_view">
+        <t t-call="web.html_container">
+
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <br/>
+                    <div class="text-center" style="margin-top: -5px">
+                        <h4 style="! important;font-weight: bold ! important;">
+                            <strong>Resignation Report</strong>
+                        </h4>
+                    </div>
+
+                    <br/>
+                    <t t-if="department_name">
+                        <div class="text-left">
+                            <h5>
+                                <strong>Department/</strong>
+                                <span t-esc=" department_name"/>
+                            </h5>
+                        </div>
+                    </t>
+                    <div class="text-center report_table">
+
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                            <strong class="p-4">From :
+                                <span t-esc="date_start"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                            <strong class="p-4">To :
+                                <span t-esc="date_end"/>
+                            </strong>
+                        </span>
+                        <div class="p-1"/>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="from_no">
+                            <strong class="p-5">From No :
+                                <span t-esc="from_no"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="to_no">
+                            <strong class="p-5">To No :
+                                <span t-esc="to_no"/>
+                            </strong>
+                        </span>
+                        <div class="p-2"/>
+
+
+                    </div>
+
+                    <table class="table table-condensed table-bordered"
+                           style="width: 90% ! important;font-size:12px ! important;">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%">No</th>
+                                <th class="text-center" style="width: 5%">Registration No</th>
+                                <th class="text-center" style="width: 15%">Name</th>
+                                <th class="text-center" style="width: 10%">Department</th>
+                                <th class="text-center" style="width: 15%">Job position</th>
+                                <th class="text-center" style="width: 10%">Nationality</th>
+                                <th class="text-center" style="width: 10%">Insurance No</th>
+                                <th class="text-center" style="width: 10%">Recruit date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="No" t-value="1"/>
+                            <!--                            <t t-set="cost_per_days" t-value="0"/>-->
+                            <!--                            <t t-set="transportation_allowance" t-value="0"/>-->
+                            <!--                            <t t-set="other_expanse" t-value="0"/>-->
+                            <!--                            <t t-set="total_amount" t-value="0"/>-->
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="No"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['register']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['emp_name']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['department']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['job_position']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['nationality']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['insurance_no']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['recruit_date']"/>
+                                    </td>
+
+
+                                    <!--                                    <t t-set="total_amount" t-value="total_amount + doc['total_amount']"/>-->
+                                </tr>
+
+                                <t t-set="No" t-value="No + 1 "/>
+                            </t>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+
+                    <table class="table table-sm" style="width: 50% ! important;font-size:14px ! important;">
+                        <tr style="text-align:center;">
+                            <td style="text-align:left;color:#875A7B">
+                                <strong>Saudi arabian recruited</strong>
+                            </td>
+                            <td style="text-align:left;border:none;color:#875A7B">
+                                <span t-esc="arabian"/>
+                            </td>
+                            <td style="text-align:left;color:#875A7B">
+                                <strong>Non Saudi arabian recruited</strong>
+                            </td>
+                            <td style="text-align:left;color:#875A7B">
+                                <span t-esc="non_arabian"/>
+                            </td>
+                        </tr>
+                        <!--                            <tr style="text-align:center;">-->
+                        <!--                                <td  style="text-align:center;border:none;color:#875A7B"><strong>From Date </strong></td>-->
+                        <!--                                <td style="text-align:center;border:none;color:#875A7B" >-->
+                        <!--                                <span t-esc="from_no"/>-->
+                        <!--                                </td>-->
+                        <!--                                <td  style="text-align:center;border:none;color:#875A7B"><strong>To Date </strong></td>-->
+                        <!--                                <td style="text-align:center;border:none;color:#875A7B" >-->
+                        <!--                                <span t-esc="to_no"/>-->
+                        <!--                                </td>-->
+                        <!--                           </tr>-->
+                        <tr>
+                            <tr style="text-align:center;">
+                                <td style="text-align:left;color:#875A7B">
+                                    <strong>Total recruited</strong>
+                                </td>
+                                <td style="text-align:left;border:none;color:#875A7B">
+                                    <span t-esc="arabian + non_arabian"/>
+                                </td>
+                                <!--                                <td style="text-align:left;color:#875A7B"><strong>Non Saudi arabian recruited</strong></td>-->
+                                <!--                                <td style="text-align:left;color:#875A7B" >-->
+                                <!--                                <span t-esc="to_no"/>-->
+                                <!--                                </td>-->
+                            </tr>
+                        </tr>
+                        <br/>
+                        <br/>
+                    </table>
+                    <br/>
+                    <br/>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <report id="recap_mandate_report"
+            model="mandate.report.wizard"
+            string="Mandate Report"
+            report_type="qweb-pdf"
+            name="hr_report_ksa.mandate_recap_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <template id="mandate_recap_report_view">
+        <t t-call="web.html_container">
+
+            <t t-call="web.external_layout">
+                <div class="page">
+
+                    <br/>
+                    <div class="text-center" style="margin-top: -5px">
+                        <h4 style="! important;font-weight: bold ! important;">
+                            <strong>Mandate Report</strong>
+                        </h4>
+                    </div>
+                    <br/>
+                    <t t-if="department_name">
+                        <div class="text-left">
+                            <h5>
+                                <strong>Department/</strong>
+                                <span t-esc=" department_name"/>
+                            </h5>
+                        </div>
+                    </t>
+                    <div class="text-center report_table">
+
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                            <strong class="p-4">From :
+                                <span t-esc="date_start"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                            <strong class="p-4">To :
+                                <span t-esc="date_end"/>
+                            </strong>
+                        </span>
+                        <div class="p-1"/>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="from_no">
+                            <strong class="p-5">From No :
+                                <span t-esc="from_no"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="to_no">
+                            <strong class="p-5">To No :
+                                <span t-esc="to_no"/>
+                            </strong>
+                        </span>
+                        <div class="p-2"/>
+
+
+                    </div>
+                    <br/>
+
+                    <table class="table table-condensed table-bordered"
+                           style="width: 100% ! important;font-size:10px ! important;">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%">No</th>
+                                <th class="text-center" style="width: 5%">Registration No</th>
+                                <th class="text-center" style="width: ">Name</th>
+                                <th class="text-center" style="width: 10%">Mandate Start On</th>
+                                <th class="text-center" style="width: 10%">Mandate End On</th>
+                                <th class="text-center" style="width: 5%">Mandate Days</th>
+                                <th class="text-center" style="width: 15%">Mandate To</th>
+                                <th class="text-center" style="width: 10%">Cost per day</th>
+                                <th class="text-center" style="width: 10%">Transportation Cost</th>
+                                <th class="text-center" style="width: 15%">Other expanse</th>
+                                <th class="text-center" style="width: 15%">Total mandate Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="No" t-value="1"/>
+                            <t t-set="cost_per_days" t-value="0"/>
+                            <t t-set="transportation_allowance" t-value="0"/>
+                            <t t-set="other_expanse" t-value="0"/>
+                            <t t-set="total_amount" t-value="0"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="No"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['register']"/>
+                                    </td>
+                                    <td class="text-center w-25">
+                                        <span t-esc="doc['emp_name']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['date_from']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['date_to']"/>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['days_no']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['mandate_to']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['mandate_per_day']"/>
+                                    </td>
+                                    <t t-set="cost_per_days" t-value="cost_per_days + doc['mandate_per_day']"/>
+                                    <td class="text-center">
+                                        <span t-esc="doc['transportation_allowance']"/>
+                                    </td>
+                                    <t t-set="transportation_allowance"
+                                       t-value="transportation_allowance + doc['transportation_allowance']"/>
+                                    <td class="text-center">
+                                        <span t-esc="doc['other_expanse']"/>
+                                    </td>
+                                    <t t-set="other_expanse" t-value="other_expanse + doc['other_expanse']"/>
+                                    <td class="text-center">
+                                        <span t-esc="doc['total_amount']"/>
+                                    </td>
+                                    <t t-set="total_amount" t-value="total_amount + doc['total_amount']"/>
+                                </tr>
+
+                                <t t-set="No" t-value="No + 1 "/>
+                            </t>
+                            <tr>
+                                <td colspan="7" class="text-left">
+                                    <strong>Total</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="cost_per_days"></span>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="transportation_allowance"></span>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="other_expanse"></span>
+                                </td>
+                                <td class="text-center">
+                                    <span t-esc="total_amount"></span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <report id="recap_service_duration_report"
+            model="service.duration.report.wizard"
+            string="Service Duration"
+            report_type="qweb-pdf"
+            name="hr_report_ksa.recap_service_duration__view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <template id="recap_service_duration__view">
+        <t t-call="web.html_container">
+
+            <t t-call="web.external_layout">
+                <div class="page">
+
+                    <div class="text-center" style="margin-top: 5px">
+                        <h4 style="! important;font-weight: bold ! important;">
+                            <strong>Employee Service Duration Report</strong>
+                            <strong class="p-4">To Date  -
+                                <span t-esc="date_end"/>
+                            </strong>
+
+                        </h4>
+                    </div>
+                    <br/>
+                    <t t-if="department_name">
+                        <div class="text-left">
+                            <h5>
+                                <strong>القسم /</strong>
+                                <span t-esc=" department_name"/>
+                            </h5>
+                        </div>
+                    </t>
+                    <div class="text-center report_table">
+
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                            <strong class="p-4">From :
+                                <span t-esc="date_start"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                            <strong class="p-4">To :
+                                <span t-esc="date_end"/>
+                            </strong>
+                        </span>
+                        <div class="p-1"/>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="from_no">
+                            <strong class="p-5">From No :
+                                <span t-esc="from_no"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="to_no">
+                            <strong class="p-5">To No :
+                                <span t-esc="to_no"/>
+                            </strong>
+                        </span>
+                        <div class="p-2"/>
+
+
+                    </div>
+                    <br/>
+
+                    <br/>
+
+
+                    <table class="table table-condensed table-bordered"
+                           style="width: 100% ! important;font-size:10px ! important;">
+                        <thead>
+                            <tr>
+                                <th class="text-center" style="width: 5%">No</th>
+                                <th class="text-center" style="width: 7%">Registration No</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center" style="width: 7%">Department</th>
+                                <th class="text-center" style="width: 7% ! important">Work Location</th>
+                                <th class="text-center" style="width: 7% ! important">Job position</th>
+                                <th class="text-center" style="width: 7% ! important">Nationality</th>
+                                <th class="text-center" style="width: 5% ! important">Wage</th>
+                                <th class="text-center" style="width: 10% ! important">Start Date</th>
+                                <th class="text-center" style="width: 10% ! important">End Date</th>
+                                <th class="text-center" style="width: 5%">Days</th>
+                                <th class="text-center" style="width: 5%">Months</th>
+                                <th class="text-center" style="width: 5%">Years</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="No" t-value="0"/>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="No"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['register']"/>
+                                    </td>
+                                    <td class="text-center w-25">
+                                        <span t-esc="doc['emp_name']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['department']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['work_location']"/>
+                                    </td>
+
+
+                                    <td class="text-center">
+                                        <span t-esc="doc['job_position']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['nationality']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['wage']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['first_contract_date']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['date_end']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['days']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['months']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="doc['years']"/>
+                                    </td>
+
+                                </tr>
+
+                                <t t-set="No" t-value="No + 1 "/>
+                            </t>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm" style="width: 50%">
+                        <tr>
+                            <td class="w-25">
+                                <strong>Total Employee No</strong>
+                            </td>
+                            <td style="color:#875A7B" class="w-25">
+                                <span t-esc="No"/>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!--   end of service-->
+
+    <report id="recap_end_of_service_report"
+            model="end.of.service.wizard"
+            string="Service Duration"
+            report_type="qweb-html"
+            name="hr_report_ksa.end_of_service_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+
+    <template id="end_of_service_view">
+        <t t-call="web.html_container">
+
+            <t t-call="web.external_layout">
+                <div class="page" dir="rtl">
+                    <div class="text-center" style="margin-top: 7px">
+                        <h6 style="! important;font-weight: bold ! important;">
+                            <strong class="container mr-5 p-2 border border-secondary" > End of Service Benefit Report </strong>
+                        </h6>
+                    </div>
+                    <br/>
+                    <t t-if="department_name">
+                        <div class="text-left">
+                            <h6>
+                                <strong class="container mr-5 p-2 border border-secondary" >Department / <span t-esc=" department_name"/> </strong>
+
+                            </h6>
+                        </div>
+                    </t>
+                    <div class="container mr-6 p-2 text-center report_table">
+
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                            <strong class="p-4">From :
+                                <span t-esc="date_start"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                            <strong class="p-5">To :
+                                <span t-esc="date_end"/>
+                            </strong>
+                        </span>
+                        <div class="p-1"/>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="from_no">
+                            <strong class="p-6">From No :
+                                <span t-esc="from_no"/>
+                            </strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="to_no">
+                            <strong class="p-5">To No :
+                                <span t-esc="to_no"/>
+                            </strong>
+                        </span>
+                        <div class="p-2"/>
+                    </div>
+
+                    <table class="table table-condensed table-bordered"
+                           style="width: 100% ! important;font-size:10px ! important;">
+                        <thead>
+
+                            <tr>
+                                <th colspan="6"></th>
+                                <th colspan="3" scope="colgroup" class="text-center border border-dark">Net
+                                    Service Duration
+                                </th>
+                                <th colspan="4"></th>
+
+                            </tr>
+                            <tr>
+                                <th class="text-center" style="width: 5%">No</th>
+                                <th class="text-center" style="width: 5%">Employee No</th>
+                                <th class="text-center" style="width: 15%">Name</th>
+                                <th class="text-center" style="width: 10% ! important">Nationality</th>
+                                <th class="text-center" style="width: 10% ! important">Start Date</th>
+                                <th class="text-center" style="width: 10% ! important">Total Salary</th>
+                                <th class="text-center" style="width: 5%">Year</th>
+                                <th class="text-center" style="width: 5%">Month</th>
+                                <th class="text-center" style="width: 5%">Days</th>
+                                <th class="text-center" style="width: 7%">Service Duration</th>
+                                <th class="text-center" style="width: 5% ! important">Allocation</th>
+                                <th class="text-center" style="width: 5% ! important">Loan</th>
+                                <th class="text-center" style="width: 5% ! important">Net Allocation</th>
+                            </tr>
+                        </thead>
+                                                <tbody>
+                                                    <t t-set="No" t-value="0"/>
+                                                    <!--                            <t t-set="cost_per_days" t-value="0"/>-->
+                                                    <!--                            <t t-set="transportation_allowance" t-value="0"/>-->
+                                                    <!--                            <t t-set="other_expanse" t-value="0"/>-->
+                                                    <!--                            <t t-set="total_amount" t-value="0"/>-->
+                                                    <t t-foreach="docs" t-as="doc">
+                                                        <tr>
+                                                            <td class="text-center">
+                                                                <span t-esc="No"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['register']"/>
+                                                            </td>
+                                                            <td class="text-center w-25">
+                                                                <span t-esc="doc['emp_name']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['nationality']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['join_date']"/>
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['salary']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['year']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['month']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['day']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['duration_in_days']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['Benefit']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['loan_amount']"/>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span t-esc="doc['net']"/>
+                                                            </td>
+
+                                                        </tr>
+                                                        <!--                                <tr>-->
+                                                        <!--                                    <td colspan="7" class="text-left">-->
+                                                        <!--                                        <strong>Total</strong>-->
+                                                        <!--                                    </td>-->
+                                                        <!--                                    <td class="text-center">-->
+                                                        <!--                                        <span t-esc="cost_per_days"></span>-->
+                                                        <!--                                    </td>-->
+                                                        <!--                                    <td  class="text-center">-->
+                                                        <!--                                        <span t-esc="transportation_allowance"></span>-->
+                                                        <!--                                    </td>-->
+                                                        <!--                                    <td class="text-center">-->
+                                                        <!--                                        <span t-esc="other_expanse"></span>-->
+                                                        <!--                                    </td>-->
+                                                        <!--                                    <td class="text-center">-->
+                                                        <!--                                        <span t-esc="total_amount"></span>-->
+                                                        <!--                                    </td>-->
+                                                        <!--                                </tr>-->
+                                                        <t t-set="No" t-value="No + 1 "/>
+                                                    </t>
+
+                                                </tbody>
+                    </table>
+                    <br/>
+                    <br/>
+                    <table class="table table-sm " style="width: 30%">
+                        <tr>
+                            <td class="w-25">
+                                <strong>Total Employee No</strong>
+                            </td>
+                            <td style="color:#875A7B" class="w-25">
+                                <span t-esc="No"/>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

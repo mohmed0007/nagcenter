@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_contract_view_form_inherit1" model="ir.ui.view">
+        <field name="name">hr.contract.view.form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='date_end']" position="after">
+                <label for="notice_days"/>
+                <div class="o_row">
+                    <field name="notice_days"/>
+                    <span>days</span>
+                </div>
+            </xpath>
+
+            <xpath expr="//field[@name='department_id']" position="before">
+                <field name="contract_type"/>
+            </xpath>
+
+            <xpath expr="//div[@name='wage']" position="after">
+                <label for="HRA"/>
+                <div class="o_row" name="hra">
+                    <field name="HRA" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+                <label for="TA"/>
+                <div class="o_row" name="ta">
+                    <field name="TA" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+                <label for="other_amt"/>
+                <div class="o_row" name="other_amt">
+                    <field name="other_amt" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+                <label for="other_amt2"/>
+                <div class="o_row" name="other_amt2">
+                    <field name="other_amt2" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+                <field name="gross_amt"/>
+                <button name="compute_rule_amount" string="Compute Rule" type="object" colspan="2"/>
+            </xpath>
+
+            <xpath expr="//notebook" position="inside">
+                <page name="leave_information" string="Leave Information">
+                    <group string="Leave Information" col="4">
+                        <label for="leave_per_year"/>
+                        <div class="o_row">
+
+                            <field name="leave_per_year" nolabel="1"/>
+                            <span>/ year</span>
+                        </div>
+
+                        <label for="leave_per_month"/>
+                        <div class="o_row">
+
+                            <field name="leave_per_month" width="20" nolabel="1" readonly="0"/>
+                            <span>/ month</span>
+                        </div>
+                        <label for="monthly_leave_salary"/>
+                        <div class="o_row">
+
+                            <field name="monthly_leave_salary" width="20" nolabel="1"/>
+                            <span>/ month</span>
+                        </div>
+                    </group>
+                </page>
+
+                <page name="gosi" string="GOSI">
+                    <group>
+                        <group>
+                            <label for="insurance_company"/>
+                            <div class="o_row">
+                                <field name="insurance_company"/>
+                                <span>%</span>
+                            </div>
+                            <label for="insurance_employee"/>
+                            <div class="o_row">
+                                <field name="insurance_employee"/>
+                                <span>%</span>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="deduced_company_per_month"/>
+                            <field name="deduced_employee_per_month"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            
+        </field>
+    </record>
+
+</odoo>

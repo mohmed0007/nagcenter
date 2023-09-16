@@ -1,0 +1,258 @@
+<odoo>
+    <record id="emp_details_form_wiz" model="ir.ui.view">
+        <field name="name">Employee Details Report Wizard</field>
+        <field name="model">employee.report.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="department"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}" required="1"/>
+<!--                            <field name="from_no" required="0"/>-->
+                            <field name="company" />
+                        </group>
+
+
+                        <group>
+                            <field name="employee" domain="[('department_id', '=', department)]"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"
+                                   widget="many2many_tags" required="1"/>
+<!--                            <field name="to_no" required="0"/>-->
+                        </group>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_emp_details_form_wiz" model="ir.actions.act_window">
+        <field name="name">Employee Details Report</field>
+        <field name="res_model">employee.report.details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="emp_details_info"
+              name="Employees Detail"
+              action="action_emp_details_form_wiz"
+              parent="hr.hr_menu_hr_reports"
+              sequence="10"/>
+
+    <!--********************************************************************************************************************************************************-->
+    <record id="emp_details_department_2" model="ir.ui.view">
+        <field name="name">Employee Report Wizard</field>
+        <field name="model">employee.report.department</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="department"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"/>
+                            <field name="from_no" required="0"/>
+                        </group>
+
+
+                        <group>
+                            <field name="employee" domain="[('department_id', '=', department)]"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"
+                                   widget="many2many_tags"/>
+                            <field name="to_no" required="0"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_emp_report_department_1" model="ir.actions.act_window">
+        <field name="name">Employee Report</field>
+        <field name="res_model">employee.report.department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+<!--    <menuitem id="emp_report_info_1"-->
+<!--              name="Employee Report"-->
+<!--              action="action_emp_report_department_1"-->
+<!--              parent="hr.hr_menu_hr_reports"-->
+<!--              sequence="10"/>-->
+
+    <!--********************************************************************************************************************************************************-->
+    <record id="emp_leaves_and_tics" model="ir.ui.view">
+        <field name="name">Employee Leaves and Tickets</field>
+        <field name="model">employee.leave.tic</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="department"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"/>
+                            <field name="from_no" required="0"/>
+                        </group>
+                        <group>
+                            <field name="employee" domain="[('department_id', '=', department)]"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"
+                                   widget="many2many_tags"/>
+                            <field name="to_no" required="0"/>
+                        </group>
+                        <group>
+                            <field required="1"
+                                   name="leave_type"
+                                   options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="emp_leaves_and_tics_action" model="ir.actions.act_window">
+        <field name="name">Employee Leaves and Tickets</field>
+        <field name="res_model">employee.leave.tic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+<!--    <menuitem id="emp_leaves_and_tics_menu"-->
+<!--              name="Employee Leave and Ticket"-->
+<!--              action="emp_leaves_and_tics_action"-->
+<!--              parent="hr.hr_menu_hr_reports"-->
+<!--              sequence="10"/>-->
+
+    <template id="template_leaves_and_tic_emp">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div>
+                        <span>
+                            <h6 class="text-center">
+                                <h6 class="text-center">
+                                    <strong class="container mr-5 p-2 border border-secondary">
+                                        Allocations Leaves and Tickets Travels
+                                    </strong>
+                                </h6>
+                            </h6>
+                        </span>
+                    </div>
+                    <div class="container ml-3 mt-5">
+                        <div class="row">
+                            <div class="col-6 col-sm-3">Employee:</div>
+                            <div class="col-6 col-sm-3">Leave Type:</div>
+                        </div>
+                    </div>
+                    <div class="container ml-3 mt-1">
+                        <div class="row">
+                            <div class="col-6 col-sm-3">From Date:</div>
+                            <div class="col-6 col-sm-3">To Date:</div>
+                        </div>
+                    </div>
+                    <div class="table-responsive mt-5 p-4  border border-secondary">
+                        <strong class="container mr-5 p-2 border border-secondary">
+                            Department:
+                            <span t-esc="department_info.name"/>
+                        </strong>
+                        <br/>
+                        <br/>
+                        <table class="table border border-secondary">
+                            <thead>
+                                <tr>
+                                    <th colspan="5"></th>
+                                    <th colspan="3" scope="colgroup" class="text-center border border-secondary">Net
+                                        Service Life
+                                    </th>
+                                    <th colspan="1"></th>
+                                    <th colspan="2" scope="colgroup" class="text-center border border-secondary">
+                                        Vacation entitlement
+                                    </th>
+                                    <th colspan="1"></th>
+                                    <th colspan="4" scope="colgroup" class="text-center border border-secondary">Travel
+                                        Tickets Eligibility
+                                    </th>
+                                    <th colspan="2"></th>
+                                </tr>
+                                <tr class="table-active">
+                                    <th scope="text-center">Serial</th>
+                                    <th scope="text-center">Employee No</th>
+                                    <th scope="text-center">Name</th>
+                                    <th scope="text-center">Join Date</th>
+                                    <th scope="text-center">Total Salary</th>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">Day</th>
+                                    <th scope="text-center">Contract End Date</th>
+                                    <th scope="col">Balance</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col"># Tickets</th>
+                                    <th scope="col">Balance</th>
+                                    <th scope="col">Ticket Value</th>
+                                    <th scope="col">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                    <th>eee</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="m-5">
+                        <strong>Department:
+                            <span class="ml-2" t-esc="department_info.name"/>
+                        </strong>
+                        <br/>
+                        <br/>
+                        <strong>Total Department Employees:
+                            <span class="ml-2" t-esc="department_info.total_employee"/>
+                        </strong>
+                        <br/>
+                        <br/>
+                        <strong>Total Employees:
+                            <span class="ml-2" t-esc="emps_total"/>
+                        </strong>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="ml-5">Personnel Approval</div>
+                            <div class="ml-5">Audit</div>
+                            <div class="ml-5">Review</div>
+                            <div class="ml-5">Financial Director</div>
+                            <div class="ml-5">Financial and Administrative Affairs</div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

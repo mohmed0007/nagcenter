@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- EOS -->
+    <record id="view_employee_eos_tree" model="ir.ui.view">
+        <field name="name">hr.employee.eos.tree</field>
+        <field name="model">hr.employee.eos</field>
+        <field name="arch" type="xml">
+            <tree string="EOS">
+                <field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="department_id" invisible="1"/>
+                <field name="eos_date"/>
+                <field name="user_id" invisible="1"/>
+                <field name="name"/>
+                <field name="eos_type"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_employee_eos_form" model="ir.ui.view">
+        <field name="name">hr.employee.eos.form</field>
+        <field name="model">hr.employee.eos</field>
+        <field eval="25" name="priority"/>
+        <field name="arch" type="xml">
+            <form string="EOS Sheet">
+                <header>
+                    <button name="eos_confirm" states="draft" string="Submit" type="object" class="oe_highlight"
+                            groups="hr.group_hr_user"/>
+                    <button name="calc_eos" states="draft" string="Calculate EOS" type="object" class="oe_highlight"
+                            groups="hr.group_hr_user"/>
+                    <button name="eos_validate" states="confirm" string="Validate" type="object" class="oe_highlight"
+                            groups="hr.group_hr_user"/>
+                    <button name="eos_accept" states="validate" string="Approve" type="object" class="oe_highlight"
+                            groups="hr.group_hr_user"/>
+                    <button name="action_receipt_create" states="accepted" string="Generate Accounting Entries"
+                            type="object" groups="hr.group_hr_user"/>
+                    <button name="action_view_receipt" states="done" string="Open Accounting Entries"
+                            type="object" groups="hr.group_hr_user"/>
+                    <button name="eos_cancelled" states="accepted,validate,confirm" string="Refuse"
+                            type="object" groups="hr.group_hr_user"/>
+                    <button name="eos_draft" states="cancelled" string="Set to Draft" type="object"
+                            groups="hr.group_hr_user"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm"
+                           statusbar_colors='{"confirm":"blue","cancelled":"red"}'/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </h1>
+                    </div>
+                    <group string="Employee Details">
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="department_id" force_save="1"/>
+                            <field name="job_id" force_save="1"/>
+                            <field name="contract_id" domain="[('employee_id','=',employee_id)]" required="1"/>
+                            <field name="config_id"/>
+                        </group>
+                        <group>
+                            <field name="date_of_join"/>
+                            <field name="date_of_leave"/>
+                            <field name="user_valid" attrs="{'invisible': [('state','=','draft')]}"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            <field name="currency_id" groups="base.group_multi_currency"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="EOS Details">
+                            <group name="EOS Details">
+                                <group>
+                                    <field name="eos_date"/>
+                                    <field name="contract_type" readonly="0" required="1"/>
+                                    <field name="eos_type" attrs="{'required': [('contract_type', '=', 'limited')],
+                                                               'invisible': [('contract_type', '=', 'unlimited')]}"/>
+                                    <field name="eos_type2" attrs="{'required': [('contract_type', '=', 'unlimited')],
+                                                               'invisible': [('contract_type', '=', 'limited')]}"/>
+                                    <label for="remaining_leave"/>
+                                    <div class="o_row">
+                                        <field name="remaining_leave" nolabel="1" class="oe_inline"/>
+                                        <span>Day(s)</span>
+                                    </div>
+                                    <label for="duration_years" string="Years of Service"/>
+                                    <div class="o_row">
+                                        <field name="duration_years" nolabel="1" class="oe_inline"/>
+                                        <span>Year(s)</span>
+                                        <field name="duration_months" nolabel="1" class="oe_inline"/>
+                                        <span>Month(s)</span>
+                                        <field name="duration_days" nolabel="1" class="oe_inline"/>
+                                        <span>Day(s)</span>
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="calc_year" invisible="1"/>
+                                    <field name="total_eos" widget='monetary'/>
+                                    <field name="annual_leave_amount" widget='monetary'/>
+                                    <field name="current_month_salary" widget='monetary'/>
+                                    <field name="others" widget='monetary'/>
+                                    <field name="payable_eos" class="oe_subtotal_footer_separator" widget='monetary'/>
+                                </group>
+                            </group>
+                            <group>
+                                <div>
+                                    <separator string="Notes"/>
+                                    <field name="note" placeholder="Free Notes"/>
+                                </div>
+                            </group>
+                        </page>
+                        <page string="Accounting" groups="account.group_account_user">
+                            <group>
+                                <group>
+                                    <field name="journal_id" widget="selection"
+                                           domain="[('type', 'in', ('bank' , 'cash'))]"/>
+                                    <field name="account_move_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Extra Information" groups="base.group_no_one">
+                            <group col="4">
+                                <field name="create_uid" readonly="1"
+                                       attrs="{'invisible': [('create_uid', '=', False)]}"/>
+                                <field name="create_date" readonly="1"
+                                       attrs="{'invisible': [('create_date', '=', False)]}"/>
+                                <field name="write_uid" readonly="1"
+                                       attrs="{'invisible': [('write_uid', '=', False)]}"/>
+                                <field name="write_date" readonly="1"
+                                       attrs="{'invisible': [('write_date', '=', False)]}"/>
+                                <field name="user_valid"
+                                       attrs="{'invisible': [('user_valid', '=', False)], 'readonly': [('user_valid', '!=', False)]}"/>
+                                <field name="date_valid" attrs="{'invisible': [('date_valid', '=', False)],
+                            'readonly': [('date_valid', '!=', False)]}"/>
+                                <field name="user_approve" attrs="{'invisible': [('user_approve', '=', False)],
+                            'readonly': [('user_approve', '!=', False)]}"/>
+                                <field name="date_approve" attrs="{'invisible': [('date_approve', '=', False)],
+                            'readonly': [('date_approve', '!=', False)]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_eos_filter" model="ir.ui.view">
+        <field name="name">hr.employee.eos.filter</field>
+        <field name="model">hr.employee.eos</field>
+        <field name="arch" type="xml">
+            <search string="EOS">
+                <field name="name"/>
+                <field name="eos_date"/>
+                <field name="employee_id"/>
+                <filter name="draft" icon="terp-document-new" domain="[('state','=','draft')]" string="New"
+                        help="New EOS"/>
+                <filter name="approve" icon="terp-camera_test" domain="[('state','=','confirm')]" string="To Approve"
+                        help="Confirmed EOS"/>
+                <filter name="accepted" icon="terp-dolar" domain="[('state','=','accepted')]" string="Approved"/>
+                <separator/>
+                <field name="employee_id"/>
+                <field name="department_id" string="Department" context="{'invisible_department': False}"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_employee" string="Employee" icon="terp-personal"
+                            context="{'group_by':'employee_id'}"/>
+                    <filter name="group_department" string="Department" icon="terp-personal+"
+                            context="{'group_by':'department_id'}"/>
+                    <filter name="group_month" string="Month" icon="terp-go-month" context="{'group_by':'eos_date'}"/>
+                    <filter name="group_eos_type" string="EOS Type" icon="terp-go-personal"
+                            context="{'group_by':'eos_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="eos_all" model="ir.actions.act_window">
+        <field name="name">End of Service Indemnity (EOS)</field>
+        <field name="res_model">hr.employee.eos</field>
+        <field name="view_id" ref="view_employee_eos_tree"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to register new EOS.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="eos_all" id="menu_eos_all" name="EOS" parent="hr.menu_hr_employee_payroll" sequence="20"/>
+</odoo>

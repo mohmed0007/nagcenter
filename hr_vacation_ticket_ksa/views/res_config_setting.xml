@@ -1,0 +1,199 @@
+<odoo>
+    <data>
+
+
+<!--        <record id="res_config_settings_view_form_inh" model="ir.ui.view">-->
+<!--            <field name="name">res.config.settings.view.form.inherit.account</field>-->
+<!--            <field name="model">res.config.settings</field>-->
+<!--            <field name="priority" eval="40"/>-->
+<!--            <field name="inherit_id" ref="base.res_config_settings_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[hasclass('settings')]" position="inside">-->
+<!--                    <div class="app_settings_block" data-string="Invoicing 2" string="Invoicing 2">-->
+<!--                        <h2>Other Configurations</h2>-->
+<!--                        <div class="row mt16 o_settings_container">-->
+<!--                            <div class="col-12 col-lg-6 o_setting_box"-->
+<!--                                 title="These taxes are set in any new product created.">-->
+<!--                                <div class="o_setting_left_pane"/>-->
+<!--                                <div class="o_setting_right_pane">-->
+<!--                                    <span class="o_form_label">Defaults Employee Expenses Account</span>-->
+<!--                                    <br/>-->
+<!--                                    <div class="content-group">-->
+<!--                                        <div class="row">-->
+<!--                                            <label for="leave_expenses_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="leave_expenses_acc"/>-->
+<!--                                            <label for="ticket_expenses_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="ticket_expenses_acc"/>-->
+<!--                                            <label for="end_service_expenses_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="end_service_expenses_acc"/>-->
+<!--                                            <label for="gosi_expenses_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="gosi_expenses_acc"/>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-12 col-lg-6 o_setting_box"-->
+<!--                                 title="These taxes are set in any new product created.">-->
+<!--                                <div class="o_setting_left_pane"/>-->
+<!--                                <div class="o_setting_right_pane">-->
+<!--                                    <span class="o_form_label">Defaults Employee Allocation Account</span>-->
+<!--                                    <div class="content-group">-->
+<!--                                        <div class="row">-->
+<!--                                            <label for="leave_allocation_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="leave_allocation_acc"/>-->
+<!--                                            <label for="ticket_allocation_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="ticket_allocation_acc"/>-->
+<!--                                            <label for="end_service_allocation_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="end_service_allocation_acc"/>-->
+
+<!--                                            <label for="gosi_allocation_acc" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="gosi_allocation_acc"/>-->
+<!--                                            <label for="journal_allocation_id" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="journal_allocation_id"/>-->
+<!--                                            &lt;!&ndash;                                            <label for="ins_account_analytic_id" class="col-lg-3 o_light_label"/>&ndash;&gt;-->
+<!--                                            &lt;!&ndash;                                            <field name="ins_account_analytic_id"/>&ndash;&gt;-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+
+<!--                            <div class="col-12 col-lg-6 o_setting_box"-->
+<!--                                 title="These taxes are set in any new product created.">-->
+<!--                                <div class="o_setting_left_pane"/>-->
+<!--                                <div class="o_setting_right_pane">-->
+<!--                                    <span class="o_form_label">Defaults Employee Allocation Account</span>-->
+
+<!--                                    <div class="content-group">-->
+<!--                                        <div class="row">-->
+<!--                                            <label for="leave_allocation_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="leave_allocation_acc1"/>-->
+<!--                                            <label for="ticket_allocation_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="ticket_allocation_acc1"/>-->
+<!--                                            <label for="end_service_allocation_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="end_service_allocation_acc1"/>-->
+<!--                                            <label for="gosi_allocation_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="gosi_allocation_acc1"/>-->
+<!--                                            <label for="journal_id" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="journal_id"/>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-12 col-lg-6 o_setting_box"-->
+<!--                                 title="These taxes are set in any new product created.">-->
+<!--                                <div class="o_setting_left_pane"/>-->
+<!--                                <div class="o_setting_right_pane">-->
+<!--                                    <span class="o_form_label">Defaults Employee Expenses Account</span>-->
+
+<!--                                    <div class="content-group">-->
+<!--                                        <div class="row">-->
+<!--                                            <label for="leave_expenses_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="leave_expenses_acc1"/>-->
+<!--                                            <label for="ticket_expenses_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="ticket_expenses_acc1"/>-->
+<!--                                            <label for="end_service_expenses_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="end_service_expenses_acc1"/>-->
+<!--                                            <label for="gosi_expenses_acc1" class="col-lg-5 o_light_label"/>-->
+<!--                                            <field name="gosi_expenses_acc1"/>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <!--       Enhance  of Allocation  !-->
+        <record id="accounting_configuration_form" model="ir.ui.view">
+            <field name="name">hr.allocation.accounting.configuration.form</field>
+            <field name="model">hr.allocation.accounting.configuration</field>
+            <field name="arch" type="xml">
+                <form string="Allocation Account">
+                    <sheet>
+                        <!--                        <field name="active" invisible="1"/>-->
+                        <!--                        <widget name="web_ribbon" text="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>-->
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="1" placeholder="e.g. Configuration For X. Company"/>
+                            </h1>
+                                                        <label for="company_id" class="oe_edit_only"/>
+                                                        <h6>
+                                                            <field name="company_id" style="width:45%"/>
+                                                        </h6>
+                        </div>
+
+                        <notebook>
+
+                            <page name="accounting" string="Accounting">
+                                <group>
+                                    <group >
+                                        <field name="leave_allocation_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="ticket_allocation_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="end_service_allocation_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="gosi_allocation_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="journal_id" domain="[('company_id','=',company_id)]"/>
+                                    </group>
+                                    <group >
+                                        <field name="leave_expenses_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="ticket_expenses_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="end_service_expenses_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="gosi_expenses_acc_id" domain="[('company_id','=', company_id)]"/>
+                                        <field name="loan_Payment_account" domain="[('company_id','=', company_id)]"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_allocation_accounting_configuration_tree" model="ir.ui.view">
+            <field name="name">hr.allocation.accounting.configuration.tree</field>
+            <field name="model">hr.allocation.accounting.configuration</field>
+            <field name="arch" type="xml">
+                <tree string="Allocation Accounting">
+                    <field name="name"/>
+                    <field name="journal_id"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+<!--        <record id="hr_allocation_accounting_configuration_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Allocation Configuration</field>-->
+<!--            <field name="res_model">hr.allocation.accounting.configuration</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--        </record>-->
+
+        <record id="action_allocation_accounting_configuration" model="ir.actions.act_window">
+        <field name="name">Allocation Configuration</field>
+        <field name="res_model">hr.allocation.accounting.configuration</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_myrequest': 1}</field>
+        <field name="search_view_id" ref="hr_allocation_accounting_configuration_tree"/>
+         <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new employees allocation configuration.
+            </p><p>
+                Use this menu to create Employees Allocation Configuration .
+            </p>
+        </field>
+    </record>
+
+        <menuitem id="hr_allocation_accounting_configuration_action" name="Allocation Configuration"
+                  parent="hr.menu_human_resources_configuration"
+                  action="action_allocation_accounting_configuration" sequence="15"/>
+
+    </data>
+</odoo>

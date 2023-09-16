@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_letter_request_tree" model="ir.ui.view">
+        <field name="name">view.letter.request.tree</field>
+        <field name="model">letter.request</field>
+        <field name="arch" type="xml">
+            <tree string="Letter Request">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <field name="employee_job"/>
+                <field name="request_date"/>
+                <field name="service_type"/>
+                <field name="service_to"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_letter_request_form" model="ir.ui.view">
+        <field name="name">view.letter.request.form</field>
+        <field name="model">letter.request</field>
+        <field name="arch" type="xml">
+            <form string="Letter Request">
+                <header>
+                    <button name="action_submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+                    <button name="action_double_approve" type="object" string="Validate" states="waiting_approval"
+                            class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    <button name="action_approve" type="object" string="Approve" states="waiting_approval_2"
+                            class="oe_highlight" groups="account.group_account_manager"/>
+                    <button name="action_refuse" type="object" string="Refuse"
+                            states="draft,waiting_approval,waiting_approval_2"
+                            groups="hr.group_hr_manager,hr.group_hr_user,account.group_account_manager"/>
+                    <button name="action_cancel" type="object" string="Cancel" states="draft"/>
+                    <button name="%(hr_letter_request_ksa.salary_introduction_report_action)d" class="oe_highlight"
+                            type="action" icon="fa-print" string="Print Letter"
+                            attrs="{'invisible': ['|', ('service_type', '!=', 'salary_introduction'),('state', '!=', 'approve')]}"/>
+                    <button name="%(hr_letter_request_ksa.salary_transfer_report_action)d" class="oe_highlight"
+                            type="action" icon="fa-print" string="Print Letter"
+                            attrs="{'invisible': ['|', ('service_type', '!=', 'salary_transfer'),('state', '!=', 'approve')]}"/>
+                    <button name="%(hr_letter_request_ksa.letter_of_authority_report_action)d" class="oe_highlight"
+                            type="action" icon="fa-print" string="Print Letter"
+                            attrs="{'invisible': ['|', ('service_type', '!=', 'letter_of_authority'),('state', '!=', 'approve')]}"/>
+                    <button name="%(hr_letter_request_ksa.experience_certificate_report_action)d" class="oe_highlight"
+                            type="action" icon="fa-print" string="Print Certificate"
+                            attrs="{'invisible': ['|', ('service_type', '!=', 'experience_certificate'),('state', '!=', 'approve')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_approval,approve"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group col="2">
+                        <group>
+                            <field name="another_employee"/>
+                            <field name="employee_id" attrs="{'readonly': [('another_employee', '=', False)]}"
+                                   required="1"/>
+                            <field name="manager_id"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="user_lang" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="employee_job"/>
+                            <field name="service_type" required="1"/>
+                            <field name="service_to" attrs="{'required': [('service_type', 'in', ['salary_introduction','salary_transfer','letter_of_authority'])],
+                                                             'invisible': [('service_type', '=', 'experience_certificate')]}"/>
+                            <field name="last_working_date" attrs="{'invisible': [('service_type', 'in', ['salary_introduction','salary_transfer','letter_of_authority'])],
+                                                                    'required': [('service_type', '=', 'experience_certificate')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="reason" required="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Letter Request">
+                            <group>
+                                <field name="salary_intro_report_body" nolabel="1"
+                                       attrs="{'invisible': [('service_type', '!=', 'salary_introduction')]}"/>
+                            </group>
+                            <group>
+                                <field name="salary_transfer_report_body" nolabel="1"
+                                       attrs="{'invisible': [('service_type', '!=', 'salary_transfer')]}"/>
+                            </group>
+                            <group>
+                                <field name="letter_of_authority_report_body" nolabel="1"
+                                       attrs="{'invisible': [('service_type', '!=', 'letter_of_authority')]}"/>
+                            </group>
+                            <group>
+                                <field name="experience_certificate_report_body" nolabel="1"
+                                       attrs="{'invisible': [('service_type', '!=', 'experience_certificate')]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Inherit Res Company Form View to Modify it -->
+    <record id="view_company_form_inherit" model="ir.ui.view">
+        <field name="name">res.company.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='favicon']" position="after">
+                <field name="company_stamp"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="after">
+                <div class="oe_title">
+                    <h2 class="d-flex">
+                        <field name="english_name" placeholder="Employee's English name" required="1"/>
+                    </h2>
+                </div>
+            </div>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_letter_request">
+        <field name="name">Letter Request</field>
+        <field name="res_model">letter.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to create letter request.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_letter_request" name="Letter Request" action="action_letter_request"
+              parent="hr_employee_updation.menu_operation_request" sequence="99"
+              groups="hr.group_hr_user"/>
+
+</odoo>

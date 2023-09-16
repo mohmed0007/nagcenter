@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="leave_encashment_form_view" model="ir.ui.view">
+        <field name="name">leave.encashment.form</field>
+        <field name="model">leave.encashment</field>
+        <field name="arch" type="xml">
+            <form string="Leave Encashment">
+                <group>
+                    <group>
+                        <field name="employee_id" readonly="1"/>
+                        <field name="leave_allocation_id" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="encashment_type"/>
+                        <field name="applied_date"/>
+                        <field name="journal_id" attrs="{'invisible': [('encashment_type', 'not in', ['bank_cash'])], 'required': [('encashment_type', 'in', ['bank_cash'])]}" domain="[('type', 'in', ['bank','cash'])]"/>
+                    </group>
+                    <group>
+                        <field name="leaves_taken"/>
+                        <field name="remaining_days" force_save="1"/>
+                    </group>
+                    <group>
+                        <field name="encashment_days"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="generate_leave_allowance" string="Done" type="object" class="oe_highlight"/>
+                    <button class="oe_link" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

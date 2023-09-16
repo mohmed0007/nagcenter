@@ -1,0 +1,204 @@
+<odoo>
+    <data>
+        <record id="letter_of_authority_template_id" model="mail.template">
+            <field name="name">Letter of Authority</field>
+            <field name="model_id" ref="hr_letter_request_ksa.model_letter_request"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <center>
+                        <font style="font-size:16px;font-family: 'Almarai', 'serif';">
+                            <t t-if="object.user_lang == 'en_US'">
+                                <table class="table table-condensed table-bordered" style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td style="border: 1px solid black;width: 33%;">Date</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.request_date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;width: 33%;" dir="rtl">التاريخ</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black;">#Serial</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;" dir="rtl">#متسلسل</td>
+                                    </tr>
+                                </table>
+
+                                <div class="text-center">
+                                    <br/>
+                                    <strong>
+                                        <span>خطاب تفويض</span>
+                                        <br/>
+                                        <span>Letter of Authority</span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-center">
+                                    <strong>
+                                        <u>
+                                            <span>إلى من يهمه اﻷمر</span>
+                                        </u>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-right" dir="rtl">
+                                    <span>السلام عليكم ورحمة الله وبركاته،،، وبعد،،،</span>
+                                    <br/>
+                                    <span>نحن</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.company_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>نفيدكم بأننا فوضنا منسوبنا السيد/</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>الجنسية:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.country_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>بموجب هوية وطنية رقم:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.visa_no"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>،</span>
+                                    <span>وذلك في مراجعة الجهات المختصة مثل:</span>
+                                    <span>وزارة النقل - الجوازات - اﻷحوال المدنية - مكتب العمل - وزارة الخارجية -
+                                        البلدية - الدفاع المدني - المرور - مراكز الشرطة - حرس الحدود - وأي جهة حكومية
+                                        أخرى لها علاقة بأعمالنا والتي لم يرد ذكرها أعلاه، وهذا التفويض صالح لمدة ستة
+                                        أشهر من تاريخه.
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                </div>
+                                <div class="text-center" dir="rtl">
+                                    <strong>
+                                        <span>ولكم منا جزيل الشكر والتقدير،،،</span>
+                                    </strong>
+                                </div>
+                                <br/>
+                                <br/>
+                            </t>
+                            <t t-else="">
+                                <table class="table table-condensed table-bordered" style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td style="border: 1px solid black;width: 33%;" dir="rtl">التاريخ</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.request_date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;width: 33%;" class="text-right">Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black;" dir="rtl">#متسلسل</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;" class="text-right">Serial#</td>
+                                    </tr>
+                                </table>
+
+                                <div class="text-center">
+                                    <br/>
+                                    <strong>
+                                        <span>خطاب تفويض</span>
+                                        <br/>
+                                        <span>Letter of Authority</span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-center">
+                                    <strong>
+                                        <u>
+                                            <span>إلى من يهمه اﻷمر</span>
+                                        </u>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-left" dir="rtl">
+                                    <span>السلام عليكم ورحمة الله وبركاته،،، وبعد،،،</span>
+                                    <br/>
+                                    <span>نحن</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.company_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>نفيدكم بأننا فوضنا منسوبنا السيد/</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>الجنسية:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.country_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>بموجب هوية وطنية رقم:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.visa_no"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>،</span>
+                                    <span>وذلك في مراجعة الجهات المختصة مثل:</span>
+                                    <span>وزارة النقل - الجوازات - اﻷحوال المدنية - مكتب العمل - وزارة الخارجية -
+                                        البلدية - الدفاع المدني - المرور - مراكز الشرطة - حرس الحدود - وأي جهة حكومية
+                                        أخرى لها علاقة بأعمالنا والتي لم يرد ذكرها أعلاه، وهذا التفويض صالح لمدة ستة
+                                        أشهر من تاريخه.
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div class="text-center">
+                                    <strong>
+                                        <span>ولكم منا جزيل الشكر والتقدير،،،</span>
+                                    </strong>
+                                </div>
+                                <br/>
+                                <br/>
+                            </t>
+                        </font>
+                    </center>
+                </div>
+            </field>
+            <field name="report_name">${(object.service_type or '').replace('/','_')}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>

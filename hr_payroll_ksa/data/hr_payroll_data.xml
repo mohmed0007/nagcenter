@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="structure_type_employee1" model="hr.payroll.structure.type">
+            <field name="name">Employee Structure</field>
+            <field name="country_id" eval="False"/>
+            <field name="wage_type">monthly</field>
+        </record>
+
+        <!--Payslip Allowance Input Type-->
+        <record id="other_allowance_input" model="hr.payslip.input.type">
+            <field name="name">Other Allowance Amount</field>
+            <field name="code">OTHER_ALLOWANCE_AMOUNT</field>
+        </record>
+
+        <!--Payslip Deduction Input Type-->
+        <record id="other_deduction_input" model="hr.payslip.input.type">
+            <field name="name">Other Deduction Amount</field>
+            <field name="code">OTHER_DEDUCTION_AMOUNT</field>
+        </record>
+
+        <!-- Salary Structure -->
+        <record id="hr_payroll_structure_custom" model="hr.payroll.structure">
+            <field name="name">Employees Other Rules</field>
+            <field name="report_id" ref="hr_payroll.action_report_payslip"/>
+            <field name="use_worked_day_lines" eval="True"/>
+            <field name="country_id" eval="False"/>
+            <field name="type_id" ref="structure_type_employee1"/>
+        </record>
+
+        <!-- Contribution Registers -->
+        <record id="contrib_register_gosi_employee_sa" model="res.partner">
+            <field name="name">Gosi Saudi Employee Contribution</field>
+        </record>
+
+        <!-- House Rent Allowance-->
+        <record id="hr_salary_rule_houserentallowance" model="hr.salary.rule">
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = contract.HRA > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+                employee_worked_days = 0
+                employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+                result = (contract.HRA / 30) * employee_worked_days
+            </field>
+            <field name="code">HRA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="name">Housing Allowance</field>
+            <field name="sequence" eval="5"/>
+        </record>
+
+        <!-- TA Allowance-->
+        <record id="hr_salary_rule_ta" model="hr.salary.rule">
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = contract.TA > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+                employee_worked_days = 0
+                employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+                result = (contract.TA /30) * employee_worked_days
+            </field>
+            <field name="code">TA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="name">Transportation Allowance</field>
+            <field name="sequence" eval="10"/>
+        </record>
+
+        <!-- Other Allowance-->
+        <record id="hr_salary_rule_other_amt" model="hr.salary.rule">
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = contract.other_amt > 0 or contract.other_amt2 > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+                employee_worked_days = 0
+                employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+                result = ((contract.other_amt + contract.other_amt2) / 30) * employee_worked_days
+            </field>
+            <field name="code">OTHER</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="name">Other Allowance</field>
+            <field name="sequence" eval="18"/>
+        </record>
+
+        <record id="hr_salary_rule_other_allowance" model="hr.salary.rule">
+            <field name="name">Other Allowance</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="code">OTHER_ALLOWANCE</field>
+            <field name="sequence" eval="20"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = (inputs.OTHER_ALLOWANCE_AMOUNT and
+                inputs.OTHER_ALLOWANCE_AMOUNT.amount > 0)
+            </field>
+            <field name="amount_select">code</field>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="amount_python_compute">
+                employee_worked_days = 0
+                employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+                result = ((inputs.OTHER_ALLOWANCE_AMOUNT.amount) / 30) * employee_worked_days
+            </field>
+        </record>
+
+        <!-- GOSI Deduction-->
+        <record id="hr_salary_rule_gosi_emp" model="hr.salary.rule">
+            <field name="name">GOSI Contribution</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="code">GOSI</field>
+            <field name="sequence" eval="105"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = contract.gosi_deduction > 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -(contract.gosi_deduction)</field>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="partner_id" ref="hr_payroll_ksa.contrib_register_gosi_employee_sa"/>
+        </record>
+
+        <record id="hr_salary_rule_other_deduction" model="hr.salary.rule">
+            <field name="name">Other Deduction</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="code">OTHER_DEDUCTION</field>
+            <field name="sequence" eval="116"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = (inputs.OTHER_DEDUCTION_AMOUNT and
+                inputs.OTHER_DEDUCTION_AMOUNT.amount > 0)
+            </field>
+            <field name="amount_select">code</field>
+            <field name="struct_id" ref="hr_payroll_structure_custom"/>
+            <field name="amount_python_compute">result = -(inputs.OTHER_DEDUCTION_AMOUNT.amount)</field>
+        </record>
+
+    </data>
+</odoo>

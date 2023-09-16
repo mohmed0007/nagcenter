@@ -1,0 +1,103 @@
+<odoo>
+    <record id="eos_view" model="ir.ui.view">
+        <field name="name">End of Service Wizard</field>
+        <field name="model">report.eos.wizard</field>
+        <field name="arch" type="xml">
+             <form>
+                <sheet>
+                        <group>
+
+                        
+                           
+                            <group>
+                                <field name="department_id" />
+                                <field name="date" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="print_project_report_xls" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_eos_wizard" model="ir.actions.act_window">
+        <field name="name">End Of Service </field>
+        <field name="res_model">report.eos.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="eos_view"/>
+        <field name="target">new</field>
+    </record>
+    
+ <report id="report_xls"
+                string="End of Service"
+                model="report.eos.wizard"
+                report_type="xlsx"
+                file="hr_report_ksa.report_xlsx"
+                name="hr_report_ksa.report_xlsx"
+                menu="True"
+        />
+
+
+    <menuitem id="eos_menu_o" name="End of Service" action="action_eos_wizard"
+              parent="hr.hr_menu_hr_reports" sequence="66"/>
+
+
+  <record id="eos2_view" model="ir.ui.view">
+        <field name="name">End of Service Wizard</field>
+        <field name="model">report.eos.wizard.2</field>
+        <field name="arch" type="xml">
+             <form>
+                <sheet>
+                        <group>
+
+                        
+                           
+                            <group>
+                                <field name="department_id" />
+                                <field name="date" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="print_project_report_xls" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_eo2s_wizard" model="ir.actions.act_window">
+        <field name="name">End Of Service </field>
+        <field name="res_model">report.eos.wizard.2</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="eos_view"/>
+        <field name="target">new</field>
+    </record>
+    
+ <report id="report2_xls"
+                string="End of Service"
+                model="report.eos.wizard"
+                report_type="xlsx"
+                file="hr_report_ksa.report2_xlsx"
+                name="hr_report_ksa.report2_xlsx"
+                menu="True"
+        />
+
+
+    <menuitem id="eos_menu_o2" name="End of Service2" action="action_eo2s_wizard"
+              parent="hr.hr_menu_hr_reports" sequence="667"/>
+
+
+
+</odoo>

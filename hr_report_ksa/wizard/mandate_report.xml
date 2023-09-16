@@ -1,0 +1,244 @@
+<odoo>
+
+
+    <!--   Employee Recruit and Resignation Report-->
+     <record id="recruit_resignation_report_view" model="ir.ui.view">
+        <field name="name">Recruit Resignation Wizard</field>
+        <field name="model">recruit.resignation.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+
+                            <group>
+                                <field name="date_from"/>
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                                <field name="to_no"/>
+                                <field name="department_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report1" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_recruit_resignation_report_wizard" model="ir.actions.act_window">
+        <field name="name">Recruit and Resignation Report</field>
+        <field name="res_model">recruit.resignation.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="recruit_resignation_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="recruit_resignation_report_report" name="Recruit and Resignation" action="action_recruit_resignation_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="10"/>-->
+
+
+
+    <!--    Employee Recruit Report-->
+
+    <record id="recruit_report_view" model="ir.ui.view">
+        <field name="name">Recruit Report Wizard</field>
+        <field name="model">employee.recruit.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+
+                            <group>
+                                <field name="date_from" />
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+                            <group>
+                                <field name="date_to" />
+                                <field name="to_no"/>
+                                <field name="department_id" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report1" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_recruit_report_wizard" model="ir.actions.act_window">
+        <field name="name">Recruit Report</field>
+        <field name="res_model">employee.recruit.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="recruit_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="recruit_report_report" name="Recruit Report" action="action_recruit_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="10"/>-->
+
+
+
+<!--    Employee Mandate Report-->
+
+    <record id="mandate_report_view" model="ir.ui.view">
+        <field name="name">Mandate Report Wizard</field>
+        <field name="model">mandate.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+
+                            <group>
+                                <field name="date_from"/>
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                                <field name="to_no"/>
+                                <field name="department_id" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_mandate_report_wizard" model="ir.actions.act_window">
+        <field name="name">Mandate Report</field>
+        <field name="res_model">mandate.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mandate_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="mandate_report_report" name="Mandate Report" action="action_mandate_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="10"/>-->
+
+    // wizard of employee service duration report
+
+    <record id="service_duration_view" model="ir.ui.view">
+        <field name="name">Service Duration Report Wizard</field>
+        <field name="model">service.duration.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+
+                            <group>
+                                <field name="date" invisible="1"/>
+                                <field name="date_from"/>
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+
+                            <group>
+
+                                <field name="date_to"/>
+                                <field name="to_no"/>
+                                <field name="department_id" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report1" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="service_duration_report_wizard" model="ir.actions.act_window">
+        <field name="name">Service Duration Report</field>
+        <field name="res_model">service.duration.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="service_duration_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="service_duration_report" name="Service Duration" action="service_duration_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="11"/>-->
+
+     // wizard of employee EndOfService  report
+
+    <record id="employee_end_of_service_view" model="ir.ui.view">
+        <field name="name">End of Service Report Wizard</field>
+        <field name="model">end.of.service.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+
+                            <group>
+                                <field name="date" invisible="1"/>
+                                <field name="date_from"/>
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+
+                            <group>
+
+                                <field name="date_to"/>
+                                <field name="to_no"/>
+                                <field name="department_id" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report1" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="end_of_service_report_wizard" model="ir.actions.act_window">
+        <field name="name">End Of Service Report</field>
+        <field name="res_model">end.of.service.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="employee_end_of_service_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="end_of_service_menu" name="End of Service" action="end_of_service_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="11"/>-->
+
+
+</odoo>

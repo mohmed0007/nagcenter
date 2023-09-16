@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_branch_form_view" model="ir.ui.view">
+        <field name="name">hr.branch.form</field>
+        <field name="model">hr.branch</field>
+        <field name="arch" type="xml">
+            <form string="Branch">
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_branch_tree_view" model="ir.ui.view">
+        <field name="name">hr.branch.tree</field>
+        <field name="model">hr.branch</field>
+        <field name="arch" type="xml">
+            <tree string="Branch" editable="top">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_branch">
+        <field name="name">Branch</field>
+        <field name="res_model">hr.branch</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to define a new Branch.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_hr_branch" action="action_hr_branch" parent="hr.menu_human_resources_configuration" sequence="15" groups="hr.group_hr_manager"/>
+
+</odoo>

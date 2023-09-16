@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Employee Information Form Report -->
+        <report id="report_employee_information_form"
+                string="Employee Information "
+                model="hr.employee"
+                report_type="qweb-html"
+                file="hr_report_ksa.report_employee_information"
+                name="hr_report_ksa.report_employee_information"
+                menu="True"
+        />
+
+
+        <template id="report_employee_information">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page" dir="rtl">
+                            <div class="oe_structure">
+                                <div class="row row-centered">
+                                    <div class="col-md-12 col-centered">
+                                        <style>
+                                            table {
+                                            width:100%;
+                                            font-family: almarai !important;
+                                            }
+                                            table, th, td {
+                                            border: 1px solid white;
+                                            border-collapse: collapse;
+                                            }
+                                            th, td {
+                                            padding: 15px;
+                                            text-align: center;
+                                            }
+                                            table#t03 tr:nth-child(even) {
+                                            background-color: white;
+                                            }
+                                            table#t03 tr:nth-child(odd) {
+                                            background-color: #fff;
+                                            }
+                                            table#t03 th {
+                                            background-color: #ec1c24;
+                                            color: white;
+                                            }
+                                        </style>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <table id="t03" style="float:right; width:100%; font-size:16px;  " class="table table-condensed table-bordered report_table ">
+                                            <h5 class="text-center" style="font-size:20px;   font-weight:bold;  font-family: almarai !important;">
+                                                &amp;nbsp; &amp;nbsp; بيانات الموظف الاساسية
+                                            </h5>
+                                            <br/>
+
+                                            <tbody style="width:100%;" border="0" cellpadding="0" cellspacing="0">
+
+                                                <tr style="height:70%;">
+                                                    <td align="center" valign="center">
+                                                        <img t-att-src="image_data_uri(o.avatar_1920)" style="max-height:85pt;max-width:90%" alt="Employee Image"/>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center" style="width:100%;">
+
+                                                    <td class="text-center">
+                                                        <b>اسم الموظف :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.name"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>رقم الموظف :</b>
+                                                    </td>
+                                                    <td class="text-center" style="width:25%;">
+                                                        <span t-field="o.employee_number"/>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">
+                                                        <strong>مكان العمل :</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.address_id.name"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <strong>رقم الهوية :</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.identification_id"/>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="text-center">
+                                                        <b>القسم :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.department_id.name"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>المدير :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.parent_id.name"/>
+                                                    </td>
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="text-center">
+                                                        <b>الوظيفة :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.job_title"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>تاريخ الانضمام :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.joining_date"/>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr class="text-center">
+                                                    <td class="text-center">
+                                                        <b>الهاتف :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.work_phone"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>الجنسية :</b>
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <span t-field="o.country_id.name"/>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr class="text-right">
+                                                    <td class="text-center">
+                                                        <b>الراتب الاساسي :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.wage"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>بدل السكن :</b>
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.l10n_sa_housing_allowance"/>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr class="text-right">
+                                                    <td class="text-center">
+                                                        <b>بدل النقل :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.l10n_sa_transportation_allowance"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b> بدلات اخري :</b>
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.l10n_sa_other_allowances"/>
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr class="text-right">
+                                                    <td class="text-center">
+                                                        <b>  تذاكر السفر :</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.ticket_per_year"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b> هاتف العمل:</b>
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <span t-field="o.mobile_phone"/>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr class="text-right">
+                                                    <td class="text-center">
+                                                        <b>بداية العقد:</b>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.date_start"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <b>نهاية العقد :</b>
+                                                    </td>
+
+                                                    <td class="text-center">
+                                                        <span t-field="o.contract_id.date_end"/>
+                                                    </td>
+
+
+                                                </tr>
+<!--                                                <tr class="text-right">-->
+<!--                                                    <td class="text-center">-->
+<!--                                                        <b>الراتب الاساسي :</b>-->
+<!--                                                    </td>-->
+<!--                                                    <td class="text-center">-->
+<!--                                                        <span t-field="o.contract_id.wage"/>-->
+<!--                                                    </td>-->
+<!--                                                    <td class="text-center">-->
+<!--                                                        <b>بدل السكن :</b>-->
+<!--                                                    </td>-->
+
+<!--                                                    <td class="text-center">-->
+<!--                                                        <span t-field="o.contract_id.l10n_sa_transportation_allowance"/>-->
+<!--                                                    </td>-->
+
+
+<!--                                                </tr>-->
+                                                <!--                                                <tr class="text-center">-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>  تاريخ الأنتهاء :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b> تاريخ المباشرة :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_joining_date"/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                </tr>-->
+                                                <!--                                                <tr class="text-center">-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>مدة الخدمة :</b>-->
+                                                <!--                                                        <![CDATA[&nbsp;]]>-->
+                                                <!--                                                        <b>/ سنة</b>-->
+
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.total_working_years"/>-->
+                                                <!--                                                    </td>-->
+
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>  شهر :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_gratuity_month"/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                </tr>-->
+                                                <!--                                                <tr class="text-center">-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>يوم :</b>-->
+
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_gratuity_days"/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>  مدة الخدمة / أيام :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span/>-->
+                                                <!--                                                    </td>-->
+
+                                                <!--                                                </tr>-->
+                                                <!--                                                <tr class="text-center">-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>بدل سكن :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_id.contract_id.hra"/>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <b>الراتب الاساسي :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_id.contract_id.wage"/>-->
+                                                <!--                                                    </td>-->
+
+
+                                                <!--                                                </tr>-->
+                                                <!--                                                <tr class="text-right">-->
+                                                <!--                                                     <td class="text-center">-->
+                                                <!--                                                        <b>بدل نقل :</b>-->
+                                                <!--                                                    </td>-->
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span t-field="o.employee_id.contract_id.transport_allowance"/>-->
+                                                <!--                                                    </td>-->
+
+
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                        <span/>-->
+                                                <!--                                                    </td>-->
+
+                                                <!--                                                    <td class="text-center">-->
+                                                <!--                                                    </td>-->
+
+
+                                                <!--                                                </tr>-->
+
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

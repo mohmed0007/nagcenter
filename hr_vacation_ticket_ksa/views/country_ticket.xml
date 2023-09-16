@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="view_country_inherit_form">
+            <field name="name">res.country.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="ticket_price" readonly="0" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_country_inherit_tree">
+            <field name="name">res.country.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_tree"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="ticket_price" />
+<!--                    <field name="nationality_name"/>-->
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_contract_view_inherit1">
+            <field name="name">contract.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//page[@name='information']" position="after">
+                   <page name="ticket_information" string="Vacation Information" >
+                        <group string="Vacation Allocation" col="4" >
+                        <field name="country_id"/>
+                        <field name="ticket_price" />
+                            <label for="ticket_per_year"/>
+                               <div class="o_row">
+                                 <field name="ticket_per_year" nolabel="1"/>
+                               <span>/ year</span>
+                             </div>
+
+                             <label for="amount_per_month"/>
+                               <div class="o_row">
+
+                                 <field name="amount_per_month"  width="20" nolabel="1"/>
+                               <span>/ month</span>
+                               </div>
+
+                    </group>
+
+<!--                     <group string="Leave Information" col="4" >-->
+<!--                            <label for="leave_per_year"/>-->
+<!--                               <div class="o_row">-->
+
+<!--                                 <field name="leave_per_year" nolabel="1"/>-->
+<!--                               <span>/ year</span>-->
+<!--                             </div>-->
+
+<!--                             <label for="leave_per_month"/>-->
+<!--                               <div class="o_row">-->
+
+<!--                                 <field name="leave_per_month" width="20" nolabel="1"/>-->
+<!--                               <span>/ month</span>-->
+<!--                               </div>-->
+<!--                             <label for="monthly_leave_salary"/>-->
+<!--                               <div class="o_row">-->
+
+<!--                                 <field name="monthly_leave_salary" width="20" nolabel="1"/>-->
+<!--                               <span>/ month</span>-->
+<!--                               </div>-->
+<!--                    </group>-->
+                </page>
+            </xpath>
+<!--                <group name="salary_info" position="after">-->
+<!--                    <group name="ticket_per_year_vacation" string="Number Vacation of Ticket" >-->
+<!--                        <field name="ticket_per_year" string="Number of Ticket"/>-->
+<!--                    </group>-->
+<!--                </group>-->
+            </field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+
+<!--    Hr Accounting Sync Wizard-->
+
+    <record id="hr_accounting_sync_wizard_view" model="ir.ui.view">
+        <field name="name">Hr Accounting Sync Wizard</field>
+        <field name="model">hr.account.sync</field>
+        <field name="arch" type="xml">
+            <form>
+               <group col="4">
+                   <field name="date"/>
+                   <field name="company_id"/>
+                   <field name="configuration_id" domain="[('company_id','=', company_id)]"/>
+                   <field name="last_entitlement" />
+
+               </group>
+
+            <footer>
+	                <button name="employee_allocation" string="Sync" type="object" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="action_hr_accounting_sync_wizard_view" model="ir.actions.act_window">
+        <field name="name">Hr Accounting Sync Wizard</field>
+        <field name="res_model">hr.account.sync</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_accounting_sync_wizard_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="menu_hr_accounting_sync_wizard_view" name="Hr Accounting Sync" action="action_hr_accounting_sync_wizard_view"
+              parent="hr.menu_hr_root" sequence="4"/>
+
+</odoo>

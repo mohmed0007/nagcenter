@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit HR Settings Form View to Modify it -->
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='employee_rights_setting_container']" position="after">
+                    <h2>Letters Request</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Salary Introduction Letter</span>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="salary_intro_report_template" required="1" class="oe_inline"
+                                               readonly="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Salary Transfer Letter</span>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="salary_transfer_report_template" required="1" class="oe_inline"
+                                               readonly="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Letter of Authority</span>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="letter_of_authority_report_template" required="1" class="oe_inline"
+                                               readonly="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Experience Certificate</span>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="experience_certificate_report_template" required="1"
+                                               class="oe_inline" readonly="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

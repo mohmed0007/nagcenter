@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_flight_booking_user,access_flight_booking_user,model_flight_booking,base.group_user,1,1,1,0
+access_flight_booking_manager,access_flight_booking_manager,model_flight_booking,hr.group_hr_manager,1,1,1,1
+access_flight_booking_line_user,access_flight_booking_line_user,model_flight_booking_line,base.group_user,1,0,0,0
+access_flight_booking_line_manager,access_flight_booking_line_manager,model_flight_booking_line,hr.group_hr_user,1,1,1,1
+access_other_rules_user,access_other_rules_user,model_other_rules,base.group_user,1,0,0,0
+access_other_rules_officer,access_other_rules_officer,model_other_rules,hr.group_hr_user,1,1,1,1

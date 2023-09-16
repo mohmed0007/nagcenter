@@ -1,0 +1,102 @@
+<odoo>
+
+<!--    Complete Salary  report-->
+
+    <record id="complete_salary_report_view1" model="ir.ui.view">
+        <field name="name">Complete Report Wizard</field>
+        <field name="model">complete.salary.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+                            <group>
+
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+                            <group>
+
+                                <field name="to_no"/>
+                                <field name="department_id"/>
+                                 <field name="emp_rel"/>
+
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="action_complete_salary_report_wizard" model="ir.actions.act_window">
+        <field name="name">Complete Salary Report</field>
+        <field name="res_model">complete.salary.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="complete_salary_report_view1"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="employees_complete_salary_report_report" name="Complete Salary Report" action="action_complete_salary_report_wizard"
+              parent="hr.hr_menu_hr_reports" sequence="4"/>
+
+
+
+<!--    Allowance  report-->
+
+
+    <record id="employees_report_view" model="ir.ui.view">
+        <field name="name">Employees Report Wizard</field>
+        <field name="model">employees.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+                            <group>
+
+                                <field name="from_no"/>
+                                <field name="company"/>
+                            </group>
+                            <group>
+
+                                <field name="to_no"/>
+                                <field name="department_id"/>
+<!--                                <field name="date_to"/>-->
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_employees_report_wizard" model="ir.actions.act_window">
+        <field name="name">Employees Report</field>
+        <field name="res_model">employees.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="employees_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <menuitem id="employees_report_report" name="Employees Report" action="action_employees_report_wizard"-->
+<!--              parent="hr.hr_menu_hr_reports" sequence="10" />-->
+
+
+</odoo>

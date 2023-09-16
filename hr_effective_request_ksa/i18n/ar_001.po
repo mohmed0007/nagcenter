@@ -1,0 +1,436 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_effective_request_ksa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-14 19:22+0000\n"
+"PO-Revision-Date: 2023-08-14 19:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                    From\n"
+"                                </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                    من\n"
+"                                </span>"
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                    To\n"
+"                                </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                    إلى\n"
+"                                </span>"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__another_employee
+msgid "Another Employee"
+msgstr "موظف أخر"
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__approve
+msgid "Approved"
+msgstr "مقبول"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__cancel
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.actions.act_window,help:hr_effective_request_ksa.action_effective_request
+msgid "Click to create effective request."
+msgstr "إضغط ﻹنشاء مباشرة عمل"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__create_uid
+msgid "Created by"
+msgstr "أنشأ بواسطة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__create_date
+msgid "Created on"
+msgstr "أنشأ في"
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Dates"
+msgstr "التاريخ"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__effective_date
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_hr_employee__effective_date
+msgid "Effective Date"
+msgstr "تاريخ المباشرة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.actions.act_window,name:hr_effective_request_ksa.action_effective_request
+#: model:ir.ui.menu,name:hr_effective_request_ksa.menu_effective_request
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_tree
+msgid "Effective Request"
+msgstr "طلب مباشرة عمل"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model,name:hr_effective_request_ksa.model_hr_employee
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_hr_leave__have_effective
+msgid "Have Salary"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_needaction
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_has_error
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__employee_job
+msgid "Job Position"
+msgstr "الوظيفة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__leave_id
+msgid "Leave"
+msgstr "اﻹجازة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model,name:hr_effective_request_ksa.model_effective_request
+msgid "Leave Effective Request"
+msgstr "مباشرة عودة من إجازة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__leave_date_from
+msgid "Leave Form"
+msgstr "بداية اﻹجازة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__leave_date_to
+msgid "Leave To"
+msgstr "نهاية اﻹجازة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__name
+msgid "Name"
+msgstr "اﻹسم"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_hr_leave__need_effective
+msgid "Need Effective"
+msgstr "تطلب مباشرة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Submit"
+msgstr "تأكيد"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__waiting_approval
+msgid "Submitted"
+msgstr "مؤكد"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_hr_employee__suspend_salary
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_hr_leave__suspend_salary
+msgid "Suspend Salary"
+msgstr "إيقاف الراتب"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model,name:hr_effective_request_ksa.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model_terms:ir.ui.view,arch_db:hr_effective_request_ksa.view_effective_request_form
+msgid "Validate"
+msgstr "إعتماد"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields.selection,name:hr_effective_request_ksa.selection__effective_request__state__waiting_approval_2
+msgid "Waiting Finance Approval"
+msgstr "بإنتظار موافقة المالية"
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,field_description:hr_effective_request_ksa.field_effective_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: model:ir.model.fields,help:hr_effective_request_ksa.field_effective_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_effective_request_ksa
+#: code:addons/hr_effective_request_ksa/models/effective_request.py:0
+#, python-format
+msgid "You cannot delete request which is not in draft or cancelled state"
+msgstr "لا يمكنك حذف الطلب وهو ليس مسودة أو ملغي"

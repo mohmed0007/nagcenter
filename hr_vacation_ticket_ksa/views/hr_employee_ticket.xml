@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="view_department_form_inherit" model="ir.ui.view">
+            <field name="name">hr.department</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="analytic_account_id" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_flight_ticket_form" model="ir.ui.view">
+            <field name="name">hr.flight.ticket.form</field>
+            <field name="model">hr.flight.ticket</field>
+            <field name="priority" eval="0"/>
+            <field name="arch" type="xml">
+                <form string="Flight Ticket" >
+                    <header>
+                        <button name="action_submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="approve" />
+                        <button name="action_approve" type="object" string="Approve" states="waiting_approval_1" class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        <button name="action_double_approve" type="object" string="Approve" states="waiting_approval_2" class="oe_highlight" groups="account.group_account_user,account.group_account_manager"/>
+                        <button name="action_refuse" type="object" string="Refuse" states="waiting_approval_1,waiting_approval_2" class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,waiting_approval_1,approve" />
+                    </header>
+                    <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </h1>
+                    </div>
+                    <group col="4">
+                        <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                        <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="department_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+
+                        <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="number_of_ticket" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+
+                        <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+<!--                        <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_company"/>-->
+                    </group>
+                    <notebook>
+                        <page string="Accounting">
+                            <group col="4" >
+                                <field name="employee_account_id" attrs="{'required': [('state', 'in', ('waiting_approval_2'))]}" />
+                                <field name="treasury_account_id" attrs="{'required': [('state', 'in', ('waiting_approval_2'))]}"/>
+                                <field name="journal_id" attrs="{'required': [('state', 'in', ('waiting_approval_2'))]}"/>
+                                <field name="move_id" readonly="1"/>
+                            </group>
+
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+               </form>
+            </field>
+        </record>
+
+        <record id="view_hr_flight_ticket_tree" model="ir.ui.view">
+            <field name="name">hr.flight.ticket.form</field>
+            <field name="model">hr.flight.ticket</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Flight Ticket" >
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="department_id"/>
+<!--                    <field name="job_position"/>-->
+                    <field name="amount"/>
+               </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_hr_flight_tickets" model="ir.actions.act_window">
+            <field name="name">Flight Tickets</field>
+            <field name="res_model">hr.flight.ticket</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', 'in', ('draft','cancel','refuse','approve'))]</field>
+        </record>
+
+
+        <menuitem
+            id="menu_hr_flight_tickets_root"
+            name="Flight Tickets"
+            parent="hr_holidays.menu_hr_holidays_root"
+            groups="hr_holidays.group_hr_holidays_manager"
+            sequence="4"/>
+        <menuitem
+            id="menu_hr_flight_tickets"
+            name="Tickets Request"
+            parent="menu_hr_flight_tickets_root"
+            action="action_hr_flight_tickets"
+            groups="hr_holidays.group_hr_holidays_manager"
+            sequence="4"/>
+
+        <record model="ir.actions.act_window" id="view_employee_tickets_to_pay">
+            <field name="name">Flight Tickets</field>
+            <field name="res_model">hr.flight.ticket</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="domain">[('state', '=', 'waiting_approval_1')]</field>-->
+            <field name="domain">[('state', 'in', ('waiting_approval_1','approve'))]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Approved Resignation
+                </p>
+            </field>
+        </record>
+        <menuitem
+            id="menu_tickets_to_pay_root"
+            name="Tickets To Pay"
+            parent="hr_holidays.menu_hr_holidays_root"
+            groups="account.group_account_user"
+            sequence="4"/>
+
+        <menuitem id="menu_tickets_to_pay"
+                  parent="menu_tickets_to_pay_root"
+                  name="Tickets To Pay"
+                  action="view_employee_tickets_to_pay"
+                  groups="account.group_account_user"
+                  sequence="4"/>
+    </data>
+</odoo>

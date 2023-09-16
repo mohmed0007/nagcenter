@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Register Loan Form Report -->
+        <report id="report_hr_payslip_form"
+                string="Hr Payslip"
+                model="hr.payslip.run"
+                report_type="qweb-html"
+                file="hr_report_ksa.report_payslip_run_template"
+                name="hr_report_ksa.report_payslip_run_template"
+                menu="True"
+        />
+
+
+    </data>
+</odoo>

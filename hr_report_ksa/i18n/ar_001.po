@@ -1,0 +1,793 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-31 15:42+0000\n"
+"PO-Revision-Date: 2021-07-31 15:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "<strong>Department  /</strong>"
+msgstr "القسم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "<strong>Department /</strong>"
+msgstr "القسم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "<strong>Department/</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "<strong>Employee Loan Report</strong>"
+msgstr "كشف سلف الموظفين"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "<strong>Employee Service Duration Report</strong>"
+msgstr "كشف بالموظفين حسب الخدمة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+msgid "<strong>Employees Approval Report</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "<strong>Employees Leave Report</strong>"
+msgstr "تقرير ارصدة الاجازات"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "<strong>Employees Salary Allowance Report</strong>"
+msgstr "تقرير بدلات الموظفين"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "<strong>From Employee No</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "<strong>Leave type</strong>"
+msgstr "نوع الاجازة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "<strong>Mandate Report</strong>"
+msgstr "كشف بالانتدابات"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+msgid "<strong>Non Saudi arabian recruited</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "<strong>Resignation Report</strong>"
+msgstr "كشف تعين وانهاء الخدمة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+msgid "<strong>Saudi arabian recruited</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "<strong>To Employee No</strong>"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "<strong>Total Employee No</strong>"
+msgstr "مجموع عدد الموظفين"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "<strong>Total recruited </strong>"
+msgstr "عدد التعيانت في الفترة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+msgid "<strong>Total recruited</strong>"
+msgstr "عدد التعيانت في الفترة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "<strong>القسم /</strong>"
+msgstr "القسم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view1
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.service_duration_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Cost per day"
+msgstr "بدل الانتداب اليومي"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__create_date
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "DA Allowance"
+msgstr "بدل سكن"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__date
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "Deduction"
+msgstr "التأمينات"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__department_id
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__department_id
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_resignation_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_approval_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_leave_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_recap_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_mandate_recap_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_loan_report_view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_service_duration__view__display_name
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__display_name
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "Education"
+msgstr "التعليم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_employees_leave_report_wizard
+#: model:ir.actions.report,name:hr_report.leave_report
+msgid "Employees Leave Report"
+msgstr "تقرير ارصدة الاجازات"
+
+#. module: hr_report
+#: model:ir.actions.report,name:hr_report.recap_report
+msgid "Employees Recap Report"
+msgstr "تقرير بدلات الموظفين"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_employees_report_wizard
+#: model:ir.ui.menu,name:hr_report.employees_report_report
+msgid "Employees Report"
+msgstr "تقرير بدلات الموظقين"
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_employees_report_wizard
+msgid "Employees Report Wizard"
+msgstr "تقرير بدلات الموظفين"
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_approval_wizard
+#: model:ir.model,name:hr_report.model_report_leave_wizard
+msgid "Employees Time Of Report Wizard"
+msgstr "تقرير ارصدة الاجازات "
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "First contract date"
+msgstr "تاريخ المباشرة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "Fix allowance"
+msgstr "بدلات ثابته"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__date_from
+msgid "From"
+msgstr "من"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__from_no
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__from_no
+msgid "From Employee No"
+msgstr "من الموظف رقم"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__date_from
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__date_from
+msgid "From date"
+msgstr "من تاريخ"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "House rent"
+msgstr "بدل سكن"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_resignation_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_approval_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_leave_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_recap_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_mandate_recap_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_loan_report_view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_service_duration__view__id
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__id
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Installment amount"
+msgstr "القسط الشهري"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+msgid "Insurance No"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Job position"
+msgstr "الوظيفه"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "Joining date"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employee_recruit_resignation_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_approval_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_leave_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_employees_recap_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_mandate_recap_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_loan_report_view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_hr_report_recap_service_duration__view____last_update
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard____last_update
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Last Paid Installment"
+msgstr "اخر قسط مدفوع"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__write_date
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__category_id
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__leave_type
+msgid "Leave type"
+msgstr "نوع الاجازة"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_loan_report_wizard
+#: model:ir.actions.report,name:hr_report.recap_loan_report
+#: model:ir.ui.menu,name:hr_report.loan_report_report
+msgid "Loan Report"
+msgstr "كشف سلف الموظفين"
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_loan_report_wizard
+msgid "Loan Report Wizard"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Loan amount"
+msgstr "مبلغ السلفة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Loan date"
+msgstr "تاريخ السلفة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Mandate Days"
+msgstr "مدة الانتداب/يوم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Mandate End On"
+msgstr "تاريخ نهاية الانتداب"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_mandate_report_wizard
+#: model:ir.actions.report,name:hr_report.recap_mandate_report
+#: model:ir.ui.menu,name:hr_report.mandate_report_report
+msgid "Mandate Report"
+msgstr "كشف باإنتدابات"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Mandate Start On"
+msgstr "تاريخ بداية الانتداب"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Mandate To"
+msgstr "جهة الإنتداب"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Month"
+msgstr "الشهر"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Months"
+msgstr "شهور"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "No"
+msgstr "لا"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "No of installment"
+msgstr "عدد الاقساط "
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Other expanse"
+msgstr "مصروفات اخرى"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Page:"
+msgstr "الصفحة"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_employees_approval_report_wizard
+#: model:ir.actions.report,name:hr_report.approval_report
+msgid "Permission Approval Report"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.ui.menu,name:hr_report.employees_approval_report_report
+msgid "Permission Report"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view1
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.service_duration_view
+msgid "Print"
+msgstr "طباعة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_recruit_report_wizard
+#: model:ir.actions.report,name:hr_report.recap_recruit_report
+#: model:ir.ui.menu,name:hr_report.recruit_report_report
+msgid "Recruit Report"
+msgstr "كشف التعينات"
+
+#. module: hr_report
+#: model:ir.actions.report,name:hr_report.recap_recruit_resignation_report
+msgid "Recruit Resignation Report"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.ui.menu,name:hr_report.recruit_resignation_report_report
+msgid "Recruit and Resignation"
+msgstr "كشف التعينات وانهاء الخدمة"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.action_recruit_resignation_report_wizard
+msgid "Recruit and Resignation Report"
+msgstr "كشف تعين وانهاء الخدمة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+msgid "Recruit date"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Registration No"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Remain"
+msgstr "المتبقي"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "Remain days"
+msgstr "الايام المتبقة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employee_recruit_resignation_report_view
+msgid "Resignation date"
+msgstr "تاريخ انهاء الخدمة"
+
+#. module: hr_report
+#: model:ir.actions.report,name:hr_report.recap_service_duration_report
+#: model:ir.ui.menu,name:hr_report.service_duration_report
+msgid "Service Duration"
+msgstr "كشف بالموظفين حسب الخدمة"
+
+#. module: hr_report
+#: model:ir.actions.act_window,name:hr_report.service_duration_report_wizard
+msgid "Service Duration Report"
+msgstr "كشف بالموظفين حسب الخدمة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "Taken days"
+msgstr "الايام المستهلكة"
+
+#. module: hr_report
+#: model:ir.ui.menu,name:hr_report.employees_leave_report_report
+msgid "Time Of Report"
+msgstr "تقرير ارصدة الاجازات"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_loan_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__date_to
+msgid "To"
+msgstr "إلى"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_employees_report_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_report_approval_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__to_no
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__to_no
+msgid "To Employee No"
+msgstr "الي الموظف رقم"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_employee_recruit_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_mandate_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_recruit_resignation_report_wizard__date_to
+#: model:ir.model.fields,field_description:hr_report.field_service_duration_report_wizard__date_to
+msgid "To date"
+msgstr "الي تاريخ"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Total Paid"
+msgstr "اجمالي المدفوع"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Total mandate Cost"
+msgstr "اجمالي تكلفة الانتداب"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "Transport Allowance"
+msgstr "بدل نقل"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_recap_report_view
+msgid "Transportation Cost"
+msgstr "بدل النقل"
+
+#. module: hr_report
+#: model:ir.model.fields,field_description:hr_report.field_report_leave_wizard__date
+msgid "Until date"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Wage"
+msgstr "الراتب الآساسي"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Work Location"
+msgstr "مكان العمل"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_leave_report_view
+msgid "Worthy days"
+msgstr "الايام المستحقة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_loan_report_view
+msgid "Year"
+msgstr "السنة"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.recap_service_duration__view
+msgid "Years"
+msgstr "سنة"
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_employee_recruit_report_wizard
+#: model:ir.model,name:hr_report.model_recruit_resignation_report_wizard
+msgid "employee recruit report wizard"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_mandate_report_wizard
+#: model:ir.model,name:hr_report.model_service_duration_report_wizard
+msgid "mandate report wizard"
+msgstr ""
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_approval_report_view1
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.leave_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.loan_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.mandate_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.recruit_resignation_report_view
+#: model_terms:ir.ui.view,arch_db:hr_report.service_duration_view
+msgid "or"
+msgstr "أو"
+
+#. module: hr_report
+#: model_terms:ir.ui.view,arch_db:hr_report.employees_recap_report_view
+msgid "other allowance"
+msgstr "مصاريف اخري"
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_employee_recruit_report_view
+msgid "report.hr_report.employee_recruit_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_employee_recruit_resignation_report_view
+msgid "report.hr_report.employee_recruit_resignation_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_employees_approval_report_view
+msgid "report.hr_report.employees_approval_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_employees_leave_report_view
+msgid "report.hr_report.employees_leave_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_employees_recap_report_view
+msgid "report.hr_report.employees_recap_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_mandate_recap_report_view
+msgid "report.hr_report.mandate_recap_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_recap_loan_report_view
+msgid "report.hr_report.recap_loan_report_view"
+msgstr ""
+
+#. module: hr_report
+#: model:ir.model,name:hr_report.model_report_hr_report_recap_service_duration__view
+msgid "report.hr_report.recap_service_duration__view"
+msgstr ""

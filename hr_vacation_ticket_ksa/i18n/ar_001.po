@@ -1,0 +1,1160 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_vacation_ticket
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-28 10:18+0000\n"
+"PO-Revision-Date: 2022-05-28 10:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "<span class=\"ml8\">Every</span>"
+msgstr "كل"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid ""
+"<span class=\"ml8\">SR\n"
+"                                    </span>"
+msgstr "ر.س"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                                        Ticket Balance\n"
+"                                    </span>"
+msgstr "رصيد التذاكر"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_contract_view_inherit1
+msgid "<span>/ month</span>"
+msgstr "شهر"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_contract_view_inherit1
+msgid "<span>/ year</span>"
+msgstr "سنة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "<span>Days add</span>"
+msgstr "الايام المضافة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__move_id
+msgid "Account move"
+msgstr "قيد اليومية"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.accounting_configuration_form
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__allocation_type__accrual
+msgid "Accrual Allocation"
+msgstr "تخصيص الاستحقاق"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_needaction
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_ids
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_state
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_type_icon
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Add a reason..."
+msgstr "إضافة سبب..."
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__duration_display
+msgid "Allocated (Days/Hours)"
+msgstr "التخصيص (الايام /الساعات)"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__ticket_allocation_id
+msgid "Allocation"
+msgstr "تخصيص"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.accounting_configuration_form
+msgid "Allocation Account"
+msgstr "حساب التخصيص"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.hr_allocation_accounting_configuration_tree
+msgid "Allocation Accounting"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.actions.act_window,name:hr_vacation_ticket.action_allocation_accounting_configuration
+#: model:ir.ui.menu,name:hr_vacation_ticket.hr_allocation_accounting_configuration_action
+msgid "Allocation Configuration"
+msgstr "إعداد التخصيص"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__private_name
+msgid "Allocation Description"
+msgstr "وصف التخصيص"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__holiday_type
+msgid "Allocation Mode"
+msgstr "وضع تخصيص رصيد الإجازات"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Allocation Request"
+msgstr "طلب تخصيص رصيد إجازات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__allocation_type
+msgid "Allocation Type"
+msgstr "نوع التخصيص"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid "Allocation con not be refused after balance consuming "
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid ""
+"Allocation request must be confirmed (\"To Approve\") in order to approve "
+"it."
+msgstr "طلب التخصيص يجب ان يكون مؤكد لكي يصدق"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid "Allocation request must be confirmed in order to approve it."
+msgstr "طلب التخصيص يجب ان يكون مؤكد لكي يصدق"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid ""
+"Allocation request must be confirmed or validated in order to refuse it."
+msgstr "طلب التخصيص يجب ان يكون مؤكد او مصدق لكي يرفض"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid ""
+"Allocation request must be in Draft state (\"To Submit\") in order to "
+"confirm it."
+msgstr "طلب التخصيص يجب ان يكون مسودة لكي يؤكد"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid ""
+"Allocation request state must be \"Refused\" or \"To Approve\" in order to "
+"reset to Draft."
+msgstr "طلب التخصيص يجب ان يكون مرفوض او موكد قبل ارجاعة لمسودة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__holiday_type
+msgid ""
+"Allow to create requests in batchs:\n"
+"- By Employee: for a specific employee\n"
+"- By Company: all employees of the specified company\n"
+"- By Department: all employees of the specified department\n"
+"- By Employee Tag: all employees of the specific employee group category"
+msgstr ""
+"السماح بإنشاء طلبات في دفعات:\n"
+"- للموظف: لموظف معين\n"
+"- للمؤسسة: لجميع موظفي مؤسسة معينة\n"
+"- للقسم: لجميع موظفي قسم معين\n"
+"- لوسم الموظف: لجميع الموظفين التابعين لفئة معينة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__amount
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_department__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_res_config_settings__ticket_approve
+msgid "Approval from Accounting Department"
+msgstr "الموافقه من المحاسبة علي تزاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__validate
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__approve
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_leave__state__validate
+msgid "Approved"
+msgstr "وافق"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.actions.act_window,help:hr_vacation_ticket.view_employee_tickets_to_pay
+msgid "Approved Resignation"
+msgstr "إلغاء"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_attachment_count
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__balance
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__balance_taken
+msgid "Balance Taken"
+msgstr "المستهلك"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__accrual_limit
+msgid "Balance limit"
+msgstr "حد الرصيد"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__holiday_type__company
+msgid "By Company"
+msgstr "حسب المؤسسة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__holiday_type__department
+msgid "By Department"
+msgstr "حسب القسم"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__holiday_type__employee
+msgid "By Employee"
+msgstr "حسب الموظف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__holiday_type__category
+msgid "By Employee Tag"
+msgstr "حسب وسم الموظف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__can_approve
+msgid "Can Approve"
+msgstr "بإمكانه قبول"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.hr_accounting_sync_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__cancel
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.actions.act_window,help:hr_vacation_ticket.action_allocation_accounting_configuration
+msgid "Click to create a new employees allocation configuration."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__company_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__company_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__company_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__company_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_res_config_settings__company_id
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__configuration_id
+msgid "Configuration"
+msgstr "إعداد"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Confirm"
+msgstr "إعتماد"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_res_country
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_contract__country_id
+msgid "Country"
+msgstr "الدولة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__create_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__create_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__create_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__create_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__create_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__create_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__date
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__nextcall
+msgid "Date of the next accrual allocation"
+msgstr "تاريخ المخصصات المستحقة التالية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__unit_per_interval__days
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_department
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__department_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__display_name
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__display_name
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__display_name
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__number_of_days_display
+msgid "Duration (days)"
+msgstr "المدة (بالأيام)"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__number_of_hours_display
+msgid "Duration (hours)"
+msgstr "المدة (بالساعات)"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__number_of_days
+msgid "Duration in days. Reference field to use when necessary."
+msgstr "المدة بالأيام. حقل مرجعي يُستخدم عند الحاجة."
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__employee_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__employee_id
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__department_id
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__end_service_allocation_acc_id
+msgid "End of Allocation Service Account"
+msgstr "حساب مستحق نهاية الخدمة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__end_service_expenses_acc_id
+msgid "End of Service expenses "
+msgstr "حساب مصروف نهاية الخدمة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_account_bank_statement_line__is_entitlements
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_account_move__is_entitlements
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_account_payment__is_entitlements
+msgid "Entitlements"
+msgstr "الاستحقاق"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__employee_account_id
+msgid "Expanse Account"
+msgstr "حساب المصروف"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Extra Balance"
+msgstr "رصيد اضافي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__duration_display
+msgid ""
+"Field allowing to see the allocation duration in days or hours depending on "
+"the type_request_unit"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__first_approver_id
+msgid "First Approval"
+msgstr "الموافقة الأولى"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_tree
+msgid "Flight Ticket"
+msgstr "تذاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_flight_ticket_allocation
+msgid "Flight Ticket Allocation"
+msgstr "تخصيص تذاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_res_config_settings__ticket_approve
+msgid "Flight Ticket Approval from account manager"
+msgstr "الموافقة من مسؤل الحسابات علي تذاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/hr_employee_ticket.py:0
+#, python-format
+msgid "Flight Ticket Invoice"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.actions.act_window,name:hr_vacation_ticket.action_hr_flight_tickets
+#: model:ir.actions.act_window,name:hr_vacation_ticket.view_employee_tickets_to_pay
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_hr_flight_tickets_root
+msgid "Flight Tickets"
+msgstr "تذاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model:ir.actions.act_window,name:hr_vacation_ticket.action_hr_flight_tickets_allocation
+msgid "Flight Tickets Allocation"
+msgstr "تخصيص تذاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_follower_ids
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_partner_ids
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__activity_type_icon
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "شكل الأيقونة، مثلا fa-tasks"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__has_message
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__unit_per_interval__hours
+msgid "Hours"
+msgstr "الساعات"
+
+#. module: hr_vacation_ticket
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_hr_accounting_sync_wizard_view
+msgid "Hr Accounting Sync"
+msgstr "ترحيل مستحقات الموظفين"
+
+#. module: hr_vacation_ticket
+#: model:ir.actions.act_window,name:hr_vacation_ticket.action_hr_accounting_sync_wizard_view
+msgid "Hr Accounting Sync Wizard"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__activity_exception_icon
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__number_of_days_display
+msgid ""
+"If Accrual Allocation: Number of days allocated in addition to the ones you "
+"will get via the accrual' system."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__number_of_hours_display
+msgid ""
+"If Accrual Allocation: Number of hours allocated in addition to the ones you"
+" will get via the accrual' system."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_needaction
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_unread
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_needaction
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_has_error
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_has_sms_error
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_has_error
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "If no value set, runs indefinitely"
+msgstr "إن لم يتم تحديد قيمة، ستظل جارية بلا نهاية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_is_follower
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__journal_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__journal_id
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__last_entitlement
+msgid "Last Entitlement Date"
+msgstr "اخر تاريخ  استحقاق"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation____last_update
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync____last_update
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration____last_update
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__write_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__write_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__write_uid
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__write_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_account_sync__write_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__write_date
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__leave_allocation_acc_id
+msgid "Leave Allocation Account"
+msgstr "مخصص الاجازة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__leave_expenses_acc_id
+msgid "Leave expenses Account"
+msgstr "مصروف الاجازة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__loan_Payment_account
+msgid "Loan Account"
+msgstr "حساب السلفة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_flight_ticket
+msgid "Loan Request"
+msgstr "طلب سلفه"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Mark as Draft"
+msgstr "اعادة لمسودة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__accrual_limit
+msgid "Maximum of allocation for accrual; 0 means no maximum."
+msgstr "الحد الأقصى للمخصصات لكل استحقاق؛ القيمة 0 تعني عدم وجود حد أقصى."
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_has_error
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_ids
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Mode"
+msgstr "الوضع"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__interval_unit__months
+msgid "Months"
+msgstr "شهور"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__name
+msgid "Name of the Ticket"
+msgstr "عدد التذاكر"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_res_country__nationality_name
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_summary
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_type_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__number_of_days
+msgid "Number of Days"
+msgstr "عدد الأيام"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__number_of_ticket
+msgid "Number of Ticket"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_needaction_counter
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_has_error_counter
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_contract__ticket_per_year
+msgid "Number of ticket"
+msgstr "عدد التذاكر"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__interval_number
+msgid "Number of unit between two intervals"
+msgstr "عدد الوحدات بين فترتين"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__amount_per_interval
+msgid "Number of unit per interval"
+msgstr "عدد الوحدات في الفترة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__message_unread_counter
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__parent_id
+msgid "Parent"
+msgstr "الأصل"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/hr_employee_ticket.py:0
+#, python-format
+msgid "Please Compute installment"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_contract__amount_per_month
+msgid "Price per month"
+msgstr "القية الشهرية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__notes
+msgid "Reasons"
+msgstr "الأسباب"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__refuse
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__refuse
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_leave__state__refuse
+msgid "Refused"
+msgstr "رفض"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__allocation_type__regular
+msgid "Regular Allocation"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__activity_user_id
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Run until"
+msgstr "جاري حتى"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid ""
+"SR\n"
+"                                        <span class=\"ml8\">of ticket balance</span>"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__second_approver_id
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__validate1
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_leave__state__validate1
+msgid "Second Approval"
+msgstr "الموافقة الثانية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_department__analytic_account_id
+msgid "Select corresponding analytic account"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__date_from
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__state
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_leave__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__activity_state
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__waiting_approval_1
+msgid "Submitted"
+msgstr "تم الإرسال"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.hr_accounting_sync_wizard_view
+msgid "Sync"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_leave__state
+msgid ""
+"The status is set to 'To Submit', when a time off request is created.\n"
+"The status is 'To Approve', when time off request is confirmed by user.\n"
+"The status is 'Refused', when time off request is refused by manager.\n"
+"The status is 'Approved', when time off request is approved by manager."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__state
+msgid ""
+"The status is set to 'To Submit', when an allocation request is created.\n"
+"The status is 'To Approve', when an allocation request is confirmed by user.\n"
+"The status is 'Refused', when an allocation request is refused by manager.\n"
+"The status is 'Approved', when an allocation request is approved by manager."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__first_approver_id
+msgid ""
+"This area is automatically filled by the user who validates the allocation"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__second_approver_id
+msgid ""
+"This area is automaticly filled by the user who validates the allocation "
+"with second level (If allocation type need second validation)"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__ticket_allocation_acc_id
+msgid "Ticket Allocation Account"
+msgstr "مستحق التذاكر"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Ticket Balance Taken/Total Allocated"
+msgstr "الرصيد المستهلك /المخصص"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__name
+msgid "Ticket Name"
+msgstr "اسم التذكرة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__ticket_expenses_acc_id
+msgid "Ticket expenses Account"
+msgstr "حساب مصروف"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_contract__ticket_price
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_res_country__ticket_price
+msgid "Ticket price"
+msgstr "سعر التذكرة"
+
+#. module: hr_vacation_ticket
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_hr_flight_tickets_allocation
+msgid "Tickets Allocation"
+msgstr "تخصيص التذاكر"
+
+#. module: hr_vacation_ticket
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_hr_flight_tickets
+msgid "Tickets Request"
+msgstr "طلب تذاكر"
+
+#. module: hr_vacation_ticket
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_tickets_to_pay
+#: model:ir.ui.menu,name:hr_vacation_ticket.menu_tickets_to_pay_root
+msgid "Tickets To Pay"
+msgstr "دفع قيمة التذاكر"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__confirm
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_leave__state__confirm
+msgid "To Approve"
+msgstr "للاعتماد"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__flight_ticket_allocation__state__draft
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_leave__state__draft
+msgid "To Submit"
+msgstr "للإرسال"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__treasury_account_id
+msgid "Treasury Account"
+msgstr "حساب البنك/الصندوق"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__activity_exception_decoration
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__unit_per_interval
+msgid "Unit of time added at each interval"
+msgstr "الوحدة الزمنية المضافة لكل فترة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__interval_unit
+msgid "Unit of time between two intervals"
+msgstr "الوحدة الزمنية بين فترتين"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_unread
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__message_unread_counter
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.actions.act_window,help:hr_vacation_ticket.action_allocation_accounting_configuration
+msgid "Use this menu to create Employees Allocation Configuration ."
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_contract_view_inherit1
+msgid "Vacation Allocation"
+msgstr "تخصيص مستحقات الاجازة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_contract_view_inherit1
+msgid "Vacation Information"
+msgstr "تخصيص مستحقات الاجازة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields.selection,name:hr_vacation_ticket.selection__hr_flight_ticket__state__waiting_approval_2
+msgid "Waiting Approval"
+msgstr "في انتظار الموافقة"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_flight_ticket_allocation__website_message_ids
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_flight_ticket__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_flight_ticket_allocation__website_message_ids
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/approval_request.py:0
+#, python-format
+msgid "You can only create request for you or for direct employees"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/hr_payslip.py:0
+#, python-format
+msgid "You cannot delete a Batch which hase payslip"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,help:hr_vacation_ticket.field_hr_flight_ticket__amount
+msgid "amount"
+msgstr "القيمة"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.accounting_configuration_form
+msgid "e.g. Configuration For X. Company"
+msgstr "اعداد لشركة الثاقب"
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.view_hr_flight_ticket_form_allocation
+msgid "e.g. Flight Ticket Allocation"
+msgstr "تخصيص تزاكر الطيران"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__gosi_allocation_acc_id
+msgid "gosi  Allocation Account"
+msgstr "حساب تخصيص التامينات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__gosi_expenses_acc_id
+msgid "gosi expenses"
+msgstr "حساب مصروف التامينات"
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_account_sync
+msgid "hr.account.sync"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model,name:hr_vacation_ticket.model_hr_allocation_accounting_configuration
+msgid "hr.allocation.accounting.configuration"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/hr_employee_ticket.py:0
+#, python-format
+msgid "insufficient Balance installment"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model:ir.model.fields,field_description:hr_vacation_ticket.field_hr_allocation_accounting_configuration__name
+msgid "name"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: model_terms:ir.ui.view,arch_db:hr_vacation_ticket.hr_accounting_sync_wizard_view
+msgid "or"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/ticket_allocation.py:0
+#, python-format
+msgid ""
+"the allocated number of ticket will exceed the number of ticket in contract"
+msgstr ""
+
+#. module: hr_vacation_ticket
+#: code:addons/hr_vacation_ticket/models/hr_employee_ticket.py:0
+#, python-format
+msgid "you must cancel the journal entry"
+msgstr ""

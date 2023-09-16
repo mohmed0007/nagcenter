@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_effective_request_tree" model="ir.ui.view">
+        <field name="name">view.effective.request.tree</field>
+        <field name="model">effective.request</field>
+        <field name="arch" type="xml">
+            <tree string="Effective Request">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="manager_id"/>
+                <field name="employee_job"/>
+                <field name="request_date"/>
+                <field name="effective_date"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_effective_request_form" model="ir.ui.view">
+        <field name="name">view.effective.request.form</field>
+        <field name="model">effective.request</field>
+        <field name="arch" type="xml">
+            <form string="Effective Request">
+                <header>
+                    <button name="action_submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+                    <button name="action_double_approve" type="object" string="Validate" states="waiting_approval"
+                            class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    <button name="action_approve" type="object" string="Approve" states="waiting_approval_2"
+                            class="oe_highlight" groups="account.group_account_manager"/>
+                    <button name="action_refuse" type="object" string="Refuse"
+                            states="draft,waiting_approval,waiting_approval_2"
+                            groups="hr.group_hr_manager,hr.group_hr_user,account.group_account_manager"/>
+                    <button name="action_cancel" type="object" string="Cancel" states="draft"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_approval,approve"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group col="2">
+                        <group>
+                            <field name="another_employee"/>
+                            <field name="employee_id" attrs="{'readonly': [('another_employee', '=', False)]}"
+                                   required="1"/>
+                            <field name="manager_id"/>
+                            <field name="request_date" readonly="1"/>
+                            <field name="effective_date" required="1"/>
+                        </group>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="employee_job"/>
+                            <field name="leave_id" required="1" domain="[('need_effective', '=', True),('employee_id', '=', employee_id),('state', '=', 'validate'),('have_effective', '=', False)]"/>
+                            <label for="leave_date_from" string="Dates"/>
+                            <div class="o_row o_row_readonly">
+                                <span class="oe_inline">
+                                    From
+                                </span>
+                                <field name="leave_date_from" class="oe_inline" nolabel="1"/>
+                                <span class="oe_inline">
+                                    To
+                                </span>
+                                <field name="leave_date_to" class="oe_inline"/>
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_employee_form_view_inherit">
+        <field name="name">hr.employee.form.view.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="effective_date"/>
+                <field name="suspend_salary"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_leave_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.view.form.inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/group" position="inside">
+                <field name="need_effective"/>
+                <field name="suspend_salary"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_effective_request">
+        <field name="name">Effective Request</field>
+        <field name="res_model">effective.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to create effective request.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_effective_request"
+              name="Effective Request"
+              action="action_effective_request"
+              parent="hr_holidays.menu_hr_holidays_approvals"
+              sequence="99"
+              groups="hr.group_hr_user"
+    />
+</odoo>

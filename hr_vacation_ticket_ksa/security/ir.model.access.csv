@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_flight_ticket_user,hr.flight.ticket.user,model_hr_flight_ticket,hr_holidays.group_hr_holidays_user,1,1,1,1
+access_hr_flight_ticket_employee,hr.flight.ticket.employee,model_hr_flight_ticket,base.group_user,1,1,1,1
+access_hr_flight_ticket_allocation_user,hr.flight.ticket.allocation.user,model_flight_ticket_allocation,hr_holidays.group_hr_holidays_user,1,1,1,1
+access_hr_flight_ticket_allocation_employee,hr.flight.ticket.allocation.employee,model_flight_ticket_allocation,base.group_user,1,1,1,1
+access_hr_account_sync,hr.account.sync,model_hr_account_sync,,1,1,1,1
+access_hr_accounting_configuration,hr.allocation.accounting.configuration,model_hr_allocation_accounting_configuration,,1,1,1,1
+
+
+

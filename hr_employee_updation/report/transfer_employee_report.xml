@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="action_transfer_employee_report" model="ir.actions.report">
+        <field name="name">Staff Action</field>
+        <field name="model">transfer.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_employee_updation.transfer_employee_report</field>
+        <field name="report_file">hr_employee_updation.transfer_employee_report</field>
+        <field name="binding_model_id" ref="hr_employee_updation.model_transfer_employee"/>
+    </record>
+
+    <template id="transfer_employee_report">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-12" style="text-align: center;font-size:20px;font-weight: bold;">
+                                <span style="text-align: center;font-size:20px;font-weight: bold;">Staff Action Form</span>
+                           </div>
+                        </div>
+                        <!-- personal data -->
+                        <table class="table table-condensed" style="border: 1px solid;font-size:16px;">
+                            <tr>
+                                <td colspan="4" style="border-top:1px solid black;background-color:#B8CCE4;">
+                                    <strong>Personal Data</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:20%;border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Employee Name</strong></td>
+                                <td style="width:30%;border-top:1px solid black;border-right:1px solid black;"><span t-field="o.employee_id.name"/></td>
+                                <td style="width:20%;border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Nationality</strong></td>
+                                <td style="width:30%;border-top:1px solid black;border-right:1px solid black;"><span t-field="o.employee_id.country_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:20%;border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Employment Contract Date</strong></td>
+                                <td style="width:30%;border-top:1px solid black;border-right:1px solid black;"><span t-field="o.hr_contract_id.date_start" t-options='{"widget": "date"}'/></td>
+                                <td style="width:20%;border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Joining Date</strong></td>
+                                <td style="width=30%;border-top:1px solid black;border-right:1px solid black;"><span t-field="o.employee_id.first_contract_date" t-options='{"widget": "date"}'/></td>
+                            </tr>
+                        </table>
+                        <!-- Type of action -->
+                        <table class="table table-condensed" style="border: 1px solid;font-size:16px;margin-bottom:0px;">
+                           <tr>
+                                <td colspan="6" style="border-right:1px solid black;border-top:1px solid black;background-color:#B8CCE4;"><strong>Type of Action</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Confirmation </strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.confirmation"><span>Y</span></t>
+                                    <t t-if="not o.confirmation"><span>N</span></t>
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Salary Revision</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.salary_revision"><span>Y</span></t>
+                                    <t t-if="not o.salary_revision"><span>N</span></t>
+                                </td>
+                               <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Others</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.other"><span>Y</span></t>
+                                    <t t-if="not o.other"><span>N</span></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Promotion </strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.promotion"><span>Y</span></t>
+                                    <t t-if="not o.promotion"><span>N</span></t>
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Grade Revision</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.grade_revision"><span>Y</span></t>
+                                    <t t-if="not o.grade_revision"><span>N</span></t>
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Extension</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.extension"><span>Y</span></t>
+                                    <t t-if="not o.extension"><span>N</span></t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Title Change</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.title_change"><span>Y</span></t>
+                                    <t t-if="not o.title_change"><span>N</span></t>
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Branch Revision</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;text-align: center;">
+                                    <t t-if="o.branch_revision"><span>Y</span></t>
+                                    <t t-if="not o.branch_revision"><span>N</span></t>
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;">
+                                    <t t-if="o.extension_period">
+                                        <strong>Extension Date</strong>
+                                    </t>
+                                </td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;">
+                                    <t t-if="o.extension_period">
+                                        <span t-field="o.extension_period" t-options='{"widget": "date"}'/>
+                                    </t>
+                                </td>
+                            </tr>
+                            
+                            <!-- Current - Proposed Changes -->
+                            <tr>
+                                <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;background-color:#B8CCE4;"><strong>Status</strong></td>
+                                <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;text-align: center;background-color:#B8CCE4;"><strong>Current</strong></td>
+                                <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;background-color:#B8CCE4;"><strong>Proposed (Change To)</strong></td>
+                            </tr>
+                            <t t-if="o.confirmation or o.promotion or o.extension or o.other or o.title_change or o.grade_revision or o.branch_revision">
+                                <tr>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Department Name</strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.department_id.name"/></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.new_department_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Designation Title</strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.job_id.name"/></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.new_job_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Grade</strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.grade_id.name"/></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.new_grade_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;background-color: #D9D9D9;"><strong>Branch</strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.branch_id.name"/></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.new_branch_id.name"/></td>
+                                </tr>
+                            </t>
+                            <t t-if="o.salary_revision">
+                                <tr>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;background-color:#B8CCE4;"><strong>Emoluments (in SAR)</strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;text-align: center;"></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>Basic Salary</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.basic"/></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.new_basic"/></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>House Allowance</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.HRA"/></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.new_HRA"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>Transport Allowance</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.TA"/></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.new_TA"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>Management Allowance</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.other_amt"/></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.new_other_amt"/></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>Fixed/OT Amount</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><span t-field="o.other_amt2"/></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.new_other_amt2"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;background-color: #D9D9D9;"><strong>Total Earnings</strong></td>
+                                    <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;"><strong><span t-field="o.gross_amt"/></strong></td>
+                                    <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;"><strong><span t-field="o.new_gross_amt"/></strong></td>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td style="border-right:1px solid black;border-top:1px solid black;"><strong>Effective As Of</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;"><span t-field="o.effective_date" t-options='{"widget": "date"}'/></td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;"><strong>Request Date</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;">
+                                    <span t-field="o.create_date" t-options='{"widget": "date"}' />
+                                </td>
+                                <td style="border-right:1px solid black;border-top:1px solid black;"><strong>Status</strong></td>
+                                <td style="border-top:1px solid black;border-right:1px solid black;">
+                                    <span t-field="o.state"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="border-right:1px solid black;border-top:1px solid black;background-color:#B8CCE4;"><strong>Justification</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="border-right:1px solid black;border-top:1px solid black;padding-bottom:20px;"><span t-field="o.description"/></td>
+                            </tr>
+                        </table>
+                        <table class="table table-condensed" style="border: 1px solid;font-size:14px; padding-top:0px;margin-top:0px;">
+                            <tr>
+                                <td colspan="2" style="border-right:1px solid black;padding-bottom:50px;font-size:10px;"></td>
+                                <td colspan="2" style="border-right:1px solid black;padding-bottom:50px;font-size:10px;"></td>
+                                <td colspan="2" style="border-right:1px solid black;padding-bottom:50px;font-size:10px;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;"><strong>Manager</strong></td>
+                                <td colspan="2" style="border-top:1px solid black;border-right:1px solid black;text-align: center;"><strong>HR Manager</strong></td>
+                                <td colspan="2" style="border-right:1px solid black;border-top:1px solid black;text-align: center;"><strong>Final Approval</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="border-right:1px solid black;border-top:1px solid black;padding-bottom:50px;">
+                                    <strong>Comments and Approval</strong>
+                                </td>
+                                <td colspan="3" style="border-right:1px solid black;border-top:1px solid black;padding-bottom:50px;"><strong>Staff Signature</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

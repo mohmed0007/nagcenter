@@ -1,0 +1,264 @@
+<odoo>
+    <data>
+        <record id="salary_transfer_report_template_id" model="mail.template">
+            <field name="name">Salary Transfer Letter</field>
+            <field name="model_id" ref="hr_letter_request_ksa.model_letter_request"/>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <center>
+                        <font style="font-size:16px;font-family: 'Almarai', 'serif';">
+                            <t t-if="object.user_lang == 'en_US'">
+                                <table class="table table-condensed table-bordered" style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td style="border: 1px solid black;width: 33%;">Date</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.request_date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;width: 33%;" dir="rtl">التاريخ</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black;">#Serial</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;" dir="rtl">#متسلسل</td>
+                                    </tr>
+                                </table>
+
+                                <div class="text-center">
+                                    <br/>
+                                    <strong>
+                                        <span>خطاب تثبيت راتب</span>
+                                        <br/>
+                                        <span>Salary Transfer Letter</span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-right" dir="rtl">
+                                    <span>السادة/</span>
+                                    <strong>
+                                        <span>
+                                            <t t-out="object.service_to"/>
+                                        </span>
+                                    </strong>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>المحترمين،،،</span>
+                                    <br/>
+                                    <br/>
+                                    <span>السلام عليكم ورحمة الله وبركاته،،، وبعد،،،</span>
+                                    <br/>
+                                    <span>تود</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.company_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>اﻹفادة بأن السيد/</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>الجنسية:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.country_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>بموجب هوية رقم:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.visa_no"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>يعمل لدينا بوظيفة:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.job_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>إعتباراً من:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.contract_id.date_start"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>ولا يزال على رأس العمل حتى تاريخه ونتعهد بتثبيت راتبه ومستحقات نهاية التعاقد
+                                        لدى بنك:
+                                    </span>
+                                    <strong dir="rtl">
+                                        <span>
+                                            <t t-if="object.employee_id.address_home_id.bank_ids">
+                                                <t t-out="object.employee_id.address_home_id.bank_ids[0].bank_id.name"/>
+                                            </t>
+                                        </span>
+                                    </strong>
+                                    <span>في حسابه رقم:</span>
+                                    <strong dir="rtl">
+                                        <span>
+                                            <t t-if="object.employee_id.address_home_id.bank_ids">
+                                                <t t-out="object.employee_id.address_home_id.bank_ids[0].acc_number"/>
+                                            </t>
+                                        </span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+                                <div class="text-center" dir="rtl">
+                                    <strong>
+                                        <span>ولكم منا جزيل الشكر والتقدير،،،</span>
+                                    </strong>
+                                </div>
+                                <br/>
+                                <br/>
+                            </t>
+                            <t t-else="">
+                                <table class="table table-condensed table-bordered" style="width: 100%; height: 100%;">
+                                    <tr>
+                                        <td style="border: 1px solid black;width: 33%;" dir="rtl">التاريخ</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.request_date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;width: 33%;" class="text-right">Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black;" dir="rtl">#متسلسل</td>
+                                        <td style="border: 1px solid black;" class="text-center">
+                                            <t t-out="object.name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;" class="text-right">Serial#</td>
+                                    </tr>
+                                </table>
+
+                                <div class="text-center">
+                                    <br/>
+                                    <strong>
+                                        <span>خطاب تثبيت راتب</span>
+                                        <br/>
+                                        <span>Salary Transfer Letter</span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="text-left" dir="rtl">
+                                    <span>السادة/</span>
+                                    <strong>
+                                        <span>
+                                            <t t-out="object.service_to"/>
+                                        </span>
+                                    </strong>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>
+                                    <span>المحترمين،،،</span>
+                                    <br/>
+                                    <br/>
+                                    <span>السلام عليكم ورحمة الله وبركاته،،، وبعد،،،</span>
+                                    <br/>
+                                    <span>تود</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.company_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>اﻹفادة بأن السيد/</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>الجنسية:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.country_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>بموجب هوية رقم:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.visa_no"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>يعمل لدينا بوظيفة:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.job_id.name"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>إعتباراً من:</span>
+                                    <span>
+                                        <strong>
+                                            <span>
+                                                <t t-out="object.employee_id.contract_id.date_start"/>
+                                            </span>
+                                        </strong>
+                                    </span>
+                                    <span>ولا يزال على رأس العمل حتى تاريخه ونتعهد بتثبيت راتبه ومستحقات نهاية التعاقد
+                                        لدى بنك:
+                                    </span>
+                                    <strong dir="rtl">
+                                        <span>
+                                            <t t-if="object.employee_id.address_home_id.bank_ids">
+                                                <t t-out="object.employee_id.address_home_id.bank_ids[0].bank_id.name"/>
+                                            </t>
+                                        </span>
+                                    </strong>
+                                    <span>في حسابه رقم:</span>
+                                    <strong dir="rtl">
+                                        <span>
+                                            <t t-if="object.employee_id.address_home_id.bank_ids">
+                                                <t t-out="object.employee_id.address_home_id.bank_ids[0].acc_number"/>
+                                            </t>
+                                        </span>
+                                    </strong>
+                                    <br/>
+                                    <br/>
+                                </div>
+                                <br/>
+                                <br/>
+                                <div class="text-center">
+                                    <strong>
+                                        <span>ولكم منا جزيل الشكر والتقدير،،،</span>
+                                    </strong>
+                                </div>
+                                <br/>
+                                <br/>
+                            </t>
+                        </font>
+                    </center>
+                </div>
+            </field>
+            <field name="report_name">${(object.service_type or '').replace('/','_')}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    </data>
+</odoo>

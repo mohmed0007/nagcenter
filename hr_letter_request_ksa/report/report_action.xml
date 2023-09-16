@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="letter_custom_paperformat" model="report.paperformat">
+            <field name="name">Custom Paper Format</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">35</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report id="experience_certificate_report_action"
+                model="letter.request"
+                string="Experience Certificate Report"
+                file="hr_letter_request_ksa.experience_certificate_template"
+                name="hr_letter_request_ksa.experience_certificate_template"
+                report_type="qweb-pdf"
+                menu="False"
+                paperformat="hr_letter_request_ksa.letter_custom_paperformat"
+        />
+
+        <report id="letter_of_authority_report_action"
+                model="letter.request"
+                string="Letter of Authority Report"
+                file="hr_letter_request_ksa.letter_of_authority_template"
+                name="hr_letter_request_ksa.letter_of_authority_template"
+                report_type="qweb-pdf"
+                menu="False"
+                paperformat="hr_letter_request_ksa.letter_custom_paperformat"
+        />
+
+        <report id="salary_introduction_report_action"
+                model="letter.request"
+                string="Salary Introduction Report"
+                file="hr_letter_request_ksa.salary_introduction_template"
+                name="hr_letter_request_ksa.salary_introduction_template"
+                report_type="qweb-pdf"
+                menu="False"
+                paperformat="hr_letter_request_ksa.letter_custom_paperformat"
+        />
+
+        <report id="salary_transfer_report_action"
+                model="letter.request"
+                string="Salary Transfer Report"
+                file="hr_letter_request_ksa.salary_transfer_template"
+                name="hr_letter_request_ksa.salary_transfer_template"
+                report_type="qweb-pdf"
+                menu="False"
+                paperformat="hr_letter_request_ksa.letter_custom_paperformat"
+        />
+
+    </data>
+</odoo>

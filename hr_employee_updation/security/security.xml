@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="grade_manager_rule" model="ir.rule">
+        <field name="name">Manager Grade</field>
+        <field name="model_id" ref="model_hr_grade"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>
+
+    <record id="grade_branch_rule" model="ir.rule">
+        <field name="name">Manager Branch</field>
+        <field name="model_id" ref="model_hr_branch"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>
+
+    <record id="document_emp_rule" model="ir.rule">
+        <field name="name">Employee Document</field>
+        <field name="model_id" ref="model_hr_document"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">['|', ('message_partner_ids', '=', user.partner_id.id), ('employee_id.user_id','=',user.id)]</field>
+    </record>
+
+    <record id="employee_doc_manager_rule" model="ir.rule">
+        <field name="name">HR Manager EMP Document</field>
+        <field name="model_id" ref="model_hr_document"/>
+        <field name="groups" eval="[(4, ref('hr.group_hr_manager'))]"/>
+        <field name="domain_force">['|',('company_id','=',False), ('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+    
+    <record id="transfer_employee_emp_rule" model="ir.rule">
+        <field name="name">Employee</field>
+        <field name="model_id" ref="model_transfer_employee"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">['|', '|',('employee_id.user_id', '=', user.id),
+            ('employee_id.parent_id.user_id', '=', user.id),
+            ('employee_id.coach_id.user_id', '=', user.id)]</field>
+    </record>
+
+    <record id="transfer_employee_rule_all" model="ir.rule">
+        <field name="name">Employee Transfer All</field>
+        <field name="model_id" ref="model_transfer_employee"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4,ref('hr.group_hr_user')), (4,ref('account.group_account_manager'))]"/>
+    </record>
+
+    <record id="transfer_employee_officer_rule" model="ir.rule">
+        <field name="name">Officer/Manager</field>
+        <field name="model_id" ref="model_transfer_employee"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="visa_emp_rule" model="ir.rule">
+        <field name="name">Employee Visa</field>
+        <field name="model_id" ref="model_hr_visa"/>
+        <field name="domain_force">['|','|','|',('message_partner_ids', '=', user.partner_id.id), ('employee_id.user_id', '=', user.id), ('employee_id.parent_id.user_id', '=', user.id), ('employee_id.coach_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="visa_officer_rule" model="ir.rule">
+        <field name="name">Officer Visa</field>
+        <field name="model_id" ref="model_hr_visa"/>
+        <field name="groups" eval="[(4,ref('hr.group_hr_user'))]"/>
+        <field name="domain_force">['|', ('message_partner_ids', 'child_of', [user.partner_id.id]), '|', ('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>
+
+

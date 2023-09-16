@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- EOS -->
+    <record id="view_employee_eos_pay_tree" model="ir.ui.view">
+        <field name="name">hr.employee.eos.pay.tree</field>
+        <field name="model">hr.eos.pay</field>
+        <field name="arch" type="xml">
+            <tree string="EOS Pay">
+                <field name="ref" />
+                <field name="date" />
+                <field name="employee_id"/>
+                <field name="amount"/>
+                <field name="state"/>
+           </tree>
+        </field>
+    </record>
+
+    <record id="view_employee_eos_pay_form" model="ir.ui.view">
+        <field name="name">hr.employee.eos.pay.form</field>
+        <field name="model">hr.eos.pay</field>
+        <field eval="25" name="priority"/>
+        <field name="arch" type="xml">
+            <form string="EOS Pay Sheet">
+            <header>
+                <button name="confirm" states="draft" string="Submit" type="object" class="oe_highlight"
+                        groups="hr.group_hr_user"/>
+                <button name="cancelled" states="draft,confirm" string="Cancel" type="object" class="oe_highlight"
+                        groups="hr.group_hr_user"/>
+              
+                <field name="state" widget="statusbar" statusbar_visible="draft,confirm"
+                       statusbar_colors='{"confirm":"blue","cancelled":"red"}'/>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <label for="ref" class="oe_edit_only"/>
+                    <h1><field name="ref" class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/></h1>
+                </div>
+                <group string="Employee Details">
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="date" force_save="1"/>
+                       
+                    </group>
+                    <group>
+                        <field name="amount"/>
+                        
+                    </group>
+                </group>
+                
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div>
+            </form>
+        </field>
+    </record>
+
+  
+    <record id="eos_pay_all" model="ir.actions.act_window">
+        <field name="name">End of Service Pay</field>
+        <field name="res_model">hr.eos.pay</field>
+        <field name="view_id" ref="view_employee_eos_pay_tree"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to register new Payment EOS .
+           </p>
+        </field>
+    </record>
+
+    <menuitem action="eos_pay_all" id="menu_eos_all_i" name="EOS Payment"  parent="hr.menu_hr_employee_payroll" sequence="45"/>
+    <!-- <menuitem  id="menu_eosn_all_i" name="EOS tes Payment"  parent="hr.menu_hr_employee_payroll" sequence="96"/> -->
+</odoo>

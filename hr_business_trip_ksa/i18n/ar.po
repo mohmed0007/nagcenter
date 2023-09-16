@@ -1,0 +1,4359 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nig
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-04 07:41+0000\n"
+"PO-Revision-Date: 2022-03-04 07:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nig
+#: model:mail.template,body_html:nig.email_template_hr_document_notify
+msgid ""
+"\n"
+"                <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
+"                    <p>Hello, <strong>${object.employee_id.name}</strong></p>\n"
+"                    <p>This is to inform you that your document <strong>${object.type_id.name}</strong> will expire on <strong>${object.expiry_date}</strong>. You shall be notified in writing within the date or after this date should renew your <strong>${object.type_id.name}</strong> </p>\n"
+"                    <p>For more information see below details,</p>\n"
+"                    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"                       &nbsp;&nbsp;<strong>REFERENCES</strong><br />\n"
+"                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject: <strong>${object.employee_id.name}'s ${object.type_id.name} Expiration</strong><br />\n"
+"                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee: ${object.employee_id.name}<br />\n"
+"                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document: ${object.type_id.name}<br />\n"
+"                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration: <strong> ${object.issue_date} - ${object.expiry_date} </strong><br />\n"
+"                    </p>\n"
+"                    <p> This Document will be expired on <strong> ${object.expiry_date} </strong>.</p>\n"
+"                    <br/><br/>\n"
+"                    Thanks,<br/>\n"
+"                    Administrator.\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: nig
+#: model:mail.template,body_html:nig.email_template_hr_document_expire
+msgid ""
+"\n"
+"            <p>Hello ${object.employee_id.name},</p><br/>\n"
+"            <p style=\"color:red\">Your Document <b>${object.type_id.name}</b> is <b>${object.name}</b> has been expired on ${object.expiry_date}.</p><br/>\n"
+"            <p>Thank you,</p>\n"
+"            <p>${user.name}</p>\n"
+"            "
+msgstr ""
+
+#. module: nig
+#: model:mail.template,subject:nig.email_template_hr_document_notify
+msgid "${object.employee_id.name} Document Expiration"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid ""
+"%d no. of days are consider as encashment and amount will provide to "
+"employee."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid ""
+"%d no. of days are consider as encashment and provided amount by payslip."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid "%d no. of days are reduces."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "%s's EOS is already Generated."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "%s's EOS is already in Generated."
+msgstr ""
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket_detail__child_fare
+msgid "80% of Adult Fare"
+msgstr "80%من تعرفة البالغين"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.external_layout_standard_nig
+msgid "<span style=\"color: #FFFFFF;\">  www.nefaie.com </span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid ""
+"<span style=\"margin-right:5px;\" "
+"attrs=\"{'invisible':[('days','=',0.0)]}\"> Days </span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid ""
+"<span style=\"margin-right:5px;\" "
+"attrs=\"{'invisible':[('months','=',0.0)]}\"> Months </span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid ""
+"<span style=\"margin-right:5px;\" "
+"attrs=\"{'invisible':[('years','=',0.0)]}\"> Years </span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid ""
+"<span style=\"text-align: center;font-size:20px;font-weight: bold;\">Staff "
+"Action Form</span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_contract_view_form_inherit1
+msgid "<span>/ month</span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Basic Salary</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Branch Revision</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Branch</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Comments and Approval</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Confirmation </strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Current</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Date :</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Department Name</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Designation Title</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Effective As Of</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Emoluments (in SAR)</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Employee Name</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Employment Contract Date</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Extension Date</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Extension</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Final Approval</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Fixed/OT Amount</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Grade Revision</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Grade</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>HR Manager</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>House Allowance</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Joining Date</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Journal Entry</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Journal:</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Justification</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Management Allowance</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Manager</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Nationality</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Number: </strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Others</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Personal Data</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Promotion </strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Proposed (Change To)</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Reference :</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Request Date</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Salary Revision</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Staff Signature</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Status</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Title Change</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Total Earnings</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "<strong>Total:</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Transport Allowance</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_report
+msgid "<strong>Type of Action</strong>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.report_invoice_document_nig
+msgid ""
+"<strong>الرقم الضريبي: </strong>\n"
+"                    <span> ٣٠٠١٠١٤١٥٢٠٠٠٠٣</span>"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Account"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Accounting"
+msgstr "محاسبة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_needaction
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_needaction
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_needaction
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_needaction
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_needaction
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_needaction
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_needaction
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_needaction
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_needaction
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_needaction
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_needaction
+msgid "Action Needed"
+msgstr "مطلوب إجراء"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_ids
+msgid "Activities"
+msgstr "نشاطات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_exception_decoration
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "استثناء النشاط"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_state
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_state
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_state
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_state
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_state
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_state
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_type_icon
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_annual_ticket_by_employees
+msgid "Add"
+msgstr "إضافة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Add Employees"
+msgstr "إضافة موظف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__adjustment_amount
+msgid "Adjustment Amount"
+msgstr "تعديل الإجمالي"
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#: code:addons/nig/models/hr_payroll.py:0
+#: code:addons/nig/models/hr_payroll.py:0
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "Adjustment Entry"
+msgstr "إدخال التعديل"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__annual_ticket_status__member_type__adult
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__member_type__adult
+msgid "Adult"
+msgstr "بالغ"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__adult_fare
+msgid "Adult Fare"
+msgstr "تعرفة البالغين"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__adults
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Adult(s)"
+msgstr "بالغ(ين)"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__advance_amount
+msgid "Advance Amount"
+msgstr "مبلغ مقدم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__advance_payment_id
+msgid "Advance Payment"
+msgstr "دفعة مقدمة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__advance_required
+msgid "Advance Required"
+msgstr "مطلوب مقدم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__airline
+msgid "Airline"
+msgstr "شركة الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+msgid "Airlines"
+msgstr "شركات الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Airlines Details"
+msgstr "تفاصيل شركات الطيران"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__payroll_summary_report__status__all
+msgid "All"
+msgstr "الكل"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__payroll_summary_report__status__all_not_cancel
+msgid "All But Not Cancel"
+msgstr "الكل بدون إلغاء"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__allocated_amount
+msgid "Allocated Amount"
+msgstr "مبلغ مخصص"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__leave_allocation_id
+msgid "Allocated Leave"
+msgstr "إجازة مخصصة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__other_rules__operation_type__allowance
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Allowance"
+msgstr "مصروف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__allowance_amount
+msgid "Allowance Amount"
+msgstr "مبلغ المصروف"
+
+#. module: nig
+#: code:addons/nig/wizard/generate_air_allowance.py:0
+#, python-format
+msgid "Allowance amount should be less then remaining amount!!"
+msgstr "!!كمية المصروف يجب أن تكون أقل من الكمية المتبقية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__amount
+#: model:ir.model.fields,field_description:nig.field_other_rules__amount
+#: model:ir.model.fields,help:nig.field_hr_loan_line__amount
+msgid "Amount"
+msgstr "كمية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Analytic Account"
+msgstr "حساب تحليلي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_salary_rule__analytic_tag_ids
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Analytic Tags"
+msgstr "علامات تحليلية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_leave_allocation__is_annual_leave
+#: model:ir.model.fields,field_description:nig.field_hr_leave_type__is_annual_leave
+msgid "Annual Leave"
+msgstr "إجازة سنوية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_job__annual_leave_rate
+msgid "Annual Leave Rate"
+msgstr "معدل الإجازة السنوية"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_annual_ticket_view
+#: model:ir.model,name:nig.model_annual_ticket
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__annual_ticket_id
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__reason__annual_ticket
+#: model:ir.ui.menu,name:nig.menu_annual_ticket
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Annual Ticket"
+msgstr "تذكرة سنوية"
+
+#. module: nig
+#: code:addons/nig/models/annual_ticket.py:0
+#, python-format
+msgid "Annual Ticket 'Date From' must be earlier 'Date To'."
+msgstr "'للتذكرة  السنوية 'التاريخ من' يجب أن يكون أكبر من 'التاريخ إلى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__annual_ticket_detail_ids
+msgid "Annual Ticket Detail"
+msgstr "تفاصيل التذكرة السنوية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_annual_ticket_status
+msgid "Annual Ticket Status"
+msgstr "حالة التذكرة السنوية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_annual_ticket_by_employees
+msgid "Annual Ticket by Employees"
+msgstr "التذكرة السنوية حسب الموظفين"
+
+#. module: nig
+#: model:ir.model,name:nig.model_annual_ticket_detail
+msgid "Annual Ticket details"
+msgstr "تفاصيل التذكرة السنوية"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__purpose_of_visa__annual_vacation
+msgid "Annual Vacation"
+msgstr "عطلة سنوية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__applied_on_contract
+msgid "Apply on Contract"
+msgstr "تطبيق على العقد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__user_approve
+msgid "Approval by"
+msgstr "الموافقة حسب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__date_approve
+msgid "Approve Date"
+msgstr "تاريخ الموافقة"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid "Approve Date to must be greater then Approve Date from."
+msgstr "يجب أن يكون تاريخ الموافقة أكبر من تاريخ الموافقة من."
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__approved
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__accepted
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_leaving__state__approve
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__approve
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__validate1
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__approve
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__approved_by
+msgid "Approved By"
+msgstr "تمت الموافقة من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__approved_date
+#: model:ir.model.fields,field_description:nig.field_flight_booking__approved_date
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__approved_date
+#: model:ir.model.fields,field_description:nig.field_hr_visa__approved_date
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__approved_date
+msgid "Approved Date"
+msgstr "تاريخ الموافقة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__approved_date_from
+msgid "Approved Date From"
+msgstr "تاريخ الموافقة من"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__approved_date_to
+#: model:ir.model.fields,field_description:nig.field_other_rules__approved_date_to
+msgid "Approved Date To"
+msgstr "تاريخ الموافقة إلى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__approved_by
+#: model:ir.model.fields,field_description:nig.field_flight_booking__approved_by
+#: model:ir.model.fields,field_description:nig.field_hr_visa__approved_by
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__approved_by
+msgid "Approved by"
+msgstr "تمت الموافقة من قبل"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__validate1
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__validate1
+msgid "Approved by HR Manager"
+msgstr "تمت الموافقة من قبل مدير الموارد البشرية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.payslip_summary_reports_print_view
+msgid "Are you sure you want to Generate Payslip Summary Report?"
+msgstr "هل أنت متأكد من أنك تريد إنشاء تقرير ملخص إيصال الرواتب؟"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.wps_reports_print_view
+msgid "Are you sure you want to Generate WPS Report?"
+msgstr "؟WPS هل أنت متأكد أنك تريد إنشاء تقرير"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_attachment_count
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document__attachment_ids
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__balance_amount
+msgid "Balance Amount"
+msgstr "الرصيد"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__balance_amount
+msgid "Balance amount"
+msgstr "الرصيد"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip_payment__payment_type__bank
+msgid "Bank"
+msgstr "بنك"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__leave_encashment__encashment_type__bank_cash
+msgid "Bank/Cash"
+msgstr "بنك/نقد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__basic
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__basic
+msgid "Basic"
+msgstr "أساسي"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_contract__basic
+#: model:ir.model.fields,help:nig.field_transfer_employee__basic
+#: model:ir.model.fields,help:nig.field_transfer_employee__new_basic
+msgid "Basic Salary of Employee"
+msgstr "المرتب الأساسي للموظف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__booking_lines
+msgid "Booking Lines"
+msgstr "صفوف الحجوزات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__booking_id
+msgid "Booking Request"
+msgstr "طلب حجز"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_branch
+#: model:ir.model.fields,field_description:nig.field_business_trip__branch_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__branch_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee__branch_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_base__branch_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_public__branch_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__branch_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__branch_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__branch_id
+#: model:ir.ui.menu,name:nig.menu_hr_branch
+#: model_terms:ir.ui.view,arch_db:nig.hr_branch_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_branch_tree_view
+msgid "Branch"
+msgstr "فرع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__branch_revision
+msgid "Branch Revision"
+msgstr "مراجعة فرع"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__flight_class__business
+msgid "Business"
+msgstr "عمل"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+msgid "Business Request Validated"
+msgstr "تمت المصادقة على طلب العمل"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_bt_view
+#: model:ir.model,name:nig.model_business_trip
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__business_trip_id
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__reason__business_trip
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__purpose_of_visa__business_trip
+#: model:ir.ui.menu,name:nig.menu_bt
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.bt_tree_view
+msgid "Business Trip"
+msgstr "رحلة عمل"
+
+#. module: nig
+#: code:addons/nig/models/business_trip.py:0
+#: model:ir.actions.act_window,name:nig.action_business_trip_payment
+#: model:ir.model,name:nig.model_business_trip_payment
+#: model_terms:ir.ui.view,arch_db:nig.view_business_trip_payment_form
+#, python-format
+msgid "Business Trip Payment"
+msgstr "دفعة رحلة عمل"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+msgid "Business Trip has been refused"
+msgstr "تم رفض رحلة العمل"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__leave_encashment__encashment_type__by_payslip
+msgid "By Payslip"
+msgstr "حسب إيصال المرتب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Calculate EOS"
+msgstr "حساب مستحقات نهاية الخدمة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_holidays_public__state__cancel
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__cancel
+#: model_terms:ir.ui.view,arch_db:nig.generate_air_allowance_from_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.leave_encashment_form_view
+#: model_terms:ir.ui.view,arch_db:nig.payslip_summary_reports_print_view
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_annual_ticket_by_employees
+#: model_terms:ir.ui.view,arch_db:nig.view_business_trip_payment_form
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_loan_payment_form
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_form
+#: model_terms:ir.ui.view,arch_db:nig.wps_reports_print_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__cancel
+msgid "Canceled"
+msgstr "تم الإلغاء"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__transportation_type__car
+msgid "Car"
+msgstr "سيارة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip_payment__payment_type__cash
+msgid "Cash"
+msgstr "نقد"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__annual_ticket_status__member_type__child
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__member_type__child
+msgid "Child"
+msgstr "طفل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__child_fare
+msgid "Child Fare"
+msgstr "تعرفة الأطفال"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__children
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Children"
+msgstr "أطفال"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__flight_class
+msgid "Class"
+msgstr "الفئة"
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_loan_request
+msgid "Click to create a new Loan request."
+msgstr "اضغط لإنشاء طلب سلف جديد"
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_branch
+msgid "Click to define a new Branch."
+msgstr "اضغط لتحديد فرع جديد"
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_document_type
+msgid "Click to define a new Document Type."
+msgstr "انقر لتحديد نوع مستند جديد."
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_document
+msgid "Click to define a new Document."
+msgstr "انقر لتحديد مستند جديد."
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_grade
+msgid "Click to define a new Grade."
+msgstr "اضغط لتحديد فئة جديدة"
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.eos_all
+msgid "Click to register new EOS."
+msgstr "اضغط تسجيل نهاية خدمة جديدة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__cost_center__client
+msgid "Client"
+msgstr "عميل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__client_id
+msgid "Client Name"
+msgstr "اسم العميل"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_holidays_public__state__close
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_branch__code
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: nig
+#: model:ir.model.constraint,message:nig.constraint_hr_document_type_code
+msgid "Code must be unique per Document!"
+msgstr "يجب أن يكون الرمز فريدًا لكل مستند!"
+
+#. module: nig
+#: model:ir.model,name:nig.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__company_id
+#: model:ir.model.fields,field_description:nig.field_business_trip__company_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__company_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_document__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__company_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__company_id
+#: model:ir.model.fields,field_description:nig.field_other_rules__company_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__company_id
+#: model:ir.model.fields,help:nig.field_hr_loan__company_id
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__cost_center__company
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Company"
+msgstr "شركة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_contract_view_form_inherit1
+msgid "Compute GOSI"
+msgstr "احسب التأمينات الاجتماعية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+msgid "Compute Installment"
+msgstr "احسب الأقساط"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_contract_view_form_inherit1
+msgid "Compute Rule"
+msgstr "احسب السياسة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_form
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Confirm"
+msgstr "أكد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__confirmation
+msgid "Confirmation"
+msgstr "تأكيد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_bank_statement_line__l10n_sa_confirmation_datetime
+#: model:ir.model.fields,field_description:nig.field_account_move__l10n_sa_confirmation_datetime
+#: model:ir.model.fields,field_description:nig.field_account_payment__l10n_sa_confirmation_datetime
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__date_confirm
+msgid "Confirmation Date"
+msgstr "تاريخ التأكيد"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__confirm
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+msgid "Confirmed"
+msgstr "تم التأكيد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+msgid "Confirmed EOS"
+msgstr "نهاية الخدمة المؤكدة"
+
+#. module: nig
+#: model:ir.model,name:nig.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__contact_person
+msgid "Contact Person"
+msgstr "اتصل بالشخص"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__contract_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__hr_contract_id
+msgid "Contract"
+msgstr "عقد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_tree_view
+msgid "Contract Amendment"
+msgstr "تعديل العقد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Contract Information"
+msgstr "معلومات العقد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__cost_center
+msgid "Cost Center"
+msgstr "مركز التكلفة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+msgid "Create Advance Payment"
+msgstr "عمل دفعة مقدمة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+msgid "Create By"
+msgstr "العمل حسب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_leave_view_form_inherit
+msgid "Create or View Ticket Request"
+msgstr "إنشاء أو عرض طلب تذكرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_leave_view_form_inherit
+msgid "Create or View Visa Request"
+msgstr "إنشاء أو عرض طلب تأشيرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__create_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__create_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__create_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__create_uid
+#: model:ir.model.fields,field_description:nig.field_business_trip__create_uid
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__create_uid
+#: model:ir.model.fields,field_description:nig.field_flight_booking__create_uid
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__create_uid
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_branch__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_document__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_grade__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__create_uid
+#: model:ir.model.fields,field_description:nig.field_hr_visa__create_uid
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__create_uid
+#: model:ir.model.fields,field_description:nig.field_other_rules__create_uid
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__create_uid
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__create_uid
+#: model:ir.model.fields,field_description:nig.field_wps_report__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__create_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__create_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__create_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__create_date
+#: model:ir.model.fields,field_description:nig.field_business_trip__create_date
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__create_date
+#: model:ir.model.fields,field_description:nig.field_flight_booking__create_date
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__create_date
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_branch__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_document__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_grade__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__create_date
+#: model:ir.model.fields,field_description:nig.field_hr_visa__create_date
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__create_date
+#: model:ir.model.fields,field_description:nig.field_other_rules__create_date
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__create_date
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__create_date
+#: model:ir.model.fields,field_description:nig.field_wps_report__create_date
+msgid "Created on"
+msgstr "تم الإنشاء في"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Credit"
+msgstr "الإئتمان"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__currency_id
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__currency_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__currency_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__currency_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__currency_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__currency_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__currency_id
+#: model:ir.model.fields,help:nig.field_hr_loan__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Current"
+msgstr "الحالي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__eos_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan__date
+#: model:ir.model.fields,field_description:nig.field_other_rules__date
+#: model:ir.model.fields,help:nig.field_hr_loan__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__date_from
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__date_from
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_tree
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__date_to
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__date_to
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_tree
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document__expiry_date
+msgid "Date of Expiry"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document__issue_date
+msgid "Date of Issue"
+msgstr "تاريخ المسألة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__travel_date
+msgid "Date of Journey"
+msgstr "تاريخ الرحلة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__date_approve
+msgid ""
+"Date of the Approval of the sheet eos. It's filled when the button Approve "
+"is pressed."
+msgstr ""
+"تاريخ الموافقة على ورقة نهاية الخدمة. يتم ملؤه عند الضغط على زر الموافقة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__date_valid
+msgid ""
+"Date of the acceptation of the sheet eos. It's filled when the button "
+"Validate is pressed."
+msgstr ""
+"تاريخ الموافقة على ورقة نهاية الخدمة. يتم ملؤه عند الضغط على زر التصديق"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__date_confirm
+msgid ""
+"Date of the confirmation of the sheet expense. It's filled when the button "
+"Confirm is pressed."
+msgstr "تاريخ تأكيد ورقة النفقات. يتم ملؤه عند الضغط على زر التأكيد"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__payment_date
+msgid "Date of the paymemt"
+msgstr "تاريخ الدفعة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan_line__date
+msgid "Date of the payment"
+msgstr "تاريخ الدفعة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__days
+msgid "Days"
+msgstr "الأيام"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__eos_type__death
+msgid "Death"
+msgstr "موت"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Debit"
+msgstr "مدين"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__other_rules__operation_type__deduction
+msgid "Deduction"
+msgstr "خصم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__adult_fare
+msgid "Default Adult Fare"
+msgstr "تعريفة البالغين الأساسية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_bank_statement_line__l10n_sa_delivery_date
+#: model:ir.model.fields,field_description:nig.field_account_move__l10n_sa_delivery_date
+#: model:ir.model.fields,field_description:nig.field_account_payment__l10n_sa_delivery_date
+msgid "Delivery Date"
+msgstr "تاريخ التوصيل"
+
+#. module: nig
+#: code:addons/nig/models/account_move.py:0
+#, python-format
+msgid "Delivery Date cannot be before Invoice Date"
+msgstr "لا يمكن ان يكون تاريخ التوصيل قبل تاريخ الفاتورة"
+
+#. module: nig
+#: code:addons/nig/models/account_move.py:0
+#, python-format
+msgid "Delivery Date cannot be empty"
+msgstr "لا يمكن ترك تاريخ التوصيل فارغاً"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__department_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__department_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__department_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__department_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__department_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__department_id
+#: model:ir.model.fields,field_description:nig.field_other_rules__department_id
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_loan_request_search_form
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__departure_date
+#: model:ir.model.fields,field_description:nig.field_hr_visa__requested_date_from
+msgid "Departure Date"
+msgstr "تاريخ المغادرة"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid "Departure Date must be greater then Return Date."
+msgstr "تاريخ المغادرة يجب أن يكون أكبر من تاريخ العودة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__description
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__name
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__description
+#: model:ir.model.fields,field_description:nig.field_hr_visa__description
+#: model:ir.model.fields,field_description:nig.field_other_rules__description
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__description
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+msgid "Destination"
+msgstr "الوجهة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_move__display_name
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__display_name
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__display_name
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__display_name
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__display_name
+#: model:ir.model.fields,field_description:nig.field_business_trip__display_name
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__display_name
+#: model:ir.model.fields,field_description:nig.field_flight_booking__display_name
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__display_name
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_branch__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_document__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_employee_public__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_grade__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_job__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_leave_allocation__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_leave_type__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_loan__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_payslip_employees__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_salary_rule__display_name
+#: model:ir.model.fields,field_description:nig.field_hr_visa__display_name
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__display_name
+#: model:ir.model.fields,field_description:nig.field_other_rules__display_name
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__display_name
+#: model:ir.model.fields,field_description:nig.field_res_company__display_name
+#: model:ir.model.fields,field_description:nig.field_res_partner__display_name
+#: model:ir.model.fields,field_description:nig.field_resource_calendar_leaves__display_name
+#: model:ir.model.fields,field_description:nig.field_resource_mixin__display_name
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__display_name
+#: model:ir.model.fields,field_description:nig.field_wps_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_document
+msgid "Document"
+msgstr "وثيقة"
+
+#. module: nig
+#: model:mail.template,subject:nig.email_template_hr_document_expire
+msgid "Document Expire"
+msgstr "الوثيقة تنتهي"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_document_type
+#: model:ir.model,name:nig.model_hr_document_type
+#: model:ir.ui.menu,name:nig.menu_hr_document_type
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_document_type_form
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_document_type_tree
+msgid "Document Type"
+msgstr "نوع الوثيقة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee.py:0
+#: model:ir.model.fields,field_description:nig.field_hr_employee__documents_count
+#: model_terms:ir.ui.view,arch_db:nig.hr_form_view_inherit
+#, python-format
+msgid "Documents"
+msgstr "وثائق"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__done
+#: model:ir.model.fields.selection,name:nig.selection__other_rules__state__done
+#: model:ir.model.fields.selection,name:nig.selection__payroll_summary_report__status__done
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__done
+#: model_terms:ir.ui.view,arch_db:nig.leave_encashment_form_view
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_form1
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+msgid "Done"
+msgstr "تم"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_leaving__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__hr_holidays_public__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__other_rules__state__draft
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__draft
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: nig
+#: model:ir.ui.menu,name:nig.menu_eos_all
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_tree
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+msgid "EOS"
+msgstr "نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Account Move"
+msgstr "نقل حساب نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Approved."
+msgstr ".تمت الموافقة على نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Cancelled."
+msgstr ".تم إلغاء نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Confirmed."
+msgstr ".تم تأكيد نهاية الخدمة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "EOS Details"
+msgstr "تفاصيل نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Draft."
+msgstr "مسودة نهاية الخدمة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "EOS Sheet"
+msgstr "تقرير نهاية الخدمة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+msgid "EOS Type"
+msgstr "نوع نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "EOS Validated."
+msgstr "تم التصديق على نهاية الخدمة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__effective_date
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "Effective Date"
+msgstr "تاريخ النفاذ"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__purpose_of_visa__emergency
+msgid "Emergency"
+msgstr "طوارىء"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_employee
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__employee_id
+#: model:ir.model.fields,field_description:nig.field_business_trip__employee_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__employee_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_document__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__employee_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__employee_id
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__employee_id
+#: model:ir.model.fields,field_description:nig.field_other_rules__employee_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__employee_id
+#: model:ir.model.fields,help:nig.field_hr_loan__department_id
+#: model:ir.model.fields,help:nig.field_hr_loan__employee_id
+#: model:ir.model.fields,help:nig.field_hr_loan_line__employee_id
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_search
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_loan_request_search_form
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__debit_account_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__debit_account_id
+msgid "Employee Account"
+msgstr "حساب الموظف"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Employee Details"
+msgstr "تفاصيل الموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_employee_leaving_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_tree_view
+msgid "Employee Leaving"
+msgstr "مغادرة الموظف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_other_rules__name
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket_detail__adults
+msgid "Employee and Spouse"
+msgstr "الموظف و الزوجة أو الزوج"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__employee_ids
+#: model_terms:ir.ui.view,arch_db:nig.view_annual_ticket_by_employees
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__encashment_days
+msgid "Encashment Days"
+msgstr "أيام تحصيل المستحقات"
+
+#. module: nig
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid "Encashment Days need to be greater than 0!!"
+msgstr "!!عدد ايام تحصيل المستحقات يجب أن يكون اكبر من 0"
+
+#. module: nig
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid "Encashment Days need to be less than remaining days of %s Employee !!"
+msgstr ""
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__applied_date
+msgid "Encashment Report Date"
+msgstr "تاريخ تقرير تحصيل المستحقات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__encashment_type
+msgid "Encashment Type"
+msgstr "نوع المستحقات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.eos_all
+#: model:ir.model,name:nig.model_hr_employee_eos
+msgid "End of Service Indemnity (EOS)"
+msgstr "(EOS)تعويض نهاية الخدمة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Enter ticket number..."
+msgstr "...أدخل رقم التذكرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Enter your remarks..."
+msgstr "...أدخل تعليقاتك"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid "Error! Approved Date From must be less than Approved Date To."
+msgstr ".خطأ! تاريخ الموافقة من يجب أن يكون أقل من تاريخ الموافقة إلى"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid "Error! Departure Date must be less than Return Date."
+msgstr ".خطأ! تاريخ المغادرة يجب أن يكون أقل من تاريخ العودة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__estimated_amount
+msgid "Estimated Amount"
+msgstr "المبلغ التقريبي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__excel_file
+#: model:ir.model.fields,field_description:nig.field_wps_report__excel_file
+msgid "Excel File"
+msgstr "ملف إكسل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__exit_date
+msgid "Exit Date"
+msgstr "تاريخ الخروج"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_leaving.py:0
+#, python-format
+msgid "Exit Date must be greater than Notice End Date"
+msgstr "تاريخ الخروج يجب أن يكون أكبر من تاريخ انتهاء الإشعار"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_leave__exit_entry_required
+msgid "Exit Entry Required"
+msgstr "دخول المخرج مطلوب"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__reason_of_visa__annual_leave
+msgid "Exit re-entry Visa"
+msgstr "تأشيرة إعادة دخول المخرج"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__expiry
+msgid "Expiry"
+msgstr "انقضاء"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__extension
+msgid "Extension"
+msgstr "تمديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__extension_period
+msgid "Extension Period"
+msgstr "فترة التمديد"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__reason_of_visa__renew_visa
+msgid "Extension of Exit re-entry Visa"
+msgstr "تمديد تأشيرة إعادة دخول المخرج"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Extra Information"
+msgstr "معلومات إضافية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__filename
+msgid "File"
+msgstr "ملف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__file_name
+#: model:ir.model.fields,field_description:nig.field_wps_report__filename
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_wps_report__file_path
+msgid "File Path"
+msgstr "مسار الملف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Filter"
+msgstr "ترشيح"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__reason_of_visa__final_exit
+msgid "Final Exit"
+msgstr "المخرج النهائي"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__flight_class__first
+msgid "First"
+msgstr "الأول"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__other_amt2
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__other_amt2
+msgid "Fixed/OT Amount"
+msgstr "علاوة ثابتة عمل إضافي"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__transportation_type__flight
+msgid "Flight"
+msgstr "الطيران"
+
+#. module: nig
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/hr_leave.py:0
+#: model:ir.actions.act_window,name:nig.action_flight_booking_view
+#: model:ir.model,name:nig.model_flight_booking
+#: model:ir.ui.menu,name:nig.menu_flight_booking
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_tree_view
+#, python-format
+msgid "Flight Booking"
+msgstr "حجوزات الطيران"
+
+#. module: nig
+#: model:ir.model,name:nig.model_flight_booking_line
+msgid "Flight Booking Lines"
+msgstr "صفوف حجوزات الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight Type"
+msgstr "نوع الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request"
+msgstr "طلب الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request In process"
+msgstr "طلب الطيران قيد التنفيذ"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request approved"
+msgstr "طلب الطيران تمت الموافقة عليه"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request has been refused"
+msgstr "طلب الطيران تم رفضه"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request has been waiting for approval"
+msgstr "طلب الطيران بانتظار الموافقة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Flight request receive for confirm"
+msgstr "طلب الطيران تم استلامه للتأكيد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_follower_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_channel_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_partner_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_business_trip__activity_type_icon
+#: model:ir.model.fields,help:nig.field_flight_booking__activity_type_icon
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__activity_type_icon
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__activity_type_icon
+#: model:ir.model.fields,help:nig.field_hr_loan__activity_type_icon
+#: model:ir.model.fields,help:nig.field_hr_visa__activity_type_icon
+#: model:ir.model.fields,help:nig.field_transfer_employee__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA- المهام"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.external_layout_standard_nig
+msgid "Footer"
+msgstr "تذييل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__journal_id
+msgid "Force Journal"
+msgstr "إجبار اليومية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Free Notes"
+msgstr "ملاحظات حرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "From"
+msgstr "من"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__department_id
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "From Department"
+msgstr "من القسم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__grade_id
+msgid "From Grade"
+msgstr "من الفئة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__job_id
+msgid "From Job"
+msgstr "من الوظيفة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "From Job Position"
+msgstr "من الموقع الوظيفي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__calc_gosi_deduction
+msgid "GOSI Calculated Amount"
+msgstr "مبلغ التأمينات الاجتماعية المحسوب"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_gosi_emp
+msgid "GOSI Contribution"
+msgstr "مساهمة التأمينات الاجتماعية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__gosi_deduction
+msgid "GOSI Deduction"
+msgstr "خصم التأمينات الاجتماعية"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_contract__calc_gosi_deduction
+msgid "GOSI deduction amount of Employee"
+msgstr "خصم التأمينات الاجتماعية للموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.generate_air_allowance_from_view
+msgid "Generate"
+msgstr "توليد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Generate Accounting Entries"
+msgstr "توليد مدخلات حسابية"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_generate_air_allowance_view
+msgid "Generate Air Allowanace"
+msgstr "توليد "
+
+#. module: nig
+#: model:ir.model,name:nig.model_generate_air_allowance
+#: model_terms:ir.ui.view,arch_db:nig.generate_air_allowance_from_view
+msgid "Generate Air Allowance"
+msgstr "إنشاء بدل الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Generate Allowance"
+msgstr "إنشاء المصروف"
+
+#. module: nig
+#: code:addons/nig/models/annual_ticket.py:0
+#, python-format
+msgid "Generate Annual Leaving"
+msgstr "إنشاء الإجازات السنوية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_annual_ticket_employees
+msgid "Generate Annual Ticket Record for all selected employees"
+msgstr "إنشاء سجل التذاكر السنوية لكل الموظفين المحددين"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_leave_allocation_view_form_inherit1
+msgid "Generate Leave Encashment"
+msgstr "إنشاء مستحقات الإجازة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+msgid "Generate Payment"
+msgstr "إنشاء دفعة"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "إنشاء إيصالات مرتبات لكافة الموظفين المحددين"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__destination
+#: model:ir.model.fields,field_description:nig.field_flight_booking__destination
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__destination
+msgid "Going To"
+msgstr "الذهاب إلى"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_grade
+#: model:ir.model.fields,field_description:nig.field_hr_employee__grade_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_base__grade_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_public__grade_id
+#: model:ir.model.fields,field_description:nig.field_hr_job__grade_id
+#: model:ir.ui.menu,name:nig.menu_hr_grade
+#: model_terms:ir.ui.view,arch_db:nig.view_grade_form
+#: model_terms:ir.ui.view,arch_db:nig.view_grade_tree
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_grade_filter
+msgid "Grade"
+msgstr "الفئة"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_grade
+msgid "Grade Description"
+msgstr "وصف الفئة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__grade_revision
+msgid "Grade Revision"
+msgstr "مراجعة الفئة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_contract__gross_amt
+msgid "Gross Amount is Sum of Basic Salary + HRA + TA."
+msgstr "المبلغ الاجمالي هو مجموع الراتب الأساسي + بدل السكن + بدل المواصلات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__gross_amt
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__gross_amt
+msgid "Gross Salary"
+msgstr "المرتب الإجمالي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_holidays_public_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Group By..."
+msgstr "...الجمع حسب"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__flight_class__guest
+msgid "Guest"
+msgstr "ضيف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+msgid "HR Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_document
+msgid "HR Document"
+msgstr "وثيقة الموارد البشرية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_employee_leaving
+msgid "HR Employee Leaving"
+msgstr "مغادرة موظف موارد بشرية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_job
+msgid "HR Job"
+msgstr "وظيفة الموارد البشرية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+msgid "HR Manager Approve"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_visa
+msgid "HR Visa"
+msgstr "تأشيرة الموارد البشرية"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_transfer_employee__HRA
+#: model:ir.model.fields,help:nig.field_transfer_employee__new_HRA
+msgid "HRA of employee"
+msgstr "بدل الإسكان للموظف"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_contract__HRA
+msgid "HRA of employee (25% of basic)"
+msgstr "بدل الإسكان للموظف (25% من الأساسي)"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__handled_by
+msgid "Handled by"
+msgstr "تمت المعاملة من قبل"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.external_layout_standard_nig
+msgid "Header1"
+msgstr "رأس 1"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.external_layout_standard_nig
+msgid "Header2"
+msgstr "رأس 2"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__purpose_of_visa__holiday
+msgid "Holiday"
+msgstr "عطلة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__holidays_id
+msgid "Holiday Calendar Year"
+msgstr "سنة روزنامة العطلات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__line_ids
+msgid "Holiday Dates"
+msgstr "تواريخ العطلات"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_houserentallowance
+#: model:ir.model.fields,field_description:nig.field_hr_contract__HRA
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__HRA
+msgid "Housing Allowance"
+msgstr "بدل السكن"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_move__id
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__id
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__id
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__id
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__id
+#: model:ir.model.fields,field_description:nig.field_business_trip__id
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__id
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__id
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__id
+#: model:ir.model.fields,field_description:nig.field_hr_branch__id
+#: model:ir.model.fields,field_description:nig.field_hr_contract__id
+#: model:ir.model.fields,field_description:nig.field_hr_document__id
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__id
+#: model:ir.model.fields,field_description:nig.field_hr_employee__id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_public__id
+#: model:ir.model.fields,field_description:nig.field_hr_grade__id
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__id
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__id
+#: model:ir.model.fields,field_description:nig.field_hr_job__id
+#: model:ir.model.fields,field_description:nig.field_hr_leave__id
+#: model:ir.model.fields,field_description:nig.field_hr_leave_allocation__id
+#: model:ir.model.fields,field_description:nig.field_hr_leave_type__id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__id
+#: model:ir.model.fields,field_description:nig.field_hr_payslip__id
+#: model:ir.model.fields,field_description:nig.field_hr_payslip_employees__id
+#: model:ir.model.fields,field_description:nig.field_hr_salary_rule__id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__id
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__id
+#: model:ir.model.fields,field_description:nig.field_other_rules__id
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__id
+#: model:ir.model.fields,field_description:nig.field_res_company__id
+#: model:ir.model.fields,field_description:nig.field_res_partner__id
+#: model:ir.model.fields,field_description:nig.field_resource_calendar_leaves__id
+#: model:ir.model.fields,field_description:nig.field_resource_mixin__id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__id
+#: model:ir.model.fields,field_description:nig.field_wps_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_exception_icon
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_business_trip__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_flight_booking__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_hr_loan__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_hr_visa__activity_exception_icon
+#: model:ir.model.fields,help:nig.field_transfer_employee__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ايقونة للإشارة إلى النشاط المستثنى"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_needaction
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_unread
+#: model:ir.model.fields,help:nig.field_business_trip__message_needaction
+#: model:ir.model.fields,help:nig.field_business_trip__message_unread
+#: model:ir.model.fields,help:nig.field_flight_booking__message_needaction
+#: model:ir.model.fields,help:nig.field_flight_booking__message_unread
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_needaction
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_unread
+#: model:ir.model.fields,help:nig.field_hr_document__message_needaction
+#: model:ir.model.fields,help:nig.field_hr_document__message_unread
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_needaction
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_unread
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_needaction
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_unread
+#: model:ir.model.fields,help:nig.field_hr_loan__message_needaction
+#: model:ir.model.fields,help:nig.field_hr_loan__message_unread
+#: model:ir.model.fields,help:nig.field_hr_visa__message_needaction
+#: model:ir.model.fields,help:nig.field_hr_visa__message_unread
+#: model:ir.model.fields,help:nig.field_other_rules__message_needaction
+#: model:ir.model.fields,help:nig.field_other_rules__message_unread
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_needaction
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إن تم التحقق، رسائل جديدة تتطلب انتباهك"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_has_error
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_business_trip__message_has_error
+#: model:ir.model.fields,help:nig.field_business_trip__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_flight_booking__message_has_error
+#: model:ir.model.fields,help:nig.field_flight_booking__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_has_error
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_hr_document__message_has_error
+#: model:ir.model.fields,help:nig.field_hr_document__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_has_error
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_has_error
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_hr_loan__message_has_error
+#: model:ir.model.fields,help:nig.field_hr_loan__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_hr_visa__message_has_error
+#: model:ir.model.fields,help:nig.field_hr_visa__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_other_rules__message_has_error
+#: model:ir.model.fields,help:nig.field_other_rules__message_has_sms_error
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_has_error
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إن تم التحقق، بعض الرسائل تحتوي على خطأ في التسليم"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__in_progress
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__inprogress
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "In Progress"
+msgstr "جاري التنفيذ"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking_line__member_type__infant
+msgid "Infant"
+msgstr "طفل"
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "Installment"
+msgstr "تقسيط"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_payslip__installment_count
+msgid "Installment Count"
+msgstr "عدد الأقساط"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_loan_line
+msgid "Installment Line"
+msgstr "خط الأقساط"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+msgid "Installments"
+msgstr "الأقساط"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__reason__internal
+msgid "Internal Meeting"
+msgstr "اجتماع داخلي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__invoice_amount
+msgid "Invoice Amount"
+msgstr "مبلغ الفاتورة"
+
+#. module: nig
+#: code:addons/nig/models/flight.py:0
+#, python-format
+msgid "Invoice Amount should be greater then 0"
+msgstr "مبلغ الفاتورة يجب أن يكون أكبر من 0"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Invoice Details"
+msgstr "تفاصيل الفاتورة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_is_follower
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+msgid "Issue"
+msgstr "مشكلة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__issue
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__received
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Issued"
+msgstr "تم الإصدار"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_grade_form
+msgid "JOB"
+msgstr "وظيفة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__job_id
+#: model:ir.model.fields,field_description:nig.field_hr_grade__hr_job_ids
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__job_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__job_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__job_id
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Job Position"
+msgstr "منصب وظيفي"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__job_id
+msgid "Job position"
+msgstr "منصب وظيفي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__date_of_join
+msgid "Joining Date"
+msgstr "تاريخ الانضمام"
+
+#. module: nig
+#: model:ir.actions.report,name:nig.action_journal_entry_report
+msgid "Journal Entries"
+msgstr "إدخالات دفتر اليومية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Justification"
+msgstr "التبرير"
+
+#. module: nig
+#: code:addons/nig/wizard/payroll_summary_report.py:0
+#: code:addons/nig/wizard/payroll_summary_report_eng_copy.py:0
+#, python-format
+msgid "Kindly select the payslip batches."
+msgstr "فضلاً اختر دفعات كشف المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_bank_statement_line__l10n_sa_show_delivery_date
+#: model:ir.model.fields,field_description:nig.field_account_move__l10n_sa_show_delivery_date
+#: model:ir.model.fields,field_description:nig.field_account_payment__l10n_sa_show_delivery_date
+msgid "L10N Sa Show Delivery Date"
+msgstr "أظهر تاريخ التوصيل"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Label"
+msgstr "ملصق"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee__last_contract_date
+msgid "Last Contract Date"
+msgstr "آخر تاريخ للعقد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_move____last_update
+#: model:ir.model.fields,field_description:nig.field_annual_ticket____last_update
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail____last_update
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees____last_update
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status____last_update
+#: model:ir.model.fields,field_description:nig.field_business_trip____last_update
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment____last_update
+#: model:ir.model.fields,field_description:nig.field_flight_booking____last_update
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line____last_update
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_branch____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_document____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_document_type____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_employee_public____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_grade____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_job____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_leave_allocation____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_leave_type____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_loan____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_payslip_employees____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_salary_rule____last_update
+#: model:ir.model.fields,field_description:nig.field_hr_visa____last_update
+#: model:ir.model.fields,field_description:nig.field_leave_encashment____last_update
+#: model:ir.model.fields,field_description:nig.field_other_rules____last_update
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report____last_update
+#: model:ir.model.fields,field_description:nig.field_res_company____last_update
+#: model:ir.model.fields,field_description:nig.field_res_partner____last_update
+#: model:ir.model.fields,field_description:nig.field_resource_calendar_leaves____last_update
+#: model:ir.model.fields,field_description:nig.field_resource_mixin____last_update
+#: model:ir.model.fields,field_description:nig.field_transfer_employee____last_update
+#: model:ir.model.fields,field_description:nig.field_wps_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+msgid "Last Updated By"
+msgstr "آخر تحديث من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__write_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__write_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__write_uid
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__write_uid
+#: model:ir.model.fields,field_description:nig.field_business_trip__write_uid
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__write_uid
+#: model:ir.model.fields,field_description:nig.field_flight_booking__write_uid
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__write_uid
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_branch__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_document__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_grade__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__write_uid
+#: model:ir.model.fields,field_description:nig.field_hr_visa__write_uid
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__write_uid
+#: model:ir.model.fields,field_description:nig.field_other_rules__write_uid
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__write_uid
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__write_uid
+#: model:ir.model.fields,field_description:nig.field_wps_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__write_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__write_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_employees__write_date
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__write_date
+#: model:ir.model.fields,field_description:nig.field_business_trip__write_date
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__write_date
+#: model:ir.model.fields,field_description:nig.field_flight_booking__write_date
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__write_date
+#: model:ir.model.fields,field_description:nig.field_generate_air_allowance__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_branch__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_document__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_grade__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__write_date
+#: model:ir.model.fields,field_description:nig.field_hr_visa__write_date
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__write_date
+#: model:ir.model.fields,field_description:nig.field_other_rules__write_date
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__write_date
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__write_date
+#: model:ir.model.fields,field_description:nig.field_wps_report__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__annual_leave_amount
+msgid "Leave Balance"
+msgstr "رصيد الإجازة"
+
+#. module: nig
+#: code:addons/nig/models/hr_leave.py:0
+#: model:ir.model,name:nig.model_leave_encashment
+#: model_terms:ir.ui.view,arch_db:nig.leave_encashment_form_view
+#, python-format
+msgid "Leave Encashment"
+msgstr "مستحقات الإجازة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__leaves_taken
+msgid "Leaves Taken"
+msgstr "الإجازات المأخوذة"
+
+#. module: nig
+#: model:ir.ui.menu,name:nig.menu_hr_employee_leaving
+msgid "Leaving"
+msgstr "المغادرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__date_of_leave
+msgid "Leaving Date"
+msgstr "تاريخ المغادرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__source
+#: model:ir.model.fields,field_description:nig.field_flight_booking__source
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__source
+msgid "Leaving From"
+msgstr "المغادرة من"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+msgid "Leaving Information"
+msgstr "معلومات المغادرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__account_move_id
+msgid "Ledger Posting"
+msgstr "ترحيل اليومية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__required_documents
+msgid "List of Documents Required"
+msgstr "قائمة الملفات المطلوبة"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_rule_loan
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__loan_id
+#: model:ir.model.fields,help:nig.field_hr_loan_line__loan_id
+#: model_terms:ir.ui.view,arch_db:nig.hr_payslip_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:nig.view_loan_request_search_form
+msgid "Loan"
+msgstr "سلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__loan_amount
+msgid "Loan Amount"
+msgstr "مبلغ السلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__payment_done
+msgid "Loan Amount Given"
+msgstr "مبلغ السلف المُعطى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_payslip__loan_line_ids
+msgid "Loan Installment"
+msgstr "تقسيط القرض"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_payslip__loan_line_ids
+msgid "Loan Installment to employee."
+msgstr "قسط القرض للموظف."
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__loan_lines
+msgid "Loan Line"
+msgstr "سطر السلفة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__loan_id
+msgid "Loan Ref."
+msgstr "مرجع السلف"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_loan
+#: model:ir.ui.menu,name:nig.menu_hr_loan_request
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_tree_view
+msgid "Loan Request"
+msgstr "طلب سلف"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__loan_amount
+msgid "Loan amount"
+msgstr "مبلغ السلف"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.act_hr_employee_loan_request
+msgid "Loans"
+msgstr "السلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_main_attachment_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الأساسي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__other_amt
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__other_amt
+msgid "Management Allowance"
+msgstr "بدل الإدارة"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_other_amt
+msgid "Management Allowance & Fixed OT"
+msgstr "مصروف الإدارة وعلاوة ثابتة لعمل إضافي "
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket_detail__children
+msgid "Maximum two children, if no infants(Age must be between 2 to 18)"
+msgstr ""
+"اثنان من الاطفال كحد أقصى، إن لم يكن هنالك رُضَّع (العمر يجب أن يكون بين 2 و"
+" 18)"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__member_type
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__member_type
+msgid "Member Type"
+msgstr "نوع العضو"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_has_error
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_has_error
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_has_error
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_has_error
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_has_error
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_has_error
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_has_error
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_has_error
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_has_error
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_has_error
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في إيصال الرسالة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_ids
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_ids
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+msgid "Month"
+msgstr "الشهر"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_contract_view_form_inherit1
+msgid "Monthly Deduction in Cash"
+msgstr "الخصم الشهري نقداً"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__months
+msgid "Months"
+msgstr "الأشهر"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__ticket_type__multi
+msgid "Multiple"
+msgstr "العديد"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_branch
+msgid "Multiple branch."
+msgstr "فروع عديدة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_flight_booking__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_loan__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_visa__my_activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_loan_request_search_form
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__name
+#: model:ir.model.fields,field_description:nig.field_hr_branch__name
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__name
+#: model:ir.model.fields,field_description:nig.field_hr_grade__name
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__name
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__name
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_holidays_public_filter
+msgid "Name"
+msgstr "الاسم"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__name
+msgid "Name of the loan"
+msgstr "اسم السلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__country_id
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: nig
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/flight.py:0 code:addons/nig/models/flight.py:0
+#: code:addons/nig/models/flight.py:0 code:addons/nig/models/hr_visa.py:0
+#: code:addons/nig/models/hr_visa.py:0 code:addons/nig/models/hr_visa.py:0
+#: code:addons/nig/models/transfer_employee.py:0
+#: code:addons/nig/models/transfer_employee.py:0
+#: code:addons/nig/models/transfer_employee.py:0
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__draft
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_basic
+msgid "New Basic"
+msgstr "جديد أساسي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "New Branch"
+msgstr "فرع جديد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+msgid "New EOS"
+msgstr "نهاية الخدمة جديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_other_amt2
+msgid "New Fixed/OT Allowance"
+msgstr "بدل جديد ثابت / وقت إضافي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "New Grade"
+msgstr "فئة جديدة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_gross_amt
+msgid "New Gross Salary"
+msgstr "راتب إجمالي جديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_HRA
+msgid "New Housing Allowance"
+msgstr "بدل سكن جديد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "New Job"
+msgstr "وظيفة جديدة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_other_amt
+msgid "New Management Allowance"
+msgstr "بدل الإدارة الجديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_TA
+msgid "New Transport Allowance"
+msgstr "بدل مواصلات جديد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_date_deadline
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي  الجديد للنشاطات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_summary
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_summary
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_summary
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_summary
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_summary
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_summary
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_type_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: nig
+#: code:addons/nig/wizard/business_trip_payment.py:0
+#: code:addons/nig/wizard/leave_encashment.py:0
+#, python-format
+msgid "No Home Address found for the employee %s, please configure one."
+msgstr "فضلاً قم بتحديد عنوان ،%s لم يتم إيجاد عنوان منزل للموظف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__duration_days
+#: model:ir.model.fields,field_description:nig.field_other_rules__no_of_days
+msgid "No of Days"
+msgstr "عدد الأيام"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__installment
+msgid "No of Installments"
+msgstr "عدد الأقساط"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__duration_months
+msgid "No of Months"
+msgstr "عدد الشهور"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__no_of_days
+msgid "No. of Days"
+msgstr "عدد الأيام"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__no_of_night
+msgid "No. of Night"
+msgstr "عدد الليالي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__seats
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__seats
+msgid "No. of Seats"
+msgstr "عدد المقاعد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__duration_years
+msgid "No. of Years"
+msgstr "عدد السنوات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document__notes
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__notice_end_date
+msgid "Notice End Date"
+msgstr "تاريخ إشعار النهاية"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_leaving.py:0
+#, python-format
+msgid "Notice End Date must be greater than Notice Start Date"
+msgstr "تاريخ إشعار النهاية يجب أن يكون أكبر من تاريخ إشعار البداية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__notice_start_date
+msgid "Notice Start Date"
+msgstr "تاريخ إشعار البداية"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_leaving.py:0
+#, python-format
+msgid "Notice Start Date must be greater than Requested Date"
+msgstr "تاريخ إشعار البداية يجب أن يكون أكبر من تاريخ الطلب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document_type__notification_days
+msgid "Notification Days"
+msgstr "أيام الإخطار"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_document__name
+msgid "Number"
+msgstr "رقم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_needaction_counter
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee__adults
+msgid "Number of Adults"
+msgstr "عدد البالغين"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_has_error_counter
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__installment
+msgid "Number of installments"
+msgstr "عدد الأقساط"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_business_trip__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_flight_booking__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_hr_document__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_hr_visa__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_other_rules__message_needaction_counter
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_business_trip__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_flight_booking__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_hr_document__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_hr_visa__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_other_rules__message_has_error_counter
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها أخطاء في التسليم"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__message_unread_counter
+#: model:ir.model.fields,help:nig.field_business_trip__message_unread_counter
+#: model:ir.model.fields,help:nig.field_flight_booking__message_unread_counter
+#: model:ir.model.fields,help:nig.field_flight_booking_line__message_unread_counter
+#: model:ir.model.fields,help:nig.field_hr_document__message_unread_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__message_unread_counter
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__message_unread_counter
+#: model:ir.model.fields,help:nig.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,help:nig.field_hr_visa__message_unread_counter
+#: model:ir.model.fields,help:nig.field_other_rules__message_unread_counter
+#: model:ir.model.fields,help:nig.field_transfer_employee__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__old_visa_ref
+msgid "Old Visa Number"
+msgstr "رقيم التأشيرة القديم"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__flight_type__single
+msgid "One Way"
+msgstr "اتجاه واحد"
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "One of the contract for these payslips has no structure type."
+msgstr "لا يوجد نوع هيكل في أحد عقود كشوف الدفع هذه."
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "One of the payroll structures has no account journal defined on it."
+msgstr "لا يحتوي أحد هياكل كشوف المرتبات على دفتر يومية حساب محدد عليه."
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_holidays_public__state__open
+msgid "Open"
+msgstr "افتح"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Open Accounting Entries"
+msgstr "افتح مدخلات المحاسبة"
+
+#. module: nig
+#: model:ir.ui.menu,name:nig.menu_operation_request
+msgid "Operation Request"
+msgstr "طلب عملية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__other
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__purpose_of_visa__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_other_allowance
+msgid "Other Allowance"
+msgstr "مصروفات أخرى"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_payroll_other_rules
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_tree
+msgid "Other Allowances/Deduction"
+msgstr "مصروفات اخرى/خصم"
+
+#. module: nig
+#: model:ir.ui.menu,name:nig.menu_hr_payslip_other_rules
+msgid "Other Allowances/Deductions"
+msgstr "مصروفات أخرى/خصومات"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_other_deduction
+msgid "Other Deduction"
+msgstr "خصومات أخرى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__other_hr_payslip_ids
+msgid "Other Hr Payslip"
+msgstr "إيصال مرتب موارد البشرية أخرى"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+msgid "Other Information"
+msgstr "معلومات أخرى"
+
+#. module: nig
+#: model:ir.model,name:nig.model_other_rules
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_form1
+msgid "Other Rules"
+msgstr "قوانين أخرى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__others
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__reason__others
+msgid "Others"
+msgstr "أخرى"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__po_number
+msgid "PO Number"
+msgstr "رقم صندوق البريد"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__paid
+#: model:ir.model.fields,help:nig.field_hr_loan_line__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Partner"
+msgstr "شريك"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__amount
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__amount
+msgid "Payment Amount"
+msgstr "مبلغ الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__payment_date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__date
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__payment_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_wps_report__payment_details
+msgid "Payment Details"
+msgstr "بيانات الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__payment_entry_id
+msgid "Payment Entry"
+msgstr "إدخال دفعة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__journal_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan_payment__journal_id
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__journal_id
+msgid "Payment Method"
+msgstr "وسيلة الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__payment_date
+msgid "Payment Start Date"
+msgstr "تاريخ بداية الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip_payment__payment_type
+msgid "Payment Type"
+msgstr "نوع الدفع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__batch_ids
+msgid "Payroll Batches"
+msgstr "دفعات كشف المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_res_company__payroll_logo
+msgid "Payroll Logo"
+msgstr "شعار كشوف المرتبات"
+
+#. module: nig
+#: model:ir.model,name:nig.model_payroll_summary_report
+#: model:ir.ui.menu,name:nig.menu_hr_payroll_summary_report
+msgid "Payroll Summary Report"
+msgstr "تقرير موجز كشف المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__payslip_id
+#: model:ir.model.fields,help:nig.field_hr_loan_line__payslip_id
+msgid "Payslip"
+msgstr "إيصال المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_payslip__input_line_ids
+msgid "Payslip Inputs"
+msgstr "مدخلات إيصال المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__payslip_id
+msgid "Payslip Ref."
+msgstr "مرجع إيصال المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_payroll_summary_report__status
+msgid "Payslip Status"
+msgstr "حالة إيصال المرتب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.payslip_summary_reports_print_view
+msgid "Payslip Summary Report"
+msgstr "تقرير موجز إيصال المرتب"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_payslip_summary_report_view1
+msgid "Payslip Summary Reports"
+msgstr "تقرير موجز إيصال المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__per_diem_amount
+#: model:ir.model.fields,field_description:nig.field_hr_grade__per_diem_amount
+msgid "Per Diem Amount"
+msgstr "المبلغ باليوم"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__reason__personal
+msgid "Personal"
+msgstr "خاص"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee__document_ids
+#: model_terms:ir.ui.view,arch_db:nig.hr_form_view_inherit
+msgid "Personal Docs"
+msgstr "المستندات الشخصية"
+
+#. module: nig
+#: code:addons/nig/models/hr_loan.py:0
+#, python-format
+msgid "Please Compute installment"
+msgstr "فضلا احسب الأقساط"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid ""
+"Please Enter Values For Visa Number, Approved Date From and Approved Date To"
+msgstr "فضلاً أدخل رقم التأشيرة، تاريخ الموافقة من، وتاريخ الموافقة إلى"
+
+#. module: nig
+#: code:addons/nig/models/flight.py:0
+#, python-format
+msgid "Please add Ticket Details first !"
+msgstr "فضلاً أدخل تفاصيل التذكرة أولاً"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please configure %s journal's debit account."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/business_trip_payment.py:0
+#, python-format
+msgid "Please configure 'Account Receivable' on customer %s."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please configure Journal before calculating EOS."
+msgstr "فضلاً قم بضبط اليومية قبل حساب نهاية الخدمة"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please configure employee EOS for journal."
+msgstr "فضلاً قم بضبط نهاية خدمة الموظف لليومية"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#: code:addons/nig/models/hr_employee_eos.py:0
+#: code:addons/nig/models/transfer_employee.py:0
+#, python-format
+msgid "Please define contract for selected Employee!"
+msgstr "فضلاً حدد العقد للموظف المختار"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please define employee date of Join!"
+msgstr "!فضلاً حدد تاريخ انضمام الموظف"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please define employee date of Leave!"
+msgstr "!فضلاً حدد تاريخ إجازة الموظف"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "Please define employee date of leaving!"
+msgstr "!فضلاً حدد تاريخ مغادرة الموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+msgid "Please enter reason for leaving"
+msgstr "فضلاً أدخل سبب المغادرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__arrival_date
+msgid "Preferred End Date"
+msgstr "تاريخ النهاية المستحب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__departure_date
+msgid "Preferred Start Date"
+msgstr "تاريخ البداية المستحب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.payslip_summary_reports_print_view
+#: model_terms:ir.ui.view,arch_db:nig.wps_reports_print_view
+msgid "Print"
+msgstr "طباعة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__promotion
+msgid "Promotion"
+msgstr "ترقية"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Proposed"
+msgstr "مقترح"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_employee_public
+msgid "Public Employee"
+msgstr "موظف في القطاع العام"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_resource_calendar_leaves__public_line_id
+msgid "Public Holiday"
+msgstr "عطلة رسمية"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.open_public_holidays_view
+#: model:ir.model,name:nig.model_hr_holidays_public
+#: model:ir.ui.menu,name:nig.menu_public_holidays_view
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holiday_line_tree
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_form
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_tree
+msgid "Public Holidays"
+msgstr "العطل الرسمية"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_holidays_public_line
+msgid "Public Holidays Lines"
+msgstr "صفوف العطل الرسمية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__reason
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Purpose of Travel"
+msgstr "الغرض من الشفر"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__purpose_of_visa
+msgid "Purpose of Visa"
+msgstr "الغرض من التأشيرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid "Put the description here"
+msgstr "ضع الوصف هنا"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+msgid "Put the description here..."
+msgstr "...ضع الوصف هنا"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__reason
+msgid "Reason"
+msgstr "الغرض"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Reason of Visa"
+msgstr "الغرض من التأشيرة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__received
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__leave_encashment__encashment_type__reduse_days
+msgid "Reduce Days"
+msgstr "تقليل الأيام"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__name
+#: model:ir.model.fields,field_description:nig.field_flight_booking__name
+#: model:ir.model.fields,field_description:nig.field_hr_loan__name
+#: model:ir.model.fields,field_description:nig.field_hr_visa__name
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__name
+msgid "Reference"
+msgstr "مرجع"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__refuse
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__refuse
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__refuse
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__cancelled
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_leaving__state__refuse
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__refuse
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__refused
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+msgid "Refused"
+msgstr "تم الرفض"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__refused_by
+msgid "Refused By"
+msgstr "تم الرفض من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__refused_date
+msgid "Refused Date"
+msgstr "تاريخ الرفض"
+
+#. module: nig
+#: code:addons/nig/models/hr_loan.py:0
+#: model:ir.model,name:nig.model_hr_loan_payment
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_loan_payment_form
+#, python-format
+msgid "Register Loan Payment"
+msgstr "تسجيل دفعة سلف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+msgid "Register Payment"
+msgstr "تسجيل دفعة"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_loan_payment
+msgid "Register Payroll Payment"
+msgstr "تسجيل دفعة كشف المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__remaining_amount
+msgid "Remaining Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_leave_encashment__remaining_days
+msgid "Remaining Days"
+msgstr "الأيام المتبقية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__remaining_leave
+msgid "Remaining Leave"
+msgstr "أيام الإجازة المتبقية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__remarks
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_document__state__renew
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+msgid "Renew"
+msgstr "تجديد"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_hr_loan_request
+msgid "Request for Loan"
+msgstr "طلب سلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__requested_date
+msgid "Requested Date"
+msgstr "تاريخ الطلب"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid "Required Documents"
+msgstr "الملفات المطلوبة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_public_holidays_form
+msgid "Reset to Draft"
+msgstr "إعادة إلى مسودة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__eos_type__resignation
+msgid "Resignation"
+msgstr "استقالة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__resource_ids
+msgid "Resource"
+msgstr "مصدر"
+
+#. module: nig
+#: model:ir.model,name:nig.model_resource_mixin
+msgid "Resource Mixin"
+msgstr "رسالة MI المورد"
+
+#. module: nig
+#: model:ir.model,name:nig.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr "تفاصيل إجازة المصدر"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_flight_booking__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_hr_loan__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_hr_visa__activity_user_id
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__arrival_date
+#: model:ir.model.fields,field_description:nig.field_hr_visa__requested_date_to
+msgid "Return Date"
+msgstr "تاريخ العودة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__flight_type__return
+msgid "Round Trip"
+msgstr "رحلة ذهاب وعودة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_has_sms_error
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسالة النصية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__salary_revision
+msgid "Salary Revision"
+msgstr "مراجعة المرتب"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr "قاعدة المرتب"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__current_month_salary
+msgid "Salary of Current month"
+msgstr "مرتب الشهر الحالي"
+
+#. module: nig
+#: model:ir.actions.server,name:nig.ir_cron_hr_document_scheduler_action_ir_actions_server
+#: model:ir.cron,cron_name:nig.ir_cron_hr_document_scheduler_action
+#: model:ir.cron,name:nig.ir_cron_hr_document_scheduler_action
+msgid "Scheduled Employee's Documents Expiration"
+msgstr "انتهاء صلاحية مستندات الموظف المجدول"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+msgid "Search Employee Leaving"
+msgstr "البحث عن الموظفين المغادرين"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_holidays_public_filter
+msgid "Search Leave"
+msgstr "البحث عن الإجازة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+msgid "Search Other Allowances/Deduction"
+msgstr "البحث عن مصروفات/خصومات أخرى"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Select Airlines..."
+msgstr "...اختيار شركات الطيران"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_form1
+msgid "Select Department"
+msgstr "اختيار القسم"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_form1
+msgid "Select Employee"
+msgstr "اختيار الموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Select Employee running contract..."
+msgstr "اختيار العقد الجاري للموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Select Employee..."
+msgstr "...اختيار الموظف"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.other_rules_form1
+msgid "Set as Draft"
+msgstr "تحديد كمسودة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Set to Draft"
+msgstr "ضبط إلى مسودة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__ticket_type__single
+msgid "Single"
+msgstr "منفرد"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+msgid "Source"
+msgstr "مصدر"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_transfer_employee_view
+#: model:ir.actions.report,name:nig.action_transfer_employee_report
+#: model:ir.model,name:nig.model_transfer_employee
+#: model:ir.ui.menu,name:nig.menu_transfer_employee
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Staff Action"
+msgstr "إجراءات الموظفين"
+
+#. module: nig
+#: model:ir.actions.server,name:nig.staff_action_cron_ir_actions_server
+#: model:ir.cron,cron_name:nig.staff_action_cron
+#: model:ir.cron,name:nig.staff_action_cron
+msgid "Staff Action Update"
+msgstr "تحديث إجراءات الموظفين"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.report_invoice_document_nig
+msgid "Stamp"
+msgstr "ختم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public_line__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__state
+#: model:ir.model.fields,field_description:nig.field_hr_visa__state
+#: model:ir.model.fields,field_description:nig.field_other_rules__state
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__state
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "State"
+msgstr "الوضع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__state
+#: model:ir.model.fields,field_description:nig.field_flight_booking__state
+#: model:ir.model.fields,field_description:nig.field_hr_document__state
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__state
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__state
+#: model:ir.model.fields,field_description:nig.field_hr_holidays_public__state
+#: model:ir.model.fields,field_description:nig.field_hr_loan_line__loan_state
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_search
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_holidays_public_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_loan_request_search_form
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+msgid "Status"
+msgstr "الحالة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_business_trip__activity_state
+#: model:ir.model.fields,help:nig.field_flight_booking__activity_state
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__activity_state
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__activity_state
+#: model:ir.model.fields,help:nig.field_hr_loan__activity_state
+#: model:ir.model.fields,help:nig.field_hr_visa__activity_state
+#: model:ir.model.fields,help:nig.field_transfer_employee__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_document_view_form
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__waiting_approval
+msgid "Submitted"
+msgstr "تم الإرسال"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "Taxes(%)"
+msgstr "الضرائب (٪)"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__eos_type__termination
+msgid "Termination"
+msgstr "إنهاء"
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "The Expense Journal \"%s\" has not properly configured the Credit Account!"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_payroll.py:0
+#, python-format
+msgid "The Expense Journal \"%s\" has not properly configured the Debit Account!"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_loan.py:0
+#, python-format
+msgid "The employee has already a pending installment"
+msgstr "الموظف لديه دفعة معلقة بالفعل"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "The employee must have a home address."
+msgstr "يجب أن يكون لدى الموظف عنوان منزل"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#, python-format
+msgid "The employee must have a payable account set on his home address."
+msgstr "يجب أن يكون للموظف حساب للدفع بعنوان المنزل"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__journal_id
+msgid "The journal used when the eos is done."
+msgstr "اليومية يتم استخدامها عند إكمال نهاية الخدمة"
+
+#. module: nig
+#: model:ir.model.constraint,message:nig.constraint_hr_holidays_public_line_date_check
+msgid "The start date must be anterior to the end date."
+msgstr "تاريخ البداية يجب أن يسبق تاريخ النهاية"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket_detail__adult_fare
+msgid "This amount shows return fare."
+msgstr "هذا المبلغ يظهر تعرفة العودة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__adult_fare
+msgid "This default amount shows return fare."
+msgstr "هذا المبلغ الأساسي يُظهر تعرفة العودة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__ticket_detail_id
+#: model:ir.model.fields,field_description:nig.field_other_rules__ticket_detail_id
+msgid "Ticket Detail"
+msgstr "تفاصيل التذكرة"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_flight_booking_line
+#: model:ir.model.fields,field_description:nig.field_business_trip__flight_booking_id
+#: model:ir.model.fields,field_description:nig.field_hr_leave__flight_booking_id
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_tree_view
+msgid "Ticket Details"
+msgstr "تفاصيل التذكرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_filter
+msgid "Ticket No"
+msgstr "رقم التذكرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__ticket_no
+msgid "Ticket Number"
+msgstr "رقم التذكرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_leave__ticket_required
+msgid "Ticket Required"
+msgstr "مطلوب تذكرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__ticket_status_ids
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Ticket Status"
+msgstr "حالة التذكرة"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_leave_allocation
+msgid "Time Off Allocation"
+msgstr "تخصيص الإجازات"
+
+#. module: nig
+#: model:ir.model,name:nig.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "نوع الإجازة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__title_change
+msgid "Title Change"
+msgstr "تغيير العنوان"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "To"
+msgstr "إلى"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_eos_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+msgid "To Approve"
+msgstr "إلى الموافقة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_branch_id
+msgid "To Branch"
+msgstr "إلى الفرع"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_department_id
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "To Department"
+msgstr "إلى القسم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_grade_id
+msgid "To Grade"
+msgstr "إلى الفئة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__new_job_id
+msgid "To Job"
+msgstr "إلى الوظيفة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "To Job Position"
+msgstr "إلى المنصب الوظيفي"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__draft
+msgid "To Submit"
+msgstr "إلى التسليم"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Total Allocated Amount"
+msgstr "المبلغ الإجمالي المخصص"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__payable_eos
+#: model:ir.model.fields,field_description:nig.field_hr_loan__total_amount
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__total_eos
+msgid "Total Award"
+msgstr "التعويض الكلي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__total_expense
+msgid "Total Expense Amount"
+msgstr "مبلغ النفقات الكلي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_loan__total_paid_amount
+msgid "Total Paid Amount"
+msgstr "المبلغ المدفوع الكلي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Total Remaining Amount"
+msgstr "المبلغ الكلي المتبقي"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.annual_ticket_from_view
+msgid "Total Used Amount"
+msgstr "المبلغ الكلي المستخدم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__calc_year
+msgid "Total Years"
+msgstr "عدد السنوات الكلي"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__total_amount
+msgid "Total loan amount"
+msgstr "مبلغ السلف الكلي"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_loan__total_paid_amount
+msgid "Total paid amount"
+msgstr "المبلغ المدفوع الكلي"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_contract__TA
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__TA
+msgid "Transport Allowance"
+msgstr "بدل المواصلات"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_transfer_employee__TA
+#: model:ir.model.fields,help:nig.field_transfer_employee__new_TA
+msgid "Transport Allowance of employee"
+msgstr "بدل المواصلات للموظف"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_contract__TA
+msgid "Transport Allowance of employee (10% of Basic)"
+msgstr "بدل المواصلات للموظف (10% من الأساسي)"
+
+#. module: nig
+#: model:hr.salary.rule,name:nig.hr_salary_rule_ta
+msgid "Transportation Allowance"
+msgstr "بدل المواصلات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__transportation_type
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+msgid "Transportation Type"
+msgstr "نوع المواصلات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__supplier_id
+msgid "Travel Agency"
+msgstr "وكالة سفريات"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__description
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_line_form_view
+msgid "Travel Details"
+msgstr "تفاصيل السفر"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_form_view
+msgid "Travel Information"
+msgstr "معلومات الشفر"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+msgid "Trip Details"
+msgstr "معلومات الرحلة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_flight_booking__flight_type
+#: model:ir.model.fields,field_description:nig.field_hr_document__type_id
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__eos_type
+#: model:ir.model.fields,field_description:nig.field_hr_visa__ticket_type
+#: model:ir.model.fields,field_description:nig.field_other_rules__operation_type
+#: model_terms:ir.ui.view,arch_db:nig.view_other_rules_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Type"
+msgstr "النوع"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+msgid "Type of Action"
+msgstr "نوع الإجراء"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__reason_of_visa
+msgid "Type of Visa"
+msgstr "نوع التأشيرة"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_business_trip__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_flight_booking__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_hr_loan__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_hr_visa__activity_exception_decoration
+#: model:ir.model.fields,help:nig.field_transfer_employee__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى على السجل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_unread
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_unread
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_unread
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_unread
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_unread
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_unread
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_unread
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_unread
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_unread
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_unread
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_business_trip__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_hr_document__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_hr_visa__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_other_rules__message_unread_counter
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: nig
+#: model_terms:ir.actions.act_window,help:nig.action_hr_loan_request
+msgid "Use this menu to create loan requests."
+msgstr "استخدم هذه القائمة لإنشاء طلب سلف"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_detail__used_amount
+#: model:ir.model.fields,field_description:nig.field_annual_ticket_status__used_amount
+msgid "Used Amount"
+msgstr "المبلغ المستخدم"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.bt_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_employee_leaving_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_form_view
+#: model_terms:ir.ui.view,arch_db:nig.view_business_trip_payment_form
+#: model_terms:ir.ui.view,arch_db:nig.view_employee_eos_form
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_loan_payment_form
+msgid "Validate"
+msgstr "تحقق"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__validate
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__validate
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__validate
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_leaving__state__validate
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.view_hr_employee_leaving_filter
+msgid "Validated"
+msgstr "تم التحقق"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__validated_date
+msgid "Validated Date"
+msgstr "تاريخ التحقق"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__validated_by
+msgid "Validated by"
+msgstr "تم التحقق من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__date_valid
+msgid "Validation Date"
+msgstr "تاريخ التخصص"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__user_valid
+msgid "Validation by"
+msgstr "تم التحقق من قبل"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_wps_report__value_date
+msgid "Value Date"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Visa"
+msgstr "تأشيرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "Visa                     that has been approved"
+msgstr "التأشيرة                     التي تمت الموافقة عليها"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__hr_visa_id
+#: model:ir.model.fields,field_description:nig.field_hr_leave__hr_visa_id
+msgid "Visa Details"
+msgstr "تفاصيل التأشيرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__years
+msgid "Visa Duration"
+msgstr "مدة التأشيرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+msgid "Visa Information"
+msgstr "معلومات التأشيرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__visa_ref
+msgid "Visa Number"
+msgstr "رقم التأشيرة"
+
+#. module: nig
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/hr_leave.py:0
+#: model:ir.actions.act_window,name:nig.action_hr_visa
+#: model:ir.ui.menu,name:nig.menu_hr_visa
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_form
+#: model_terms:ir.ui.view,arch_db:nig.hr_visa_tree
+#, python-format
+msgid "Visa Request"
+msgstr "طلب تأشيرة"
+
+#. module: nig
+#: code:addons/nig/models/hr_visa.py:0
+#, python-format
+msgid "Visa Request Received."
+msgstr "تم استلام طلب التأشيرة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_business_trip__visa_required
+msgid "Visa Required"
+msgstr "التأشيرة مطلوبة"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_hr_visa__visa_title
+msgid "Visa Title"
+msgstr "عنوان التأشيرة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "Visa that                     has been refused"
+msgstr "التأشيرة                     التي تم رفضها"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.transfer_employee_filter
+msgid "Visa that                     has been waiting for approval"
+msgstr "التأشيرة                      التي بانتظار الموافقة"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Visa that has been approved."
+msgstr "التأشيرة التي تمت الموافقة عليها"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Visa that has been refused"
+msgstr "التأشيرة التي تم رفضها"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Visa that has been waiting for approval of Manager."
+msgstr "التأشيرة التي بانتظار الموافقة من المدير"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.view_visa_filter
+msgid "Visa that has sent for process."
+msgstr "التأشيرة التي تم إرسالها لإكمال الإجراءات"
+
+#. module: nig
+#: model:ir.model,name:nig.model_wps_report
+#: model_terms:ir.ui.view,arch_db:nig.wps_reports_print_view
+msgid "WPS Report"
+msgstr "WPS تقرير"
+
+#. module: nig
+#: model:ir.actions.act_window,name:nig.action_wps_report_view1
+msgid "WPS Reports"
+msgstr "WPS تقارير"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__business_trip__state__confirm
+#: model:ir.model.fields.selection,name:nig.selection__flight_booking__state__confirm
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_eos__state__confirm
+#: model:ir.model.fields.selection,name:nig.selection__hr_employee_leaving__state__confirm
+#: model:ir.model.fields.selection,name:nig.selection__hr_visa__state__confirm
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__confirm
+#: model_terms:ir.ui.view,arch_db:nig.bt_filter
+#: model_terms:ir.ui.view,arch_db:nig.flight_booking_filter
+msgid "Waiting Approval"
+msgstr "بانتظار الموافقة"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__hr_loan__state__waiting_approval_2
+msgid "Waiting Finance Approval"
+msgstr "بانتظار موافقة قسم المالية"
+
+#. module: nig
+#: model:ir.model.fields.selection,name:nig.selection__transfer_employee__state__validate
+msgid "Waiting HR Department Approval"
+msgstr "بانتظار موافقة قسم الموارد البشرية"
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_annual_ticket__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_business_trip__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_flight_booking_line__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_document__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_eos__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_employee_leaving__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_loan__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_hr_visa__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_other_rules__website_message_ids
+#: model:ir.model.fields,field_description:nig.field_transfer_employee__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_annual_ticket__website_message_ids
+#: model:ir.model.fields,help:nig.field_business_trip__website_message_ids
+#: model:ir.model.fields,help:nig.field_flight_booking__website_message_ids
+#: model:ir.model.fields,help:nig.field_flight_booking_line__website_message_ids
+#: model:ir.model.fields,help:nig.field_hr_document__website_message_ids
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__website_message_ids
+#: model:ir.model.fields,help:nig.field_hr_employee_leaving__website_message_ids
+#: model:ir.model.fields,help:nig.field_hr_loan__website_message_ids
+#: model:ir.model.fields,help:nig.field_hr_visa__website_message_ids
+#: model:ir.model.fields,help:nig.field_other_rules__website_message_ids
+#: model:ir.model.fields,help:nig.field_transfer_employee__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع الإلكتروني"
+
+#. module: nig
+#: model:ir.model.fields,help:nig.field_hr_employee_eos__state
+msgid ""
+"When the eos request is created the status is 'Draft'.\n"
+" It is confirmed by the user and request is sent to finance, the status is 'Waiting Confirmation'.        \n"
+"If the finance accepts it, the status is 'Accepted'."
+msgstr "'إن تم القبول من قسم المالية، فإن الحالة هي 'مقبول"
+
+#. module: nig
+#: code:addons/nig/models/transfer_employee.py:0
+#, python-format
+msgid "You Can not Done the Contract Amendment Because Effective Date is %s."
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/generate_annual_ticket.py:0
+#, python-format
+msgid "You already done %s annual ticket for this particular Duration!!"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/annual_ticket.py:0
+#, python-format
+msgid "You already done %s annual ticket for this particular duration!!"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/wizard/generate_annual_ticket.py:0
+#, python-format
+msgid "You already generate %s annual ticket details!!"
+msgstr ""
+
+#. module: nig
+#: code:addons/nig/models/hr_public_holidays.py:0
+#, python-format
+msgid "You can not have holiday that overlaps on same days!"
+msgstr "لا يمكن الحصول على إجازة تتداخل في نفس الأيام"
+
+#. module: nig
+#: code:addons/nig/models/flight.py:0
+#, python-format
+msgid ""
+"You can't set details for the Booking which is not in 'In Progress' state!"
+msgstr "!'لا يمكن إنشاء تفاصيل لحجز ليس في حالة 'قيد التنفيذ"
+
+#. module: nig
+#: code:addons/nig/models/hr_employee_eos.py:0
+#: code:addons/nig/models/hr_employee_leaving.py:0
+#: code:addons/nig/models/hr_public_holidays.py:0
+#: code:addons/nig/models/hr_visa.py:0 code:addons/nig/models/other_rules.py:0
+#: code:addons/nig/models/transfer_employee.py:0
+#, python-format
+msgid "You cannot remove the record which is in %s state!"
+msgstr "!%s لا يمكن إزالة السجل في حالة"
+
+#. module: nig
+#: code:addons/nig/models/business_trip.py:0
+#: code:addons/nig/models/flight.py:0
+#, python-format
+msgid "You cannot remove the record which is not in draft state!"
+msgstr "لا يمكن إزالة السجل إذا لم يكن في حالة مسودة"
+
+#. module: nig
+#: code:addons/nig/wizard/hr_payroll_payslips_by_employees.py:0
+#, python-format
+msgid "You must select employee(s) to generate payslip(s)."
+msgstr "يجب عليك تحديد الموظف (الموظفين) لإنشاء قسيمة (ق) الدفع."
+
+#. module: nig
+#: model:ir.model.fields,field_description:nig.field_account_bank_statement_line__l10n_sa_qr_code_str
+#: model:ir.model.fields,field_description:nig.field_account_move__l10n_sa_qr_code_str
+#: model:ir.model.fields,field_description:nig.field_account_payment__l10n_sa_qr_code_str
+msgid "Zatka QR Code"
+msgstr "رمز الاستجابة السريع لزاتكا"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.generate_air_allowance_from_view
+#: model_terms:ir.ui.view,arch_db:nig.view_annual_ticket_by_employees
+msgid "or"
+msgstr "أو"
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "المحاسب"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "المدير المالي"
+msgstr ""
+
+#. module: nig
+#: model_terms:ir.ui.view,arch_db:nig.journal_entry_report
+msgid "مدير الحسابات"
+msgstr ""

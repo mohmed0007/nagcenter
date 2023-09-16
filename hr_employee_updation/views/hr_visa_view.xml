@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_visa_form" model="ir.ui.view">
+        <field name="name">Visa Request</field>
+        <field name="model">hr.visa</field>
+        <field name="arch" type="xml">
+            <form string="Visa Request">
+                <header>
+                    <button name="visa_confirm" string="Submit" states="draft" type="object" class="oe_highlight"/>
+                    <button name="visa_validate1" string="Validate" states="confirm" groups="hr.group_hr_user" type="object" class="oe_highlight" />
+                    <button name="visa_inprogress" string="In Progress" states="validate1" groups="hr.group_hr_manager" type="object" class="oe_highlight" />
+                    <button name="visa_received" string="Issued" states="inprogress" groups="hr.group_hr_manager" type="object" class="oe_highlight" />
+                    <button name="visa_refuse" string="Refuse" groups="hr.group_hr_manager"
+                            states="confirm,validate1,inprogress" type="object"/>
+                    <button name="set_draft" string="Set as Draft" states="refused" type="object"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm"
+                           statusbar_colors='{"confirm":"blue","refused":"red"}' />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="oe_inline" readonly="1"/></h1>
+                    </div>
+                    <group string="Employee Information" groups="hr.group_hr_user">
+                        <group>
+                            <field name="employee_id" attrs="{'readonly':[('state','!=', 'draft')]}" placeholder="Select Employee"/>
+                            <field name="country_id" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <field name="department_id" placeholder="Select Department" force_save="1"/>
+                            <field name="branch_id" force_save="1"/>
+                            <field name="company_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create': True}" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <separator string="Visa Information"/>
+                    <group>
+                        <group>
+                            <field name="reason_of_visa" attrs="{'readonly':[('state','!=', 'draft')]}" />
+                            <field name="purpose_of_visa" attrs="{'readonly':[('state','!=', 'draft')],
+                                        'invisible':[('reason_of_visa','not in',['annual_leave','renew_visa'])],'required':[('reason_of_visa','in',['annual_leave','renew_visa'])]}" />
+                            <field name="visa_ref" attrs="{'readonly':[('state','!=', 'inprogress')],
+                                        'required':[('state','in',['inprogress','received'])], 'invisible': [('state','!=', 'inprogress')]}"/>
+                            <field name="old_visa_ref" attrs="{'invisible':[('reason_of_visa','!=','renew_visa')],
+                                        'readonly':[('state','!=','draft')],'required':[('reason_of_visa','=','renew_visa')]}"/>
+                            <field name="visa_title" attrs="{'required':[('state','=','inprogress')],
+                                        'invisible':[('state','in', ['draft', 'confirm', 'validate1'])],'readonly':[('state','!=','inprogress')]}"/>
+                            <label for="years" attrs="{'invisible':['|',('reason_of_visa','=','final_exit'), ('state','in',['draft', 'confirm', 'validate1'])]}"/>
+                            <div attrs="{'invisible':['|',('reason_of_visa','=','final_exit'), ('state','in',['draft', 'confirm', 'validate1'])]}">
+                                <field name="years" nolabel="1" attrs="{'invisible':[('years','=',0.0)]}" class="oe_inline"/>
+                                <span style="margin-right:5px;" attrs="{'invisible':[('years','=',0.0)]}"> Years </span>
+                                <field name="months" nolabel="1" attrs="{'invisible':[('months','=',0.0)]}" class="oe_inline oe_text_right"/>
+                                <span style="margin-right:5px;" attrs="{'invisible':[('months','=',0.0)]}"> Months </span>
+                                <field name="days" nolabel="1" attrs="{'invisible':[('days','=',0.0)]}" class="oe_inline oe_text_right"/>
+                                <span style="margin-right:5px;" attrs="{'invisible':[('days','=',0.0)]}"> Days </span>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="ticket_type" attrs="{'readonly':[('state','!=', 'draft')],
+                            'invisible':[('reason_of_visa','in',['final_exit'])],
+                            'required':[('reason_of_visa','not in',['final_exit'])]}"/>
+                            <field name="requested_date_from" attrs="{'readonly':[('state','!=', 'draft')]}"/>
+                            <field name="requested_date_to" attrs="{'readonly':[('state','!=', 'draft')],
+                            'invisible':[('reason_of_visa','=','final_exit')]}" />
+                            <field name="approved_date_from" attrs="{'readonly':[('state','!=', 'inprogress')],
+                            'required':[('state','in',['inprogress','received'])], 'invisible':[('state','in', ['draft', 'confirm', 'validate1'])]} "/>
+                            <field name="approved_date_to" attrs="{'readonly':[('state','!=', 'inprogress')],
+                            'invisible':['|',('reason_of_visa','=','final_exit'), ('state','in', ['draft', 'confirm', 'validate1'])],
+                            'required':[('state','in',['inprogress','received']),('reason_of_visa','!=','final_exit')]}"/>
+                            <field name="client_id" attrs="{'readonly':[('state','!=', 'draft')],
+                                        'invisible':[('purpose_of_visa','not in',['business_trip'])],
+                                        'required':[('purpose_of_visa','=','business_trip')]}"/>
+                            <field name="handled_by" attrs="{'required':[('state','=','inprogress')],
+                                        'invisible':[('state','in', ['draft', 'confirm', 'validate1'])],'readonly':[('state','!=','inprogress')]}"/>
+                        </group>
+                    </group>
+                    <separator string="Required Documents" colspan="4" attrs="{'invisible':[('reason_of_visa','in',['renew_visa',False])]}"/>
+                    <field name="required_documents" nolabel="True" force_save="1" attrs="{'invisible':[('reason_of_visa','in',['renew_visa',False])]}"/>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" nolabel="True" placeholder="Put the description here"
+                                   attrs="{'required':[('purpose_of_visa','=','other')],'readonly':[('state','=', 'received')]}"/>
+                        </page>
+                        <page string="Extra Information" groups="base.group_no_one">
+                            <group name="extra_info" col="4">
+                                <field name="create_uid" readonly="1" attrs="{'invisible':[('create_uid','=',False)]}"/>
+                                <field name="create_date" readonly="1" attrs="{'invisible':[('create_date','=',False)]}"/>
+                                <field name="write_uid" readonly="1" attrs="{'invisible':[('write_uid','=',False)]}"/>
+                                <field name="write_date" readonly="1" attrs="{'invisible':[('write_date','=',False)]}"/>
+                                <field name="approved_by" attrs="{'invisible':[('approved_by','=',False)]}"/>
+                                <field name="approved_date" attrs="{'invisible':[('approved_date','=',False)]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="hr_visa_tree" model="ir.ui.view">
+        <field name="name">Visa Request</field>
+        <field name="model">hr.visa</field>
+        <field name="arch" type="xml">
+            <tree string="Visa Request" sample="1">
+                <field name="name"/>
+                <field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="visa_ref"/>
+                <field name="reason_of_visa"/>
+                <field name="ticket_type"/>
+                <field name="approved_date_to" string="Date To"/>
+                <field name="approved_date_from" string="Date From"/>
+                <field name="state"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_visa_filter" model="ir.ui.view">
+        <field name="name">visa.list.select</field>
+        <field name="model">hr.visa</field>
+        <field name="arch" type="xml">
+            <search string="Filter">
+                <field name="name" filter_domain="['|',('name','ilike',self),('visa_ref','ilike',self)]"
+                       string="Visa"/>
+                <filter name="in_progress" string="In Progress" domain="[('state','=',('inprogress'))]" help="Visa that has sent for process." />
+                <filter name="approve" string="Approved" domain="[('state','=',('validate1'))]" help="Visa that has been approved." />
+                <filter name="confirm" string="Confirm" domain="[('state','=',('confirm'))]" help="Visa that has been waiting for approval of Manager." />
+                <filter name="issue" string="Issued" domain="[('state','=',('received'))]" help="Visa that has been refused" />
+                <filter name="refuse" string="Refuse" domain="[('state','=',('refused'))]" help="Visa that has been refused" />
+                <group expand="0" string="Group By...">
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_reason_of_visa" string="Reason of Visa" context="{'group_by':'reason_of_visa'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by':'ticket_type'}"/>
+                    <filter name="group_department" string="Department" context="{'group_by':'department_id'}"/>
+                    <filter name="group_state" string="State" context="{'group_by':'state'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_hr_visa" model="ir.actions.act_window">
+        <field name="name">Visa Request</field>
+        <field name="res_model">hr.visa</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hr_visa" parent="menu_operation_request"
+              name="Visa Request"
+              action="action_hr_visa" sequence="12"
+              groups="base.group_user"/>
+</odoo>

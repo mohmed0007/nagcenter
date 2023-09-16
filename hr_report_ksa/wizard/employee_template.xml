@@ -1,0 +1,220 @@
+<odoo>
+
+
+    <report id="employee_contract_information_report"
+            model="employee.contract.information.report.wizard"
+            string="Employee Information Report"
+            report_type="qweb-html"
+            name="hr_report_ksa.employee_contract_information_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <report id="employee_time_off_report"
+            model="employee.time.off.report.wizard"
+            string="Employee Time Off Report"
+            report_type="qweb-html"
+            name="hr_report_ksa.employee_time_off_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+
+
+
+    <template id="employee_contract_information_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page" t-foreach="contract_info" t-as="emp_info">
+                    <div>
+                        <span>
+                            <h6 class="text-center">
+                                <h6 class="text-center">
+                                    <span class="container mr-5 p-2 border border-secondary">
+                                        Contract Information Details
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <span class="text-center container mr-5 p-2 border border-secondary">
+                                        Employee Name:
+                                        <span class="ml-2" t-esc="emp_info.employee_id.name"/>
+                                    </span>
+                                </h6>
+                            </h6>
+                        </span>
+                    </div>
+
+                    <div class="d-inline p-2 bg-secondary text-white  mb-3">Basic Information
+                        <span class="mr-5"/>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 10%">Name</th>
+                                    <th class="text-center" style="width: 7%">Job Position</th>
+                                    <th class="text-center" style="width: 7%">Department </th>
+                                    <th class="text-center" style="width: 7%">Start Date</th>
+<!--                                    <th scope="col">Religion</th>-->
+                                    <th class="text-center" style="width: 7%">End Date</th>
+                                    <th class="text-center" style="width: 5%">Wage</th>
+                                    <th class="text-center" style="width: 10%">Housing Allowance</th>
+                                    <th class="text-center" style="width: 10%">Transportation Allowance</th>
+                                    <th class="text-center" style="width: 10%">Other Allowance</th>
+<!--                                    <th scope="col"># Dependents</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td  t-esc="emp_info.employee_id.name if emp_info.employee_id.name else '' "/>
+                                    <td  t-esc="emp_info.job_id.name if emp_info.job_id.name else '' "/>
+                                    <td  t-esc="emp_info.department_id.name if emp_info.department_id.name else '' "/>
+
+                                    <td  t-esc="emp_info.date_start if emp_info.date_start else '' "/>
+                                    <td  t-esc="emp_info.date_end if emp_info.date_end else '' "/>
+                                    <td  t-esc="emp_info.wage if emp_info.wage else '' "/>
+                                    <td  t-esc="emp_info.l10n_sa_housing_allowance if emp_info.l10n_sa_housing_allowance else '' "/>
+                                    <td  t-esc="emp_info.l10n_sa_transportation_allowance if emp_info.l10n_sa_transportation_allowance else '' "/>
+                                    <td  t-esc="emp_info.l10n_sa_other_allowances if emp_info.l10n_sa_other_allowances else '' "/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-inline p-2 bg-secondary text-white mb-3">Qualifications
+                        <span class="mr-5"/>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Certificate</td>
+                                    <td scope="col">Study Field</td>
+                                    <td scope="col">Place</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row" t-esc="emp_info.employee_id.certificate" t-if="emp_info.employee_id.certificate"/>
+                                    <td scope="row" t-esc="emp_info.employee_id.study_field" t-if="emp_info.employee_id.study_field"/>
+                                    <td scope="row" t-esc="emp_info.employee_id.study_school" t-if="emp_info.employee_id.study_school"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br/>
+                    <br/>
+                    <div style="border-bottom: 2px solid black"/>
+                    <br/>
+                    <br/>
+
+                    <div class="p-5"/>
+
+                </div>
+
+            </t>
+        </t>
+    </template>
+
+    <template id="employee_time_off_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <br/>
+                    <div class="text-center report_table " style="margin-top: -5px">
+                        <h4 style="! important;font-weight: bold ! important;">
+                            <strong>Employee Time off Duration Information</strong>
+                        </h4>
+                    </div>
+                    <br/>
+                     <t t-if="department_name">
+                     <div class="text-left" >
+                         <h5><strong>Department /</strong> <span t-esc=" department_name"/></h5>
+                         <br></br>
+                     </div>
+                   </t>
+                   <div class="text-center report_table">
+
+                         <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_start">
+                           <strong class="p-4" >From : <span t-esc="date_start"/></strong>
+                        </span>
+                        <span style="! important;font-weight: bold ! important;color:#875A7B" t-if="date_end">
+                           <strong class="p-4" >To : <span t-esc="date_end"/></strong>
+                        </span>
+                        <div class="p-1"/>
+                    <br/>
+                    <br/>
+                   <table class="table table-condensed table-bordered report_table"  style="width: 100%! important;font-size:12px ! important;">
+
+                        <thead>
+                           <tr>
+                            <th class="text-center" style="width: 5%">No</th>
+                            <th class="text-center" style="width: 5%">Registration No</th>
+                            <th class="text-center" style="width: 20%">Employee Name</th>
+                            <th class="text-center" style="width: 20%">Time Off Type</th>
+                            <th class="text-center" style="width: 15%">Start date</th>
+                            <th class="text-center" style="width: 15%">End date</th>
+                            <th class="text-center" style="width: 15%">Duration</th>
+
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="No" t-value="1"/>
+                            <t t-foreach="docs" t-as="rec">
+                                <tr>
+                                    <td class="text-center">
+                                        <span t-esc="No"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['register']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['emp_name']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['holiday_status_id']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['date_from']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['date_to']"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="rec['duration']"/>
+                                    </td>
+                                </tr>
+                                <t t-set="No" t-value="No + 1 "/>
+                            </t>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                    </div>
+<!--                </div>-->
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,96 @@
+<odoo>
+
+
+    <record id="employee_leave_report_view" model="ir.ui.view">
+        <field name="name">Employees Leave Report Wizard</field>
+        <field name="model">employee.time.off.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                        <group>
+                            <group>
+                                <field name="date_from" />
+                                <field name="department_id"/>
+
+                            </group>
+                            <group>
+                                <field name="date_to" />
+                                <field name="company"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                <footer>
+	                <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_full_employees_leave_report_wizard" model="ir.actions.act_window">
+        <field name="name">Employees Leave Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.time.off.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="employee_leave_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+
+
+    <menuitem id="leave_report_report1" name="Time Of Duration Report" action="action_full_employees_leave_report_wizard"
+              parent="hr.hr_menu_hr_reports" sequence="18"/>
+
+
+
+
+    <record id="contract_information_report_view" model="ir.ui.view">
+        <field name="name">Contract Information Wizard</field>
+        <field name="model">employee.contract.information.report.wizard</field>
+        <field name="arch" type="xml">
+             <form>
+                <sheet>
+                        <group>
+                            <group>
+<!--                                <field name="date_from"/>-->
+                                <field name="company" />
+                            </group>
+                            <group>
+<!--                                <field name="date_to"/>-->
+                                <field name="department_id"/>
+                                <field name="employee_ids" widget="many2many_tags" />
+                            </group>
+                        </group>
+                    </sheet>
+
+            <footer>
+	                <button name="get_report" string="Print" type="object" default_focus="1" class="oe_highlight" />
+	                or
+	                <button string="Cancel" class="oe_link" special="cancel" />
+	            </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_contract_report_wizard" model="ir.actions.act_window">
+        <field name="name">Contract Information Wizard</field>
+        <field name="res_model">employee.contract.information.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="contract_information_report_view"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="menu_contract_report_report" name="Contract Information Report" action="action_contract_report_wizard"
+              parent="hr.hr_menu_hr_reports" sequence="10"/>
+
+
+
+
+</odoo>

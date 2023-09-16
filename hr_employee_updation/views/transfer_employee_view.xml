@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="transfer_employee_form_view" model="ir.ui.view">
+        <field name="name">transfer.employee.form</field>
+        <field name="model">transfer.employee</field>
+        <field name="arch" type="xml">
+            <form string="Staff Action">
+                <header>
+                    <button name="transfer_confirm" string="Confirm" states="draft" type="object" class="oe_highlight" />
+                    <button name="transfer_validate" string="Validate" states="confirm" type="object" class="oe_highlight" groups="hr.group_hr_user"/>
+                    <button name="transfer_approve" string="Approve" states="validate" type="object" class="oe_highlight" groups="hr.group_hr_manager"/>
+                    <button name="transfer_done" string="Done" states="approve" type="object" class="oe_highlight" groups="hr.group_hr_manager"/>
+                    <button name="transfer_cancel" string="Cancel" states="confirm,validate" type="object" groups="hr.group_hr_manager"/>
+                    <button name="set_to_draft" string="Set to Draft" states="cancel" type="object" groups="hr.group_hr_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="oe_inline" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Employee Information">
+                            <field name="employee_id" placeholder='Select Employee...' attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <group string="Contract Information">
+                            <field name="hr_contract_id" groups="hr.group_hr_manager" context="{'default_employee_id':employee_id}" placeholder='Select Employee running contract...' attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="effective_date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                    <group string="Type of Action">
+                        <group>
+                            <field name="confirmation" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="promotion" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="title_change" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="grade_revision" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="branch_revision" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="salary_revision" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="other" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="extension" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="extension_period" attrs="{'readonly':[('state','!=','draft')],'invisible':[('extension','=',False)],'required':[('extension','=',True)]}"/>
+                        </group>
+                    </group>
+                    <group attrs="{'invisible':[('confirmation','=',False),('extension','=',False),('other','=',False),('title_change','=',False),('grade_revision','=',False),('branch_revision','=',False),('promotion','=',False)]}">
+                        <group string="From">
+                            <field name="department_id" force_save='1'/>
+                            <field name="job_id" force_save='1'/>
+                            <field name="grade_id" force_save="1"/>
+                            <field name="branch_id" force_save="1"/>
+                            <field name="company_id" groups="base.group_multi_company" force_save="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group string="To">
+                            <field name="new_department_id" placeholder='To Department' attrs="{'readonly':[('state','!=','draft')], 'required':['|','|',('title_change','=',True),('grade_revision','=',True),('promotion','=',True)]}"/>
+                            <field name="new_job_id" domain="[('department_id','=',new_department_id)]" placeholder='New Job' attrs="{'readonly':[('state','!=','draft')], 'required':['|','|',('title_change','=',True),('grade_revision','=',True),('promotion','=',True)]}"/>
+                            <field name="new_grade_id" placeholder='New Grade' attrs="{'readonly':[('state','!=','draft')], 'required':['|','|',('title_change','=',True),('grade_revision','=',True),('promotion','=',True)]}" domain="[('hr_job_ids','=',new_job_id)]"/>
+                            <field name="new_branch_id" placeholder='New Branch' attrs="{'readonly':[('state','!=','draft')], 'required':['|','|',('title_change','=',True),('branch_revision','=',True),('promotion','=',True)]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Current" attrs="{'invisible':[('salary_revision','=',False)],'required':[('salary_revision','=',True)]}">
+                            <field name="basic" readonly="1" force_save="1"/>
+                            <field name="HRA" readonly="1" force_save="1"/>
+                            <field name="TA" readonly="1" force_save="1"/>
+                            <field name="other_amt" readonly="1" force_save="1"/>
+                            <field name="other_amt2" readonly="1" force_save="1"/>
+                            <!-- <field name="gosi_deduction" readonly="1" force_save="1"/> -->
+                            <field name="gross_amt" readonly="1" force_save="1"/>
+                        </group>
+                        <group string="Proposed" attrs="{'invisible':[('salary_revision','=',False)]}">
+                            <field name="new_basic" attrs="{'readonly':[('state','in',['approve','done'])],'required':[('salary_revision','=',True)]}"/>
+                            <field name="new_HRA" attrs="{'readonly':[('state','in',['approve','done'])],'required':[('salary_revision','=',True)]}"/>
+                            <field name="new_TA" attrs="{'readonly':[('state','in',['approve','done'])],'required':[('salary_revision','=',True)]}"/>
+                            <field name="new_other_amt" attrs="{'readonly':[('state','in',['approve','done'])],'required':[('salary_revision','=',True)]}"/>
+                            <field name="new_other_amt2" attrs="{'readonly':[('state','in',['approve','done'])],'required':[('salary_revision','=',True)]}"/>
+                            <field name="new_gross_amt"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Justification">
+                            <seperator string="Justification" />
+                            <field name="description" nolabel="1" attrs="{'readonly':[('state','=','done')]}"/>
+                        </page>
+                        <page string="Extra Information" groups="base.group_no_one">
+                            <group name="extra_info" col="4">
+                                <field name="create_uid" readonly="1"/>
+                                <field name="create_date" readonly="1"/>
+                                <field name="write_uid" readonly="1"/>
+                                <field name="write_date" readonly="1"/>
+                                <field name="validated_by" attrs="{'invisible':[('validated_by','=',False)]}" />
+                                <field name="validated_date" attrs="{'invisible':[('validated_date','=',False)]}" />
+                                <field name="approved_by" attrs="{'invisible':[('approved_by','=',False)]}" />
+                                <field name="approved_date" attrs="{'invisible':[('approved_date','=',False)]}" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="transfer_employee_tree_view" model="ir.ui.view">
+        <field name="name">transfer.employee.tree</field>
+        <field name="model">transfer.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Contract Amendment">
+                <field name="name"/>
+                <field name="employee_id" widget="many2one_avatar_employee"/>
+                <field name="department_id"/>
+                <field name="new_department_id"/>
+                <field name="grade_id"/>
+                <field name="new_grade_id"/>
+                <field name="job_id"/>
+                <field name="new_job_id"/>
+                <field name="branch_id" optional="hide"/>
+                <field name="new_branch_id" optional="hide"/>
+                <field name="effective_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="transfer_employee_filter" model="ir.ui.view">
+        <field name="name">transfer.employee.filter</field>
+        <field name="model">transfer.employee</field>
+        <field name="arch" type="xml">
+            <search string="Filter">
+                <field name="employee_id"/>
+                <filter name="draft" string="Draft"
+                    domain="[('state','=',('draft'))]"
+                    help="Visa
+                    that has been approved"/>
+                <filter name="confirm" string="Confirm"
+                    domain="[('state','=',('confirm'))]"
+                    help="Visa that
+                    has been waiting for approval"/>
+                <filter name="validate" string="Validate"
+                    domain="[('state','=',('validate'))]"
+                    help="Visa that
+                    has been refused"/>
+                <filter name="approved" string="Approved"
+                    domain="[('state','=',('approve'))]"
+                    help="Visa that
+                    has been refused"/>
+                <filter name="done" string="Done"
+                    domain="[('state','=',('done'))]"
+                    help="Visa that
+                    has been refused"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_from_job" string="From Job Position" context="{'group_by':'job_id'}"/>
+                    <filter name="group_from_department" string="From Department" context="{'group_by':'department_id'}"/>
+                    <filter name="group_to_job" string="To Job Position" context="{'group_by':'new_job_id'}"/>
+                    <filter name="group_to_department" string="To Department" context="{'group_by':'new_department_id'}"/>
+                    <filter name="group_effective_date" string="Effective Date" context="{'group_by':'effective_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_transfer_employee_view" model="ir.actions.act_window">
+        <field name="name">Staff Action</field>
+        <field name="res_model">transfer.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_transfer_employee" parent="hr.menu_hr_employee_payroll"
+              name="Staff Action"
+              action="action_transfer_employee_view" sequence="10"
+              groups="hr.group_hr_user,account.group_account_manager"/>
+
+</odoo>

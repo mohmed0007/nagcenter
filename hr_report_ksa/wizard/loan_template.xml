@@ -1,0 +1,140 @@
+<odoo>
+    <report id="recap_loan_report"
+            model="loan.report.wizard"
+            string="Loan Report"
+            report_type="qweb-html"
+            name="hr_report_ksa.recap_loan_report_view"
+            paperformat="paperformat_employees_recap_report"
+            menu="False"/>
+
+    <template id="recap_loan_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+
+                    <div>
+                        <br/>
+                        <div class="text-center" >
+                            <h4>
+                                <strong>Employees Loan Report</strong>
+                            </h4>
+                        </div>
+                    </div>
+                    <br/>
+                                        <table class="table table-condensed table-bordered  report_table;"
+                                               style="width: 100% ! important;font-size:10px ! important;">
+                                            <thead>
+                                                <!--                            <colgroup span="7"></colgroup>-->
+                                                <tr>
+                                                    <th colspan="8"></th>
+                                                    <th colspan="3" scope="colgroup" class="text-center">Last Paid Installment</th>
+                                                    <th colspan="4"></th>
+
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center" style="width: 5%">No</th>
+                                                    <th class="text-center" style="width: 10%">Registration No</th>
+                                                    <th class="text-center" style="width: 20%">Name</th>
+                                                    <th class="text-center" style="width: 10%">Department</th>
+                                                    <th class="text-center" style="width: 10%">Loan date</th>
+                                                    <th class="text-center" style="width: 5%">Loan amount</th>
+                                                    <th class="text-center" style="width: 5%">No of installment</th>
+                                                    <th class="text-center" style="width: 5%">Installment amount</th>
+                                                    <th scope="col">Month</th>
+                                                    <th scope="col">Year</th>
+                                                    <th scope="col">Amount</th>
+
+                                                    <th class="text-center" style="width: 5%">Total Paid</th>
+                                                    <th class="text-center" style="width: 5%">Remain</th>
+                                                </tr>
+
+                                                <!--                            <tr>-->
+                                                <!--                               -->
+                                                <!--                            </tr>-->
+                                            </thead>
+                                            <tbody>
+                                                <t t-set="No" t-value="1"/>
+                                                <!--                            <t t-set="cost_per_days" t-value="0"/>-->
+                                                <!--                            <t t-set="transportation_allowance" t-value="0"/>-->
+                                                <!--                            <t t-set="other_expanse" t-value="0"/>-->
+                                                <!--                            <t t-set="total_amount" t-value="0"/>-->
+                                                <t t-foreach="docs" t-as="compa">
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span t-esc="No"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['register']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['emp_name']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['department']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['date']"/>
+                                                        </td>
+
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['loan_total_amount']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['installment_no']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc=" '%.2f'% compa['installment_amount']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['month']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['year']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="compa['amount']"/>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="'%.2f'% compa['total_paid']" /> 
+                                                            
+                                                            
+                                                            <!-- <span t-esc="'%.2f'% l.product_uom_qty"/> -->
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <span t-esc="'%.2f'% compa['total_remain']"/>
+                                                        </td>
+
+
+                                                    </tr>
+
+                                                    <t t-set="No" t-value="No + 1 "/>
+                                                </t>
+
+                                            </tbody>
+                                        </table>
+
+                </div>
+                <div class="footer">
+                    <div class="row text-center" style="border-top: 1px solid black;">
+                        <div class="col col-3 offset-9 text-right">
+                            <ul class="list-inline mt-2">
+                                <li class="list-inline-item text-right">
+                                    <span t-esc="date      "/>
+                                </li>
+                                <li class="list-inline-item">Page:</li>
+                                <li class="list-inline-item">
+                                    <span class="page"/>
+                                </li>
+                                <li class="list-inline-item">/</li>
+                                <li class="list-inline-item">
+                                    <span class="topage"/>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
