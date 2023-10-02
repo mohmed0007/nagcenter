@@ -39,9 +39,9 @@
             <field name="condition_python">result = contract.HRA > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-            employee_worked_days = 0
-            employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-            result = (contract.HRA / 30) * employee_worked_days
+employee_worked_days = 0
+employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+result = (contract.HRA / 30) * employee_worked_days
             </field>
             <field name="code">HRA</field>
             <field name="category_id" ref="hr_payroll.ALW"/>
@@ -56,9 +56,9 @@
             <field name="condition_python">result = contract.TA > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-            employee_worked_days = 0
-            employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-            result = (contract.TA /30) * employee_worked_days
+employee_worked_days = 0
+employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+result = (contract.TA /30) * employee_worked_days
             </field>
             <field name="code">TA</field>
             <field name="category_id" ref="hr_payroll.ALW"/>
@@ -73,9 +73,9 @@
             <field name="condition_python">result = contract.other_amt > 0 or contract.other_amt2 > 0</field>
             <field name="amount_select">code</field>
             <field name="amount_python_compute">
-            employee_worked_days = 0
-            employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-            result = ((contract.other_amt + contract.other_amt2) / 30) * employee_worked_days
+employee_worked_days = 0
+employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+result = ((contract.other_amt + contract.other_amt2) / 30) * employee_worked_days
             </field>
             <field name="code">OTHER</field>
             <field name="category_id" ref="hr_payroll.ALW"/>
@@ -96,9 +96,9 @@
             <field name="amount_select">code</field>
             <field name="struct_id" ref="hr_payroll_structure_custom"/>
             <field name="amount_python_compute">
-            employee_worked_days = 0
-            employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-            result = ((inputs.OTHER_ALLOWANCE_AMOUNT.amount) / 30) * employee_worked_days
+employee_worked_days = 0
+employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
+result = ((inputs.OTHER_ALLOWANCE_AMOUNT.amount) / 30) * employee_worked_days
             </field>
         </record>
 
