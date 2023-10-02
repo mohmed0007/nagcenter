@@ -38,9 +38,9 @@
             <field name="condition_select">python</field>
             <field name="condition_python">result = contract.HRA > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">'''employee_worked_days = 0
+            <field name="amount_python_compute">employee_worked_days = 0
 employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-result = (contract.HRA / 30) * employee_worked_days'''
+result = (contract.HRA / 30) * employee_worked_days
             </field>
             <field name="code">HRA</field>
             <field name="category_id" ref="hr_payroll.ALW"/>
@@ -54,9 +54,9 @@ result = (contract.HRA / 30) * employee_worked_days'''
             <field name="condition_select">python</field>
             <field name="condition_python">result = contract.TA > 0</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">'''employee_worked_days = 0
+            <field name="amount_python_compute">employee_worked_days = 0
 employee_worked_days = payslip.worked_days_line_ids.filtered(lambda days: days.code in ['WORK100']).number_of_days
-result = (contract.TA /30) * employee_worked_days'''
+result = (contract.TA /30) * employee_worked_days
             </field>
             <field name="code">TA</field>
             <field name="category_id" ref="hr_payroll.ALW"/>
