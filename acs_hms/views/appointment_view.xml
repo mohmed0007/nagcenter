@@ -198,7 +198,7 @@
                         <!-- <button name="action_refer_doctor" string="Refer. To" type="object" states="in_consultation,invoiced" class="oe_stat_button" icon="fa-pencil-square-o"/> -->
                         <button name="action_prescription" string="Treatment Plan" type="object" class="oe_stat_button" icon="fa-pencil-square-o"  attrs="{'invisible': [('state','=','done'),('prescription_ids', '=', False)]}"/>
                        
-                        <button name="action_prescription_trouble" string="prescription" type="object" class="oe_stat_button" icon="fa-pencil-square-o" />
+                        <button name="action_prescription_trouble" string="External Prescription" type="object" class="oe_stat_button" icon="fa-pencil-square-o" />
                         <button class="oe_stat_button" type="object" name="view_invoice" icon="fa-pencil-square-o" attrs="{'invisible': [('invoice_count', '=', 0)]}" groups="account.group_account_invoice">
                             <field string="Invoices" name="invoice_count" widget="statinfo"/>
                         </button>

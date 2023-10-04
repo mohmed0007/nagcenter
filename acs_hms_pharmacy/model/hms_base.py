@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models, _
+from odoo.exceptions import UserError
 
 class PrescriptionLine(models.Model):
     _inherit = 'prescription.line'
