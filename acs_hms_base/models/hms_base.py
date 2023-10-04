@@ -2,7 +2,7 @@
 
 from odoo import api, fields, models, _
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.exceptions import UserError, UserWarning
+from odoo.exceptions import UserError
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
@@ -65,7 +65,7 @@ class ACSHmsMixin(models.AbstractModel):
         inv_data1 = self.acs_prepare_invocie_data(partner, patient, product_data, inv_data)
         vals_list = []
         vals_list.append(inv_data1)
-        raise UserWarning(vals_list)
+        raise UserError(vals_list)
         invoice = self.env['account.move'].create(vals_list)
 
         invoice._onchange_partner_id()
