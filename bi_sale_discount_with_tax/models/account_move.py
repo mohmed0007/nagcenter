@@ -226,7 +226,8 @@ class account_move(models.Model):
 
 	discount_method = fields.Selection([('fix', 'Fixed'), ('per', 'Percentage')],'Discount Method',default='fix')
 	discount_amount = fields.Float('Discount Amount')
-	discount_amt = fields.Float(string='Discount', readonly=True, compute='_compute_amount')
+	# discount_amt = fields.Float(string='Discount', readonly=True, compute='_compute_amount')
+	discount_amt = fields.Float(string='Discount', readonly=True, compute=False)
 	amount_untaxed = fields.Monetary(string='Untaxed Amount', store=True, readonly=True, tracking=True,
 		compute='_compute_amount')
 	amount_tax = fields.Monetary(string='Tax', store=True, readonly=True,
@@ -236,7 +237,8 @@ class account_move(models.Model):
 		inverse='_inverse_amount_total')
 	discount_type = fields.Selection([('line', 'Order Line'), ('global', 'Global'),('non_discount','No Discount')], 'Discount Applies to',default='non_discount')
 	discount_account_id = fields.Many2one('account.account', 'Discount Account',compute='_compute_amount_account',store=True)
-	discount_amt_line = fields.Float(compute='_compute_amount', string='Line Discount', digits='Discount', store=True, readonly=True)
+	# discount_amt_line = fields.Float(compute='_compute_amount', string='Line Discount', digits='Discount', store=True, readonly=True)
+	discount_amt_line = fields.Float(compute=False, string='Line Discount', digits='Discount', store=True, readonly=True)
 	discount_amount_line = fields.Float(string="Discount Line")
    
 

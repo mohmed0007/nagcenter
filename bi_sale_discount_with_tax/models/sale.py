@@ -171,13 +171,18 @@ class sale_order(models.Model):
                     'amount_untaxed': amount_untaxed,
                     'amount_tax': amount_tax,
                     'amount_total': amount_untaxed + amount_tax ,
+                    'discount_amt_line': 0,
+                    'discount_amt': 0,
+                    
                     })
 
     discount_method = fields.Selection([('fix', 'Fixed'), ('per', 'Percentage')], 'Discount Method')
     discount_amount = fields.Float('Discount Amount')
-    discount_amt = fields.Monetary(compute='_amount_all', string='Discount', store=True, readonly=True)
+    # discount_amt = fields.Monetary(compute='_amount_all', string='Discount', store=False, readonly=True)
+    discount_amt = fields.Monetary(compute=False, string='Discount', store=False, readonly=True)
     discount_type = fields.Selection([('line', 'Order Line'), ('global', 'Global'),('non_discount','No Discount')],string='Discount Applies to',default='non_discount')
-    discount_amt_line = fields.Float(compute='_amount_all', string='Line Discount', digits=(16, 4), store=True, readonly=True)
+    # discount_amt_line = fields.Float(compute='_amount_all', string='Line Discount', digits=(16, 4), store=False, readonly=True)
+    discount_amt_line = fields.Float(compute=False, string='Line Discount', digits=(16, 4), store=False, readonly=True)
 
     # def _prepare_invoice(self):
     #     res = super(sale_order,self)._prepare_invoice()
