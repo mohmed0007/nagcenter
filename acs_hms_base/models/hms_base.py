@@ -58,12 +58,12 @@ class ACSHmsMixin(models.AbstractModel):
         data['discount_amt_line'] = inv_data.get('discount_amt_line',False)
         data['discount_type'] = inv_data.get('discount_type',False)
 
-        return data
+        return [data]
 
     @api.model
     def acs_create_invoice(self, partner, patient=False, product_data=[], inv_data={}):
-        inv_data = self.acs_prepare_invocie_data(partner, patient, product_data, inv_data)
-        invoice = self.env['account.move'].create(inv_data)
+        inv_data1 = self.acs_prepare_invocie_data(partner, patient, product_data, inv_data)
+        invoice = self.env['account.move'].create(inv_data1)
 
         invoice._onchange_partner_id()
         for line in invoice.invoice_line_ids:
