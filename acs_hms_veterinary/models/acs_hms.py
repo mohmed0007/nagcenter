@@ -81,7 +81,7 @@ class ResPartner(models.Model):
 
     def _rec_vat_count(self):
         for rec in self:
-            rec.partner_procedure_count = len(rec.partner_procedure_ids)
+            rec.partner_procedure_count = len(rec.partner_procedure_ids) or 0
 
     pet_ids = fields.One2many("hms.patient", "partner_id", "Pets")
 
