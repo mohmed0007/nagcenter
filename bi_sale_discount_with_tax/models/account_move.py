@@ -616,48 +616,48 @@ class account_move(models.Model):
 			if in_draft_mode:
 				taxes_map_entry['tax_line'].update(taxes_map_entry['tax_line']._get_fields_onchange_balance(force_computation=True))
 
-	@api.model_create_multi
-	def create(self, vals_list):
-		res = super(account_move,self).create(vals_list)
-		settings= self.env.company
+	# @api.model_create_multi
+	# def create(self, vals_list):
+	# 	res = super(account_move,self).create(vals_list)
+	# 	settings= self.env.company
 
-		tax_discount_policy = settings.tax_discount_policy;
-		if not tax_discount_policy and res.discount_amt == 0:
-			return res
-		if len(vals_list):
-			obj = self.env["account.move"].search([("name","=",vals_list[0])]);
-		name_flag = False;
+	# 	tax_discount_policy = settings.tax_discount_policy
+	# 	if not tax_discount_policy and res.discount_amt == 0:
+	# 		return res
+	# 	if len(vals_list):
+	# 		obj = self.env["account.move"].search([("name","=",vals_list[0])]);
+	# 	name_flag = False
 		
-		print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#",self.discount_type)
-		for line in self.line_ids:
-			if line.name == "Discount":
-				name_flag = True;
-		if self.discount_type == 'line':
-			price = self.discount_amt_line
-		elif self.discount_type == 'global':
-			price = self.discount_amt
-		else:
-			price = 0  
-		move_line = res.line_ids.filtered(lambda x : x.name == 'Discount')
-		if not len(res) > 1:
-			if not name_flag and res.move_type != 'entry':
-				if not move_line:
-					# if res.discount_type != 'non_discount':
-					if res.discount_account_id:       
-						discount_vals = {
-								'account_id': res.discount_account_id, 
-								'quantity': 1,
-								'price_unit': -price,
-								'name': "Discount", 
-								'exclude_from_invoice_tab': True,
-								} 
-						res.with_context(check_move_validity=False).write({
-								'invoice_line_ids' : [(0,0,discount_vals)]
-								})
-				else:
-					pass   
-		# res._compute_amount() 
-		return res
+	# 	print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#",self.discount_type)
+	# 	for line in self.line_ids:
+	# 		if line.name == "Discount":
+	# 			name_flag = True;
+	# 	if self.discount_type == 'line':
+	# 		price = self.discount_amt_line
+	# 	elif self.discount_type == 'global':
+	# 		price = self.discount_amt
+	# 	else:
+	# 		price = 0  
+	# 	move_line = res.line_ids.filtered(lambda x : x.name == 'Discount')
+	# 	if not len(res) > 1:
+	# 		if not name_flag and res.move_type != 'entry':
+	# 			if not move_line:
+	# 				# if res.discount_type != 'non_discount':
+	# 				if res.discount_account_id:       
+	# 					discount_vals = {
+	# 							'account_id': res.discount_account_id, 
+	# 							'quantity': 1,
+	# 							'price_unit': -price,
+	# 							'name': "Discount", 
+	# 							'exclude_from_invoice_tab': True,
+	# 							} 
+	# 					res.with_context(check_move_validity=False).write({
+	# 							'invoice_line_ids' : [(0,0,discount_vals)]
+	# 							})
+	# 			else:
+	# 				pass   
+	# 	# res._compute_amount() 
+	# 	return res
 
 	@api.onchange('invoice_line_ids','discount_amount','discount_method')
 	def _onchange_invoice_line_ids_discount(self):
