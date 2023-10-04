@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <!-- <Pet Breed> -->
+        <record id="hms_pat_breed_0" model="acs.pet.breed">
+            <field name="name">Labrador Retriever</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+        </record>
+        <record id="hms_pat_breed_1" model="acs.pet.breed">
+            <field name="name">German Shepherd</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+        </record>
+        <record id="hms_pat_breed_2" model="acs.pet.breed">
+            <field name="name">Golden Retriever</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+        </record>
+
+        <record id="hms_pat_breed_3" model="acs.pet.breed">
+            <field name="name">Maine Coon</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+        </record>
+
+        <record id="hms_pat_breed_4" model="acs.pet.breed">
+            <field name="name">Polish rabbit</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+        </record>
+
+        <record id="hms_pat_breed_5" model="acs.pet.breed">
+            <field name="name">Kite</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+        </record>
+
+    </data>
+</odoo>

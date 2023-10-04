@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      
+    <template id="order_sale_small">
+
+        <t t-call="web.basic_layout" t-set="o">
+          <t t-foreach="docs" t-as="o">
+          <t t-set="c" t-value="0" />
+             
+           
+                
+            <div class="page" style="break-inside avoid">
+                 <table align="center" style="border:1px solid black;" >
+                        <!--      الجزء الخاص بالاسم-->
+                    <tr width="270">
+                      <td style="text-align:center;" border="0" width="270" colspan="2">
+                     
+                       
+                          <font style="font-size:12px"> <span t-field="o.company_id.name"/> </font>
+                       
+                      </td>
+
+                    </tr>
+                    <!--     الجزء الخاص بعنوان الفاتورة-->
+                    <tr width="270">
+                       <td style="text-align:center;" border="0" width="270" colspan="2">
+                          <font size="1"> فاتورة المبيعات</font>
+                       </td>
+                    </tr>
+                    <!--   الجزء الخاص بالشعار-->
+                    <tr>
+                      <td style="text-align:center;" border="0"  colspan="2" width="270px">
+                       
+                       
+                      
+                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" alt="Logo"  width="70px" height="70px"/>
+                      
+                      
+                      </td>
+                      
+                    </tr> 
+
+                    <!--   الجزء الخاص بالعنوان والهاتف -->
+                     <tr width="270">
+                      <td style="text-align:center;" border="0" width="135px">
+
+                         <t t-if="o.company_id.vat">
+                          <font style="font-size:8px"> الرقم الضريبي:</font>
+                          <font style="font-size:9px">  <span t-field="o.company_id.vat" /> </font>
+                         </t>
+
+                       
+                      </td>
+
+                      
+                      <td style="text-align:center;"  border="0" width="135px">
+                      
+                      
+                         <t t-if="o.company_id.mobile">
+                         
+                          <font style="font-size:8px">  رقم الهاتف:</font>
+                          <font style="font-size:8px">  <span t-field="o.company_id.mobile" /> </font>
+                        </t>
+
+                   
+                      
+                      </td>
+                     
+                    </tr>
+                          <tr width="270">
+                      <td style="text-align:center;" border="0" width="135px">
+
+                         <font style="font-size:9px"> <span t-field="o.company_id.street" /> </font>
+
+                       
+                      </td>
+
+                      
+                      <td style="text-align:center;"  border="0" width="135px">
+                      
+                         
+                            <font style="font-size:9px"> <span t-field="o.company_id.street2" /> </font>
+                    
+                      
+                      </td>
+                     
+                    </tr>
+                </table>
+
+                <table align="center" style="page-breake-inside: avoid" >
+                    <tr>
+                      <td style="text-align:left;" border="0" width="135px">
+                            <t t-if="o.company_id.mobile">
+                              <font style="font-size:8px">      اسم المالك : </font> <font style="font-size:8px"> <span t-field="o.partner_id"/> </font>  
+                            </t>
+                      </td>
+                     
+                      <td style="text-align:right;" width="135px" border="0">
+                            <t t-if="o.patient_id">
+                               <font style="font-size:8px">       اسم المريض : </font>  <font style="font-size:8px"> <span t-field="o.patient_id"/> </font>
+                            </t>                         
+                      </td>
+                    </tr>
+                      <tr>
+                      <td style="text-align:left;" border="0" width="135px">
+                            <t t-if="o.physician_id">
+                              <font style="font-size:8px">      اسم الطبيب : </font> <font style="font-size:8px"> <span t-field="o.physician_id"/> </font>  
+                            </t>
+                      </td>
+                     
+                      <td style="text-align:right;" width="135px" border="0">
+
+                            <t t-if="o.patient_id.code">
+                               <font style="font-size:8px">      رقم المريض : </font>  <font style="font-size:8px"> <span t-field="o.patient_id.code"/> </font>
+                            </t>                     
+                      </td>
+                    </tr>
+                </table>
+
+                 <table align="center" >
+                    <tr style="align:center;" width="270px">
+                      <td width="100px"></td>
+                      <td style="align:center;" width="70px">
+                             <t t-if="o.company_id.vat">
+                              <p align="center" >
+                                  <img t-if="o.l10n_sa_qr_code_str"
+                                      style="display:block;"
+                                      t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', o.l10n_sa_qr_code_str, 70, 70)"/>
+                              </p>
+                            </t>
+                      </td>
+                      <td width="100px"></td>
+                    </tr>
+                </table>
+                <table align="center" style="page-breake-inside: avoid">
+                    <tr style="border:1px solid black;" >
+                       <th style="text-align:center;" > <font style="font-size:12px;width:150px"> المنتج</font></th>
+                       <th style="text-align:center;" ><font style="font-size:12px;width:30px"> الكمية</font></th>
+                       <th style="text-align:center;" ><font style="font-size:12px;width:45px">السعر</font></th>
+                       <th style="text-align:center;" ><font style="font-size:12px;width:45px">المجموع</font></th>
+                    </tr>
+
+                    <t t-foreach="o.invoice_line_ids" t-as="line">
+                    <t t-set="c" t-value="c+1" />
+                      <tr style="border:1px solid black;">
+                        <td style="text-align:center;" width="150px">
+                          <font style="font-size:12px"> <span t-field="line.product_id"/> </font>
+                       
+                        </td>
+                     
+                        <td style="text-align:center;" width="30px">
+                          <font style="font-size:9px"> <span t-field="line.quantity"/> </font>
+                        </td>
+                        <td style="text-align:center;" width="45px"> 
+                          <font style="font-size:9px"> <span t-field="line.price_unit"/> </font>                    
+                       </td>
+                       <td style="text-align:center;" width="45px"> 
+                          <font style="font-size:9px"> <span t-field="line.price_subtotal"/> </font>                    
+                       </td>
+                      </tr>
+                    </t>
+
+
+
+                   
+
+                     <tr>
+
+                       
+                     
+                    
+                      <td style="text-align:right;" colspan="3" >
+                                   
+                           <font  style="font-size:12px">Amount Untaxed :</font><font size="1"> <span t-field="o.amount_untaxed"/> </font>               
+                      </td>
+                    </tr>
+
+                     <tr>
+
+                       
+                     
+                    
+                      <td style="text-align:right;" colspan="3" >
+                          <t t-if="o.discount_amt_line or o.discount_amt">
+                             <font  style="font-size:15px">>  Discount :</font> <font size="1"> <t t-if="o.discount_amt_line" t-esc="o.discount_amt_line" id="inv_discount_small_sale"/> </font>    
+                             <font size="1"> <t t-if="o.discount_amt" t-esc="o.discount_amt" id="inv_discount_small_sale"/></font>
+                          </t>         
+                      </td>
+                    </tr>
+
+                     <tr>
+
+                       
+                     
+                    
+                      <td style="text-align:right;" colspan="3" >
+                                   
+                           <font style="font-size:15px">  Tax :</font><font size="1"> <span t-field="o.amount_tax"/> </font>               
+                      </td>
+                    </tr>
+
+                    <tr>
+
+                       
+                     
+                    
+                      <td style="text-align:right;" colspan="3" >
+                                   
+                           <font style="font-size:15px">  Total :</font><font size="1"> <span t-field="o.amount_total"/> </font>               
+                      </td>
+                    </tr>
+                </table>
+                <br/> 
+                <br/> 
+                <br/> 
+                <br/> 
+                 <p>___________________________________</p>
+
+                  <font style="font-size:20px">  User Name :</font><font size="1"> <span t-field="o.invoice_user_id"/> </font>
+             
+                  <t t-set="x" t-value="o.change_size_page(c)" />
+          </div>
+          </t>
+        </t>
+
+
+    </template>
+
+  </data>
+</odoo>
+
+
+               

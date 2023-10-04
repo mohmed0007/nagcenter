@@ -1,0 +1,749 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_veterinary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-29 06:57+0000\n"
+"PO-Revision-Date: 2021-04-09 11:23-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__veterinary_procedure_count
+msgid "# Veterinary Procedures"
+msgstr "# Procedimientos Veterinarios"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_laboratory__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_insurance_company__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_insurance_tpa__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_medical_representative__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__part_vet_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__part_vet_procedure_count
+msgid "#Pet Veterinary Procedures"
+msgstr "# Procedimientos Veterinarios de Mascotas"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__veterinary_procedure_count
+msgid "#Veterinary Procedures"
+msgstr "#Procedimientos Veterinarios"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "ACS Veterinary Procedure"
+msgstr "Procedimiento Veterinario Red"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Excepción de actividad"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícono de tipo de actvidad"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_appointment
+#: model:ir.model,name:acs_hms_veterinary.model_hms_appointment
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_appointment
+msgid "Appointment"
+msgstr "Cita"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__appointment_ids
+msgid "Appointments"
+msgstr "Citas"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de adjuntos"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+msgid "Cancel"
+msgstr "Anular"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__acs_veterinary_procedure__state__cancel
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_veterinary_procedure
+msgid "Click to add a Patient Veterinary Procedure."
+msgstr "Haga clic para agregar un procedimiento veterinario a la mascota"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_pet_owners
+msgid "Click to add a Pet Owner."
+msgstr "Haga clic para agregar un propietario de la mascota."
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_treatment
+msgid "Click to add a Veterinary Treatment."
+msgstr "Haga clic para agregar un tratamiento veterinario."
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_appointment
+msgid "Click to add an Veterinary Appointment."
+msgstr "Haga clic para agregar una cita veterinaria."
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_veterinary_cofig
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+msgid "Create Combined Invoice"
+msgstr "Crear factura combinada"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hms_veterinary_appointment_form
+msgid "Create Veterinary Invoice"
+msgstr "Crear factura veterinaria"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_breed
+msgid "Create a new Pet Breed"
+msgstr "Crear una nueva raza de mascotas"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_color
+msgid "Create a new Pet Color"
+msgstr "Crear un nuevo color de mascota"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_type
+msgid "Create a new Pet Type"
+msgstr "Crear un nuevo tipo de mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__create_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__create_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__create_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__create_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__create_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__create_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__date
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_hr_department
+msgid "Department"
+msgstr "Departamento"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__description
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__description
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__description
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__diseas_id
+msgid "Disease"
+msgstr "Enfermedad"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_vaccination__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_appointment__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hr_department__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_template__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__acs_veterinary_procedure__state__done
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+msgid "Done"
+msgstr "Hecho"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de Font Awesome ej. fa-tasks"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__company_id
+msgid "Hospital"
+msgstr "Hospital"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hr_department__department_type
+msgid "Hospital Department"
+msgstr "Departamento del Hospital"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_product__hospital_product_type
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_template__hospital_product_type
+msgid "Hospital Product Type"
+msgstr "Tipo de producto hospitalario"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_vaccination__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_appointment__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hr_department__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_template__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_needaction
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado hay nuevos mensajes que requieren su atención."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_error
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__image
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_vaccination____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_appointment____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hr_department____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_template____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__write_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__write_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__write_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__write_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__write_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__write_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+msgid "Mark as Done"
+msgstr "Marcar como hecho"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+msgid "Mark as Running"
+msgstr "Marcar como en ejecución"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "My Veterinary Procedure"
+msgstr "Mi Procedimiento Veterinario"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__name
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_treatment
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_appointment
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_pet_owners
+msgid "No Record Found"
+msgstr "Registro no encontrado"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Not Done"
+msgstr "No se ha hecho"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero de errores"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_vaccination__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_appointment__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__partner_id
+msgid "Owner Name"
+msgstr "Nombre del Titular"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__partner_id
+msgid "Partner-related data of the Patient"
+msgstr "Datos del cliente relacionados al paciente"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_veterinary_procedure
+msgid "Patient Veterinary Procedures"
+msgstr "Procedimientos Veterinarios del Paciente"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__patient_id
+msgid "Patient/Pet"
+msgstr "Paciente/Mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_hms_patient
+msgid "Pet"
+msgstr "Mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_breed
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_breed
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_breed_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_breed
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_view_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_view_tree
+msgid "Pet Breed"
+msgstr "Raza de mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_color
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_color
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_color_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_color
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_color_view_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_color_view_tree
+msgid "Pet Color"
+msgstr "Color de la mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__name
+msgid "Pet Name"
+msgstr "Nombre de la mascota"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hms_veterinary_appointment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_patient_veterinary_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_vaccination_vac_form
+msgid "Pet Owner"
+msgstr "Propietario de mascota"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_pet_owners
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_contacts
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_res_partner_filter
+msgid "Pet Owners"
+msgstr "Propietarios de mascotas"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_type
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_type
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__pet_type_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_type_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_type
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_type_view_form
+msgid "Pet Type"
+msgstr "Tipo de mascota"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_type_view_tree
+msgid "Pet Types"
+msgstr "Tipos de mascotas"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_laboratory__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_insurance_company__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_insurance_tpa__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_medical_representative__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__part_vet_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__part_vet_procedure_ids
+msgid "Pet Veterinary Procedures"
+msgstr "Procedimientos Veterinarios de Mascotas"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_laboratory__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_insurance_company__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_insurance_tpa__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_medical_representative__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__pet_ids
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_patient
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_partner_veterinary_form
+msgid "Pets"
+msgstr "Mascotas"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__physician_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Physician"
+msgstr "Profesional"
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_veterinary.py:0
+#, python-format
+msgid "Please Set Product first."
+msgstr "Por favor, establezca el producto primero."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__price_unit
+msgid "Price"
+msgstr "Precio"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__product_id
+msgid "Procedure"
+msgstr "Procedimiento"
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_veterinary_procedures
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Procedures"
+msgstr "Procedimientos"
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_veterinary.py:0
+#, python-format
+msgid "Record can be deleted only in Canceled state."
+msgstr "El registro solo se puede eliminar en estado Cancelado."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__acs_veterinary_procedure__state__running
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+msgid "Running"
+msgstr "Corriendo"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_search
+msgid "Schedule"
+msgstr "Agenda"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__acs_veterinary_procedure__state__scheduled
+msgid "Scheduled"
+msgstr "Agendado"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__sequence
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__sequence
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+msgid "Show Full details"
+msgstr "Mostrar detalles completos"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__state
+msgid "State"
+msgstr "Estado"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid "There is no Procedure to Invoice or all are already Invoiced."
+msgstr "No hay ningún procedimiento para facturar o todos ya están facturados."
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\". You may have to "
+"install a chart of account from Accounting app, settings menu."
+msgstr ""
+"No hay ninguna cuenta de ingresos definida para este producto: \"%s\". "
+"Deberá instalar el plan contable desde la aplicación contabilidad, menú de "
+"configuración."
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_treatment
+#: model:ir.model,name:acs_hms_veterinary.model_hms_treatment
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__treatment_id
+msgid "Treatment"
+msgstr "Tratamiento"
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_treatment
+msgid "Treatments"
+msgstr "Tratamientos"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Nº de mensajes sin leer"
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_acs_vaccination
+msgid "Vaccination"
+msgstr "Vacunación"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hr_department__department_type__veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_main_veterinary
+msgid "Veterinary"
+msgstr "Veterinario"
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_veterinary_procedure
+#: model:ir.model,name:acs_hms_veterinary.model_acs_veterinary_procedure
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_list
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_vaccination_pivot
+msgid "Veterinary Procedure"
+msgstr "Procedimiento Veterinario"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__veterinary_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__veterinary_procedure_ids
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_patient_veterinary_procedure
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_calendar
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hms_veterinary_appointment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_partner_veterinary_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_patient_veterinary_form
+msgid "Veterinary Procedures"
+msgstr "Procedimientos Veterinarios"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__product_template__hospital_product_type__veterinary
+msgid "Veterinary Process"
+msgstr "Proceso veterinario"
+
+#. module: acs_hms_veterinary
+#: model:res.groups,name:acs_hms_veterinary.group_hms_veterinary
+msgid "Veterinary User"
+msgstr "Usuario veterinario"
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_acs_veterinary_procedure_form
+msgid "View Invoice"
+msgstr "Ver factura"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_veterinary_procedure__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_acs_veterinary_procedure__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"

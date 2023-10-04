@@ -1,0 +1,97 @@
+<odoo>
+  <data>
+    <record id ="custom_sale_order_form_view_extended" model="ir.ui.view">
+				<field name="name">custom.sale.order.form.view.extended</field>
+			 	<field name="model">sale.order</field>
+			  	<field name="inherit_id" ref="sale.view_order_form"/>
+		      	<field name="arch" type="xml">
+	            	<xpath expr="//field[@name='date_order']" position="after">
+	            		<field name="custom_sale_order_automation_id"></field>
+						<!-- <field name="test"></field> -->
+						
+            		</xpath>
+            		<xpath expr="//button[@name='action_cancel']" position="after">
+	            		<button name="action_sale_order_automation_method" type="object" string="Auto Confirm Order-البيع السريع"  attrs="{'invisible':['|',('custom_sale_order_automation_id','=',False),('state','not in',('draft'))]}"></button>
+            		</xpath>
+	          </field>
+	  </record>
+
+
+    <record id ="custom_sale_res_partner_form_view_extended" model="ir.ui.view">
+			 <field name="name">custom.sale.res.partner.form.view.extended</field>
+			 <field name="model">res.partner</field>
+			  <field name="inherit_id" ref="base.view_partner_form"/>
+		      <field name="arch" type="xml">
+		            <xpath expr="//page/group/group/field[@name='user_id']" position="after">	
+		            	<field name="is_auto_sale_order_automation"/>
+		            	<field name="custom_sale_order_automation_id" attrs="{'invisible':[('is_auto_sale_order_automation','=',False)],'required':[('is_auto_sale_order_automation','=',True)]}"/>
+		           </xpath>	
+	           </field>
+	</record> 
+
+    <record id="custom_sale_order_automation_tree_view" model="ir.ui.view">
+            <field name="name">custom.sale.order.automation_view_tree</field>
+            <field name="model">custom.sale.order.automation</field>
+            <field eval="16" name="priority"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="is_confirm_sale_order"/>
+                    <field name="is_create_vendor_bill"/>
+                    <field name="is_post_vendor_bill"/>
+                    <field name="is_paid_vendor_bill"/>
+                </tree>
+            </field>
+    </record>
+        
+    <record id="custom_sale_order_automation_form_view" model="ir.ui.view">
+          <field name="name">custom.sale.order.automation_form_view</field>
+          <field name="model">custom.sale.order.automation</field>
+          <field eval="16" name="priority"/>
+          <field name="type">form</field>
+          <field name="arch" type="xml">
+          <form>
+					  <sheet>
+						      <group>
+		                    <group>	
+		                    	<field name="name" required="1"/>
+		                    </group>
+		                     <group>
+                                <field name="is_true_default"/>
+								                <field name="journal_id" attrs="{'invisible':[('is_paid_vendor_bill','=',False)] , 'required':[('is_paid_vendor_bill','=',True)]}" />
+								                <field name="outbound_payment_method_id" attrs="{'invisible':[('is_paid_vendor_bill','=',False)] , 'required':[('is_paid_vendor_bill','=',True)]}" />
+		                   		      <field name="sale_journal_id"/>                                           
+		                    </group> 
+						      </group>
+	                    <group>
+	                    	<group>
+	                    		<field name="is_confirm_sale_order" widget="boolean_toggle"/>
+	                    		<field name="is_validate_incoming_shipment" attrs="{'invisible':[('is_confirm_sale_order','=',False)]}" widget="boolean_toggle"/>
+	                    		<field name="is_create_vendor_bill"  attrs="{'invisible':[('is_confirm_sale_order','=',False)]}" widget="boolean_toggle"/>
+	                    			
+	                    	</group>
+	                    	<group>
+	                    		<field name="is_post_vendor_bill" attrs="{'invisible':[('is_create_vendor_bill','=',False)]}" widget="boolean_toggle"/>							
+	                    		<field name="is_paid_vendor_bill" attrs="{'invisible':[('is_create_vendor_bill','=',False)]}" widget="boolean_toggle"/>
+	                    		<field name="is_order_date_same_bill_date" attrs="{'invisible':[('is_create_vendor_bill','=',False)]}" widget="boolean_toggle"/>
+	                    	</group>    
+	                    </group>
+    
+            </sheet>
+          </form>
+          </field>
+    </record>
+        
+        
+    <record id="custom_sale_order_automation_action" model="ir.actions.act_window">
+            <field name="name">Sale Custom Order Automation</field>
+            <field name="res_model">custom.sale.order.automation</field>
+            <field name="view_mode">tree,form</field>
+             <field name="view_id" ref="custom_sale_order_automation_tree_view"/>
+    </record>
+        
+        <menuitem id="custom_sale_order_automation_main_menu" name="Sale Order Automation"  parent="sale.menu_sale_config" sequence="100"/>
+        <menuitem id="custom_sale_order_automation_child_menu" name="Sale Order Automation Configuration" action="custom_sale_order_automation_action"  parent="custom_sale_order_automation_main_menu" sequence="1"/>
+  </data>
+</odoo>
