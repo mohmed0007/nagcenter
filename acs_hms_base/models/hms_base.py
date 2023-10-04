@@ -2,7 +2,7 @@
 
 from odoo import api, fields, models, _
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, UserWarning
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 
@@ -52,18 +52,21 @@ class ACSHmsMixin(models.AbstractModel):
             data['ref_physician_id'] = inv_data.get('ref_physician_id',False)
         if inv_data.get('appointment_id',False):
             data['appointment_id'] = inv_data.get('appointment_id',False)
-        # data['discount_method'] = inv_data.get('discount_method',False)
-        # data['discount_amount'] = inv_data.get('discount_amount',False)
-        # data['discount_amt'] = inv_data.get('discount_amt',False)
-        # data['discount_amt_line'] = inv_data.get('discount_amt_line',False)
-        # data['discount_type'] = inv_data.get('discount_type',False)
+        data['discount_method'] = inv_data.get('discount_method',False)
+        data['discount_amount'] = inv_data.get('discount_amount',False)
+        data['discount_amt'] = inv_data.get('discount_amt',False)
+        data['discount_amt_line'] = inv_data.get('discount_amt_line',False)
+        data['discount_type'] = inv_data.get('discount_type',False)
 
-        return [data]
+        return data
 
     @api.model
     def acs_create_invoice(self, partner, patient=False, product_data=[], inv_data={}):
         inv_data1 = self.acs_prepare_invocie_data(partner, patient, product_data, inv_data)
-        invoice = self.env['account.move'].create(inv_data1)
+        vals_list = []
+        vals_list.append(inv_data1)
+        raise UserWarning(vals_list)
+        invoice = self.env['account.move'].create(vals_list)
 
         invoice._onchange_partner_id()
         for line in invoice.invoice_line_ids:
