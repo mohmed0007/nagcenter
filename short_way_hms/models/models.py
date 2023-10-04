@@ -36,95 +36,95 @@ class ACSPrescriptionOrder(models.Model):
     _inherit = 'prescription.order'
     
 
-    def create_invoice(self):
-        # res = super(ACSPrescriptionOrder, self).create_invoice()
-        if not self.prescription_line_ids:
-            raise UserError(_("Please add prescription lines first."))
+    # def create_invoice(self):
+    #     # res = super(ACSPrescriptionOrder, self).create_invoice()
+    #     if not self.prescription_line_ids:
+    #         raise UserError(_("Please add prescription lines first."))
 
-        if self.discount_type == 'global':
-            if not self.discount_method:
-                raise UserError(_('Pleas Enter Discount Method.'))
+    #     if self.discount_type == 'global':
+    #         if not self.discount_method:
+    #             raise UserError(_('Pleas Enter Discount Method.'))
 
-        if self.discount_type == 'line': 
-            for line_pre in self.prescription_line_ids:
-                if not line_pre.discount_method:
-                    raise UserError(_('Pleas Enter Discount Method Peer Line.'))
-        product_data = []
-        for line in self.prescription_line_ids:
-            product_data.append({
-                'product_id': line.product_id,
-                'quantity': line.quantity,
-                'name': line.name,
-                'display_type': line.display_type,
-                'discount': 0.0,
-                'discount_method': line.discount_method,
-                'discount_amount': line.discount_amount,
-                'discount_amt': line.discount_amt,
-                'tax_ids':line.tax_ids.ids
+    #     if self.discount_type == 'line': 
+    #         for line_pre in self.prescription_line_ids:
+    #             if not line_pre.discount_method:
+    #                 raise UserError(_('Pleas Enter Discount Method Peer Line.'))
+    #     product_data = []
+    #     for line in self.prescription_line_ids:
+    #         product_data.append({
+    #             'product_id': line.product_id,
+    #             'quantity': line.quantity,
+    #             'name': line.name,
+    #             'display_type': line.display_type,
+    #             'discount': 0.0,
+    #             'discount_method': line.discount_method,
+    #             'discount_amount': line.discount_amount,
+    #             'discount_amt': line.discount_amt,
+    #             'tax_ids':line.tax_ids.ids
                 
-            })
-        print('>>>>>>>>>>>>>>>>>pp>>>>>',product_data)
+    #         })
+    #     print('>>>>>>>>>>>>>>>>>pp>>>>>',product_data)
                          
-        inv_data = {
-            'physician_id': self.physician_id and self.physician_id.id or False,
-            'hospital_invoice_type': 'pharmacy',
-            'discount_method': self.discount_method,
-            'discount_amount': self.discount_amount,
-             'discount_amt': self.discount_amt,
-            'discount_amt_line' : self.discount_amt_line,
-            'discount_amount_line':self.discount_amt_line,
-             'discount_type': self.discount_type,
+    #     inv_data = {
+    #         'physician_id': self.physician_id and self.physician_id.id or False,
+    #         'hospital_invoice_type': 'pharmacy',
+    #         'discount_method': self.discount_method,
+    #         'discount_amount': self.discount_amount,
+    #          'discount_amt': self.discount_amt,
+    #         'discount_amt_line' : self.discount_amt_line,
+    #         'discount_amount_line':self.discount_amt_line,
+    #          'discount_type': self.discount_type,
             
-        }
-        invoice = self.acs_create_invoice(partner=self.patient_id.partner_id, patient=self.patient_id, product_data=product_data, inv_data=inv_data)
-        now_data_dis =[]
-        # if self.discount_type == 'line' or self.discount_type == 'global': 
-        # for dis_now in self.prescription_line_ids:
-        #     line_prescription_now = (1, invoice.invoice_line_ids.id,{'discount_method': dis_now.discount_method,
-        #                         'discount_amount': dis_now.discount_amount,
-        #                         'discount_amt': dis_now.discount_amt
-        #                         })
-        #     line_prescription_now = (1,0,{'discount_method': dis_now.discount_method,
-        #                         'discount_amount': dis_now.discount_amount,
-        #                         'discount_amt': dis_now.discount_amt
-        #                         })
-        #     now_data_dis.append(line_prescription_now)
+    #     }
+    #     invoice = self.acs_create_invoice(partner=self.patient_id.partner_id, patient=self.patient_id, product_data=product_data, inv_data=inv_data)
+    #     now_data_dis =[]
+    #     # if self.discount_type == 'line' or self.discount_type == 'global': 
+    #     # for dis_now in self.prescription_line_ids:
+    #     #     line_prescription_now = (1, invoice.invoice_line_ids.id,{'discount_method': dis_now.discount_method,
+    #     #                         'discount_amount': dis_now.discount_amount,
+    #     #                         'discount_amt': dis_now.discount_amt
+    #     #                         })
+    #     #     line_prescription_now = (1,0,{'discount_method': dis_now.discount_method,
+    #     #                         'discount_amount': dis_now.discount_amount,
+    #     #                         'discount_amt': dis_now.discount_amt
+    #     #                         })
+    #     #     now_data_dis.append(line_prescription_now)
 
-        invoice.write({
-                'create_stock_moves': False if self.deliverd else True,
-                'prescription_id': self.id,
-                'discount_method': self.discount_method,
-                'discount_amount': self.discount_amount,
-                'discount_amt': self.discount_amt,
-                'discount_amt_line' : self.discount_amt_line,
-                'discount_amount_line':self.discount_amt_line,
-                'discount_type': self.discount_type,
-                # 'invoice_line_ids':now_data_dis
-        })
-        self.sudo().invoice_id = invoice.id
-        # else:
-            # for dis_now in self.prescription_line_ids:
-            # line_prescription_now = (1, invoice.invoice_line_ids.id,{'discount_method': dis_now.discount_method,
-            #                     'discount_amount': dis_now.discount_amount,
-            #                     'discount_amt': dis_now.discount_amt
-            #                     })
-                # line_prescription_now = (1,0,{'discount_method': None,
-                #                 'discount_amount': 0.0,
-                #                 'discount_amt': 0.0
-                #                 })
-                # now_data_dis.append(line_prescription_now)
-            # invoice.write({
-            #     'create_stock_moves': False if self.deliverd else True,
-            #     'prescription_id': self.id,
-            #     'discount_type': self.discount_type,
-                # 'discount_method': None,
-                # 'discount_amount': 0.0,
-                # 'discount_amt': 0.0,
-                # 'discount_amt_line' : 0.0,
-                # 'discount_amount_line':now_data_dis
-            # })
-            # self.sudo().invoice_id = invoice.id
-        # return res
+    #     invoice.write({
+    #             'create_stock_moves': False if self.deliverd else True,
+    #             'prescription_id': self.id,
+    #             'discount_method': self.discount_method,
+    #             'discount_amount': self.discount_amount,
+    #             'discount_amt': self.discount_amt,
+    #             'discount_amt_line' : self.discount_amt_line,
+    #             'discount_amount_line':self.discount_amt_line,
+    #             'discount_type': self.discount_type,
+    #             # 'invoice_line_ids':now_data_dis
+    #     })
+    #     self.sudo().invoice_id = invoice.id
+    #     # else:
+    #         # for dis_now in self.prescription_line_ids:
+    #         # line_prescription_now = (1, invoice.invoice_line_ids.id,{'discount_method': dis_now.discount_method,
+    #         #                     'discount_amount': dis_now.discount_amount,
+    #         #                     'discount_amt': dis_now.discount_amt
+    #         #                     })
+    #             # line_prescription_now = (1,0,{'discount_method': None,
+    #             #                 'discount_amount': 0.0,
+    #             #                 'discount_amt': 0.0
+    #             #                 })
+    #             # now_data_dis.append(line_prescription_now)
+    #         # invoice.write({
+    #         #     'create_stock_moves': False if self.deliverd else True,
+    #         #     'prescription_id': self.id,
+    #         #     'discount_type': self.discount_type,
+    #             # 'discount_method': None,
+    #             # 'discount_amount': 0.0,
+    #             # 'discount_amt': 0.0,
+    #             # 'discount_amt_line' : 0.0,
+    #             # 'discount_amount_line':now_data_dis
+    #         # })
+    #         # self.sudo().invoice_id = invoice.id
+    #     # return res
 
     def button_confirm(self):
         res = super(ACSPrescriptionOrder, self).button_confirm()
