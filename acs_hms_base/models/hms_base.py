@@ -52,11 +52,11 @@ class ACSHmsMixin(models.AbstractModel):
             data['ref_physician_id'] = inv_data.get('ref_physician_id',False)
         if inv_data.get('appointment_id',False):
             data['appointment_id'] = inv_data.get('appointment_id',False)
-        data['discount_method'] = inv_data.get('discount_method',False)
-        data['discount_amount'] = inv_data.get('discount_amount',False)
-        data['discount_amt'] = inv_data.get('discount_amt',False)
-        data['discount_amt_line'] = inv_data.get('discount_amt_line',False)
-        data['discount_type'] = inv_data.get('discount_type',False)
+        # data['discount_method'] = inv_data.get('discount_method',False)
+        # data['discount_amount'] = inv_data.get('discount_amount',False)
+        # data['discount_amt'] = inv_data.get('discount_amt',False)
+        # data['discount_amt_line'] = inv_data.get('discount_amt_line',False)
+        # data['discount_type'] = inv_data.get('discount_type',False)
 
         return [data]
 
