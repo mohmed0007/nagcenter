@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- <Pet> -->
+        <record id="acs_hms.hmshms_patient_0" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_0.jpg" />
+            <field name="name">Rocky</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_0"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_1" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_1.jpg" />
+            <field name="name">Jax</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_1"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_2" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">Buddy</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_3" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Apollo</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_4" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_4.jpg"/>
+            <field name="name">Gugli</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_2"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_4"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_5" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg"/>
+            <field name="name">KÎTE</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_6" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_0.jpg" />
+            <field name="name">KING</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_0"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_7" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_1.jpg" />
+            <field name="name">Tommy</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_1"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_8" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">OREO</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_9" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Gokul</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_10" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_4.jpg" />
+            <field name="name">Kanak</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_2"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_4"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_11" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg" />
+            <field name="name">Yara</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_12" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg" />
+            <field name="name">Sunny</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_13" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_1.jpg" />
+            <field name="name">Alex</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_1"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_14" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">Browny</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_15" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Ekansh</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_16" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">Danny</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_1"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_17" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_4.jpg" />
+            <field name="name">Swapnil</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_2"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_4"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_1"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_18" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Nishith</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_4"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_19" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg" />
+            <field name="name">Bugs</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_4"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_20" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_0.jpg" />
+            <field name="name">Gabbar</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_0"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_21" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_1.jpg" />
+            <field name="name">Jacky</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_1"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_22" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">Chintu</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_23" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Onkar</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_24" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_4.jpg" />
+            <field name="name">Gaman</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_2"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_4"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_25" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg" />
+            <field name="name">Laila</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_0"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_26" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_5.jpeg" />
+            <field name="name">Lucy</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_3"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_5"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_27" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_0.jpg" />
+            <field name="name">Crazy</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_0"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_0" />
+            <field name="partner_id" ref="acs_hms.hms_physician_2"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_28" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_1.jpg" />
+            <field name="name">Dodo</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_1"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_29" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_2.jpg" />
+            <field name="name">Tony</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_0"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_2"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_2" />
+            <field name="partner_id" ref="acs_hms.hms_physician_3"/>
+        </record>
+
+        <record id="acs_hms.hmshms_patient_30" model="hms.patient">
+            <field name="image_1920" type="base64" file="acs_hms_veterinary/static/src/img/pet_img_3.jpeg" />
+            <field name="name">Tejas</field>
+            <field name="pet_type_id" ref="acs_hms_veterinary.hms_pat_type_1"/>
+            <field name="pet_breed_id" ref="acs_hms_veterinary.hms_pat_breed_3"/>
+            <field name="pet_color_id" ref="acs_hms_veterinary.hms_pat_color_1" />
+            <field name="partner_id" ref="acs_hms.hms_physician_5"/>
+        </record>
+    </data>
+</odoo>

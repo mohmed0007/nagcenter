@@ -1,0 +1,307 @@
+<odoo>
+
+    <record id="res_config_settings_dep_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.Dep</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Dependents" string="Dependents"
+                     data-key="financial_dependents">
+                    <h2>Dependents disbursement of the covenant</h2>
+                    <group>
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_dep_journal" string="Default journal"/>
+                                <field name="conf_dep_journal"/>
+                            </div>
+                        </div>
+                    </group>
+                    <group>
+
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_dep_account_1" string="Default Depit Account"/>
+                                <field name="conf_dep_account_1"/>
+                            </div>
+                        </div>
+                    </group>
+                    <group>
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_cre_account_2" string="Default Credit Account"/>
+                                <field name="conf_cre_account_2"/>
+                            </div>
+                        </div>
+                    </group>
+                    <h2>Dependents Covenant liquidation</h2>
+                    <group>
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_dep_filtering_journal" string="Default journal"/>
+                                <field name="conf_dep_filtering_journal"/>
+                            </div>
+                        </div>
+                    </group>
+                    <group>
+
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_dep_filtering_account_1" string="Default Depit Account"/>
+                                <field name="conf_dep_filtering_account_1"/>
+                            </div>
+                        </div>
+                    </group>
+                    <group>
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_left_pane">
+                                <label for="conf_cre_filtering_account_2" string="Default Credit Account"/>
+                                <field name="conf_cre_filtering_account_2"/>
+                            </div>
+                        </div>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- model.name form view -->
+    <record id="dependents_name_view_form" model="ir.ui.view">
+        <field name="name">dependents.name.view.form</field>
+        <field name="model">financial.dependents</field>
+        <field name="arch" type="xml">
+            <form string="ohad">
+                <header>
+                    <button name="create_aprove" states='manager' type="object" string="Approve" class="oe_highlight"/>
+                    <button name="manager_approve" states="draft" type="object" string="Manager Approved" class="oe_highlight"/>
+                    <button name="set_draft" attrs="{'invisible': [('state', '=', 'draft')]}" type="object" string="Set Draft" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1 attrs="{'invisible': [('state', '!=', 'draft')]}">
+                            <span>Draft</span>
+                        </h1>
+                        <h1 attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group colspan="4" col='4'>
+                        <field name="emp_partner_id" attrs="{'readonly' : [('state', '!=' , 'draft')]}" required="1"/>
+                        <field name="credit_account_custom" attrs="{'readonly' : [('state', '!=' , 'draft')]}" required="1"/>
+                        <field name="dep_amount" attrs="{'readonly' : [('state', '!=' , 'draft')]}" required="1"/>
+                        <field name="liquidated_amount" readonly="1"/>
+                        <field name="dep_date" attrs="{'readonly' : [('state', '!=' , 'draft')]}" required="1"/>
+                        <field name="dep_journal_id" readonly="1"/>
+                        <field name="company_id" readonly="1"/>
+                        <field name="account_move" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="dep_dibet_account" invisible="1"/>
+                        <field name="credit_cridet_account" invisible="1"/>
+                        <field name="sequence" invisible="1"/>
+                    </group>
+                    <notebook>
+                        <page name="discription" string="Discription">
+                            <field name="dep_memo" attrs="{'readonly' : [('state', '!=' , 'draft')]}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- model.name tree view -->
+    <record id="dependents_name_view_tree" model="ir.ui.view">
+        <field name="name">dependents.name.view.tree</field>
+        <field name="model">financial.dependents</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="dep_date"/>
+                <field name="emp_partner_id"/>
+                <field name="dep_amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- liquidation Line tree view -->
+    <record id="view_liquidation_line_tree" model="ir.ui.view">
+        <field name="name">view.liquidation.line.tree</field>
+        <field name="model">liquidation.line</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="liq_account_id"/>
+                <field name="partner_id" optional="hide"/>
+                <field name="amount_liq"/>
+                <field name="facility_name" optional="hide"/>
+                <field name="tax_id_liq" optional="hide"/>
+                <field name="inv_num_liq" optional="hide"/>
+                <field name="inv_date_liq" optional="hide"/>
+                <field name="description"/>
+                <field name="financial_dep_ids" widget="many2many_tags" invisible="1"/>
+                <field name="tax_liquid_id"/>
+                <field name="sub_amount_liq"/>
+                <!--invisible fields-->
+                <field name="liq_dep_id" invisible="1"/>
+
+                <field name="financial_dep" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- liquidation.dependents form view -->
+    <record id="liquidation_dependents_view_form" model="ir.ui.view">
+        <field name="name">liquidation.dependents.view.form</field>
+        <field name="model">liquidation.dependents</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="set_draft" attrs="{'invisible': [('state', '=', 'draft')]}" type="object" string="Set Draft" class="oe_highlight"/>
+                    <button name="action_confirm" type="object" states="draft" string="Approve" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                     <div class="oe_title">
+                        <h1 attrs="{'invisible': [('state', '!=', 'draft')]}">
+                            <span>Draft</span>
+                        </h1>
+                        <h1 attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <field name="sequence_liquidation" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group colspan="2" col='2'>
+                        <!-- Add your fields here -->
+                        <field name="liq_partner_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="date_liq"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="liq_journal_id"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="account_move" readonly="1"/>
+                        <field name="financial_dep_ids" widget="many2many_tags" invisible="1"/>
+                        <field name="custody_amount" invisible="1"/>
+                        <field name="company_id" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Clearance Line">
+                            <field name="liq_line_ids"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </page>
+                        <page string="Clearance Documents">
+                            <field name="attachment_ids"  widget="many2many_binary"/>
+                        </page>
+                    </notebook>
+                    <group class="oe_subtotal_footer oe_right">
+                        <div class="oe_subtotal_footer_separator oe_inline">
+                            <label for="total_amount_liq"/>
+                        </div>
+                        <field name="total_amount_liq" nolabel="1" class="oe_subtotal_footer_separator"/>
+                    </group>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- liquidation.dependents tree view -->
+    <record id="liquidation_dependents_view_tree" model="ir.ui.view">
+        <field name="name">liquidation.dependents.view.tree</field>
+        <field name="model">liquidation.dependents</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="liq_partner_id"/>
+                <field name="date_liq"/>
+                <field name="total_amount_liq"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <!-- liquidation.dependents action window -->
+    <record id="liquidation_dependents_action" model="ir.actions.act_window">
+        <field name="name">Petty Cash Clearance</field>
+        <field name="res_model">liquidation.dependents</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- financial.dependents action window -->
+    <record id="dependents_name_action" model="ir.actions.act_window">
+        <field name="name">Petty Cash</field>
+        <field name="res_model">financial.dependents</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- config.Dependents action window -->
+   <record id="config_Dependents_name_action" model="ir.actions.act_window">
+      <field name="name">config.Dependents.action</field>
+      <field name="res_model">res.config.settings</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+<!--    Petty Cash Settings  -->
+    <record id="petty_cash_view_form_setting" model="ir.ui.view">
+        <field name="name">petty.cash.view.form.setting</field>
+        <field name="model">petty.cash.settings</field>
+        <field name="arch" type="xml">
+            <form string="Petty Cash Settings">
+                <sheet>
+                    <group colspan="2" col='2'>
+                        <field name="conf_dep_journal"/>
+                        <field name="conf_dep_account_1"/>
+                        <field name="conf_cre_account_2"/>
+                    </group>
+<!--                    <group colspan="2" col='2'>-->
+<!--                        <field name="conf_dep_filtering_journal"/>-->
+<!--                        <field name="conf_dep_filtering_account_1"/>-->
+<!--                        <field name="conf_cre_filtering_account_2"/>-->
+<!--                        <field name="company_id" readonly="1"/>-->
+<!--                    </group>-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="petty_cash_view_setting_tree" model="ir.ui.view">
+        <field name="name">petty.cash.view.form.setting</field>
+        <field name="model">petty.cash.settings</field>
+         <field name="arch" type="xml">
+              <tree>
+                 <field name="conf_dep_journal"/>
+                 <field name="conf_dep_account_1"/>
+                 <field name="conf_cre_account_2"/>
+                 <field name="company_id" readonly="1"/>
+              </tree>
+         </field>
+     </record>
+
+    <record id="petty_cash_view_form_setting_action" model="ir.actions.act_window">
+      <field name="name">Petty Cash Setting</field>
+      <field name="res_model">petty.cash.settings</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+<!--  ggggggggggggggggggggggghhhh  -->
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="dependents_menu_root" name="Petty Cash" web_icon="petty_cash,static/description/icon.jpeg"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="dependents_menu_act" name="Payment Petty Cash" parent="dependents_menu_root"
+              action="dependents_name_action"/>
+
+    <menuitem id="liquidation_dependents_menu_act" name="Clearance Petty Cash" parent="dependents_menu_root"
+              action="liquidation_dependents_action"/>
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="config_dependents_menu_root" name="Settings" parent="dependents_menu_root" sequence="20"/>
+    <!-- This Menu Item must have a parent and an action -->
+<!--   <menuitem id="config_dependents_menu_act" name="Petty Cash123" parent="config_dependents_menu_root" action="config_Dependents_name_action"/>-->
+   <menuitem id="config_dependents_menu_menu" name="Petty Cash" parent="config_dependents_menu_root" action="petty_cash_view_form_setting_action"/>
+
+</odoo>

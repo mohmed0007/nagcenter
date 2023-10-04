@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Pet Type -->
+    <record id='acs_pet_type_view_form' model='ir.ui.view'>
+        <field name="name">acs.pet.type.form</field>
+        <field name="model">acs.pet.type</field>
+        <field name="arch" type="xml">
+            <form string="Pet Type">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">                        
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='acs_pet_type_view_tree' model='ir.ui.view'>
+        <field name="name">acs.pet.type.tree</field>
+        <field name="model">acs.pet.type</field>
+        <field name="arch" type="xml">
+            <tree string="Pet Types">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='action_acs_pet_type' model='ir.actions.act_window'>
+        <field name="name">Pet Type</field>
+        <field name="res_model">acs.pet.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Pet Type
+          </p>
+        </field>
+    </record>
+
+    <!-- Pet Breed -->
+    <record id='acs_pet_breed_view_form' model='ir.ui.view'>
+        <field name="name">acs.pet.breed.form</field>
+        <field name="model">acs.pet.breed</field>
+        <field name="arch" type="xml">
+            <form string="Pet Breed">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">                        
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="pet_type_id"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='acs_pet_breed_view_tree' model='ir.ui.view'>
+        <field name="name">acs.pet.breed.tree</field>
+        <field name="model">acs.pet.breed</field>
+        <field name="arch" type="xml">
+            <tree string="Pet Breed">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="pet_type_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="acs_pet_breed_search" model="ir.ui.view">
+        <field name="name">acs.pet.breed.search</field>
+        <field name="model">acs.pet.breed</field>
+        <field name="arch" type="xml">
+            <search string="Pet Breed">
+                <field name="name"/>
+                <field name="pet_type_id"/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_pet_type" string="Pet Type" domain="[]" context="{'group_by':'pet_type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id='action_acs_pet_breed' model='ir.actions.act_window'>
+        <field name="name">Pet Breed</field>
+        <field name="res_model">acs.pet.breed</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Pet Breed
+          </p>
+        </field>
+    </record>
+
+    <!-- Pet Color -->
+    <record id='acs_pet_color_view_form' model='ir.ui.view'>
+        <field name="name">acs.pet.color.form</field>
+        <field name="model">acs.pet.color</field>
+        <field name="arch" type="xml">
+            <form string="Pet Color">
+                <sheet>
+                    <div class="oe_title">                        
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='acs_pet_color_view_tree' model='ir.ui.view'>
+        <field name="name">acs.pet.color.tree</field>
+        <field name="model">acs.pet.color</field>
+        <field name="arch" type="xml">
+            <tree string="Pet Color">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='action_acs_pet_color' model='ir.actions.act_window'>
+        <field name="name">Pet Color</field>
+        <field name="res_model">acs.pet.color</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Pet Color
+          </p>
+        </field>
+    </record>
+
+</odoo>

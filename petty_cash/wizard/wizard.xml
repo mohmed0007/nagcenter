@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+		<record id="account_custom_petty_form" model="ir.ui.view">
+            <field name="name">Account Custom Putty</field>
+            <field name="model">account.ohad.cash.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">		
+				<form>
+		            <sheet>
+			           <group string="Custody Date" colspan="2" col="4">
+			                <field name="date_from" required="1"/>
+			                <field name="date_to" required="1"/>
+			           </group>
+			           <group string="Other Info">
+			                 <field name="employee_id" options="{'no_create_edit': True, 'no_create' :True}"/>
+			                 <!-- <field name="department_id"  options="{'no_create_edit': True, 'no_create' :True}"/> -->
+			            </group>
+                         <footer>
+                          <button name="get_report" string="Report" type="object" class="oe_highlight"/>
+                           <button string="Cancel" special="cancel"/>
+                         </footer>
+		            </sheet>
+	            </form>
+			</field>
+		</record>
+
+   
+
+
+
+
+       <record id="account_ohad_cash_wizard" model="ir.actions.act_window">
+            <field name="name">custody</field>
+            <field name="res_model">account.ohad.cash.wizard</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="type">ir.actions.act_window</field>
+        </record>
+       
+
+
+        <menuitem id="account_report" name="Reporting" parent="dependents_menu_root" sequence="13"/>
+        <menuitem id="account_custom_cash_report" name="Petty Cash" parent="account_report" 
+        	sequence="100" action="account_ohad_cash_wizard"/>
+          <!-- <menuitem id="account_liquidation_cash_report" name="Liquidation Petty Cash" parent="account_report" 
+          sequence="101" action="liquidation_putty_cash_wizard"/> -->
+
+
+
+	</data>
+</odoo>

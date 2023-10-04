@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_liquidation_15,liquidation_access,model_liquidation_dependents,base.group_user,1,1,1,1
+access_liquidation_line_15,liquidation_line_access,model_liquidation_line,base.group_user,1,1,1,1
+access_inancial_dependents_15,inancial_dependents_access,model_financial_dependents,base.group_user,1,1,1,1
+access_petty_cash,petty_casj_access,model_petty_cash_settings,base.group_user,1,1,1,1
+access_petty_report,petty_report_access,model_account_report_wizard,base.group_user,1,1,1,1

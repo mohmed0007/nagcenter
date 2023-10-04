@@ -1,0 +1,167 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_accounting_recap_report">
+        <field name="name">paperformat.accounting.recap.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="petty_cash.ohad_all_report"
+            model="account.report.wizard"
+            string="Accounting ohad Report"
+            report_type="qweb-html"
+            name="petty_cash.accounting_ohad_all_report_view"
+            paperformat="paperformat_accounting_recap_report"
+            menu="False"/>
+
+    <template id="accounting_ohad_all_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="text-center" >
+                       <h6>
+                           <span style="font-size: 14px;"><strong>Account Name</strong>:
+                                <t t-esc="account_name"/>
+                            </span>
+                       </h6>
+                       <br/>
+                         <h6>
+                           <span style="font-size: 14px;"><strong>Duration</strong>:
+                             From :   <t t-esc="date_start"/> To :  <t t-esc="date_end"/>
+                            </span>
+                       </h6>
+                       <br/>
+                    </div>
+
+                        <table class="table table-condensed table-bordered" style="width: 100%">
+                            <tr>
+                                <th colspan="2"></th>
+                                <th colspan="2" scop="colgroup" class="text-center border border-dark">
+                                    Initial Balance
+                                </th>
+                                <th colspan="2" scop="colgroup" class="text-center border border-dark">
+                                     Operations
+                                </th>
+                                <th colspan="2" scop="colgroup" class="text-center border border-dark">
+                                     End Balance
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-center" style="width: 15%">Account</th>
+                                <th class="text-center" style="width: 15%">Partner</th>
+                                <th class="text-center" style="width: 10%">Debit</th>
+                                <th class="text-center" style="width: 10%">Credit</th>
+                                <th class="text-center" style="width: 10%">Debit</th>
+                                <th class="text-center" style="width: 10%">Credit</th>
+                                <th class="text-center" style="width: 10%">Debit</th>
+                                <th class="text-center" style="width: 10%">Credit</th>
+                            </tr>
+                            <tbody>
+                                <t t-set="totald1" t-value="0.0"/>
+                                <t t-set="totalc1" t-value="0.0"/>
+                                <t t-set="totald2" t-value="0.0"/>
+                                <t t-set="totalc2" t-value="0.0"/>
+                                <t t-set="totald3" t-value="0.0"/>
+                                <t t-set="totalc3" t-value="0.0"/>
+                                <t t-foreach="docs" t-as="doc">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="doc['account_name']+doc['account_code']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="doc['partner']"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totald1" t-value="totald1+ round(doc['debitstart'])"/>
+                                            <span t-esc="round(doc['debitstart'])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totalc1" t-value="totalc1 + round(doc['creditstart'])"/>
+                                            <span t-esc="round(doc['creditstart'])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totald2" t-value="totald2 + round(doc['debit'])"/>
+                                            <span t-esc="round(doc['debit'])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totalc2" t-value="totalc2 + round(doc['credit'])"/>
+                                            <span t-esc="round(doc['credit'])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totald3" t-value="totald3 + round(doc['debitcurr'])"/>
+                                            <span t-esc="round(doc['debitcurr'])"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-set="totalc3" t-value="totalc3 + round(doc['creditcurr'])"/>
+                                            <span t-esc="round(doc['creditcurr'])"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr style="background-color:white;color:black;text-align: center;border-bottom: 1px solid black;">
+                                    <th style="text-align: center;border-bottom: 1px solid black;"
+                                        class="text-center">Total
+                                    </th>
+                                    <td style="text-align: center;border-bottom: 1px solid black;"
+                                        class="text-center"></td>
+
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totald1)"/>
+                                    </td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totalc1)"/>
+                                    </td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totald2)"/>
+                                    </td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totalc2)"/>
+                                    </td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totald3)"/>
+                                    </td>
+                                    <td style="text-align: center;border-bottom: 1px solid black;" class="text-center">
+                                        <t t-esc="'{0:,.2f}'.format(totalc3)"/>
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer">
+                        <div class="row text-center" style="border-top: 1px solid black;">
+                            <div class="col col-3 offset-9 text-right">
+                                <ul class="list-inline mt-2">
+                                    <li class="list-inline-item">Page:</li>
+                                    <li class="list-inline-item">
+                                        <span class="page"/>
+                                    </li>
+                                    <li class="list-inline-item">/</li>
+                                    <li class="list-inline-item">
+                                        <span class="topage"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+            </t>
+
+        </t>
+    </template>
+</odoo>

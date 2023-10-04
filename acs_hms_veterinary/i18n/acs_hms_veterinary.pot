@@ -1,0 +1,1262 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_veterinary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-14 06:28+0000\n"
+"PO-Revision-Date: 2022-03-14 06:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid " Days"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid " Month "
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid " Year"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__partner_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__partner_procedure_count
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__partner_procedure_count
+msgid "# Pet Procedures"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hms_patient__blood_group__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hms_patient__blood_group__ab-
+msgid "AB-"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_account_payable_id
+msgid "Account Payable"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_account_receivable_id
+msgid "Account Receivable"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__acs_amount_due
+msgid "Acs Amount Due"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__active
+msgid "Active"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__active_lang_count
+msgid "Active Lang Count"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__additional_info
+msgid "Additional info"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__type
+msgid "Address Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__age
+msgid "Age"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this"
+" language."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_appointment
+#: model:ir.model,name:acs_hms_veterinary.model_hms_appointment
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_appointment
+msgid "Appointment"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__avatar_1920
+msgid "Avatar"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__avatar_1024
+msgid "Avatar 1024"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__avatar_128
+msgid "Avatar 128"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__avatar_256
+msgid "Avatar 256"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__avatar_512
+msgid "Avatar 512"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__bank_account_count
+msgid "Bank"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__bank_ids
+msgid "Banks"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__is_blacklisted
+msgid "Blacklist"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__mobile_blacklisted
+msgid "Blacklisted Phone Is Mobile"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__phone_blacklisted
+msgid "Blacklisted Phone is Phone"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__blood_group
+msgid "Blood Group"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__message_bounce
+msgid "Bounce"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__can_publish
+msgid "Can Publish"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__channel_ids
+msgid "Channels"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__is_patient
+msgid "Check if customer is linked with patient."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__employee
+msgid "Check this box if this contact is an Employee."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__city
+msgid "City"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_veterinary_procedure
+msgid "Click to add a Patient Veterinary Procedure."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_pet_owners
+msgid "Click to add a Pet Owner."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_treatment
+msgid "Click to add a Veterinary Treatment."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_appointment
+msgid "Click to add an Veterinary Appointment."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__color
+msgid "Color Index"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__commercial_partner_id
+msgid "Commercial Entity"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__company_id
+msgid "Company"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__company_name
+msgid "Company Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__commercial_company_name
+msgid "Company Name Entity"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__company_type
+msgid "Company Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_gid
+msgid "Company database ID"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__contact_address
+msgid "Complete Address"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_veterinary_cofig
+msgid "Configuration"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_res_partner
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__child_ids
+msgid "Contact"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__contact_address_complete
+msgid "Contact Address Complete"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__country_id
+msgid "Country"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hms_veterinary_appointment_form
+msgid "Create Veterinary Invoice"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_breed
+msgid "Create a new Pet Breed"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_color
+msgid "Create a new Pet Color"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_pet_type
+msgid "Create a new Pet Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__create_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__create_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__create_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__create_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__credit_limit
+msgid "Credit Limit"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_stock_customer
+msgid "Customer Location"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__customer_rank
+msgid "Customer Rank"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__date
+msgid "Date"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__birthday
+msgid "Date of Birth"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__date_of_death
+msgid "Date of Death"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__trust
+msgid "Degree of trust you have in this debtor"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_hr_department
+msgid "Department"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__description
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__description
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__description
+msgid "Description"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__display_name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__email
+msgid "Email"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__employee
+msgid "Employee"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__employee_ids
+msgid "Employees"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__employees_count
+msgid "Employees Count"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hms_patient__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_account_position_id
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__email_formatted
+msgid "Formatted Email"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__gender
+msgid "Gender"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_latitude
+msgid "Geo Latitude"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_longitude
+msgid "Geo Longitude"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_search
+msgid "Group By..."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hr_department__department_type
+msgid "Hospital Department"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__hospital_name
+msgid "Hospital Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_product__hospital_product_type
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_product_template__hospital_product_type
+msgid "Hospital Product Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__id
+msgid "ID"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__im_status
+msgid "IM Status"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__code
+msgid "Identification Code"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__code
+msgid "Identifier provided by the Health Center."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__phone_sanitized_blacklisted
+msgid ""
+"If the sanitized phone number is on the blacklist, the contact won't receive"
+" mass mailing sms anymore, from any list"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__image
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__image
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__mobile_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a mobile number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__phone_blacklisted
+msgid ""
+"Indicates if a blacklisted sanitized phone number is a phone number. Helps "
+"distinguish which number is blacklisted             when there is both a "
+"mobile and phone field in a model."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__industry_id
+msgid "Industry"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__invoice_warn
+msgid "Invoice"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__is_patient
+msgid "Is Patient"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__is_published
+msgid "Is Published"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__is_referring_doctor
+msgid "Is Refereinng Physician"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__function
+msgid "Job Position"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__journal_item_count
+msgid "Journal Items"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__lang
+msgid "Language"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color____last_update
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__write_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__write_uid
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__write_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__write_date
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hms_patient__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__image_medium
+msgid "Medium-sized image"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__name
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__name
+msgid "Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_acs_treatment
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_appointment
+#: model_terms:ir.actions.act_window,help:acs_hms_veterinary.action_pet_owners
+msgid "No Record Found"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__email_normalized
+msgid "Normalized Email"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__comment
+msgid "Notes"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__ocn_token
+msgid "OCN Token"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hms_patient__gender__other
+msgid "Other"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_patient_procedure__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_vaccination__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_appointment__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_treatment__partner_id
+msgid "Owner Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__parent_name
+msgid "Parent name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__contract_ids
+msgid "Partner Contracts"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__partner_id
+msgid "Partner-related data of the Patient"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__acs_patient_id
+msgid "Patient"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_acs_patient_procedure
+msgid "Patient Procedure"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_veterinary_procedure
+msgid "Patient Veterinary Procedures"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_patient_procedure__patient_id
+msgid "Patient/Pet"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__debit_limit
+msgid "Payable Limit"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__payment_token_count
+msgid "Payment Token Count"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__payment_token_ids
+msgid "Payment Tokens"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_hms_patient
+msgid "Pet"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_breed
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_breed
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_breed_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_breed
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_view_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_view_tree
+msgid "Pet Breed"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_color
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_color
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_color_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_color
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_color_view_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_color_view_tree
+msgid "Pet Color"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__name
+msgid "Pet Name"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hms_veterinary_appointment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_hospital_hms_treatment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_patient_veterinary_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_vaccination_vac_form
+msgid "Pet Owner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_pet_owners
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_contacts
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_res_partner_filter
+msgid "Pet Owners"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__partner_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__partner_procedure_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__partner_procedure_ids
+msgid "Pet Procedures"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_pet_type
+#: model:ir.model,name:acs_hms_veterinary.model_acs_pet_type
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__pet_type_id
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_type_id
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_pet_type
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_breed_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_type_view_form
+msgid "Pet Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.acs_pet_type_view_tree
+msgid "Pet Types"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_physician__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_partner__pet_ids
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_res_users__pet_ids
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_patient
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_partner_veterinary_form
+msgid "Pets"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__phone
+msgid "Phone"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__phone_sanitized_blacklisted
+msgid "Phone Blacklisted"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__phone_mobile_search
+msgid "Phone/Mobile"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid "Please set Date Of Birth first."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_veterinary_procedures
+msgid "Procedures"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__ref
+msgid "Reference"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__parent_id
+msgid "Related Company"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__employee_ids
+msgid "Related employees based on their private address"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__website_id
+msgid "Restrict publishing to this website."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__phone_sanitized
+msgid "Sanitized Number"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__invoice_warn
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__picking_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__self
+msgid "Self"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_breed__sequence
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_color__sequence
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_acs_pet_type__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__partner_share
+msgid "Share Partner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__signup_expiration
+msgid "Signup Expiration"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__signup_token
+msgid "Signup Token"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__signup_type
+msgid "Signup Token Type"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__signup_valid
+msgid "Signup Token is Valid"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__signup_url
+msgid "Signup URL"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__state_id
+msgid "State"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__picking_warn
+msgid "Stock Picking"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__street
+msgid "Street"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__street2
+msgid "Street2"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__supplier_rank
+msgid "Supplier Rank"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__category_id
+msgid "Tags"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__vat
+msgid "Tax ID"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__website_url
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: code:addons/acs_hms_veterinary/models/acs_hms.py:0
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\". You may have to"
+" install a chart of account from Accounting app, settings menu."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can"
+" contain more than strictly an email address."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__tz
+msgid "Timezone"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__tz_offset
+msgid "Timezone offset"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__title
+msgid "Title"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__total_invoiced
+msgid "Total Invoiced"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__debit
+msgid "Total Payable"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__credit
+msgid "Total Receivable"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__credit
+msgid "Total amount this customer owes you."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_acs_plan_vaccinations
+msgid "Transfer Accommodation"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_acs_treatment
+#: model:ir.model,name:acs_hms_veterinary.model_hms_treatment
+msgid "Treatment"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_treatment
+msgid "Treatments"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__barcode
+msgid "Use a barcode to identify this contact."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__ocn_token
+msgid "Used for sending notification to registered devices"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__user_ids
+msgid "Users"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__currency_id
+msgid "Utility field to express amount currency"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model,name:acs_hms_veterinary.model_acs_vaccination
+msgid "Vaccination"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_stock_supplier
+msgid "Vendor Location"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__hr_department__department_type__veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_main_veterinary
+msgid "Veterinary"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.actions.act_window,name:acs_hms_veterinary.action_veterinary_procedure
+msgid "Veterinary Procedure"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.ui.menu,name:acs_hms_veterinary.menu_acs_patient_veterinary_procedure
+#: model_terms:ir.ui.view,arch_db:acs_hms_veterinary.view_partner_veterinary_form
+msgid "Veterinary Procedures"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields.selection,name:acs_hms_veterinary.selection__product_template__hospital_product_type__veterinary_procedure
+msgid "Veterinary Process"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:res.groups,name:acs_hms_veterinary.group_hms_veterinary
+msgid "Veterinary User"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__website_published
+msgid "Visible on current website"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__visitor_ids
+msgid "Visitors"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__website_id
+msgid "Website"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__website
+msgid "Website Link"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__website_url
+msgid "Website URL"
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,help:acs_hms_veterinary.field_hms_patient__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+
+#. module: acs_hms_veterinary
+#: model:ir.model.fields,field_description:acs_hms_veterinary.field_hms_patient__zip
+msgid "Zip"
+msgstr ""

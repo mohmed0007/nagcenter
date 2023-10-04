@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Partner View -->
+    <record id="view_partner_veterinary_form" model="ir.ui.view">
+        <field name="name">partner.veterinary.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_partner_procedures" class="oe_stat_button" icon="fa-medkit" type="object" groups="acs_hms_veterinary.group_hms_veterinary">
+                    <field string="Veterinary Procedures" name="partner_procedure_count" widget="statinfo"/>
+                </button>
+            </div>
+
+            <xpath expr="//page[1]" position="before">
+                <page string="Pets" name="pet_info" autofocus="autofocus">
+                    <field name="pet_ids" mode="kanban" context="{'form_view_ref' : 'acs_hms_veterinary.view_acs_patient_form_veterinary'}"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- <record id="view_acs_patient_form_veterinary" model="ir.ui.view">
+        <field name="name">acs.patient.form</field>
+        <field name="model">hms.patient</field>
+        <field name="priority" eval="100"/>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="acs_hms_veterinary.view_patient_veterinary_form"/>
+        <field name="arch" type="xml">
+           <field name="partner_id" position="replace">
+                <field name="partner_id" required="0" invisible="1"/>
+           </field>
+        </field>
+    </record> -->
+
+
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">res.partner.filter</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <filter name="customer" position="before">
+                <filter string="Pet Owners" name="is_pet_owner" domain="[('pet_ids','!=',False)]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="action_pet_owners" model="ir.actions.act_window">
+        <field name="name">Pet Owners</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_is_pet_owner':1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Record Found
+            </p>
+            <p>
+                Click to add a Pet Owner.
+            </p>
+        </field>
+    </record>
+
+    <!-- Patient View -->
+    <record id="view_patient_veterinary_form" model="ir.ui.view">
+        <field name="name">patient.veterinary.form</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms_base.view_patient_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="replace">
+            </field>
+            <field name="code" position="before">
+                <field name="pet_type_id"/>
+                <field name="pet_breed_id" domain="[('pet_type_id','=',pet_type_id)]"/>
+                <field name="pet_color_id"/>
+            </field>
+            <field name="birthday" position="before">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+            </field>
+
+            <field name="marital_status" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <group name="basic_details" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </group>
+            <field name="gov_code" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="patient_kanban_view" model="ir.ui.view">
+        <field name="name">patient.veterinary.form</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms_base.patient_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-set='placeholder']" position="replace">
+                <t t-set="placeholder" t-value="'/acs_hms_veterinary/static/src/img/pet_placeholder.jpg'"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Appointment View -->
+    <record id="view_hms_veterinary_appointment_form" model="ir.ui.view">
+        <field name="name">hms.appointment.form</field>
+        <field name="model">hms.appointment</field>
+        <field name="inherit_id" ref="acs_hms.view_hms_appointment_form"/>
+        <field name="arch" type="xml">
+            <button name="create_invoice" position="after">
+                <button name="action_create_veterinary_invoice" string="Create Veterinary Invoice" groups="account.group_account_invoice" attrs="{'invisible': ['|','|',('department_type','!=','veterinary'),('invoice_id','!=',False), ('no_invoice','=', True)]}" type="object" class="oe_highlight"/>
+            </button>
+            <field name="patient_id" position="replace">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+                <field name="patient_id" domain="[('partner_id','=', partner_id)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_appointment" model="ir.actions.act_window">
+        <field name="name">Appointment</field>
+        <field name="res_model">hms.appointment</field>
+        <field name="view_mode">tree,form,kanban,calendar,pivot</field>
+        <field name="domain" eval="[('department_id.department_type','=','veterinary')]"/>
+        <field name="context">{'search_default_today': 1, 'search_default_done': 1, 'acs_department_type': 'veterinary'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Record Found
+            </p>
+            <p>
+                Click to add an Veterinary Appointment.
+            </p>
+        </field>
+    </record>
+
+    <!-- Treatment -->
+    <record id="view_hospital_hms_treatment_form" model="ir.ui.view">
+        <field name="name">hms.treatment.form</field>
+        <field name="model">hms.treatment</field>
+        <field name="inherit_id" ref="acs_hms.view_hospital_hms_treatment_form"/>
+        <field name="arch" type="xml">
+            <field name="patient_id" position="replace">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+                <field name="patient_id" domain="[('partner_id','=', partner_id)]"/>
+            </field>
+            <xpath expr="//field[@name='patient_procedure_ids']" position="attributes">
+                <attribute name="context">{'default_treatment_id': active_id, 'default_partner_id': patient_id, 'default_patient_id': patient_id, 'default_physician_id': physician_id}</attribute>
+                <attribute name="domain">[('partner_id','=', partner_id)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='patient_procedure_ids']//field[@name='patient_id']" position="before">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_acs_treatment" model="ir.actions.act_window">
+        <field name="name">Treatment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hms.treatment</field>
+        <field name="view_mode">tree,form,calendar,pivot</field>
+        <field name="domain" eval="[('department_id.department_type','=','veterinary')]"/>
+        <field name="context">{'acs_department_type': 'veterinary'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Record Found
+            </p>
+            <p>
+                Click to add a Veterinary Treatment.
+            </p>
+        </field>
+    </record>
+
+    <!-- Vaccination View -->
+    <record id="view_vaccination_vac_form" model="ir.ui.view">
+        <field name="name">acs.vaccination.form</field>
+        <field name="model">acs.vaccination</field>
+        <field name="inherit_id" ref="acs_hms_vaccination.view_vaccination_vac_form"/>
+        <field name="arch" type="xml">
+            <field name="patient_id" position="replace">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+                <field name="patient_id" domain="[('partner_id','=', partner_id)]"/>
+            </field>
+        </field>
+    </record>
+
+    <!--Veterinary Procedures-->
+    <record id="view_acs_patient_procedure_form" model="ir.ui.view">
+        <field name="name">acs.patient.procedure.form</field>
+        <field name="model">acs.patient.procedure</field>
+        <field name="inherit_id" ref="acs_hms.view_acs_patient_procedure_form"/>
+        <field name="arch" type="xml">
+            <field name="patient_id" position="replace">
+                <field name="partner_id" required="1" string="Pet Owner" domain="[('pet_ids','!=',False)]"/>
+                <field name="patient_id" domain="[('partner_id','=', partner_id)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_veterinary_procedure" model="ir.actions.act_window">
+        <field name="name">Veterinary Procedure</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="product.product_template_kanban_view"/>
+        <field name="domain">[('hospital_product_type','=','veterinary_procedure')]</field>
+        <field name="context">{'default_hospital_product_type': 'veterinary_procedure', 'default_detailed_type': 'service'}</field>
+    </record>
+
+</odoo>
