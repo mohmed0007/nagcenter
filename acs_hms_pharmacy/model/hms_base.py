@@ -91,6 +91,8 @@ class Prescription(models.Model):
                 'quantity': line.quantity,
                 'name': line.name,
                 'display_type': line.display_type,
+                'tax_ids': line.tax_ids.ids,
+                'price_unit': line.price_unit,
             })
         inv_data = {
             'physician_id': self.physician_id and self.physician_id.id or False,

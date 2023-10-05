@@ -65,8 +65,7 @@ class ACSHmsMixin(models.AbstractModel):
         inv_data1 = self.acs_prepare_invocie_data(partner, patient, product_data, inv_data)
         vals_list = []
         vals_list.append(inv_data1)
-        raise UserError(vals_list)
-        invoice = self.env['account.move'].create(vals_list)
+        invoice = self.env['account.move'].with_context(check_move_validity=False).create(vals_list)
 
         invoice._onchange_partner_id()
         for line in invoice.invoice_line_ids:
@@ -75,7 +74,7 @@ class ACSHmsMixin(models.AbstractModel):
             line._get_computed_taxes()
             line._get_computed_uom()
 
-        invoice.with_context(check_move_validity=False)._recompute_dynamic_lines(recompute_all_taxes=True,recompute_tax_base_amount=True)
+        invoice._recompute_dynamic_lines(recompute_all_taxes=True,recompute_tax_base_amount=True)
         return invoice
 
     @api.model
@@ -101,8 +100,7 @@ class ACSHmsMixin(models.AbstractModel):
                         tax_ids = fiscal_position_id.map_tax(tax_ids._origin)
                     tax_ids = [(6, 0, tax_ids.ids)]
                 t = data.get('tax_ids')
-                print("llllllllllllllll",data)
-                tax_ids = [(6, 0, t)]
+                tax_ids = [(6, 0, t or [])]
 
                 lines.append((0, 0, {
                     'name': data.get('name',product.get_product_multiline_description_sale()),
@@ -124,7 +122,6 @@ class ACSHmsMixin(models.AbstractModel):
                     'name': data.get('name'),
                     'display_type': data.get('display_type', 'line_section'),
                 }))
-                
         return lines
 
     @api.model
@@ -148,8 +145,7 @@ class ACSHmsMixin(models.AbstractModel):
                 if invoice.fiscal_position_id:
                     tax_ids = invoice.fiscal_position_id.map_tax(tax_ids._origin)
                 tax_ids = [(6, 0, tax_ids.ids)]
-            t = data.get('tax_ids')
-            print("llllllllllllllll",data)
+            t = product_data.get('tax_ids',[])
             tax_ids = [(6, 0, t)]
 
 
