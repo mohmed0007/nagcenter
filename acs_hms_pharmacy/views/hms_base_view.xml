@@ -8,8 +8,8 @@
         <field name="inherit_id" ref='acs_hms.view_hms_prescription_order_form'/>
         <field name="arch" type="xml">
             <button name="button_reset" position="after">
-                <button name="create_invoice" string="Create Invoice" type="object" invisible="1"  groups="account.group_account_invoice"/>
-                <button name="acs_create_delivery" string="Create Delivery" type="object" invisible="1"/>
+                <button name="create_invoice" string="Create Invoice" type="object" invisible="0"  groups="account.group_account_invoice"/>
+                <button name="acs_create_delivery" string="Create Delivery" type="object" invisible="0"/>
             </button>
             <div name="button_box" position="inside">
                 <button name="view_invoice" string="View Invoice" groups="account.group_account_invoice" type="object" class="oe_stat_button" icon="fa-pencil-square-o" attrs="{'invisible': [('invoice_id','=', False)]}"/>
