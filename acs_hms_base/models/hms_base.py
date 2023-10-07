@@ -68,11 +68,11 @@ class ACSHmsMixin(models.AbstractModel):
         invoice = self.env['account.move'].with_context(check_move_validity=False).create(vals_list)
 
         invoice._onchange_partner_id()
-        for line in invoice.invoice_line_ids:
-            line._get_computed_name()
-            line._get_computed_account()
-            line._get_computed_taxes()
-            line._get_computed_uom()
+        # for line in invoice.invoice_line_ids:
+        #     line._get_computed_name()
+        #     line._get_computed_account()
+        #     line._get_computed_taxes()
+        #     line._get_computed_uom()
 
         invoice._recompute_dynamic_lines(recompute_all_taxes=True,recompute_tax_base_amount=True)
         return invoice
@@ -173,21 +173,26 @@ class ACSHmsMixin(models.AbstractModel):
 
     def acs_action_view_invoice(self, invoices):
         action = self.env["ir.actions.actions"]._for_xml_id("account.action_move_out_invoice_type")
-        if len(invoices) > 1:
-            action['domain'] = [('id', 'in', invoices.ids)]
-        elif len(invoices) == 1:
-            action['views'] = [(self.env.ref('account.view_move_form').id, 'form')]
-            action['res_id'] = invoices.id
-        elif self.env.context.get('acs_open_blank_list'):
-            #Allow to open invoices
-            action['domain'] = [('id', 'in', invoices.ids)]
-        else:
-            action = {'type': 'ir.actions.act_window_close'}
-
+        action['domain'] = [('id', 'in', invoices.ids)]
         context = {
             'default_move_type': 'out_invoice',
         }
         action['context'] = context
+        # if len(invoices) > 1:
+        #     action['domain'] = [('id', 'in', invoices.ids)]
+        # elif len(invoices) == 1:
+        #     action['views'] = [(self.env.ref('account.view_move_form').id, 'form')]
+        #     action['res_id'] = invoices.id
+        # elif self.env.context.get('acs_open_blank_list'):
+        #     #Allow to open invoices
+        #     action['domain'] = [('id', 'in', invoices.ids)]
+        # else:
+        #     action = {'type': 'ir.actions.act_window_close'}
+
+        # context = {
+        #     'default_move_type': 'out_invoice',
+        # }
+        # action['context'] = context
         return action
 
     @api.model

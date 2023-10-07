@@ -258,374 +258,374 @@ class sale_order(models.Model):
 
     #     print("res>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>res$$$$$$$$$$",res.discount_type)
     #     return res
-    def _create_invoices(self, grouped=False, final=False, date=None):
-        """
-        Create the invoice associated to the SO.
-        :param grouped: if True, invoices are grouped by SO id. If False, invoices are grouped by
-                        (partner_invoice_id, currency)
-        :param final: if True, refunds will be generated if necessary
-        :returns: list of created invoices
-        """
-        if not self.env['account.move'].check_access_rights('create', False):
-            try:
-                self.check_access_rights('write')
-                self.check_access_rule('write')
-            except AccessError:
-                return self.env['account.move']
+    # def _create_invoices(self, grouped=False, final=False, date=None):
+    #     """
+    #     Create the invoice associated to the SO.
+    #     :param grouped: if True, invoices are grouped by SO id. If False, invoices are grouped by
+    #                     (partner_invoice_id, currency)
+    #     :param final: if True, refunds will be generated if necessary
+    #     :returns: list of created invoices
+    #     """
+    #     if not self.env['account.move'].check_access_rights('create', False):
+    #         try:
+    #             self.check_access_rights('write')
+    #             self.check_access_rule('write')
+    #         except AccessError:
+    #             return self.env['account.move']
 
-        # 1) Create invoices.
-        invoice_vals_list = []
-        invoice_item_sequence = 0 # Incremental sequencing to keep the lines order on the invoice.
-        for order in self:
-            order = order.with_company(order.company_id)
-            current_section_vals = None
-            down_payments = order.env['sale.order.line']
+    #     # 1) Create invoices.
+    #     invoice_vals_list = []
+    #     invoice_item_sequence = 0 # Incremental sequencing to keep the lines order on the invoice.
+    #     for order in self:
+    #         order = order.with_company(order.company_id)
+    #         current_section_vals = None
+    #         down_payments = order.env['sale.order.line']
 
-            invoice_vals = order._prepare_invoice()
-            invoice_vals.update({'discount_method': self.discount_method,
-                'discount_amount': self.discount_amount,
-                'discount_amt': self.discount_amt,
-                'discount_type': self.discount_type,
-                'discount_amt_line' : self.discount_amt_line,
-                'discount_amount_line':self.discount_amt_line
-                })
-            invoiceable_lines = order._get_invoiceable_lines(final)
+    #         invoice_vals = order._prepare_invoice()
+    #         invoice_vals.update({'discount_method': self.discount_method,
+    #             'discount_amount': self.discount_amount,
+    #             'discount_amt': self.discount_amt,
+    #             'discount_type': self.discount_type,
+    #             'discount_amt_line' : self.discount_amt_line,
+    #             'discount_amount_line':self.discount_amt_line
+    #             })
+    #         invoiceable_lines = order._get_invoiceable_lines(final)
 
-            if not any(not line.display_type for line in invoiceable_lines):
-                continue
+    #         if not any(not line.display_type for line in invoiceable_lines):
+    #             continue
 
-            invoice_line_vals = []
-            down_payment_section_added = False
-            for line in invoiceable_lines:
-                if not down_payment_section_added and line.is_downpayment:
-                    # Create a dedicated section for the down payments
-                    # (put at the end of the invoiceable_lines)
-                    invoice_line_vals.append(
-                        (0, 0, order._prepare_down_payment_section_line(
-                            sequence=invoice_item_sequence,
-                        )),
-                    )
-                    down_payment_section_added = True
-                    invoice_item_sequence += 1
-                line_u = line._prepare_invoice_line(
-                        sequence=invoice_item_sequence,
-                    )
-                invoice_line_vals.append(
-                    (0, 0, line._prepare_invoice_line(
-                        sequence=invoice_item_sequence,
-                    )),
-                )
-                invoice_item_sequence += 1
+    #         invoice_line_vals = []
+    #         down_payment_section_added = False
+    #         for line in invoiceable_lines:
+    #             if not down_payment_section_added and line.is_downpayment:
+    #                 # Create a dedicated section for the down payments
+    #                 # (put at the end of the invoiceable_lines)
+    #                 invoice_line_vals.append(
+    #                     (0, 0, order._prepare_down_payment_section_line(
+    #                         sequence=invoice_item_sequence,
+    #                     )),
+    #                 )
+    #                 down_payment_section_added = True
+    #                 invoice_item_sequence += 1
+    #             line_u = line._prepare_invoice_line(
+    #                     sequence=invoice_item_sequence,
+    #                 )
+    #             invoice_line_vals.append(
+    #                 (0, 0, line._prepare_invoice_line(
+    #                     sequence=invoice_item_sequence,
+    #                 )),
+    #             )
+    #             invoice_item_sequence += 1
 
-            invoice_vals['invoice_line_ids'] += invoice_line_vals
-            invoice_vals_list.append(invoice_vals)
+    #         invoice_vals['invoice_line_ids'] += invoice_line_vals
+    #         invoice_vals_list.append(invoice_vals)
 
-        if not invoice_vals_list:
-            raise self._nothing_to_invoice_error()
+    #     if not invoice_vals_list:
+    #         raise self._nothing_to_invoice_error()
 
-        # 2) Manage 'grouped' parameter: group by (partner_id, currency_id).
-        if not grouped:
-            new_invoice_vals_list = []
-            invoice_grouping_keys = self._get_invoice_grouping_keys()
-            invoice_vals_list = sorted(
-                invoice_vals_list,
-                key=lambda x: [
-                    x.get(grouping_key) for grouping_key in invoice_grouping_keys
-                ]
-            )
-            for grouping_keys, invoices in groupby(invoice_vals_list, key=lambda x: [x.get(grouping_key) for grouping_key in invoice_grouping_keys]):
-                origins = set()
-                payment_refs = set()
-                refs = set()
-                ref_invoice_vals = None
-                for invoice_vals in invoices:
-                    if not ref_invoice_vals:
-                        ref_invoice_vals = invoice_vals
-                    else:
-                        ref_invoice_vals['invoice_line_ids'] += invoice_vals['invoice_line_ids']
-                    origins.add(invoice_vals['invoice_origin'])
-                    payment_refs.add(invoice_vals['payment_reference'])
-                    refs.add(invoice_vals['ref'])
-                ref_invoice_vals.update({
-                    'ref': ', '.join(refs)[:2000],
-                    'invoice_origin': ', '.join(origins),
-                    'payment_reference': len(payment_refs) == 1 and payment_refs.pop() or False,
+    #     # 2) Manage 'grouped' parameter: group by (partner_id, currency_id).
+    #     if not grouped:
+    #         new_invoice_vals_list = []
+    #         invoice_grouping_keys = self._get_invoice_grouping_keys()
+    #         invoice_vals_list = sorted(
+    #             invoice_vals_list,
+    #             key=lambda x: [
+    #                 x.get(grouping_key) for grouping_key in invoice_grouping_keys
+    #             ]
+    #         )
+    #         for grouping_keys, invoices in groupby(invoice_vals_list, key=lambda x: [x.get(grouping_key) for grouping_key in invoice_grouping_keys]):
+    #             origins = set()
+    #             payment_refs = set()
+    #             refs = set()
+    #             ref_invoice_vals = None
+    #             for invoice_vals in invoices:
+    #                 if not ref_invoice_vals:
+    #                     ref_invoice_vals = invoice_vals
+    #                 else:
+    #                     ref_invoice_vals['invoice_line_ids'] += invoice_vals['invoice_line_ids']
+    #                 origins.add(invoice_vals['invoice_origin'])
+    #                 payment_refs.add(invoice_vals['payment_reference'])
+    #                 refs.add(invoice_vals['ref'])
+    #             ref_invoice_vals.update({
+    #                 'ref': ', '.join(refs)[:2000],
+    #                 'invoice_origin': ', '.join(origins),
+    #                 'payment_reference': len(payment_refs) == 1 and payment_refs.pop() or False,
                     
-                })
-                new_invoice_vals_list.append(ref_invoice_vals)
-            invoice_vals_list = new_invoice_vals_list
+    #             })
+    #             new_invoice_vals_list.append(ref_invoice_vals)
+    #         invoice_vals_list = new_invoice_vals_list
 
-        # 3) Create invoices.
+    #     # 3) Create invoices.
 
-        # As part of the invoice creation, we make sure the sequence of multiple SO do not interfere
-        # in a single invoice. Example:
-        # SO 1:
-        # - Section A (sequence: 10)
-        # - Product A (sequence: 11)
-        # SO 2:
-        # - Section B (sequence: 10)
-        # - Product B (sequence: 11)
-        #
-        # If SO 1 & 2 are grouped in the same invoice, the result will be:
-        # - Section A (sequence: 10)
-        # - Section B (sequence: 10)
-        # - Product A (sequence: 11)
-        # - Product B (sequence: 11)
-        #
-        # Resequencing should be safe, however we resequence only if there are less invoices than
-        # orders, meaning a grouping might have been done. This could also mean that only a part
-        # of the selected SO are invoiceable, but resequencing in this case shouldn't be an issue.
-        if len(invoice_vals_list) < len(self):
-            SaleOrderLine = self.env['sale.order.line']
-            for invoice in invoice_vals_list:
-                sequence = 1
-                for line in invoice['invoice_line_ids']:
-                    line[2]['sequence'] = SaleOrderLine._get_invoice_line_sequence(new=sequence, old=line[2]['sequence'])
-                    sequence += 1
+    #     # As part of the invoice creation, we make sure the sequence of multiple SO do not interfere
+    #     # in a single invoice. Example:
+    #     # SO 1:
+    #     # - Section A (sequence: 10)
+    #     # - Product A (sequence: 11)
+    #     # SO 2:
+    #     # - Section B (sequence: 10)
+    #     # - Product B (sequence: 11)
+    #     #
+    #     # If SO 1 & 2 are grouped in the same invoice, the result will be:
+    #     # - Section A (sequence: 10)
+    #     # - Section B (sequence: 10)
+    #     # - Product A (sequence: 11)
+    #     # - Product B (sequence: 11)
+    #     #
+    #     # Resequencing should be safe, however we resequence only if there are less invoices than
+    #     # orders, meaning a grouping might have been done. This could also mean that only a part
+    #     # of the selected SO are invoiceable, but resequencing in this case shouldn't be an issue.
+    #     if len(invoice_vals_list) < len(self):
+    #         SaleOrderLine = self.env['sale.order.line']
+    #         for invoice in invoice_vals_list:
+    #             sequence = 1
+    #             for line in invoice['invoice_line_ids']:
+    #                 line[2]['sequence'] = SaleOrderLine._get_invoice_line_sequence(new=sequence, old=line[2]['sequence'])
+    #                 sequence += 1
 
-        # Manage the creation of invoices in sudo because a salesperson must be able to generate an invoice from a
-        # sale order without "billing" access rights. However, he should not be able to create an invoice from scratch.
-        print("####################################",invoice_vals_list)
-        moves = self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)
+    #     # Manage the creation of invoices in sudo because a salesperson must be able to generate an invoice from a
+    #     # sale order without "billing" access rights. However, he should not be able to create an invoice from scratch.
+    #     print("####################################",invoice_vals_list)
+    #     moves = self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)
 
-        # 4) Some moves might actually be refunds: convert them if the total amount is negative
-        # We do this after the moves have been created since we need taxes, etc. to know if the total
-        # is actually negative or not
-        if final:
-            moves.sudo().filtered(lambda m: m.amount_total < 0).action_switch_invoice_into_refund_credit_note()
-        for move in moves:
-            move.message_post_with_view('mail.message_origin_link',
-                values={'self': move, 'origin': move.line_ids.mapped('sale_line_ids.order_id')},
-                subtype_id=self.env.ref('mail.mt_note').id
-            )
-        return moves
+    #     # 4) Some moves might actually be refunds: convert them if the total amount is negative
+    #     # We do this after the moves have been created since we need taxes, etc. to know if the total
+    #     # is actually negative or not
+    #     if final:
+    #         moves.sudo().filtered(lambda m: m.amount_total < 0).action_switch_invoice_into_refund_credit_note()
+    #     for move in moves:
+    #         move.message_post_with_view('mail.message_origin_link',
+    #             values={'self': move, 'origin': move.line_ids.mapped('sale_line_ids.order_id')},
+    #             subtype_id=self.env.ref('mail.mt_note').id
+    #         )
+    #     return moves
 
 
-    @api.depends('order_line.tax_id', 'order_line.price_unit', 'amount_total', 'amount_untaxed','discount_amount',\
-        'discount_method','discount_type' ,'order_line.discount_amount',\
-        'order_line.discount_method','order_line.discount_amt',)
-    def _compute_tax_totals_json(self):
-        if self.state == 'draft' or self.state == 'sale' or self.state == 'sent' or self.state == 'done' or self.state == 'cancel':
-            def compute_taxes(order_line):
-                amount_untaxed = 0.0
-                res_config= self.env.company
-                if res_config.tax_discount_policy == 'tax':
-                    price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                    order = order_line.order_id
-                    return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
-                elif res_config.tax_discount_policy == 'untax':
-                    order = order_line.order_id
-                    if order.discount_type == 'line':
-                        order.discount_amt = 0.00 
-                        for line in order.order_line:
-                            amount_untaxed += line.price_subtotal
-                        if order_line.discount_method == 'fix':
-                            price_amount = order_line.price_subtotal - order_line.discount_amount 
-                            taxes = order_line.tax_id._origin.compute_all(price_amount, order_line.order_id.currency_id, 1, product=order_line.product_id, partner=order_line.order_id.partner_shipping_id)
+    # @api.depends('order_line.tax_id', 'order_line.price_unit', 'amount_total', 'amount_untaxed','discount_amount',\
+    #     'discount_method','discount_type' ,'order_line.discount_amount',\
+    #     'order_line.discount_method','order_line.discount_amt',)
+    # def _compute_tax_totals_json(self):
+    #     if self.state == 'draft' or self.state == 'sale' or self.state == 'sent' or self.state == 'done' or self.state == 'cancel':
+    #         def compute_taxes(order_line):
+    #             amount_untaxed = 0.0
+    #             res_config= self.env.company
+    #             if res_config.tax_discount_policy == 'tax':
+    #                 price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                 order = order_line.order_id
+    #                 return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #             elif res_config.tax_discount_policy == 'untax':
+    #                 order = order_line.order_id
+    #                 if order.discount_type == 'line':
+    #                     order.discount_amt = 0.00 
+    #                     for line in order.order_line:
+    #                         amount_untaxed += line.price_subtotal
+    #                     if order_line.discount_method == 'fix':
+    #                         price_amount = order_line.price_subtotal - order_line.discount_amount 
+    #                         taxes = order_line.tax_id._origin.compute_all(price_amount, order_line.order_id.currency_id, 1, product=order_line.product_id, partner=order_line.order_id.partner_shipping_id)
                         
-                        elif order_line.discount_method == 'per':
-                            price_amount = order_line.price_subtotal - ((order_line.discount_amount*order_line.price_subtotal)/100.0)
-                            taxes = order_line.tax_id._origin.compute_all(price_amount, order_line.order_id.currency_id, 1, product=order_line.product_id, partner=order_line.order_id.partner_shipping_id)
-                        else:
-                            price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                            order = order_line.order_id
-                            taxes = order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
-                        return taxes
-                    elif order.discount_type == 'global':
-                        order.discount_amt_line = 0.00
-                        if order.discount_method == 'per':
-                            for line in order.order_line:
-                                amount_untaxed += line.price_subtotal
-                            order_discount = amount_untaxed * (order.discount_amount / 100)
-                            if order_line.tax_id:
-                                final_discount = 0.0
-                                try:
-                                    final_discount = ((order.discount_amount*order_line.price_subtotal)/100.0)
-                                except ZeroDivisionError:
-                                    pass
-                                discount = order_line.price_subtotal - final_discount
-                                taxes = order_line.tax_id._origin.compute_all(discount, \
-                                                    order.currency_id,1.0, product=order_line.product_id, \
-                                                    partner=order.partner_id)
-                                return taxes
-                            else:
-                                price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                                order = order_line.order_id
-                                return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #                     elif order_line.discount_method == 'per':
+    #                         price_amount = order_line.price_subtotal - ((order_line.discount_amount*order_line.price_subtotal)/100.0)
+    #                         taxes = order_line.tax_id._origin.compute_all(price_amount, order_line.order_id.currency_id, 1, product=order_line.product_id, partner=order_line.order_id.partner_shipping_id)
+    #                     else:
+    #                         price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                         order = order_line.order_id
+    #                         taxes = order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #                     return taxes
+    #                 elif order.discount_type == 'global':
+    #                     order.discount_amt_line = 0.00
+    #                     if order.discount_method == 'per':
+    #                         for line in order.order_line:
+    #                             amount_untaxed += line.price_subtotal
+    #                         order_discount = amount_untaxed * (order.discount_amount / 100)
+    #                         if order_line.tax_id:
+    #                             final_discount = 0.0
+    #                             try:
+    #                                 final_discount = ((order.discount_amount*order_line.price_subtotal)/100.0)
+    #                             except ZeroDivisionError:
+    #                                 pass
+    #                             discount = order_line.price_subtotal - final_discount
+    #                             taxes = order_line.tax_id._origin.compute_all(discount, \
+    #                                                 order.currency_id,1.0, product=order_line.product_id, \
+    #                                                 partner=order.partner_id)
+    #                             return taxes
+    #                         else:
+    #                             price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                             order = order_line.order_id
+    #                             return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
 
 
-                        elif order.discount_method == 'fix':
-                            order_discount = order.discount_amount
-                            if order_line.tax_id:
-                                for line in order.order_line:
-                                    amount_untaxed += line.price_subtotal
-                                final_discount = 0.0
-                                try:
-                                    final_discount = ((order.discount_amount*order_line.price_subtotal)/amount_untaxed)
-                                except ZeroDivisionError:
-                                    pass
-                                discount = order_line.price_subtotal - final_discount
+    #                     elif order.discount_method == 'fix':
+    #                         order_discount = order.discount_amount
+    #                         if order_line.tax_id:
+    #                             for line in order.order_line:
+    #                                 amount_untaxed += line.price_subtotal
+    #                             final_discount = 0.0
+    #                             try:
+    #                                 final_discount = ((order.discount_amount*order_line.price_subtotal)/amount_untaxed)
+    #                             except ZeroDivisionError:
+    #                                 pass
+    #                             discount = order_line.price_subtotal - final_discount
 
-                                taxes = order_line.tax_id._origin.compute_all(discount, \
-                                                    order.currency_id,1.0, product=order_line.product_id, \
-                                                    partner=order.partner_id)
-                                return taxes
-                            else:
-                                price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                                order = order_line.order_id
-                                return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #                             taxes = order_line.tax_id._origin.compute_all(discount, \
+    #                                                 order.currency_id,1.0, product=order_line.product_id, \
+    #                                                 partner=order.partner_id)
+    #                             return taxes
+    #                         else:
+    #                             price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                             order = order_line.order_id
+    #                             return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
 
-                        else:
-                            price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                            order = order_line.order_id
-                            return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
-                    else:
-                        price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                        order = order_line.order_id
-                        return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
-                else:
-                    price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                    order = order_line.order_id
-                    return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #                     else:
+    #                         price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                         order = order_line.order_id
+    #                         return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #                 else:
+    #                     price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                     order = order_line.order_id
+    #                     return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #             else:
+    #                 price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #                 order = order_line.order_id
+    #                 return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
 
-            account_move = self.env['account.move']
-            for order in self:
-                tax_lines_data = account_move._prepare_tax_lines_data_for_totals_from_object(order.order_line, compute_taxes)
-                tax_totals = account_move._get_tax_totals(order.partner_id, tax_lines_data, order.amount_total, order.amount_untaxed, order.currency_id)
-                print("tax_totals===============",tax_totals)
-                order.tax_totals_json = json.dumps(tax_totals)
-        else:
-            def compute_taxes(order_line):
-                price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
-                order = order_line.order_id
-                return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
+    #         account_move = self.env['account.move']
+    #         for order in self:
+    #             tax_lines_data = account_move._prepare_tax_lines_data_for_totals_from_object(order.order_line, compute_taxes)
+    #             tax_totals = account_move._get_tax_totals(order.partner_id, tax_lines_data, order.amount_total, order.amount_untaxed, order.currency_id)
+    #             print("tax_totals===============",tax_totals)
+    #             order.tax_totals_json = json.dumps(tax_totals)
+    #     else:
+    #         def compute_taxes(order_line):
+    #             price = order_line.price_unit * (1 - (order_line.discount or 0.0) / 100.0)
+    #             order = order_line.order_id
+    #             return order_line.tax_id._origin.compute_all(price, order.currency_id, order_line.product_uom_qty, product=order_line.product_id, partner=order.partner_shipping_id)
 
-            account_move = self.env['account.move']
-            for order in self:
-                tax_lines_data = account_move._prepare_tax_lines_data_for_totals_from_object(order.order_line, compute_taxes)
-                tax_totals = account_move._get_tax_totals(order.partner_id, tax_lines_data, order.amount_total, order.amount_untaxed, order.currency_id)
-                order.tax_totals_json = json.dumps(tax_totals)
+    #         account_move = self.env['account.move']
+    #         for order in self:
+    #             tax_lines_data = account_move._prepare_tax_lines_data_for_totals_from_object(order.order_line, compute_taxes)
+    #             tax_totals = account_move._get_tax_totals(order.partner_id, tax_lines_data, order.amount_total, order.amount_untaxed, order.currency_id)
+    #             order.tax_totals_json = json.dumps(tax_totals)
         
 
 
-    def action_confirm(self):
-        if self.discount_type == 'global' and self.discount_type != 'non_discount':
-            if not self.discount_method:
-                raise ValidationError(_('Pleas Enter Discount Method.'))
+    # def action_confirm(self):
+    #     if self.discount_type == 'global' and self.discount_type != 'non_discount':
+    #         if not self.discount_method:
+    #             raise ValidationError(_('Pleas Enter Discount Method.'))
 
-        if self.discount_type == 'line' and self.discount_type != 'non_discount': 
-            for line in self.order_line:
-                if not line.discount_method:
-                    raise ValidationError(_('Pleas Enter Discount Method Peer Line.'))
-        # if self.discount_type == 'non_discount':
-        #     print("No ")
-        super(sale_order, self).action_confirm()
+    #     if self.discount_type == 'line' and self.discount_type != 'non_discount': 
+    #         for line in self.order_line:
+    #             if not line.discount_method:
+    #                 raise ValidationError(_('Pleas Enter Discount Method Peer Line.'))
+    #     # if self.discount_type == 'non_discount':
+    #     #     print("No ")
+    #     super(sale_order, self).action_confirm()
 
 
             
 class SaleAdvancePaymentInv(models.TransientModel):
     _inherit = "sale.advance.payment.inv"
 
-    def _create_invoice(self, order, so_line, amount):
-        res = super(SaleAdvancePaymentInv,self)._create_invoice(order, so_line, amount)
-        res.write({'discount_type': order.discount_type})
-        return res
+    # def _create_invoice(self, order, so_line, amount):
+    #     res = super(SaleAdvancePaymentInv,self)._create_invoice(order, so_line, amount)
+    #     res.write({'discount_type': order.discount_type})
+    #     return res
 
 
 class sale_order_line(models.Model):
     _inherit = 'sale.order.line'
 
-    @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id','discount_method','discount_amount')
-    def _compute_amount(self):
-        """
-        Compute the amounts of the SO line.
-        """
-        res_config= self.env.company
-        for line in self:
-            if res_config.tax_discount_policy:
-                if res_config.tax_discount_policy == 'untax':
-                    if line.discount_type == 'line':
-                        if line.discount_method == 'fix':
-                            price = (line.price_unit * line.product_uom_qty) - line.discount_amount
-                            taxes = line.tax_id.compute_all(price, line.order_id.currency_id, 1, product=line.product_id, partner=line.order_id.partner_shipping_id)
-                            line.update({
-                                'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                                'price_total': taxes['total_included'] + line.discount_amount,
-                                'price_subtotal': taxes['total_excluded'] + line.discount_amount,
-                                'discount_amt' : line.discount_amount,
-                            })
+    # @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id','discount_method','discount_amount')
+    # def _compute_amount(self):
+    #     """
+    #     Compute the amounts of the SO line.
+    #     """
+    #     res_config= self.env.company
+    #     for line in self:
+    #         if res_config.tax_discount_policy:
+    #             if res_config.tax_discount_policy == 'untax':
+    #                 if line.discount_type == 'line':
+    #                     if line.discount_method == 'fix':
+    #                         price = (line.price_unit * line.product_uom_qty) - line.discount_amount
+    #                         taxes = line.tax_id.compute_all(price, line.order_id.currency_id, 1, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                         line.update({
+    #                             'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                             'price_total': taxes['total_included'] + line.discount_amount,
+    #                             'price_subtotal': taxes['total_excluded'] + line.discount_amount,
+    #                             'discount_amt' : line.discount_amount,
+    #                         })
 
-                        elif line.discount_method == 'per':
-                            price = (line.price_unit * line.product_uom_qty) * (1 - (line.discount_amount or 0.0) / 100.0)
-                            price_x = ((line.price_unit * line.product_uom_qty) - (line.price_unit * line.product_uom_qty) * (1 - (line.discount_amount or 0.0) / 100.0))
-                            taxes = line.tax_id.compute_all(price, line.order_id.currency_id, 1, product=line.product_id, partner=line.order_id.partner_shipping_id)
-                            line.update({
-                                'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                                'price_total': taxes['total_included'] + price_x,
-                                'price_subtotal': taxes['total_excluded'] + price_x,
-                                'discount_amt' : price_x,
-                            })
-                        else:
-                            price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                            taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
-                            line.update({
-                                'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                                'price_total': taxes['total_included'],
-                                'price_subtotal': taxes['total_excluded'],
-                            })
-                    else:
-                        price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                        taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
-                        line.update({
-                            'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                            'price_total': taxes['total_included'],
-                            'price_subtotal': taxes['total_excluded'],
-                        })
-                elif res_config.tax_discount_policy == 'tax':
-                    if line.discount_type == 'line':
-                        price_x = 0.0
-                        price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                        taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                     elif line.discount_method == 'per':
+    #                         price = (line.price_unit * line.product_uom_qty) * (1 - (line.discount_amount or 0.0) / 100.0)
+    #                         price_x = ((line.price_unit * line.product_uom_qty) - (line.price_unit * line.product_uom_qty) * (1 - (line.discount_amount or 0.0) / 100.0))
+    #                         taxes = line.tax_id.compute_all(price, line.order_id.currency_id, 1, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                         line.update({
+    #                             'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                             'price_total': taxes['total_included'] + price_x,
+    #                             'price_subtotal': taxes['total_excluded'] + price_x,
+    #                             'discount_amt' : price_x,
+    #                         })
+    #                     else:
+    #                         price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                         taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                         line.update({
+    #                             'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                             'price_total': taxes['total_included'],
+    #                             'price_subtotal': taxes['total_excluded'],
+    #                         })
+    #                 else:
+    #                     price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                     taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                     line.update({
+    #                         'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                         'price_total': taxes['total_included'],
+    #                         'price_subtotal': taxes['total_excluded'],
+    #                     })
+    #             elif res_config.tax_discount_policy == 'tax':
+    #                 if line.discount_type == 'line':
+    #                     price_x = 0.0
+    #                     price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                     taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
 
-                        if line.discount_method == 'fix':
-                            price_x = (taxes['total_included']) - ( taxes['total_included'] - line.discount_amount)
-                        elif line.discount_method == 'per':
-                            price_x = (taxes['total_included']) - (taxes['total_included'] * (1 - (line.discount_amount or 0.0) / 100.0))
-                        else:
-                            price_x = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                     if line.discount_method == 'fix':
+    #                         price_x = (taxes['total_included']) - ( taxes['total_included'] - line.discount_amount)
+    #                     elif line.discount_method == 'per':
+    #                         price_x = (taxes['total_included']) - (taxes['total_included'] * (1 - (line.discount_amount or 0.0) / 100.0))
+    #                     else:
+    #                         price_x = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
                 
-                        line.update({
-                            'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                            'price_total': taxes['total_included'],
-                            'price_subtotal': taxes['total_excluded'],
-                            'discount_amt' : price_x,
-                        })
-                    else:
-                        price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                        taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
-                        line.update({
-                            'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                            'price_total': taxes['total_included'],
-                            'price_subtotal': taxes['total_excluded'],
-                        })
-                else:
-                    price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                    taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                     line.update({
+    #                         'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                         'price_total': taxes['total_included'],
+    #                         'price_subtotal': taxes['total_excluded'],
+    #                         'discount_amt' : price_x,
+    #                     })
+    #                 else:
+    #                     price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                     taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                     line.update({
+    #                         'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                         'price_total': taxes['total_included'],
+    #                         'price_subtotal': taxes['total_excluded'],
+    #                     })
+    #             else:
+    #                 price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #                 taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
                     
-                    line.update({
-                        'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                        'price_total': taxes['total_included'],
-                        'price_subtotal': taxes['total_excluded'],
-                    })
-            else:
-                price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
-                taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
+    #                 line.update({
+    #                     'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                     'price_total': taxes['total_included'],
+    #                     'price_subtotal': taxes['total_excluded'],
+    #                 })
+    #         else:
+    #             price = line.price_unit * (1 - (line.discount or 0.0) / 100.0)
+    #             taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty, product=line.product_id, partner=line.order_id.partner_shipping_id)
                 
-                line.update({
-                    'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
-                    'price_total': taxes['total_included'],
-                    'price_subtotal': taxes['total_excluded'],
-                })
+    #             line.update({
+    #                 'price_tax': sum(t.get('amount', 0.0) for t in taxes.get('taxes', [])),
+    #                 'price_total': taxes['total_included'],
+    #                 'price_subtotal': taxes['total_excluded'],
+    #             })
 
     is_apply_on_discount_amount =  fields.Boolean("Tax Apply After Discount")
     discount_method = fields.Selection([('fix', 'Fixed'), ('per', 'Percentage')], 'Discount Method')

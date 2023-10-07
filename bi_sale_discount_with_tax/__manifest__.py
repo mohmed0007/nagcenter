@@ -147,7 +147,7 @@ and Percentage wise as well as for the Invoice.
     'images': [],
     'depends': ['base','sale','sale_management','account','stock'],
     'data': [
-        'views/sale_view.xml',
+        # 'views/sale_view.xml',
         'report/inherit_sale_report.xml',
         'report/inherit_account_report.xml'
     ],
