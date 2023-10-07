@@ -89,7 +89,7 @@ class Prescription(models.Model):
             product_data.append({
                 'product_id': line.product_id,
                 'quantity': line.quantity,
-                'name': line.name,
+                'name': line.product_id.name,
                 'display_type': line.display_type,
                 'tax_ids': line.tax_ids.ids,
                 'price_unit': line.price_unit,

@@ -54,7 +54,7 @@ class ACSPrescriptionOrder(models.Model):
             product_data.append({
                 'product_id': line.product_id,
                 'quantity': line.quantity,
-                'name': line.name,
+                'name': line.product_id.name,
                 'display_type': line.display_type,
                 'discount': 0.0,
                 'discount_method': line.discount_method,
