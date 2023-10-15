@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Layout and common templates -->
+   
+	 <template id="noptechs_assets" inherit_id="web.frontend_layout">
+<!--     <xpath expr="link[last()]" position="after">-->
+                 <xpath expr="//head/link[last()]" position="after">
+
+			<link rel="stylesheet" href="/hr_portal/static/src/css/hr_portal.css" />
+			
+	  </xpath>
+
+	  <!-- <xpath expr="script[last()]" position="after">
+         <script type="text/javascript" src="/hr_portal/static/src/js/save.js"></script>
+    
+    </xpath> -->
+    </template>
+
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.hr.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+             <field name="user_id" position="replace">
+                <field name="user_id" string="Related User"/>
+             </field>
+        </field>
+    </record>
+
+
+</odoo>
+
+
+

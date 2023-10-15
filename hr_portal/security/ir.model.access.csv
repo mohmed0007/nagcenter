@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_mail_activity,access.mail.activity,mail.model_mail_activity_type,,1,1,1,1
+access_mail_activity,access.mail,mail.model_mail_activity,,1,1,1,1

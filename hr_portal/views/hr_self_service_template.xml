@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="my_account" name="HR Self Service">
+       <t t-call="portal.portal_layout">
+          <div id="wrap " class='oe_hr_portal'>
+            <div class="oe_structure"/>
+            <div class="container">
+               
+                <div class=" p-2">
+                    <div class='row shadow card-border'>
+                    <div class='row col-md-6 p-3'>
+                        <div class="col-md-6   o_colored_level">
+                            <t t-if="partner.image_1920">
+                             <img t-att-src="image_data_uri(partner.image_1920)" class=" rounded-circle img img-fluid mx-auto" alt="" loading="lazy"   data-mimetype="image/jpeg"/>
+                            </t>
+                        </div>
+                        <div class="col-md-6 ">
+                            <h3 t-esc='employee.name'></h3>
+                            <p t-esc='employee.job_title'></p>
+                            <p t-esc='employee.work_phone'></p>
+                        </div>
+                    </div>
+
+
+                    <div class='row col-md-6 p-3 '>
+                        <div class="col-md-6 p-3 border-left ">
+                            <div class='row'>
+                                <div class="col-md-3">
+                                    <img src='/hr_portal/static/src/img/gender.png' class='icon-width'/>
+                                </div>
+                                <div class="col-md-9">
+                                   <p t-esc='employee.gender'></p>  
+                               </div>
+                            </div>
+                            <div class='row'>
+                               <div class="col-md-3">
+                                    <img src='/hr_portal/static/src/img/birth.png' class='icon-width'/>
+                                </div>
+                                <div class="col-md-9 mt-3">
+                                    <p t-esc='employee.birthday'></p>  
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-6 p-3">
+                            <p class='basic-color-text'>Joined: <span t-esc='employee.first_contract_date' class='text-black'/></p>
+                            <p class='basic-color-text mt-4'>Nationality: <span t-esc='employee.country_id.name' class='text-black'/></p>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="row">
+                    
+                    <div class='col-md-3  p-4'>
+                        <a href='/my/time_off'>
+                        <div class='shadow card-border row p-3'>
+                        <div class="">
+                            <img src='/hr_portal/static/src/img/time off.png' class='icon-width-2 d-inline'/>
+                            <span class='ml-5'>
+                                <h5 class='d-inline'>Time Off</h5>
+                                <span t-esc='time_off' class='ml-2'></span>
+                            </span>
+                        </div>
+                    </div>
+                    </a>
+                    </div>
+            </div>
+
+
+
+              <div class="row">
+
+                    <div class='col-md-3  p-4'>
+                        <a href='/my/time_off'>
+                        <div class='shadow card-border row p-3'>
+                        <div class="">
+                            <img src='/hr_portal/static/src/img/time off.png' class='icon-width-2 d-inline'/>
+                            <span class='ml-5'>
+                                <h5 class='d-inline'>Time Off</h5>
+                                <span t-esc='time_off' class='ml-2'></span>
+                            </span>
+                        </div>
+                    </div>
+                    </a>
+                    </div>
+
+            </div>
+            <div class="oe_structure"/>
+          </div>
+        </t>
+    </template>
+
+</odoo>

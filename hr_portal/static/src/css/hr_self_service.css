@@ -1,0 +1,46 @@
+.o_cc1, .navbar-light {
+    background-color: #B5538F;
+    color: #ffffff;
+}
+.border-check{
+border-radius: 27px;
+}
+.border-left{
+	border-left-color: black;
+}
+.icon-width{
+	width: 30px;
+}
+.icon-width-2{
+	height: 37px;
+}
+.icon-width-3{
+	height: 37px;
+}
+.icon-width-4{
+	height: 37px;
+}
+.basic-color-text{
+	color: #B5538F;
+}
+.check-out-background{
+	background-color: #B5538F;
+}
+.check-in-background{
+	background-color: #13A188;
+}
+.shadow{
+	background-color: #f9f6f6;
+}
+.icon-width-checkout{
+    width: 60px;
+}
+#wrap {
+    background-color: #e4ecec;
+}
+a:hover{
+	text-decoration: none;
+}
+
+.card-border{
+border: solid 1px #f2cce3;}
