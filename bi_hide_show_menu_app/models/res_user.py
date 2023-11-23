@@ -102,7 +102,7 @@ class IrUiMenu(models.Model):
 
     def write(self, vals):
         res = super(IrUiMenu, self).write(vals)
-        request.env['ir.ui.menu'].load_menus(request.session.debug)
+        request.env['ir.ui.menu'].sudo().load_menus(request.session.debug)
         return res
 
     @api.model

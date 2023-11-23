@@ -3,7 +3,7 @@
 
 {
     "name" : "All in one Hide Menu,Submenu, Field and Reports",
-    "version" : "15.0.0.1",
+    "version" : "15.0.0.0",
     "category" : "Extra Tools",
     'license':'OPL-1',
     "summary": 'Hide menu hide report hide submenu hide field hide any menu hide any report hide any submenu hide any field hide all hide all in one menu hide user wise hide menu user wise hide report user wise invisible menu invisible report user wise report access hides',
