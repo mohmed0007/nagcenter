@@ -149,7 +149,7 @@ class ProjectCostLines(models.Model):
     planned_amount = fields.Monetary('Planned Amount', required=True,help="Amount you plan to spend.",
                                      default=0)
     practical_amount = fields.Monetary(compute='_compute_practical_amount', 
-                                       string='Practical Amount', help="Amount really spent.", store=True)
+                                       string='Actual Amount', help="Amount really spent.", store=True)
     remaining_amount = fields.Monetary(compute='_compute_remaining_amount', 
                                        string='Remaining Amount', help="remaining of budget.", store=True)
     company_id = fields.Many2one('res.company', 'Company', related='project_cost_id.company_id', store=True)

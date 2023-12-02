@@ -1,0 +1,1093 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_costing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-02 13:39+0000\n"
+"PO-Revision-Date: 2023-12-02 13:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Shared warehouse for all projects</span>"
+msgstr "<span class=\"o_form_label\">مستودع المشاريع</span>"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__access_warning
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_account_account
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__account_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__account_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__account_id
+msgid "Account"
+msgstr "الحساب "
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_needaction
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_exception_decoration
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_state
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_type_icon
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__calc_actual
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__calc_actual
+msgid "Actual Calc. On"
+msgstr "احتساب البند علي"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__allow_over_flow
+msgid "Allow budget Overflow"
+msgstr "السماح بتجاوز الموازنة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+msgid "Amount Received"
+msgstr "المبلغ المستلم"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+msgid "Amount Transffered"
+msgstr "المبلغ المحول"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_lines__practical_amount
+msgid "Amount really spent."
+msgstr "المبلغ الذي تم انفاقه"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_lines__operation_amount
+msgid "Amount resulted from Opeartion on Budgets"
+msgstr "المبلغ الناتج من تعديل الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation_line__amount_to
+msgid "Amount to be received from other items"
+msgstr "المبلغ الذي يتم استلامه من بنود اخرى"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation_line__amount_from
+msgid "Amount to be transferred to other items"
+msgstr "المبلغ الذي يتم تحويله لبنود اخرى"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_lines__planned_amount
+#: model:ir.model.fields,help:project_costing.field_project_budget_template_line__planned_amount
+msgid "Amount you plan to spend."
+msgstr "المبلغ المخطط ليتم انفاقه"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__analytic_account_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__analytic_account_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_form
+msgid "Archived"
+msgstr "مؤرشفة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_attachment_count
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__project_cost_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__project_cost_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__project_cost_id
+#: model:ir.model.fields,field_description:project_costing.field_stock_move__project_cost_id
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_tree
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_tree
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Budget"
+msgstr "الموزانة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__project_budget_line
+#: model:ir.model.fields,field_description:project_costing.field_stock_move__project_budget_line
+msgid "Budget Item"
+msgstr "بند الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__line_ids
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Budget Items"
+msgstr "بنود الموازنة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Budget Lines"
+msgstr "بنود الموازنة"
+
+#. module: project_costing
+#: model:ir.actions.act_window,name:project_costing.act_project_budget_operation_view
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+msgid "Budget Modification"
+msgstr "تعديل الموازانة"
+
+#. module: project_costing
+#: model:ir.ui.menu,name:project_costing.menu_project_budget_operation
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Budget Modifications"
+msgstr "تعديل الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__budget_operation_id
+msgid "Budget Operation"
+msgstr "تعديل الموازنه"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__budget_operation_ids
+msgid "Budget Operations"
+msgstr "تعديلات الموازنه"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__project_budget_template_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__name
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_form
+msgid "Budget Template"
+msgstr "قالب الموازنة"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget.py:0
+#, python-format
+msgid "Budget for the project %s can't be overlapped in dates"
+msgstr "الموازنة للمشروع %s لايمكن ان تتداخل في التواريخ"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget.py:0
+#, python-format
+msgid "Budget item %s for the project %s can't be out of planned."
+msgstr "بند الموازنة %s للمشروع %s لايمكن ان يكون خارج المخطط."
+
+#. module: project_costing
+#: model:ir.ui.menu,name:project_costing.menu_budget
+msgid "Budgets"
+msgstr "الموزانات"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Cancel Budget"
+msgstr "إلغاء الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget__state__cancel
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: project_costing
+#: model_terms:ir.actions.act_window,help:project_costing.act_project_budget_template_view
+msgid "Click to create a new Template."
+msgstr "اضغط ﻹنشاء قالب موازنة جديد"
+
+#. module: project_costing
+#: model_terms:ir.actions.act_window,help:project_costing.act_project_budget_view
+msgid "Click to create a new budget."
+msgstr "اضغط ﻹنشاء موازنة جديده"
+
+#. module: project_costing
+#: model_terms:ir.actions.act_window,help:project_costing.act_project_budget_operation_view
+msgid "Click to create a new operation."
+msgstr "اضغط ﻹنشاء تعديل علي الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__company_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__company_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__company_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__company_id
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Company"
+msgstr "الشركه"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget__state__confirm
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation__state__confirm
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.res_config_settings_view_form
+msgid "Create Location From Project"
+msgstr "إنشاء مخزن من المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__item_type__new
+msgid "Create New Item"
+msgstr "انشاء بند جديد"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_project__create_location
+#: model:ir.model.fields,field_description:project_costing.field_res_company__create_location
+#: model:ir.model.fields,field_description:project_costing.field_res_config_settings__create_location
+msgid "Create location from Project"
+msgstr "انشاء مخزن من المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_purchase_order__from_project
+#: model:ir.model.fields,field_description:project_costing.field_stock_move__from_project
+#: model:ir.model.fields,field_description:project_costing.field_stock_picking__from_project
+msgid "Created From Project"
+msgstr "تم الانشاء من المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__create_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__create_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__create_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__create_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__create_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__create_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__create_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__create_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__create_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__create_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__currency_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__currency_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__currency_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__access_url
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Delivery"
+msgstr "تسليم المواد"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__description
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__name
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__display_name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__display_name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__display_name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__display_name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__display_name
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget__state__done
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation__state__done
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Done"
+msgstr "منتهي"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget__state__draft
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation__state__draft
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Draft Budgets"
+msgstr "مسودة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.res_config_settings_view_form
+msgid "Enable location creation from inside project"
+msgstr "السماح بانشاء مخزن من داخل المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__item_type__exist
+msgid "Existed Item"
+msgstr "بند موجود"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_follower_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_partner_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__activity_type_icon
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "From"
+msgstr "من"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__action__from
+msgid "From Item"
+msgstr "من البند"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_template_line__sequence
+msgid "Gives the sequence order when displaying a list of sale quote lines."
+msgstr ""
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__has_message
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_res_company
+msgid "Hospital"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__id
+msgid "ID"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_exception_icon
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__activity_exception_icon
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_needaction
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_unread
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_needaction
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_has_error
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_has_sms_error
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_has_error
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_template__active
+msgid ""
+"If unchecked, it will allow you to hide the Budget template without removing"
+" it."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_stock_location
+msgid "Inventory Locations"
+msgstr "مواقع المخزون"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__is_above_budget
+msgid "Is Above Budget"
+msgstr "تجاوز الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_is_follower
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__product_id
+msgid "Item"
+msgstr "البند"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_lines__calc_actual__account
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__calc_actual__account
+msgid "Item Account"
+msgstr "حساب البند"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__item_type
+msgid "Item Type"
+msgstr "نوع البند"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_form
+msgid "Items"
+msgstr "البنود"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget____last_update
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines____last_update
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation____last_update
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line____last_update
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template____last_update
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__write_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__write_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__write_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__write_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__write_uid
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__write_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__write_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__write_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__write_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__write_date
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__budget_template_line_ids
+msgid "Lines"
+msgstr "البنود"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_main_attachment_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_has_error
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__operation_amount
+msgid "Modification Amount"
+msgstr "مبلغ التعديل"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+msgid "Modification Items"
+msgstr "بنود التعديل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_account_account__move_line_ids
+msgid "Move Lines"
+msgstr ""
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Moves"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__my_activity_date_deadline
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__name
+msgid "Name"
+msgstr "اﻹسم"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_calendar_event_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_date_deadline
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_summary
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_type_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__note
+msgid "Note"
+msgstr "الملاحظة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_needaction_counter
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_has_error_counter
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_needaction_counter
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_has_error_counter
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__message_unread_counter
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+msgid "Operation"
+msgstr "التعديل"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Operation Amount"
+msgstr "مبلغ التعديل"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+msgid "Operation Items"
+msgstr "بنود التعديل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__budget_operation_line_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__budget_operation_line_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__operation_line_ids
+msgid "Operation Lines"
+msgstr "بنود التعديل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__name
+msgid "Operation Reference"
+msgstr "مرجع التعديل"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Other Information"
+msgstr "معلومات اخرى"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Period"
+msgstr "المدة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__planned_amount
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__planned_amount
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Planned Amount"
+msgstr "المبلغ المخطط"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget.py:0
+#, python-format
+msgid "Please configure Project's location ."
+msgstr "رجاء قم باضافة مخزن المشروع"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project.py:0
+#: code:addons/project_costing/models/project_budget.py:0
+#, python-format
+msgid "Please configure Projects warehouse from the settings."
+msgstr "رجاء قم باضافه مستودع المشاريع من الاعدادات"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__access_url
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__practical_amount
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "ِActual Amount"
+msgstr "المبلغ الفعلي"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__product_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__product_id
+msgid "Product"
+msgstr "البند"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_project
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__project_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__project_id
+#: model:ir.model.fields,field_description:project_costing.field_purchase_order__project_id
+#: model:ir.model.fields,field_description:project_costing.field_stock_location__project_id
+#: model:ir.model.fields,field_description:project_costing.field_stock_picking__project_id
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Project"
+msgstr "المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_purchase_order__project_cost_id
+#: model:ir.model.fields,field_description:project_costing.field_stock_picking__project_cost_id
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Project Budget"
+msgstr "موازنة المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__project_budget_template_id
+msgid "Project Budget Template"
+msgstr "قالب موازنة المشروع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__location_id
+#: model:ir.model.fields,field_description:project_costing.field_project_project__location_id
+#: model_terms:ir.ui.view,arch_db:project_costing.edit_project
+msgid "Project Location"
+msgstr "مخزن المشروع"
+
+#. module: project_costing
+#: model:ir.actions.act_window,name:project_costing.act_project_budget_view
+#: model:ir.ui.menu,name:project_costing.menu_project_budget
+msgid "Projects Budget"
+msgstr "موازنة المشاريع"
+
+#. module: project_costing
+#: model:ir.actions.act_window,name:project_costing.act_project_budget_template_view
+#: model:ir.ui.menu,name:project_costing.menu_project_budget_template
+msgid "Projects Budget Templates"
+msgstr "قوالب موازنة المشاريع"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__project_warehouse_id
+#: model:ir.model.fields,field_description:project_costing.field_project_project__project_warehouse_id
+#: model:ir.model.fields,field_description:project_costing.field_res_company__project_warehouse_id
+#: model:ir.model.fields,field_description:project_costing.field_res_config_settings__project_warehouse_id
+#: model_terms:ir.ui.view,arch_db:project_costing.res_config_settings_view_form
+msgid "Projects Warehouse"
+msgstr "مستودع المشاريع"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Purchases"
+msgstr "المشتريات"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__product_qty
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__product_uom_qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__amount_to
+msgid "Received Amount"
+msgstr "المبلغ المستلم"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__remaining_amount
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__remaining_amount
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Remaining Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_operation_view_form
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Reset to Draft"
+msgstr "إرجاع الى مسودة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__activity_user_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_has_sms_error
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__access_token
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__date_from
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__state
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__state
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__state
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__activity_state
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_lines__calc_actual__delivery
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__calc_actual__delivery
+msgid "Stock Delivery"
+msgstr "التسليم المخزني"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_stock_move
+msgid "Stock Move"
+msgstr "حركة المخزون"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__stock_move_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__stock_move_ids
+msgid "Stock Moves"
+msgstr "حركات المخزون"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "Sub-contractors"
+msgstr "مقاولين الباطن"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_purchase_order__subcontractor
+msgid "Subcontractor"
+msgstr "مقاول الباطن"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_tree
+msgid "Templates"
+msgstr "القوالب"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "To"
+msgstr "إلى"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "To Approve"
+msgstr "للاعتماد"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_operation_search
+#: model_terms:ir.ui.view,arch_db:project_costing.view_project_budget_search
+msgid "To Approve Budgets"
+msgstr "ﻹعتماد الموازنات"
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation_line__action__to
+msgid "To Item"
+msgstr "إلى البند"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget_operation.py:0
+#, python-format
+msgid "Total Transferred amount should be equal to total received amount"
+msgstr "اجمالي المبلغ المحول يجب ان يساوي اجمالي المبلغ المستلم"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__action
+msgid "Transfer Type"
+msgstr "نوع التحويل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__amount_from
+msgid "Transferred Amount"
+msgstr "المبلغ المحول"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget_operation.py:0
+#, python-format
+msgid "Transferred Amount for the item %s should be less or equal to %s."
+msgstr "المبلغ المحول للبند %s يجب ان يكون أقل من او يساوي %s."
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__activity_exception_decoration
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_lines__price_unit
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_unread
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__message_unread_counter
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget__state__validate
+#: model:ir.model.fields.selection,name:project_costing.selection__project_budget_operation__state__validate
+msgid "Validated"
+msgstr "معتمد"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_project__view_location_id
+msgid "View Project Location"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget__website_message_ids
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget__website_message_ids
+#: model:ir.model.fields,help:project_costing.field_project_budget_operation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget.py:0
+#: code:addons/project_costing/models/project_budget_operation.py:0
+#, python-format
+msgid "You can not delete records not in draft state"
+msgstr "لا يمكن حذف سجل ليس في حالة مسودة"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget.py:0
+#, python-format
+msgid "You have to enter at least one budget item."
+msgstr "يجب على اﻷقل ادخال بند واحد"
+
+#. module: project_costing
+#: code:addons/project_costing/models/project_budget_operation.py:0
+#, python-format
+msgid "You have to enter operation items."
+msgstr "يجب عليك ادخال بنود التعديل"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template__company_id
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_template_line__company_id
+msgid "company"
+msgstr "الشركة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_view_form
+msgid "e.g. Budget"
+msgstr "مثال الموازنة"
+
+#. module: project_costing
+#: model_terms:ir.ui.view,arch_db:project_costing.project_budget_template_view_form
+msgid "e.g. Standard Consultancy Package"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_project__location_ids
+msgid "locations"
+msgstr "المخازن"
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget
+msgid "project.budget"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget_lines
+msgid "project.budget.lines"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget_operation
+msgid "project.budget.operation"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget_operation_line
+msgid "project.budget.operation.line"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget_template
+msgid "project.budget.template"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model,name:project_costing.model_project_budget_template_line
+msgid "project.budget.template.line"
+msgstr ""
+
+#. module: project_costing
+#: model:ir.model.fields,help:project_costing.field_project_budget_lines__remaining_amount
+msgid "remaining of budget."
+msgstr "متبقي الموازنة"
+
+#. module: project_costing
+#: model:ir.model.fields,field_description:project_costing.field_project_budget_operation_line__state
+msgid "state"
+msgstr "الحالة"
